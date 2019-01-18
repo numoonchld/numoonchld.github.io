@@ -161,7 +161,7 @@ npm uninstall cookie-parser --save
 npm uninstall debug --save
 ```
 
-including `--save` removes entry in the *package.json* file in addtion to uninstalling. remember to remove the `require` statements from app.js 
+including `--save` removes entry in the *package.json* file in addtion to uninstalling. remember to remove the `require` statements from `app.js`
 
 _**development-only dependencies**_
 
