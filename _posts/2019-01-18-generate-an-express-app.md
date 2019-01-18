@@ -1,0 +1,254 @@
+---
+layout: post
+title: generate an express app
+artist: Komytea
+artistLink: https://www.discogs.com/artist/458873-Komytea
+track: 9
+trackLink: https://youtu.be/hjDS9N76zCQ
+tags: [expressjs, git, nodejs, npm, notes]
+---
+
+
+## Goal: 
+
+to generate a barebones *nodejs* app named *tupla-gen* powered by *pug* and *sass*
+
+#### Required:
+
+- node.js - Development Environment
+    - [Download](https://nodejs.org/en/download/){: target="_blank"}
+    - [Install via Package Manger](https://nodejs.org/en/download/package-manager){: target="_blank"}
+
+- npm - Package Manager
+    - [Install npm](https://blog.npmjs.org/post/85484771375/how-to-install-npm){: target="_blank"}
+
+- express - Web Framework
+    - [Install ExpressJS](https://expressjs.com/en/starter/installing.html){: target="_blank"}
+
+- git - Version Control
+    - [Download](https://git-scm.com/downloads){: target="_blank"}
+
+#### Install and Update: 
+ 
+check version of *node*, *npm* and *express*
+```
+node --version
+npm --version
+express --version
+```
+
+update all npm packages 
+```
+npm update -g
+```
+
+then install (or update) express app generator
+```
+npm install -g express-generator
+```
+
+#### Optional (makes app writing easier):
+
+- vscode - Text Editor (with git and console integration)
+    - [Download](https://code.visualstudio.com/download){: target="_blank"}
+
+
+## Generate:
+
+navigate to the parent folder in which you want your newly generated app to reside
+
+generate a barebones express app with:
+```
+express tulpa-gen --view=pug --css=sass
+```
+
+this creates a folder dedicated to the app, all of the next steps happen inside this, nagivate into it
+```
+cd tulpa-gen
+```
+
+open the *package.json* file (in vs-code) and review the dependencies (i.e. node packages need to run the newly created app)
+
+check for the latest dependency package versions on *npm* package website or install check updates *npm* package to see the latest version availabe of each dependency
+```
+npm install -g npm-check-updates
+```
+
+then check for available updates in the CLI using
+```
+ncu
+```
+
+update the version numbers in *package.json* manually or using 
+
+```
+ncu -u
+```
+
+be cautious with upgrading the *package.json* file dependency versions while dealing with mature code as changing package versions might inadvertently break a fully functonal app
+
+make other changes to *package.json* at this point as desired i.e.
+
+- set the app version:
+    ```
+    "version": "0.0.1",
+    ```
+- add app description:
+    ```
+    "description": "express app to demo generation of tulpas",
+    ```
+- add node engine version:
+    ```
+    "engines": { 
+        "node": "10.x" 
+    },
+    ```
+
+## Install Dependencies:
+
+all the dependencies listed in *package.json* are installed to the app's root using
+```
+npm install
+```
+
+when this step is successfully completed, a *package-lock.json* file is created, and CLI will state that this needs to be committed
+
+so initialize a git repository (create a local git *origin*) in the app root by 
+```
+git init
+```
+
+this initializes a repository with a default `master` branch in the app's root folder 
+
+then create a *.gitignore* file (if you're using vs-code, file > new file and name file *.gitignore*)
+
+open this file and add relevant folders to ignore i.e. paste into *.gitignore*
+
+```
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+```
+
+[here is an extensive list of nodejs gitignores](https://github.com/github/gitignore/blob/master/Node.gitignore){: target="_blank"}
+
+
+install new dependencies using 
+```
+npm install dotenv --save
+npm install mongodb --save
+```
+
+*dotenv* is for enabling the use of a *.env* file in the app root folder, *mongodb* is a database driver package for *nodejs*
+
+the `--save` argument automatically adds the dependency in the *package.json* file in addition to installing the package files into *node_modules* folder
+
+remember to `require` the installed dependencies as per the package's documentation on the npm website i.e.
+```
+require('custom-env').env()
+const MongoClient = require('mongodb').MongoClient
+```
+
+uninstall unneseccary exisiting dependancies using:
+```
+npm uninstall cookie-parser --save
+npm uninstall debug --save
+```
+
+including `--save` removes entry in the *package.json* file in addtion to uninstalling. remember to remove the `require` statements from app.js 
+
+to install dev only dependencies, use the tag `--save-dev`
+```
+npm install nodemon --save-dev
+```
+*nodemon* is for auto sever refresh when new file saves are detected - useful for development, but negatively affects performance, so exclusively a development dependency
+
+
+then add `"devstart": "nodemon ./bin/www"` to the scripts object in *package.json*
+
+### Serve: 
+
+run the app in the CLI using 
+```
+npm run devstart
+```
+watch the CLI after running this for errors; *morgan* package with `dev` level logging is enabled by default in the auto-generated `app.js` file
+
+
+if no errors exist in the app, the served app can be locally accessed with a browser @ `localhost:3000`
+
+to end the app server, hit `Ctrl + C` in the CLI
+
+
+to run app without *nodemon*, use 
+```
+npm start
+```
+make sure app loads the default index content without errors in the CLI 
+
+
+
+## Commit:
+
+stage and commit the git repository 
+```
+git add . 
+git commit -m "Zeroth Commit"
+```
+the *package-lock.json* file has been committed. *tupla-gen* can be a starting point for developing complex apps.
+
+
+
+
+## Remote:
+
+this app can be pushed to a repository hosting service like Github, Gitlab, Heroku or Bitbucket. a *remote* of the app(s code repository) lives on the desired hosting service 
+
+
+
+#### set *origin* url:
+for this *tulpa-gen* example, first a *remote* called *origin* is set 
+
+for this, create a **blank** github repository (needs an active github account) and copy it's url - lets call that *remote url*. then, add a *remote* for this url (to the *git config* file of the local repository) using 
+```
+git remote add origin *remote url*
+```
+by convention, the name *origin* is intended to be the first or the direct clone of the local repository
+
+
+
+verify that *origin* url has been set correctly 
+```
+git remote --verbose 
+```
+
+*origin* must be listed twice in the output for this command with the specified *remote_url*, one for *push* and another for *fetch*
+
+#### push to *origin*
+
+haivng set *origin* successfully, push the local code repository to the remote repository using 
+```
+git push -u origin master
+```
+here `master` is the default branch, which is pushed to the *remote* repository named as *origin*
+
+if you encounter errors in this step, it's very likely your remote repository is not totally empty and was initilized with a file 
+
+
+here is my [tulpa-gen](https://github.com/numoonchld/tulpa-gen){: target="_blank"} *remote*
+
+
+## Reading: <br>
+
+##### ExpressJS:
+* [ExpressJS - generator](https://expressjs.com/en/starter/generator.html){: target="_blank"}
+* [ExpressJS on npm](https://www.npmjs.com/package/express){: target="_blank"}
+
+##### npm:
+* [npm-check-updates](https://www.npmjs.com/package/npm-check-updates){: target="_blank"}
+* [npm-update](https://docs.npmjs.com/cli/update.html){: target="_blank"}
+
+##### GitHub:
+* [Creating Github Remotes](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/){: target="_blank"}
