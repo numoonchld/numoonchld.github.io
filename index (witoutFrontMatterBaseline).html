@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Personal Portfolio</title>
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+
+<body class="bg-dark p-4" data-spy="scroll" data-target="#linkbar" data-offset="150">
+
+  <nav id="linkbar" class="navbar navbar-light bg-dark fixed-bottom">
+
+    <a class="navbar-brand" href="#"></a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#about_me"> about me </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#portfolio"> portfolio </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#contact_me"> contact me </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="main_bin" class="container bg-light p-3 mx-auto rounded">
+
+    <div id="about_me" class="p-3 rounded">
+
+      <div class="row">
+
+        <div class="col-4 p-5">
+          <img class="img-fluid rounded-circle" src="https://cdn-images-1.medium.com/max/1200/0*RzFWYlowV4E_cMEl.jpg" alt="disp_pic">
+        </div>
+        <div class="col text-center align-middle p-4 my-auto">
+          <h6> controls and photogrammetry engineer, hobby music producer, travel and photography enthusiast, front end developer,
+            currently teaching myself the Unity engine</h6>
+          <hr>
+          <h4> front end developer &#8729 music producer &#8729 photographer &#8729 engineer
+          </h4>
+
+          <div id="social_icon_links" class="row mx-auto d-block">
+            <a href="https://www.linkedin.com/in/raghavendrasaralaya/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/numoonchld/front-end-certification" target="_blank">
+              <i class="fab fa-free-code-camp"></i>
+            </a>
+            <a href="https://numoonchld.bandcamp.com/" target="_blank">
+              <i class="fab fa-bandcamp"></i>
+            </a>
+            <a href="https://unsplash.com/@panjurli" target="_blank">
+              <i class="fas fa-camera"></i>
+            </a>
+            <!--<a href="https://github.com/numoonchld" target="_blank"><i class="fab fa-github" ></i></a>-->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="portfolio" class="bg-danger p-3 rounded">
+
+      <h3 class="text-center text-light"> portfolio </h3>
+
+      <div class="row p-3">
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+        <div class="col-6 p-4">
+          <img class="img-thumbnail rounded mx-auto d-block" src="https://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc301ae4b01342ae9212a1/1442590746805/"
+            alt="portfolio_specimen">
+        </div>
+      </div>
+
+    </div>
+
+    <div id="contact_me" class="p-5 rounded">
+      <h3 class="text-center"> contact me </h3>
+      <form action="submit_contact_info" class="p-3">
+        <input type="text" class="form-control form-group text-center" placeholder="name" required>
+        <input type="text" class="form-control form-group text-center" placeholder="e-mail" required>
+        <input type="text" class="form-control form-group text-center" placeholder="phone number" required>
+        <input type="text" class="form-control form-group text-center" rows="3" placeholder="message" required>
+        <button type="submit" class="btn btn-primary btn-block p-1"> Submit </button>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+  <script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+</footer>
+
+
+
+</html>

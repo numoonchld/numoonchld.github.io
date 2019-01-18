@@ -1,0 +1,10 @@
+<script src="/media/{{page.unity-dir}}/TemplateData/UnityProgress.js"></script>
+<script src="/media/{{page.unity-dir}}/Build/UnityLoader.js"></script>
+
+<script>
+var gameInstance = UnityLoader.instantiate("gameContainer","media/{{page.unity-dir}}/Build/builds.json",{onProgress: UnityProgress});
+</script>
+
+<div class="webgl-content">
+  <div id="gameContainer" style="width: 960px; height: 600px;"></div>
+</div>

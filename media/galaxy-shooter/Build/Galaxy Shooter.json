@@ -1,0 +1,13 @@
+{
+"companyName": "panjurli",
+"productName": "Galaxy Shooter",
+"dataUrl": "Galaxy Shooter.data.unityweb",
+"asmCodeUrl": "Galaxy Shooter.asm.code.unityweb",
+"asmMemoryUrl": "Galaxy Shooter.asm.memory.unityweb",
+"asmFrameworkUrl": "Galaxy Shooter.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}

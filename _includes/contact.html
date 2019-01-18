@@ -1,0 +1,40 @@
+<div class="contactInnerTile">
+
+  <h3 class="text-center tileLabel deep-cyan-text" style="color: #BD5C3D; "> contact me </h3>
+  <p class="text-center deep-cyan-text" style="color: #BD5C3D; "> say hello and explain your webapp requirements<br> (response within 24-48 hours) </p>
+  <!-- <hr class="border w-100"> -->
+
+  <div id="contactFormDiv" class="card w-75 my-3">
+
+    <form name="postFormData" class="p-3">
+
+      <input name="name" type="text" class="form-control form-group text-center" placeholder="name" maxlength="20"
+        required>
+      <input name="email" type="email" class="form-control form-group text-center" placeholder="e-mail" required>
+      <textarea name="message" class="form-control form-group text-center" placeholder="message" rows="3" minlength="20"
+        maxlength="140" spellcheck="true" required></textarea>
+      <button type="submit" class="btn teal lighten-2 btn-block p-2" style="background-color: #E48043; "> Submit </button>
+
+    </form>
+
+  </div>
+
+  <div class="d-flex flex-column align-items-center">
+
+    <div id="contactFormProcessDiv" class="w-25 text-center" style="display:none" >
+      <i class="fas fa-cog fa-spin fa-3x" style="color: #BD5C3D"></i>
+    </div>
+
+    <div id="contactFormSuccessDiv" class="w-25 text-center" style="display:none" > 
+      <i class="fas fa-check fa-5x" style="color: #BD5C3D"></i>
+    </div>
+
+    <div id="contactFormErrorDiv" class="text-center" style="display:none">
+      <p> something went wrong </p>
+      <p> please try later or another way of getting in touch </p>
+      <p> thanks! </p>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+---
+layout: post
+name: internet quotes
+---
+
+"The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked."
+
+[MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data){:target="_blank"} on Common Security Concerns
