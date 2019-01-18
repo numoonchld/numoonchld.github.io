@@ -67,9 +67,9 @@ this creates a folder dedicated to the app, all of the next steps happen inside 
 cd tulpa-gen
 ```
 
-open the *package.json* file (in vs-code) and review the dependencies (i.e. node packages need to run the newly created app)
+open the *package.json* file (in vs-code) and review the dependencies (i.e. node packages needed to run the newly created app)
 
-check for the latest dependency package versions on *npm* package website or install check updates *npm* package to see the latest version availabe of each dependency
+check for the latest dependency package versions on *npm* package website or install a dedicated package
 ```
 npm install -g npm-check-updates
 ```
@@ -79,7 +79,7 @@ then check for available updates in the CLI using
 ncu
 ```
 
-update the version numbers in *package.json* manually or using 
+update the version numbers in *package.json* manually OR use
 
 ```
 ncu -u
@@ -87,7 +87,7 @@ ncu -u
 
 be cautious with upgrading the *package.json* file dependency versions while dealing with mature code as changing package versions might inadvertently break a fully functonal app
 
-make other changes to *package.json* at this point as desired i.e.
+make other changes to *package.json* at this point as desired - i.e.
 
 - set the app version:
     ```
@@ -106,21 +106,21 @@ make other changes to *package.json* at this point as desired i.e.
 
 ## Install Dependencies:
 
-all the dependencies listed in *package.json* are installed to the app's root using
+all the dependencies listed in *package.json* are installed to the app's root by
 ```
 npm install
 ```
 
 when this step is successfully completed, a *package-lock.json* file is created, and CLI will state that this needs to be committed
 
-so initialize a git repository (create a local git *origin*) in the app root by 
+so initialize a git repository in the app root by 
 ```
 git init
 ```
 
 this initializes a repository with a default `master` branch in the app's root folder 
 
-then create a *.gitignore* file (if you're using vs-code, file > new file and name file *.gitignore*)
+then create a *.gitignore* file (if you've been using vs-code, *file > new file* and name file *.gitignore*)
 
 open this file and add relevant folders to ignore i.e. paste into *.gitignore*
 
@@ -132,8 +132,10 @@ node_modules/
 .npm
 ```
 
-[here is an extensive list of nodejs gitignores](https://github.com/github/gitignore/blob/master/Node.gitignore){: target="_blank"}
+here is an extensive [list of nodejs gitignores](https://github.com/github/gitignore/blob/master/Node.gitignore){: target="_blank"}
 
+
+_**new dependencies**_
 
 install new dependencies using 
 ```
@@ -145,19 +147,23 @@ npm install mongodb --save
 
 the `--save` argument automatically adds the dependency in the *package.json* file in addition to installing the package files into *node_modules* folder
 
-remember to `require` the installed dependencies as per the package's documentation on the npm website i.e.
+remember to `require` the installed dependencies as per the package's documentation on the npm website - i.e.
 ```
 require('custom-env').env()
 const MongoClient = require('mongodb').MongoClient
 ```
 
-uninstall unneseccary exisiting dependancies using:
+_**delete dependencies**_
+
+uninstall unneseccary exisiting dependencies using
 ```
 npm uninstall cookie-parser --save
 npm uninstall debug --save
 ```
 
 including `--save` removes entry in the *package.json* file in addtion to uninstalling. remember to remove the `require` statements from app.js 
+
+_**development-only dependencies**_
 
 to install dev only dependencies, use the tag `--save-dev`
 ```
@@ -170,23 +176,21 @@ then add `"devstart": "nodemon ./bin/www"` to the scripts object in *package.jso
 
 ### Serve: 
 
-run the app in the CLI using 
+begin serving the app by 
 ```
 npm run devstart
 ```
-watch the CLI after running this for errors; *morgan* package with `dev` level logging is enabled by default in the auto-generated `app.js` file
+watch the CLI for errors; (*morgan* package with `dev` level logging is enabled by default in the auto-generated `app.js` file)
 
-
-if no errors exist in the app, the served app can be locally accessed with a browser @ `localhost:3000`
+if no errors are thrown, the served app can be locally accessed with a browser @ `localhost:3000` 
 
 to end the app server, hit `Ctrl + C` in the CLI
-
 
 to run app without *nodemon*, use 
 ```
 npm start
 ```
-make sure app loads the default index content without errors in the CLI 
+make sure app serves the default index.pug content @ `localhost:3000` without errors in the CLI 
 
 
 
@@ -197,25 +201,26 @@ stage and commit the git repository
 git add . 
 git commit -m "Zeroth Commit"
 ```
-the *package-lock.json* file has been committed. *tupla-gen* can be a starting point for developing complex apps.
+the *package-lock.json* file has been committed. *tupla-gen* can be a starting point for developing complex apps
 
 
 
 
 ## Remote:
 
-this app can be pushed to a repository hosting service like Github, Gitlab, Heroku or Bitbucket. a *remote* of the app(s code repository) lives on the desired hosting service 
-
+this app can be pushed to a *remote* repository on hosting service like Github, Gitlab, or Bitbucket
 
 
 #### set *origin* url:
 for this *tulpa-gen* example, first a *remote* called *origin* is set 
 
-for this, create a **blank** github repository (needs an active github account) and copy it's url - lets call that *remote url*. then, add a *remote* for this url (to the *git config* file of the local repository) using 
+for this, create a **blank** github repository (needs an active github account) and copy it's url - lets call that _remote-url-slug_
+
+then, add a *remote* for this url (to the *git config* file of the local repository) by 
 ```
-git remote add origin *remote url*
+git remote add origin _remote-url-slug_
 ```
-by convention, the name *origin* is intended to be the first or the direct clone of the local repository
+by convention, the name *origin* is intended to be the first remote (or the direct) clone of the local repository
 
 
 
@@ -226,9 +231,9 @@ git remote --verbose
 
 *origin* must be listed twice in the output for this command with the specified *remote_url*, one for *push* and another for *fetch*
 
-#### push to *origin*
+#### push to *origin*:
 
-haivng set *origin* successfully, push the local code repository to the remote repository using 
+having set *origin* successfully, push the local code repository to the remote repository using 
 ```
 git push -u origin master
 ```
