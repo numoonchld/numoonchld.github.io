@@ -222,17 +222,69 @@ and (max-width: 450px) {
 
 .blogDiv {
   margin: 10% auto;
+  max-width: 66vw;
+  padding: 5vh auto;
+  margin: 5vh auto;
+
+  /* border: 3px solid red; */
+}
+
+#blogText {
+  color: #BD5C3D;
+  background: #efe1a9;
+  padding: 6vh 6vw;
+  margin: 5vh auto;
+
+  min-width: 500px;
+}
+
+
+#blogTOC {
+  color: #BD5C3D;
+  background: #efe1a9;
+
+  margin: 5vh auto;
+  padding: 6vh 3vw;
+
+  max-width: 66vw;
+
+}
+
+#blogTOC ul {
+  list-style-type: none;
 }
 
 @media only screen
 and (max-width: 759px) {
 
   .blogDiv {
-    padding: 5%;
-    margin: 50px auto 0px auto;
+    /* margin: 50px auto 0px auto;  */
+    /* padding: 3vh auto; */
+    min-width: 95vw;
+  }
+
+  #blogText {
+
+    padding: 3vh 3vw;
+    margin: 3vh auto;
+
+    min-width: 90vw;
+    max-width: 95vw;
+  
+  }
+
+  #blogTOC {
+    padding: 3vh 1vw;
+    margin: 3vh auto;
+
+    min-width: 90vw;
+    max-width: 95vw;
+  
   }
 
 }
+
+
 
 /* FONT SIZE */
 /* ==========================================================*/

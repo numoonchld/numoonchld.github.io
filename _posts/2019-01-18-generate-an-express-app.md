@@ -52,7 +52,7 @@ npm install -g express-generator
 - vscode - Text Editor (with git and console integration)
     - [Download](https://code.visualstudio.com/download){: target="_blank"}
 
-
+<br>
 ## Generate:
 
 navigate to the parent folder in which you want your newly generated app to reside
@@ -104,6 +104,7 @@ make other changes to *package.json* at this point as desired - i.e.
     },
     ```
 
+<br>
 ## Install Dependencies:
 
 all the dependencies listed in *package.json* are installed to the app's root by
@@ -174,7 +175,8 @@ npm install nodemon --save-dev
 
 then add `"devstart": "nodemon ./bin/www"` to the scripts object in *package.json*
 
-### Serve: 
+<br>
+## Serve: 
 
 begin serving the app by 
 ```
@@ -193,7 +195,7 @@ npm start
 make sure app serves the default index.pug content @ `localhost:3000` without errors in the CLI 
 
 
-
+<br>
 ## Commit:
 
 stage and commit the git repository 
@@ -205,7 +207,7 @@ the *package-lock.json* file has been committed. *tupla-gen* can be a starting p
 
 
 
-
+<br>
 ## Remote:
 
 this app can be pushed to a *remote* repository on hosting service like Github, Gitlab, or Bitbucket
@@ -244,8 +246,9 @@ if you encounter errors in this step, it's very likely your remote repository is
 
 here is my [tulpa-gen](https://github.com/numoonchld/tulpa-gen){: target="_blank"} *remote*
 
-
-## Reading: <br>
+<br>
+<hr>
+## Reading: 
 
 ##### ExpressJS:
 * [ExpressJS - generator](https://expressjs.com/en/starter/generator.html){: target="_blank"}

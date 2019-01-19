@@ -2,31 +2,31 @@
 layout: blog
 ---
 
-<div class = "blogDiv">
+<div class="blogDiv">
 
-    <h3 class = "text-center" style="color: #BD5C3D;"> {{ page.title }} </h3>
-  
-    <!-- <hr class = "border w-100"/> -->
+  <h3 class="text-center" style="color: #BD5C3D;"> {{ page.title }} </h3>
 
-    {% if page.updated %}
-    <h6 class = "text-cente" style="color: #BD5C3D;"> last updated: {{ page.updated | date_to_string }} </h6>
-    {% endif %}
+  {% if page.updated %}
+  <h6 class="text-center" style="color: #BD5C3D;"> last updated: {{ page.updated | date_to_string }} </h6>
+  {% endif %}
 
-    <!-- Pull in unity page -->
-    {% if page.unity-dir %}
-      {% include page_unity.html %}
-    {% endif %}
-    <!-- taken from: https://bit.ly/2rexRJj -->
+  <!-- Pull in unity page -->
+  {% if page.unity-dir %}
+  {% include page_unity.html %}
+  {% endif %}
+  <!-- refer to: https://bit.ly/2rexRJj -->
 
+  <div id="blogText" class="card"> 
+    {{ content }} 
+  </div>
 
-
-    <div class = "w-75 mx-auto card p-5 my-3" style="color: #BD5C3D; background: #efe1a9"> {{ content }} </div>
-
-    <!-- <hr class = "border w-100"/> -->
-
-    <h6 class = "text-center red-text" > created: {{ page.date | date_to_string }} </h6>
+  <div>
+    <h6 class="text-center red-text"> created: {{ page.date | date_to_string }} </h6>
     {% if page.artist %}
-    <h6 class = "text-center red-text" > today's track: <a href="{{page.trackLink}}" target="_blank"> {{page.track}} </a> by <a href="{{page.artistLink}}" target="_blank"> {{page.artist}} </a> </h6>
+    <h6 class="text-center red-text"> today's track: <a href="{{page.trackLink}}" target="_blank"> {{page.track}} </a>
+      by <a href="{{page.artistLink}}" target="_blank"> {{page.artist}} </a> </h6>
     {% endif %}
+  </div>
+
 
 </div>

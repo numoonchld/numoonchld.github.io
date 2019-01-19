@@ -9,6 +9,6 @@ name: internet quotes
 
 <hr>
 
-"Hindsight is 20-20, but it doesn't help you win wars"
+"Hindsight is 20-20, but it doesn't win fights"
 
-
+"A loose cannon eventually points at your way" (unless you're the loose cannon)
