@@ -62,7 +62,7 @@ generate a barebones express app with:
 express tulpa-gen --view=pug --css=sass
 ```
 
-this creates a folder dedicated to the app, all of the next steps happen inside this, nagivate into it
+this creates a folder dedicated to the app, all of the next steps happen inside this, navigate into it
 ```
 cd tulpa-gen
 ```
@@ -85,7 +85,7 @@ update the version numbers in *package.json* manually OR use
 ncu -u
 ```
 
-be cautious with upgrading the *package.json* file dependency versions while dealing with mature code as changing package versions might inadvertently break a fully functonal app
+be cautious with upgrading the *package.json* file dependency versions while dealing with mature code as changing package versions might inadvertently break a fully functional app
 
 make other changes to *package.json* at this point as desired - i.e.
 
@@ -146,7 +146,7 @@ npm install mongodb --save
 
 *dotenv* is for enabling the use of a *.env* file in the app root folder, *mongodb* is a database driver package for *nodejs*
 
-the `--save` argument automatically adds the dependency in the *package.json* file in addition to installing the package files into *node_modules* folder
+the `--save` option automatically adds the dependency in the *package.json* file in addition to installing the package files into *node_modules* folder
 
 remember to `require` the installed dependencies as per the package's documentation on the npm website - i.e.
 ```
@@ -156,17 +156,17 @@ const MongoClient = require('mongodb').MongoClient
 
 _**delete dependencies**_
 
-uninstall unneseccary exisiting dependencies using
+uninstall unnecessary existing dependencies using
 ```
 npm uninstall cookie-parser --save
 npm uninstall debug --save
 ```
 
-including `--save` removes entry in the *package.json* file in addtion to uninstalling. remember to remove the `require` statements from `app.js`
+including `--save` removes entry in the *package.json* file in addition to uninstalling. remember to remove the `require` statements from `app.js`
 
 _**development-only dependencies**_
 
-to install dev only dependencies, use the tag `--save-dev`
+to install dev only dependencies, use the option `--save-dev`
 ```
 npm install nodemon --save-dev
 ```
@@ -216,7 +216,7 @@ this app can be pushed to a *remote* repository on hosting service like Github, 
 #### set *origin* url:
 for this *tulpa-gen* example, first a *remote* called *origin* is set 
 
-for this, create a **blank** github repository (needs an active github account) and copy it's url - lets call that _remote-url-slug_
+for this, create a **blank** GitHub repository (needs an active GitHub account) and copy it's url - lets call that _remote-url-slug_
 
 then, add a *remote* for this url (to the *git config* file of the local repository) by 
 ```
@@ -241,7 +241,7 @@ git push -u origin master
 ```
 here `master` is the default branch, which is pushed to the *remote* repository named as *origin*
 
-if you encounter errors in this step, it's very likely your remote repository is not totally empty and was initilized with a file 
+if you encounter errors in this step, it's very likely your remote repository is not totally empty and was initialized with a file 
 
 
 here is my [tulpa-gen](https://github.com/numoonchld/tulpa-gen){: target="_blank"} *remote*
