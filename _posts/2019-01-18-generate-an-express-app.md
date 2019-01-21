@@ -1,6 +1,7 @@
 ---
 layout: post
 title: generate an express app
+updated: 2019-01-21
 artist: Komytea
 artistLink: https://www.discogs.com/artist/458873-Komytea
 track: 9
@@ -11,12 +12,12 @@ tags: [expressjs, git, nodejs, npm, notes]
 
 ## Goal: 
 
-to generate a barebones *nodejs* app named *tupla-gen* powered by *pug* and *sass*
+to generate a barebones *nodejs* app named *tupla-gen* powered by *pug* and *sass*, and create a *remote* copy of the app's code on GitHub
 
 #### Required:
 
 - node.js - Development Environment
-    - [Download](https://nodejs.org/en/download/){: target="_blank"}
+    - [Download](https://nodejs.org/en/download/){: target="_blank"}t
     - [Install via Package Manger](https://nodejs.org/en/download/package-manager){: target="_blank"}
 
 - npm - Package Manager
@@ -210,7 +211,7 @@ the *package-lock.json* file has been committed. *tupla-gen* can be a starting p
 <br>
 ## Remote:
 
-this app can be pushed to a *remote* repository on hosting service like Github, Gitlab, or Bitbucket
+this app can be pushed to a *remote* repository on hosting services like Github, Gitlab, or Bitbucket
 
 
 #### set *origin* url:
@@ -246,9 +247,9 @@ if you encounter errors in this step, it's very likely your remote repository is
 
 here is my [tulpa-gen](https://github.com/numoonchld/tulpa-gen){: target="_blank"} *remote*
 
-<br>
+
 <hr>
-## Reading: 
+## Reading: <br>
 
 ##### ExpressJS:
 * [ExpressJS - generator](https://expressjs.com/en/starter/generator.html){: target="_blank"}
@@ -260,3 +261,6 @@ here is my [tulpa-gen](https://github.com/numoonchld/tulpa-gen){: target="_blank
 
 ##### GitHub:
 * [Creating Github Remotes](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/){: target="_blank"}
+
+##### Tulpas:
+* [Wikipedia](https://en.wikipedia.org/wiki/Tulpa){: target="_blank"}

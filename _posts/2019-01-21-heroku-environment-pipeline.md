@@ -1,10 +1,10 @@
 ---
 layout: post
 title: heroku environment pipeline
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Maiga
+artistLink: https://www.discogs.com/Maiga-The-Teide-Tenerife/release/10956656
+track: The Teide
+trackLink: https://www.youtube.com/watch?v=PEPU3vQ_p-c
 tags: [heroku, git, nodejs, notes]
 ---
 
@@ -43,7 +43,7 @@ to make sure the app runs, serve using `nodemon`
 
     npm run devstart 
 
-and go to `localhost:3000` in your browser to verify (a simple page loads for the work-along demo) app loads without any errors in the CLI; hit `Ctrl + C` to end server
+and go to `localhost:3000` in your browser to verify app loads (a simple page loads for the work-along demo) without any errors in the CLI; hit `Ctrl + C` to end server
 
 
 
