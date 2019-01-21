@@ -252,6 +252,7 @@ and (max-width: 450px) {
 
 #blogTOC ul {
   list-style-type: none;
+  margin-left: 0vw;
 }
 
 @media only screen
@@ -274,16 +275,21 @@ and (max-width: 759px) {
   }
 
   #blogTOC {
-    padding: 3vh 1vw;
-    margin: 3vh auto;
+    padding: 3vh 3vw;
+    margin: 3vh 1vw;
 
     min-width: 90vw;
     max-width: 95vw;
   
   }
 
-}
+  #blogTOC ul {
+    list-style-type: none;
+    margin-left: -9vw;
+  }
+  
 
+}
 
 
 /* FONT SIZE */
