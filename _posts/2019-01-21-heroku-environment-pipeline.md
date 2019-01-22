@@ -92,7 +92,7 @@ a git *remote* is some version of your local repository that's on another server
 
 a git *origin* is, by convention, the source *remote* of a repository
 
-a single local repository can have multiple *remotes*, to list all of them:
+a single local repository can have multiple *remotes*; to list all of them, do
 ```
 git remote --verbose
 ```
@@ -149,19 +149,19 @@ when working with *heroku* pipelines, each environment is allotted it's own *her
 
 _**the `development` remote :**_
 
-to initialize a *heroku remote* to the pipeline's *development* stage, create a new remote *heroku* app named *tulpa-gen-development* using `heroku create`
+create a new *heroku* app named *tulpa-gen-development* using `heroku create`, and set it's *remote* name as *development* using
     
     heroku create --remote development tulpa-gen-development
 
 here:
--  `--remote development` is the new *remote* name 
+-  `--remote development` is the new *remote* name specifier
 - `tulpa-gen-development` is the new app to be served at the new remote
 
 verify new *remote* has been added to repository 
 
     git remote --verbose 
 
-then, add this remote app to the development stage of the pipeline
+then, add this app to the development stage of the pipeline
 
     heroku pipelines:add tulpa-gen-envs-pipe --app tulpa-gen-development
 
@@ -179,13 +179,13 @@ _**the `staging` remote:**_
 
 setup a *remote* for `staging`, similar to the previous step
 
-    // create a remote for 'staging' stage
+    // create a new heroku app with associated remote named 'staging'
     heroku create --remote staging tulpa-gen-staging
 
     // verify remote has been created
     git remote --verbose 
 
-    // add staging remote to heroku pipeline
+    // add this app to heroku pipeline
     // choose 'staging' as the stage for the app when prompted
     heroku pipelines:add tulpa-gen-envs-pipe --app tulpa-gen-staging
 
@@ -196,7 +196,7 @@ setup a *remote* for `staging`, similar to the previous step
 
 _**the `production` remote:**_
 
-the *heroku* pipeline was initialized with the production stage app, now to specify a dedicated production *remote*
+the *heroku* pipeline was initialized with the production stage app, now specify a dedicated production *remote* name
 
     heroku git:remote --remote production --app tulpa-gen
 
@@ -306,6 +306,10 @@ to push a non-`master` branch, say `feature`, to *staging remote* in pipeline, d
 
     git push staging feature:master
 
+here:
+- `staging` is the target *remote*
+- `feature:master` specifies `feature` branch of local to `master` branch of *remote* 
+
 #### pipeline downstream flow:
 
 pipeline flow: `development` &rarr; `staging` &rarr; `production`
@@ -314,11 +318,16 @@ remember that a pipeline contains only deployed apps and not (necessarily) the c
 
 so, when appropriate, you may deploy your current `master` branch as an app to a `staging` environment of the pipeline initialized earlier and see how it does on the *heroku* server and perform all kinds of tests 
 
-once it's sufficiently mature (subjective to the app, requirements and developer), it may be promoted to the production app for the end user
+once it's sufficiently mature (subjective to the app, requirements and developer), it may be promoted into a production app
 
     heroku pipelines:promote --remote staging 
 
-when an app is promoted, it ceases to be in the previous environment of the pipeline, and exists entirely in the environment it is promoted to 
+    // alternatively, using the app name:
+    heroku pipelines:promote --app tulpa-gen-staging
+
+when an app is promoted via the CLI, the app in the next stage becomes the app that was promoted. if there are multiple apps downstream, the target app to promote to must be specified with the appropriate flags
+
+after the promotion, both the promoted and the promoted to app exist, and they are identical, but have their own environment variables 
 
 ![a simple *heroku* pipeline](/media/blogAssets/herokuPipelines/hp-illustrations-apps in pipeline.svg)
 {: style="text-align: center;"}
