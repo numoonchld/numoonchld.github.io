@@ -17,7 +17,7 @@ to generate a barebones *nodejs* app named *tupla-gen* powered by *pug* and *sas
 #### Required:
 
 - node.js - Development Environment
-    - [Download](https://nodejs.org/en/download/){: target="_blank"}t
+    - [Download](https://nodejs.org/en/download/){: target="_blank"}
     - [Install via Package Manger](https://nodejs.org/en/download/package-manager){: target="_blank"}
 
 - npm - Package Manager
