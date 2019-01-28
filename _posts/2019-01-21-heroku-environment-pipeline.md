@@ -29,7 +29,7 @@ to setup a *heroku* pipeline for the development process of this app (through *h
 
 #### required for this exercise:
 
-you'll need an active [*heroku* account](https://signup.heroku.com/){: target="_blank"}, [*heroku CLI*](https://devcenter.heroku.com/articles/heroku-cli){: target="_blank"} installed locally on your development machine, and a functional *nodejs* app you want to setup the pipeline with. here is my work-along demo - clone [this](https://github.com/numoonchld/tulpa-gen){: target="_blank"} to your local machine if you need something to work with
+you'll need an active [*heroku* account](https://signup.heroku.com/){: target="_blank"}, [*heroku CLI*](https://devcenter.heroku.com/articles/heroku-cli){: target="_blank"} installed locally on your development machine, and a functional *nodejs* app you want to setup the pipeline with. [here is my work-along demo](https://github.com/numoonchld/tulpa-gen){: target="_blank"}  - clone to your local drive if you need something to work with
 
 
 
@@ -60,7 +60,9 @@ then initialize a *heroku* app *tulpa-gen* with the current *nodejs* app
 
     heroku create tulpa-gen
 
-the current branch of the local repository can be deployed as a *heroku* app. a *heroku* app has two main components, a remote repository and a deployment URL. the remote repository is the code for the app to be served at the deployment URL
+the `master` branch of the local repository is now deployed as a *heroku* app. 
+
+a *heroku* app has two main components, a remote repository and a deployment URL. the remote repository is the code for the app to be served at the deployment URL
 
 in the process of creating a heroku app, the CLI shows the *heroku* app deployment URL along with a corresponding git *remote* URL, which is added as a new *remote* to the local app repository - verify:
 
