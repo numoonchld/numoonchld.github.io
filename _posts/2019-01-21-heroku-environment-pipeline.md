@@ -60,7 +60,7 @@ then initialize a *heroku* app *tulpa-gen* with the current *nodejs* app
 
     heroku create tulpa-gen
 
-the `master` branch of the local repository is now deployed as a *heroku* app. 
+the `master` branch of the local repository is now deployed on *heroku*  
 
 a *heroku* app has two main components, a remote repository and a deployment URL. the remote repository is the code for the app to be served at the deployment URL
 
