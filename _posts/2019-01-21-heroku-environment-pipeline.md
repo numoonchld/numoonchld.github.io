@@ -64,7 +64,7 @@ the `master` branch of the local repository is now deployed on *heroku*
 
 a *heroku* app has two main components, a remote repository and a deployment URL. the remote repository is the code for the app to be served at the deployment URL
 
-in the process of creating a heroku app, the CLI shows the *heroku* app deployment URL along with a corresponding git *remote* URL, which is added as a new *remote* to the local app repository - verify:
+in the process of creating a *heroku* app, the CLI shows the *heroku* app deployment URL along with a corresponding git *remote* URL, which is added as a new *remote* to the local app repository - verify:
 
     git remote --verbose 
 
