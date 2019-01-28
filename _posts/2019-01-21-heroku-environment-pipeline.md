@@ -70,6 +70,12 @@ in the process of creating a *heroku* app, the CLI shows the *heroku* app deploy
 
 should now list two remotes: `heroku` and `origin` (each one twice - for fetch and push)
 
+to launch the deployed app, do 
+
+    heroku open
+
+and verify the deployment URL works
+
 next, initialize a new *heroku* pipeline with this app 
 
     heroku pipelines:create tulpa-gen-envs-pipe --app tulpa-gen
@@ -336,6 +342,15 @@ after the promotion, both the promoted and the promoted to app exist, and they a
 
 *fig 4: schematic of a simple __heroku__ pipeline setup* 
 {: style="font-size: 80%; text-align: center;"}
+
+#### launch deployment remotes
+
+to launch the production app, do 
+
+    heroku open --remote production
+
+    // for the staging app
+    heroku open --remote staging
 
 
 <hr>
