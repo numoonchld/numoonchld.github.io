@@ -1,0 +1,25 @@
+---
+layout: main
+title: grade5Point13
+---
+
+
+
+<script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+<div class="d-flex flex-col justify-content-center align-items-center" style="height: 100vh;">
+
+  <div class="d-block">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    &nbsp; &nbsp;
+    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+  </div>
+
+  <div>
+    <canvas id="the-canvas"></canvas>
+  </div>
+
+  <script src="grade5point13pdfRenderScript.js"></script>
+
+</div>
