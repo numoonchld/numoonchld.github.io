@@ -6,7 +6,7 @@ artistLink: https://en.wikipedia.org/wiki/Filterheadz
 track: Everything Explained 
 trackLink: https://www.youtube.com/watch?v=wScsg7F5pEM
 tags: [angular 6, notes]
-updated: 2018-02-06
+updated: 2019-02-06
 ---
 
 ### Setup Pre-requisites:
