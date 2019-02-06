@@ -6,6 +6,7 @@ artistLink: https://en.wikipedia.org/wiki/Filterheadz
 track: Everything Explained 
 trackLink: https://www.youtube.com/watch?v=wScsg7F5pEM
 tags: [angular 6, notes]
+updated: 2018-02-06
 ---
 
 ### Setup Pre-requisites:
@@ -84,7 +85,7 @@ This should render the default Angular App, if everything is setup correctly.
 - [type annotation](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html){:target='_blank'} (search for type annotation)
 - [JavaScript-TypeScript relationship](https://stackoverflow.com/a/12694578){: target="_blank"}
 - [Compile Time vs. Runtime](https://stackoverflow.com/a/846421){: target="_blank"}
-- [Static vs. Dynamic, Strong vs. Weak , and Duck Typing](https://www.koffeinfrei.org/2012/03/19/static-vs-dynamic-vs-strong-vs-weak-vs-duck-typing/){: target="_blank"}
+- [Static vs. Dynamic, Strong vs. Weak, and Duck Typing](https://www.koffeinfrei.org/2012/03/19/static-vs-dynamic-vs-strong-vs-weak-vs-duck-typing/){: target="_blank"}
 
 ### Angular Concepts:
 - [decorator function](https://angular.io/guide/glossary#decorator--decoration){: target="_blank"}
