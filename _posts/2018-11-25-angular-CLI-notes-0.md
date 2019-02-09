@@ -79,7 +79,6 @@ This should render the default Angular App, if everything is setup correctly.
 ### JavaScript Concepts:
 - [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes){:target='_blank'}
 - [extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends){:target='_blank'}
-
 - [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export){:target='_blank'}
 - [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import){:target='_blank'}
 
