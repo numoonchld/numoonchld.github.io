@@ -24,7 +24,7 @@ tags: [angular-6, notes, github-pages]
 ### github repo setup:
 
 - create a blank repo in github with `<choosen-name>`
-- this must NOT be of the pattern `<github-username>.github.io`
+- this must NOT be `<github-username>.github.io`
 
 ### angular CLI tasks:
 
