@@ -6,7 +6,7 @@ artistLink: https://en.wikipedia.org/wiki/Filterheadz
 track: Everything Explained 
 trackLink: https://www.youtube.com/watch?v=wScsg7F5pEM
 tags: [angular 6, notes]
-updated: 2019-02-06
+updated: 2019-02-09
 ---
 
 ### Setup Pre-requisites:
@@ -78,8 +78,11 @@ This should render the default Angular App, if everything is setup correctly.
 
 ### JavaScript Concepts:
 - [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes){:target='_blank'}
+- [extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends){:target='_blank'}
+
 - [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export){:target='_blank'}
 - [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import){:target='_blank'}
+
 
 ### TypeScript Concepts:
 - [type annotation](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html){:target='_blank'} (search for type annotation)
