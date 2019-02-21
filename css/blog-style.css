@@ -1,0 +1,370 @@
+
+/* CSS Variables */
+/* ==========================================================*/
+
+/* min-width break points */
+:root {
+  --breakWidthHi: 2500px;
+  --breakWidthLow: 760px;
+}
+
+
+/* MAIN BODY */
+/* ==========================================================*/
+
+body {
+  font-family: 'Cagliostro', sans-serif;
+  min-width: 300px;
+
+
+}
+
+#mainBody {
+  background: linear-gradient(
+    #EAD78B , 
+    white ,  
+    #BEE3C5
+  );
+  min-width: 300px;
+}
+
+
+/* COMPONENT TILES */
+/* ==========================================================*/
+
+
+/* ------------------------------------------------------- */
+/* SHOWCASE TILES */
+
+.showcaseTile {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1.1 1 auto;
+
+  margin-top: 55px;
+  /* border: 3px solid red; */
+  
+}
+
+/* for phone */
+
+@media only screen
+and (max-width: 450px) {
+
+  .showcaseTile {
+    min-height: 100vh;
+    margin: 0px auto 50px auto;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1.1 1 auto;
+
+    margin-top: 55px;
+    /* border: 3px solid green; */
+  }
+
+} 
+
+/* ------------------------------------------------------- */
+/* ABOUT Section Styling */
+
+.aboutInnerTile {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1.1 1 auto;
+
+  max-height: 85vh;
+
+}
+
+#dispPic {
+  max-height: 50vh;
+}
+
+/* vertical aspect-ratio */
+@media only screen
+and (max-width: 450px) {
+
+  
+  .aboutInnerTile {
+    
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: around;
+    align-items: center;
+    flex: 1.1 1 auto;
+
+  }
+
+  #dispPic {
+    max-width: 66vw;
+    max-height: 50vh;
+    margin: 25px auto;
+  }
+
+}
+
+/* ------------------------------------------------------- */
+/* PROJECS Section Styling*/
+
+.projectInnerTile {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1.5 1 auto;
+
+  min-width: 100%;
+  max-height: vh;
+  padding: 20vw auto; 
+  /* border: 2px solid blueviolet; */
+
+}
+
+/* vertical aspect-ratio */
+@media only screen
+and (max-width: 450px) {
+
+  .projectInnerTile {
+    max-height: 90%;
+    /* margin: 50px auto 50px auto; */
+    padding: auto 5vw; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1.5 1 auto;
+  }
+  
+}
+
+/* ------------------------------------------------------- */
+/* PROJECT GALLERY ELEMENTS */
+
+.project-card {
+  min-width: 250px;
+  min-height: 250px;
+  max-height: 50vh;
+  
+  margin: 2vh auto;
+  
+}
+
+
+#project-holder {
+  width: 80vw;
+  height: 70vh;
+  overflow: auto;
+  box-shadow: inset 0 0 50vh #EAD78B;
+  border: 1px slid #EAD78B;
+
+  display: block;
+
+}
+
+#project-holder hr {
+  border: transparent;
+}
+
+/* ------------------------------------------------------- */
+/* CONTACT Section Styling*/
+
+.contactInnerTile {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1.5 1 auto;
+
+  min-width: 100%;
+  max-height: 100vh;
+  padding: 5vw auto; 
+  /* border: 2px solid blueviolet; */
+
+}
+
+
+/* vertical aspect-ratio */
+@media only screen
+and (max-width: 450px) {
+
+  .contactInnerTile {
+    max-height: 90%;
+    padding: auto 5vw; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1.5 1 auto;
+  }
+  
+}
+
+/* ------------------------------------------------------- */
+/* Blog and Posts Styling */
+
+.blogDiv {
+  margin: 10% auto;
+  max-width: 66vw;
+  padding: 5vh auto;
+  margin: 5vh auto;
+
+  /* border: 3px solid red; */
+}
+
+#blogText {
+  color: #BD5C3D;
+  background: #efe1a9;
+  padding: 6vh 6vw;
+  margin: 5vh auto;
+
+  min-width: 600px;
+
+}
+
+#blogText pre {
+  background: #BEE3C5;
+  box-shadow: 1 1 75% #FFF;
+
+  padding: 2% 1%;
+
+  border: 1px solid #e48043;
+  border-radius: 3px;
+}
+
+#blogText li {
+  margin: 2% auto;
+}
+
+
+#blogTOC {
+  color: #BD5C3D;
+  background: #efe1a9;
+
+  margin: 5vh auto;
+  padding: 6vh 3vw;
+
+  max-width: 66vw;
+
+}
+
+#blogTOC ul {
+  list-style-type: none;
+  /* margin-left: 0vw; */
+
+}
+
+@media only screen
+and (max-width: 759px) {
+
+  .blogDiv {
+    min-width: 95vw;
+
+  }
+
+  #blogText {
+    padding: 3vh 3vw;
+    margin: 3vh auto;
+
+    min-width: 90vw;
+    max-width: 95vw;
+  
+  }
+
+  #blogTOC {
+    padding: 3vh 3vw;
+    margin: 3vh 1vw;
+
+    min-width: 70vw;
+    max-width: 85vw;
+  
+  }
+
+  #blogTOC ul {
+    list-style-type: none;
+    margin-left: -7vw;
+
+  }
+  
+
+}
+
+
+/* FONT SIZE */
+/* ==========================================================*/
+
+@media only screen
+and (max-width: 9999px) {
+
+  body{
+    font-size: 21px;
+  }
+
+}
+
+@media only screen
+and (max-width: 1499px) {
+
+  body{
+    font-size: 18px;
+  }
+
+}
+
+@media only screen
+and (max-width: 759px) {
+
+  body{
+    font-size: 16px;
+  }
+
+}
+
+/* ==========================================================*/
+
+/* ELEMENTS */
+/* ==========================================================*/
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+
+#about {
+  order: 0;
+}
+
+#portfolio {
+  order: 10;
+}
+
+#contact {
+  order: 20;
+}
+
+#copyright {
+  order: 30;
+}
+
+
+/* ==========================================================*/

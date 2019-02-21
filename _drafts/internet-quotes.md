@@ -9,6 +9,13 @@ name: internet quotes
 
 <hr>
 
+Rants:
+
 "Hindsight is 20-20, but it doesn't win fights"
 
-"A loose cannon eventually points at your way" (unless you're the loose cannon)
+"A loose cannon eventually points at your way" (unless you're the loose cannon) 
+
+"80% of all people are caused by accidents" 
+
+"80% of all accidents are caused by people"
+
