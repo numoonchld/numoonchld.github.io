@@ -19,8 +19,8 @@ body {
 
 #mainBody {
   background: linear-gradient(
-    #EAD78B , 
-    white ,  
+    #EAD78B, 
+    white  
     #BEE3C5
   );
   min-width: 300px;
@@ -247,7 +247,6 @@ and (max-width: 450px) {
   padding: 6vh 3vw;
 
   max-width: 66vw;
-
 }
 
 #blogTOC ul {
@@ -256,12 +255,15 @@ and (max-width: 450px) {
 
 }
 
+#blenderCarousel {
+  margin: 0 auto;
+}
+
 @media only screen
 and (max-width: 759px) {
 
   .blogDiv {
     min-width: 95vw;
-
   }
 
   #blogText {
@@ -270,7 +272,7 @@ and (max-width: 759px) {
 
     min-width: 90vw;
     max-width: 95vw;
-  
+
   }
 
   #blogTOC {
@@ -279,7 +281,7 @@ and (max-width: 759px) {
 
     min-width: 70vw;
     max-width: 85vw;
-  
+
   }
 
   #blogTOC ul {
