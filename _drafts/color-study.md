@@ -16,6 +16,6 @@ tags: [color study, notes]
 *fig: primary colors*
 {: style="font-size: 80%; text-align: center;"}
 
-- Red: HTML Hex: #FF0000
-- Yellow: HTML Hex: #00FFFF
-- Blue: HTML Hex: #0000FF
+- Red - HTML Hex: #FF0000
+- Yellow - HTML Hex: #00FFFF
+- Blue - HTML Hex: #0000FF
