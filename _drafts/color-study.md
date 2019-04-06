@@ -29,8 +29,11 @@ tags: [color study, notes]
 {: style="font-size: 80%; text-align: center;"}
 
 Mix Red + Yellow to get Orange
+<br>
 Mix Yellow + Blue to get Green
+<br>
 Mix Blue + Red to get Violet
+
 
 - Orange - Hex: #FFFF00
 - Green - Hex: #00FF00
