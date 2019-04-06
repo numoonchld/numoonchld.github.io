@@ -28,9 +28,9 @@ tags: [color study, notes]
 *fig: secondary colors*
 {: style="font-size: 80%; text-align: center;"}
 
-- Red + Yellow = Orange
-- Yellow + Blue = Green
-- Blue + Red = Violet
+Mix Red + Yellow to get Orange
+Mix Yellow + Blue to get Green
+Mix Blue + Red to get Violet
 
 - Orange - Hex: #FFFF00
 - Green - Hex: #00FF00
