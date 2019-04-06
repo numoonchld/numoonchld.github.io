@@ -20,7 +20,7 @@ tags: [color study, notes]
 - Yellow - Hex: #00FFFF
 - Blue - Hex: #0000FF
 
-### Additiive Colors - 1:
+### Additive Colors - 1:
 
 ![Typical Web Page](/media/blogAssets/colorStudy/secondary.svg)
 {: style="text-align: center;"}
