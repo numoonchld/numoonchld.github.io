@@ -28,11 +28,7 @@ tags: [color study, notes]
 *fig: secondary colors*
 {: style="font-size: 80%; text-align: center;"}
 
-Mix Red + Yellow to get Orange
-<br>
-Mix Yellow + Blue to get Green
-<br>
-Mix Blue + Red to get Violet
+Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red to get Violet
 
 
 - Orange - Hex: #FFFF00
@@ -42,7 +38,7 @@ Mix Blue + Red to get Violet
 
 -----
 
-### Reading: <br>
+### References: <br>
 
 * [Blend Colors (HEX Code)](https://meyerweb.com/eric/tools/color-blend/#:::hex){: target="_blank"}
 
