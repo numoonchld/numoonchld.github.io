@@ -45,17 +45,17 @@ Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red t
 
 Mix Green + Violet to get Slate; <br>
 i.e.<br>
-Blue + Yellow + Blue + Red = Slate <br>
+(Blue + Yellow) + (Blue + Red) = Slate <br>
 50% Blue + 25% Yellow + 25% Red = Slate 
 
 Mix Violet + Orange to get Brown; <br>
 i.e.<br>
-Red + Blue + Red + Yellow = Brown <br>
+(Red + Blue) + (Red + Yellow) = Brown <br>
 50% Red + 25% Blue + 25% Yellow = Brown 
 
 Mix Green + Orange to get Olive Green: <br>
 i.e.<br>
-Blue + Yellow + Red + Yellow = Brown<br>
+(Blue + Yellow) + (Red + Yellow) = Brown<br>
 50% Yellow + 25% Blue + 25% Red = Olive Green 
 
 
