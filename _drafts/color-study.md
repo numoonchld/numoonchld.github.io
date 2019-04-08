@@ -43,19 +43,17 @@ Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red t
 *fig: tertiary colors*
 {: style="font-size: 80%; text-align: center;"}
 
-Mix Green + Violet to get Slate; 
-
+Mix Green + Violet to get Slate; <br>
 i.e.<br>
 Blue + Yellow + Blue + Red = Slate <br>
 50% Blue + 25% Yellow + 25% Red = Slate 
 
-Mix Violet + Orange to get Brown; 
+Mix Violet + Orange to get Brown; <br>
 i.e.<br>
 Red + Blue + Red + Yellow = Brown <br>
 50% Red + 25% Blue + 25% Yellow = Brown 
 
-Mix Green + Orange to get Olive Green:
-
+Mix Green + Orange to get Olive Green: <br>
 i.e.<br>
 Blue + Yellow + Red + Yellow = Brown<br>
 50% Yellow + 25% Blue + 25% Red = Olive Green 
