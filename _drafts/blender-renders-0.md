@@ -1,3 +1,12 @@
+---
+layout: post
+title: blender render 0
+artist: 
+artistLink: 
+track: 
+trackLink: 
+tags: [blender, exhibit]
+---
 
 ![Blender Donut](/3D/blenderGallery/00donut.jpg)
 {: style="text-align: center; max-width: 100%"}
