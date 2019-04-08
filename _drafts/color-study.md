@@ -28,7 +28,7 @@ tags: [color study, notes]
 *fig: secondary colors*
 {: style="font-size: 80%; text-align: center;"}
 
-Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red to get Violet
+Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red to get Violet; Here, all mixing is done in equal proportions.
 
 
 - Orange - Hex: #FFFF00
