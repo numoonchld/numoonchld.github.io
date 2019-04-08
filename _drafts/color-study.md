@@ -10,7 +10,7 @@ tags: [color study, notes]
 
 ### Primary Colors: 
 
-![Typical Web Page](/media/blogAssets/colorStudy/primary.svg)
+![Primary Colors](/media/blogAssets/colorStudy/primary.svg)
 {: style="text-align: center;"}
 
 *fig: primary colors*
@@ -22,7 +22,7 @@ tags: [color study, notes]
 
 ### Additive Colors - 1:
 
-![Typical Web Page](/media/blogAssets/colorStudy/secondary.svg)
+![Secondary Colors](/media/blogAssets/colorStudy/secondary.svg)
 {: style="text-align: center;"}
 
 *fig: secondary colors*
@@ -34,6 +34,34 @@ Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red t
 - Orange - Hex: #FFFF00
 - Green - Hex: #00FF00
 - Violet - Hex: #800080
+
+### Additive Colors - 2:
+
+![Tertiary Colors](/media/blogAssets/colorStudy/tertiary.svg)
+{: style="text-align: center;"}
+
+*fig: tertiary colors*
+{: style="font-size: 80%; text-align: center;"}
+
+Mix Green + Violet to get Slate; 
+
+i.e.
+Blue + Yellow + Blue + Red = Slate
+50% Blue + 25% Yellow + 25% Red = Slate 
+
+Mix Violet + Orange to get Brown; 
+i.e.
+Red + Blue + Red + Yellow = Brown
+50% Red + 25% Blue + 25% Yellow = Brown 
+
+Mix Green + Orange to get Olive Green:
+i.e.
+Blue + Yellow + Red + Yellow = Brown
+50% Yellow + 25% Blue + 25% Red = Olive Green 
+
+
+
+
 
 
 -----
