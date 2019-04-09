@@ -1,10 +1,10 @@
 ---
 layout: post
 title: color study
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: First State ft. Sarah Howells
+artistLink: https://en.wikipedia.org/wiki/First_State_(DJ)
+track: Brave (Myon & Shane 54 Monster Mix)
+trackLink: https://youtu.be/DJvlkQaZ99s
 tags: [color study, notes]
 ---
 
@@ -20,6 +20,9 @@ tags: [color study, notes]
 - Yellow - Hex: #00FFFF
 - Blue - Hex: #0000FF
 
+<hr>
+
+
 ### Additive Colors - 1:
 
 ![Secondary Colors](/media/blogAssets/colorStudy/secondary.svg)
@@ -34,6 +37,8 @@ Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red t
 - Orange - Hex: #FFFF00
 - Green - Hex: #00FF00
 - Violet - Hex: #800080
+
+<hr>
 
 ### Additive Colors - 2:
 
@@ -58,10 +63,27 @@ i.e.<br>
 (Blue + Yellow) + (Red + Yellow) = Brown<br>
 50% Yellow + 25% Blue + 25% Red = Olive Green 
 
+<hr>
 
+### Additive Colors - 3:
 
+![Quarternary Colors](/media/blogAssets/colorStudy/quarternary.svg)
+{: style="text-align: center;"}
 
+*fig: tertiary colors*
+{: style="font-size: 80%; text-align: center;"}
 
+Slate + Brown = Plum; <br>
+i.e.<br>
+3 Blue + 2 Yellow + 3 Red = Plum <br>
+
+Olive Green + Brown = Buff; <br>
+i.e.<br>
+3 Red + 2 Blue + 3 Yellow = Buff <br>
+
+Olive Green + Slate = Sage; <br>
+i.e.<br>
+3 Blue + 2 Red + 3 Yellow = Sage <br>
 
 -----
 
