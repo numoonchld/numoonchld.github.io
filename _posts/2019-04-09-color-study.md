@@ -66,7 +66,7 @@ i.e.<br>
 
 - Slate - Hex: #408040
 - Brown - Hex: #C04040
-- Olive Green - Hex: #80C0000
+- Olive Green - Hex: #80C000
 
 <hr>
 
