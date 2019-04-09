@@ -63,6 +63,11 @@ i.e.<br>
 (Blue + Yellow) + (Red + Yellow) = Brown<br>
 50% Yellow + 25% Blue + 25% Red = Olive Green 
 
+
+- Slate - Hex: #408040
+- Brown - Hex: #C04040
+- Olive Green - Hex: #80C0000
+
 <hr>
 
 ### Additive Colors - 3:
@@ -84,6 +89,11 @@ i.e.<br>
 Olive Green + Slate = Sage; <br>
 i.e.<br>
 3 Blue + 2 Red + 3 Yellow = Sage <br>
+
+- Plum - Hex: #806040
+- Buff - Hex: #A08020
+- Sage - Hex: #60A020
+
 
 -----
 
