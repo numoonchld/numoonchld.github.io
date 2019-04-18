@@ -1,14 +1,18 @@
 ---
 layout: post
 title: savitr - a dedication to the sun
-tags: [angular 6, notes]
+tags: [sun, solar, album Notes]
 ---
 
 Savitr - An Ode to the Sun
 
 "They are old Gods, not slow Gods"
 
-####  Circadian Rhythm
+####  Circadian Clock
+
+"A circadian clock is a biochemical oscillator that cycles with a stable phase and is synchronized with solar time."
+- https://en.wikipedia.org/wiki/Circadian_clock
+
 
 - Sleep Cycles, Cortisol and Emotional Stability:
     - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475279/
@@ -66,7 +70,7 @@ Tracklist and Notes:
 - Khaga: the sun as a bird 
 - that flies in the sky 
 - watches all and everything, everything that happens in the day happens in under light of the sun
-- keeper of time in the day as it makes it's journey across the sky (see circadian rhythm)
+- keeper of time as it makes it's journey across the sky (see circadian rhythm)
 
 ###### Savitr
 
@@ -80,3 +84,4 @@ Tracklist and Notes:
 
 References:
 
+- [Mitra](http://sacred-texts.com/hin/rigveda/rv03059.htm){: target="_blank"}
