@@ -1,7 +1,7 @@
 ---
 layout: post
 title: audio signal processing - notes
-tags: [notes, audio, music, signal processing]
+tags: [notes, audio signal processing, python]
 ---
 
 
