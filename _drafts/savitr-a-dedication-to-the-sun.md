@@ -83,7 +83,7 @@ Tracklist and Notes:
 
 ###### Khaga
 
-- Khaga: the sun as a bird 
+- The sun as a bird (Khaga)
 - that flies in the sky 
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
