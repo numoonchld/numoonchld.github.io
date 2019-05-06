@@ -5,7 +5,7 @@ artist: Nalin and Kane
 artistLink: https://edm.fandom.com/wiki/Myon_%26_Shane_54
 track: Beachball (Myon and Shane 54 Dub Mix)
 trackLink: https://youtu.be/NTZpmq0fu3Q
-tags: [python, chexpert, notes, machine learning, summer projects]
+tags: [chexpert, notes, machine learning, summer projects]
 ---
 
 
