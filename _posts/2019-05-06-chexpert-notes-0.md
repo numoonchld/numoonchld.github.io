@@ -20,7 +20,7 @@ tags: [chexpert, notes, machine learning, summer projects]
 - using large public dataset to train deep learning models to achieve expert-level performance for chest radiograph interpretation
     - consisting of 224,316 chest radiographs (images) of 65,240 patients
 
-- chest radiographic examinations (chest x-rays image) + their associated radiology reports **(how many reports??)**
+- each patient's report: chest radiographic examinations (chest x-rays image) + their associated radiology reports 
 
 #### Motivation for Automation:
 
@@ -128,6 +128,8 @@ The following keywords are the 'observations' (medical diagnosis of) sought afte
     3. Consolidation, 
     4. Edema, and 
     5. Pleural Effusion
+
+- 64740 reports for training and the rest for validation
 
 <hr>
 
