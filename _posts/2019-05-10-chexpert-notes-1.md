@@ -17,7 +17,6 @@ tags: [chexpert, notes, machine learning, summer projects]
 
 <br> 
  
-
 ## Data Pre-processing
 
 <br>
@@ -96,6 +95,7 @@ some useful `pandas` tools for exploring data:
 
 <br>
 
-[chexpert](https://stanfordmlgroup.github.io/competitions/chexpert/){: target="_blank"}
+- [chexpert](https://stanfordmlgroup.github.io/competitions/chexpert/){: target="_blank"}
+- [keras](https://keras.io/){: target"_blank"}: The Python Deep Learning library
 
 
