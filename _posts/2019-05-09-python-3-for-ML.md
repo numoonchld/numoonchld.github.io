@@ -101,6 +101,6 @@ Next Up: [data-preprocessing](#){: target="_blank"}
 
 ## References:
 
-- [Dealing with multiple Python versions and PIP](https://stackoverflow.com/a/4910393){: target='_blank'}
+- [dealing with multiple python versions and pip](https://stackoverflow.com/a/4910393){: target='_blank'}
 - [python - site package](https://docs.python.org/3/library/site.html#module-site){: target='_blank'}
 - ['Pip Installs Packages' (pip) - The Python Package Manager](https://pip.pypa.io/en/stable/){: target='_blank'}
