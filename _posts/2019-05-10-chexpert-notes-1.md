@@ -6,6 +6,7 @@ artistLink: https://en.wikipedia.org/wiki/Alexandra_Stan
 track: Lemonade
 trackLink: https://youtu.be/HrbHjsQC2zA
 tags: [chexpert, notes, machine learning, summer projects]
+updated: 2019-05-11
 ---
 
 ## Machine Learning Pipeline
@@ -97,5 +98,5 @@ some useful `pandas` tools for exploring data:
 
 - [chexpert](https://stanfordmlgroup.github.io/competitions/chexpert/){: target="_blank"}
 - [keras](https://keras.io/){: target"_blank"}: The Python Deep Learning library
-
+- [tensorflow](https://www.tensorflow.org/){:target='_blank'}
 
