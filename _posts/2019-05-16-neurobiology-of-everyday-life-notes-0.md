@@ -11,13 +11,15 @@ tags: [neuro, notes, machine learning]
 
 # the nervous system 
 
+
+### functions: 
 - four basic functions of the central nervous system:
     - voluntary movement
     - perception
     - homeostasis
     - cognition 
 
-### voluntary movement
+#### voluntary movement
 
 - driven by the brain; voluntary and involuntary expressions, such as:
     - facial expressions
@@ -25,20 +27,22 @@ tags: [neuro, notes, machine learning]
     - jumping up and down
     - dance steps 
 
-is lost in people with locked-in syndrome for example
+- is lost in people with locked-in syndrome for example
 
-### perception
+#### perception
 
 - perception is what is consciously appreciated about sensation - not the same as sensation 
-- sensory brain monitors CO<sub>2</sub> in the blood, organ chemical, muscle lengths etc., i.e. all the physical and chemical characteristics of the body, but this is at a sub-system level 
+- sensory brain monitors CO<sub>2</sub> in the blood, organ chemical, muscle lengths etc., i.e. all the physical and chemical characteristics of the body 
+    - but this is at a sub-system level 
     - [sense and receptors](https://en.wikipedia.org/wiki/Sensory_nervous_system#Senses_and_receptors){: target="_blank"}
-- the actual amounts don't reach the conscious perception 
-- perception is vision and hearing, smell and taste, the sense of balance, the sense of position in the world. "Where are we? Where is our head in the world? A sense of equilibrium"
+    - the actual amounts don't reach the conscious perception 
+- perception is vision and hearing, smell and taste, the sense of balance, the sense of position in the world 
+    - "Where are we? Where is our head in the world? A sense of equilibrium"
 
-### homeostasis
+#### homeostasis
 
 - homeostasis is what we use to keep our body in physiological limits, which the body can tolerate
-- [homeostasis examples](https://examples.yourdictionary.com/homeostasis-examples.html){: target="_blank"}
+    - [homeostasis examples](https://examples.yourdictionary.com/homeostasis-examples.html){: target="_blank"}
 
 - there are life cycle events that are challenges to our being
     - these include giving birth, and nursing a newborn, suckling from a mother - all of these things are part of homeostasis' effort to keep the body in equilibrium
@@ -47,7 +51,7 @@ is lost in people with locked-in syndrome for example
         - seasonal rhythm: has a little bit less of an obvious influence
         - the cycle of life: we go from infancy, to childhood, to adolescence, early adulthood, to middle age, to being older
         
-### cognition
+#### cognition
 
 - these are abstract functions
     - thinking 
@@ -62,38 +66,39 @@ is lost in people with locked-in syndrome for example
 
 # neurons
 
-- lung cells, liver cells, kidney cells, etc. might five, ten different types but after that - out of variation
-- neurons are unique, they could be categorized into a million different types 
+- lung cells, liver cells, kidney cells, etc. might be of five, ten different types but after that - out of variation
+- however, neurons are unique; they could be categorized into a million different types 
 - they are the longest cells in the body 
     - the longest neuron starts at the big toe and ends at the back of the spinal cord; in really tall people, that one neuron can be 6 ft 
 
 ### parts of the neuron
 
 - four parts:
-    - cell body: soma - the center of the cell body
-    - dendrites: they receive information from sypnases and relay it to the cell center
+    - cell body: 'soma' - the center of the cell body
+    - dendrites: they receive information from synaptic terminals of other cells and relay it to the cell body
     - arbor: the tree of branching of dendrites, locally dense 
-    - axon: only one axon per neuron and can go far distances in the body
+    - axon: relays messages out of the cell body, only one axon per neuron and can go far distances in the body
 
 ![Neuron Parts](/media/blogAssets/neurobiology/neuron-parts.svg)
 {: style="text-align: center;"}
 
-- synapse: space terminating one axon connecting the next neuron
-    - information travels along the axon and ends up at the communication center that the synapse is
-    - at the synapse, the axon gives the information to the next terminal in line
-    - so synapse is the point of information transfer
-    - a synapse can interface with 
+- synapse: communication center between neurons
+    - space terminating one axon connecting to dendrite of next neuron
+    - information travels out along the axon, ends up at the the synapse
+    - at the synapse, the axon gives the information to the next dentrite in line; so synapse is the point of information transfer
+    - a synapse can interface with:
         - other neurons 
-        - muscles (skeletal muscles, intestinal smooth muscles, cardiac muscles)
+        - muscles 
+            - skeletal muscles, 
+            - intestinal smooth muscles, 
+            - cardiac muscles
         - glands (salivary gland)
 
-- uniqueness: 
-    - very different form other cells and organs
-
+- uniqueness: each neuron is very different form other cells and organs
     - in anatomy:
         - the dendritic arbor collects information from a volume
         - each neuron and it's arbor manifests a little differently 
-    
+
     - in excitability:
         - how sensitive it is to actually fire
         - some keep firing all the time with little triggers, but some have to be pushed hard to trigger
@@ -102,7 +107,7 @@ is lost in people with locked-in syndrome for example
     - in neurotransmittance quality:
         - some only say "yes", others only say "no"
         - some "maybe", "probably", "questionably"
-        - something like logic gates 
+        - akin to [logic gates](https://opentextbc.ca/biology/chapter/16-2-how-neurons-communicate/){: target="_blank"}
 
 
 ### glial cells 
