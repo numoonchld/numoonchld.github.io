@@ -5,7 +5,7 @@ artist: Jochen Miller
 artistLink: http://www.jochenmiller.com/
 track: Lost Connection
 trackLink: https://youtu.be/8GqFKg0-qjM
-tags: [blender, exhibit]
+tags: [neuro, notes, machine learning]
 ---
 
 
