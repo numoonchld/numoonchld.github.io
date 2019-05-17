@@ -1,10 +1,10 @@
 ---
 layout: post
 title: ml case studies 0 - data sets
-artist: 
-artistLink: 
-track:
-trackLink: 
+artist: Megadeth
+artistLink: https://megadeth.com/
+track: Paranoid
+trackLink: https://youtu.be/5MTcEcNYL50
 tags: [notes, data science, machine learning, ai, deep learning]
 ---
 

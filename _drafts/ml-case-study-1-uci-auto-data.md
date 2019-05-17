@@ -1,9 +1,9 @@
 ---
 layout: post
 title: ml case studies 1 - uci auto data
-artist: 
-artistLink: 
-track:
-trackLink: 
+artist: Black Sabbath
+artistLink: https://www.blacksabbath.com/
+track: Paranoid
+trackLink: https://youtu.be/JvDcsMiVaLY
 tags: [notes, data science, machine learning, ai]
 ---
