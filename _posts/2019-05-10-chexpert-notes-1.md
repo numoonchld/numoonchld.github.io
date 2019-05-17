@@ -13,8 +13,7 @@ updated: 2019-05-11
 
 <br> 
 
-![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg)
-{: style="text-align: center;"}
+![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg){: style="text-align: center;"}
 
 <br> 
  
@@ -36,7 +35,7 @@ upon inspecting dataset:
     - 1 for positive
 - see list of observations in reference section below 
 
-- use `pandas` dataframes to import observation labels for all x-rays:
+- use `pandas` data-frames to import observation labels for all x-rays:
 
         df = pd.read_csv('csv-path/train.csv')
 
