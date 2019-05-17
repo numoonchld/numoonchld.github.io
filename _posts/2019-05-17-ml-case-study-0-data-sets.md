@@ -20,5 +20,5 @@ tags: [notes, data science, machine learning, ai, deep learning]
         - k-nearest neighbors
         - non-linear classifiers
         - SVMs
-        - Neural Nets
-        - Convolutional Nets
+        - neural nets
+        - convolutional nets
