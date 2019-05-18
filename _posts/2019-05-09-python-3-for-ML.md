@@ -6,6 +6,7 @@ artistLink: https://edm.fandom.com/wiki/Myon_%26_Shane_54
 track: Ibiza Sunrize (Dub remix)
 trackLink: https://youtu.be/SWmnZwA_TQA
 tags: [chexpert, notes, machine learning, summer projects]
+updated: 2019-05-18
 ---
 
 
@@ -63,6 +64,13 @@ see `cython` post [here](https://numoonchld.github.io/2019/05/07/cython-notes-0.
 
         pip3 install scikit-learn
 
+- install `tensorflow` for deep learning
+
+        pip3 install tensorflow
+
+- install `keras` for `tensorflow` frontend
+
+        pip3 install keras 
 
 use a [search engine](https://startpage.com){: target="_blank"} for respective package documentation 
 
@@ -95,6 +103,14 @@ use a [search engine](https://startpage.com){: target="_blank"} for respective p
         import sklearn  
         sklearn.__version__
 
+        # check tensorflow
+        import tensorflow
+        tensorflow.__version__
+
+        # check keras
+        import keras  
+        keras.__version__
+
 Next Up: [data-preprocessing](#){: target="_blank"}
 
 <hr>
@@ -104,3 +120,4 @@ Next Up: [data-preprocessing](#){: target="_blank"}
 - [dealing with multiple python versions and pip](https://stackoverflow.com/a/4910393){: target='_blank'}
 - [python - site package](https://docs.python.org/3/library/site.html#module-site){: target='_blank'}
 - ['Pip Installs Packages' (pip) - The Python Package Manager](https://pip.pypa.io/en/stable/){: target='_blank'}
+- [tensorflow import error fix](https://stackoverflow.com/questions/49084934/illegal-instruction-4-when-importing-tensorflow-in-python-3-6){: target="_blank"}

@@ -8,5 +8,13 @@ trackLink: https://youtu.be/JvDcsMiVaLY
 tags: [notes, data science, machine learning, ai]
 ---
 
-![NLP process-flow](/media/blogAssets/chexpert/chexpert-notes-images-deep-learning-model-output.svg)
+### Machine Learning Pipeline
+
+<br> 
+
+![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg)
 {: style="text-align: center;"}
+
+<br>
+
+### 
