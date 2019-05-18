@@ -13,7 +13,8 @@ updated: 2019-05-11
 
 <br> 
 
-![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg){: style="text-align: center;"}
+![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg)
+{: style="text-align: center;"}
 
 <br> 
  
