@@ -10,7 +10,7 @@ updated: 2019-05-18
 ---
 
 
-### Python 3 and ML tools Installation:
+### Python 3 Installation:
 
 - [download and install](https://www.python.org/downloads/){: target='_blank'} `python3` 
 
@@ -78,6 +78,8 @@ use a [search engine](https://startpage.com){: target="_blank"} for respective p
 ### Check installations:
 
 - enter `IPython` console in CLI and check installation versions 
+        
+        python3 -m IPython
 
         # check pandas
         import pandas
