@@ -1,11 +1,11 @@
 ---
 layout: post
 title: ml case studies 1 - uci auto data
-artist: Black Sabbath
-artistLink: https://www.blacksabbath.com/
-track: Paranoid
-trackLink: https://youtu.be/JvDcsMiVaLY
-tags: [notes, data science, machine learning, ai, supervised learning]
+artist: Ellie Goulding
+artistLink: https://www.elliegoulding.com/
+track: Lights (Bassnectar Remix)
+trackLink: https://youtu.be/Imixg3jrJS8
+tags: [notes, data science, machine learning, ai, supervised learning, linear regression, k-folds, residual plot, ]
 ---
 
 ### Contents
@@ -21,6 +21,8 @@ tags: [notes, data science, machine learning, ai, supervised learning]
 7. [Test-Train Split](#test-train-split)
 8. [Algorithm Setup](#algorithm-setup)
 9. [Model Fitting](#model-fitting)
+10. [Evaluation](#evaluation)
+11. [Model Re-train](#model-re-train)
 
 <hr>
 
@@ -90,21 +92,28 @@ train linear regression models with supervised learning methods to predict price
 
 <br> 
         
-        # for data import and data wrangling
+        # for data import and data wrangling:
         import numpy as np
         import pandas as pd
         
-        # for exploratory data analysis 
+        # for exploratory data analysis:
         import seaborn as sns
         from matplotlib import pyplot as plt
 
-        # for test-train split
+        # for test-train split:
         from sklearn.model_selection import train_test_split
 
-        # for linear regression
+        # for linear regression:
         from sklearn.linear_model import LinearRegression
 
-        # for saving trained models to disk
+        # for K-Folds cross validaton and prediction:
+        from sklearn.model_selection import cross_val_predict
+        from sklearn.model_selection import cross_val_score
+
+        # for mean-squared-error:
+        from sklearn.metrics import mean_squared_error
+
+        # for saving trained models to disk:
         import pickle
 
 <br>
@@ -284,11 +293,13 @@ some insights gained from exploratory data analysis:
         print(df[["curb-weight", "price"]].corr())
         sns.regplot(x="curb-weight", y="price", data=df)
 
+        print(df[["symboling", "price"]].corr())
+        sns.regplot(x="symboling", y="price", data=df)
+
         print(df[["normalized-losses", "price"]].corr())
         sns.regplot(x="normalized-losses", y="price", data=df)
 
-        print(df[["symboling", "price"]].corr())
-        sns.regplot(x="symboling", y="price", data=df)
+
 
     # categorical variables
 
@@ -359,10 +370,6 @@ some insights gained from exploratory data analysis:
 
             lm_highway_mpg = LinearRegression()
 
-    - symboling:price
-
-            lm_symboling = LinearRegression()
-
     - normalized-losses:price
 
             lm_norm_loss = LinearRegression()
@@ -394,7 +401,6 @@ some insights gained from exploratory data analysis:
         lm_engine_size.fit(x_train[['engine-size']], y_train)
         lm_horsepower.fit(x_train[['horsepower']], y_train)
         lm_highway_mpg.fit(x_train[['highway-mpg']], y_train)
-        lm_symboling.fit(x_train[['symboling']], y_train) 
         lm_norm_loss.fit(x_train[['normalized-losses']], y_train)
 
         ## multiple linear regression
@@ -415,10 +421,6 @@ some insights gained from exploratory data analysis:
         ## Highway-MPG:Price Linear Regression Model: 
         print(lm_highway_mpg.intercept_, lm_highway_mpg.coef_)
         ## [33820.38434914] [[-694.88845889]]
-        
-        ## Symboling:Price Linear Regression Model: 
-        print(lm_symboling.intercept_, lm_symboling.coef_)
-        ## [12154.37687887] [[-770.52780725]]
         
         ## Normalized-Losses:Price Linear Regression Model: 
         print(lm_norm_loss.intercept_, lm_norm_loss.coef_)
@@ -462,185 +464,191 @@ some insights gained from exploratory data analysis:
 - MSE:
     - lesser the MSE value, better the performance 
 
+<br>
 
+#### visual evaluation:
 
-##### visual evaluation:
+**Residual Plots** (in-sample evaluation)
 
-**Residual Plots**
+- engine-size:price
+    
+![engine-size](/media/blogAssets/uci-auto-data/04-a-resid-plot-engine-size.svg)
+{: style="text-align: center;"}
 
+- horsepower:price
 
+![horsepower](/media/blogAssets/uci-auto-data/04-a-resid-plot-horsepower.svg)
+{: style="text-align: center;"}
 
-<!-- 
+- highway-mpg:price
+
+![highway-mpg](/media/blogAssets/uci-auto-data/04-a-resid-plot-highway-mpg.svg)
+{: style="text-align: center;"}
+
+- normalized-losses:price
+
+![normalized-losses](/media/blogAssets/uci-auto-data/04-a-resid-plot-norm-loss.svg)
+{: style="text-align: center;"}
+
+- build-dim:price
+
+![build-dim](/media/blogAssets/uci-auto-data/04-a-resid-plot-body.svg)
+{: style="text-align: center;"}
+
+- car-specs:price
+
+![car-specs](/media/blogAssets/uci-auto-data/04-a-resid-plot-car-specs.svg)
+{: style="text-align: center;"}
+
+<br>
+
+*residual plot insights*
+
+- simple linear regression
+
+    - engine-size:price scatter plot distribution is spread evenly along the x-axis, so the linear model is appropriate
+    - horsepower:price model residual shows a curve is the distribution and the variance isn't constant, higher order fit might work better
+    - highway-mpg:price scatter plot distribution also shows a curve across x-axis, different fit needs to be explored
+    - normalized-losses:price variance isn't constant across the plot, no curve seen either, a more nuanced non-linear model might be better-suited
+
+- multi linear regression
+
+    - build-dim:price scatter plot shows no curve, but the variance isn't constant across the board
+    - car-specs:price scatter plot variance is not constant throughout 
+
+- only engine-size:price model will be further analyzed as the other models need a separate study to find out which models work 
+
+#### engine-size:price - model evaluation
+
 **Distribution Plots**
 
-- below are distribution plots of true vs. predicated values of in-sample *predictor:price* pairs 
-
-    - engine-size:price
-        
-    ![engine-size](/media/blogAssets/uci-auto-data/04-a-dist-plot-engine-size.svg)
-    {: style="text-align: center;"}
-
-    - horsepower:price
-
-    ![horsepower](/media/blogAssets/uci-auto-data/04-a-dist-plot-horsepower.svg)
-    {: style="text-align: center;"}
-
-    - highway-mpg:price
-
-    ![highway-mpg](/media/blogAssets/uci-auto-data/04-a-dist-plot-highway-mpg.svg)
-    {: style="text-align: center;"}
-
-    - symboling:price
-
-    ![symboling](/media/blogAssets/uci-auto-data/04-a-dist-plot-symboling.svg)
-    {: style="text-align: center;"}
-
-    - normalized-losses:price
-
-    ![normalized-losses](/media/blogAssets/uci-auto-data/04-a-dist-plot-normalized-losses.svg)
-    {: style="text-align: center;"}
-
-    - build-dim:price
-
-    ![](/media/blogAssets/uci-auto-data/04-a-dist-plot-body.svg)
-    {: style="text-align: center;"}
-
-    - car-specs:price
-
-    ![](/media/blogAssets/uci-auto-data/04-a-dist-plot-car-specs.svg)
-    {: style="text-align: center;"}
-
-
-- open image in new tab and zoom-in (ctrl-+) for closer look
-
-- below are distribution plots of true vs. predicated values of out-of-sample *predictor:price* pairs 
-
-    - engine-size:price
+- below are distribution plots of true vs. predicted values of in-sample engine-size:price pairs 
         
     ![engine-size](/media/blogAssets/uci-auto-data/04-b-dist-plot-engine-size.svg)
     {: style="text-align: center;"}
 
-    - horsepower:price
 
-    ![horsepower](/media/blogAssets/uci-auto-data/04-b-dist-plot-horsepower.svg)
+- below are distribution plots of true vs. predicated values of out-of-sample engine-size:price pairs 
+
+        
+    ![engine-size](/media/blogAssets/uci-auto-data/04-c-dist-plot-engine-size.svg)
     {: style="text-align: center;"}
 
-    - highway-mpg:price
-
-    ![highway-mpg](/media/blogAssets/uci-auto-data/04-b-dist-plot-highway-mpg.svg)
-    {: style="text-align: center;"}
-
-    - symboling:price
-
-    ![symboling](/media/blogAssets/uci-auto-data/04-b-dist-plot-symboling.svg)
-    {: style="text-align: center;"}
-
-    - normalized-losses:price
-
-    ![normalized-losses](/media/blogAssets/uci-auto-data/04-b-dist-plot-normalized-losses.svg)
-    {: style="text-align: center;"}
-
-
-    - build-dim:price
-
-    ![build-dimensions](/media/blogAssets/uci-auto-data/04-b-dist-plot-body.svg)
-    {: style="text-align: center;"}
-
-    - car-specs:price
-
-    ![car-specs](/media/blogAssets/uci-auto-data/04-b-dist-plot-car-specs.svg)
-    {: style="text-align: center;"}
 
 ##### R<sup>2</sup> evaluation:
 
-- in-sample R<sup>2</sup> values for trained models:
+- in-sample R<sup>2</sup> values for engine-size:price:
 
         engine-size:price
         print(lm_engine_size.score(x_train[['engine-size']], y_train))
         0.7310050422003973
 
-        horsepower:price
-        print(lm_horsepower.score(x_train[['horsepower']], y_train))
-        0.5660865679279763
 
-        highway-mpg:price
-        print(lm_highway_mpg.score(x_train[['highway-mpg']], y_train))
-        0.5320383947133107
-
-        symboling:price
-        print(lm_symboling.score(x_train[['symboling']], y_train))
-        0.02274237996698325
-
-        normalized-losses:price
-        print(lm_norm_loss.score(x_train[['normalized-losses']], y_train))
-        0.04436150614441636
-
-        build-dimensions:price
-        print(lm_build_dim.score(x_train[['length', 'width', 'height', 'curb-weight']], y_train))
-        0.8253524177884293
-
-        car-specs:price
-        print(lm_car_specs.score(x_train[['engine-size','horsepower','city-mpg','highway-mpg']], y_train))
-        0.7598382171035611
-
-- out-of-sample R<sup>2</sup> values for trained models: 
-
+- out-of-sample R<sup>2</sup> values for engine-size:price: 
 
         engine-size:price
         print(lm_engine_size.score(x_test[['engine-size']], y_test))
         0.5637996565118054
 
-        horsepower:price
-        print(lm_horsepower.score(x_test[['horsepower']], y_test))
-        0.6309800120842098
 
-        highway-mpg:price
-        print(lm_highway_mpg.score(x_test[['highway-mpg']], y_test))
-        0.40966525454282243
+##### MSE evaluation:
 
-        symboling:price
-        print(lm_symboling.score(x_test[['symboling']], y_test))
-        0.015298774454316932
+- in-sample:
 
-        normalized-losses:price
-        print(lm_norm_loss.score(x_test[['normalized-losses']], y_test))
-        -0.014248349157819808
+        engine-size:price
+        mean_squared_error(y_train,lm_engine_size.predict(x_train[['engine-size']]))
+        9848498.42266501
 
-        build-dimensions:price
-        print(lm_build_dim.score(x_test[['length', 'width', 'height', 'curb-weight']], y_test))
-        0.8236708990002322
+- out-of-sample:
 
-        car-specs:price
-        print(lm_car_specs.score(x_test[['engine-size','horsepower','city-mpg','highway-mpg']], y_test))
-        0.6179295711679644
+        engine-size:price
+        mean_squared_error(y_test,lm_engine_size.predict(x_test[['engine-size']]))
+        10707791.23428005
 
-- R<sup>2</sup> values are a bit lower for the test data
-- negative values of R<sup>2</sup> indicate overfitting -->
+##### R<sup>2</sup> and MSE insights:
 
-##### Corrective Tuning:
+- R<sup>2</sup> value is lower for the test data
+- MSE is higher for out-of-sample prediction
+- Both of these indicate that *engine-size:price* prediction model does worse of predicting price for unseen values of engine-size
+    - this might be due to over-fitting to training data
+    - this model's prediction will not generalize well to new data
+- K-folds cross-validation can be used to train the best simple linear model with 
 
-- Cross-validation with Ridge Regression is used to find the best hyper-parameter value `∝`
+### Model Re-train:
 
-<hr> 
+##### K-fold Cross-Validation
 
-<!-- ### Prediction:
+- K-folds cross validation is used to retrain the model with K in-sample *train-test* splits and get the R<sup>2</sup> values for respective splits
+
+
+    - 2-Folds:
+            
+            # train-test splits - R^2 error:        
+            cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=2)
+            # [0.72605172 0.57164608]
+
+            # R^2 average:
+            np.mean(cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=2))
+            # 0.6488488999289039
+
+
+    - 3-Folds:
+            
+            # train-test splits - R^2 error:
+            cross_val_score(lm_engine_size, df[['engine-size']], df[['price']], cv=3) 
+            # [0.73736009 0.80002091 0.50708333]
+
+            # R^2 average:
+            np.mean(cross_val_score(lm_engine_size, df[['engine-size']], df[['price']], cv=3))
+            # 0.6814881082982801
+
+
+    - 4-Folds:
+    
+            # train-test splits - R^2 error:        
+            cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=4)
+            # [0.75718247 0.75754086 0.72910826 0.38780982]
+
+
+            # R^2 average:
+            np.mean(cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=4))
+            # 0.6579103522174403
+
+
+    - 5-Folds:
+            
+            # train-test splits - R^2 error:         
+            cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=5)
+            # [0.79241442 0.70705579 0.80316644 0.65735852 0.41465915]
+
+
+            # R^2 average:        
+            np.mean(cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=5))
+            # 0.6749308645401664
+
+
+![k-fold](/media/blogAssets/uci-auto-data/grid_search_cross_validation.svg)
+{: style="text-align: center;"}
 
 <br>
+
+##### K-fold Prediction
+
+- Distribution plot of K-folds predictons for out-of-sample test data 
+
+![dist-plot - k-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size.svg)
+{: style="text-align: center;"}
 
 <hr>
-
-### Appendices:
-
-<br>
-
-<hr> -->
-
 
 ### References:
 
 <br>
 
-- [cross-validation for alpha tuning](https://scikit-learn.org/stable/modules/cross_validation.html){: target="_blank"}
+- [residual plots](https://stattrek.com/statistics/dictionary.aspx?definition=residual%20plot){: target="_blank"}
+
+- [cross-validation - k-folds](https://scikit-learn.org/stable/modules/cross_validation.html){: target="_blank"}
 
 - [pickle for model dumps](https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/){: target="_blank"}
     - [python pickle](https://docs.python.org/3.6/library/pickle.html){: target="_blank"}
+
