@@ -24,6 +24,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 10. [Evaluation](#evaluation)
 11. [Model Re-train](#model-re-train)
 12. [Conclusions](#conclusions)
+13. [References](#references)
 
 <hr>
 
@@ -125,7 +126,7 @@ train linear regression models with supervised learning methods to predict price
 
 <br> 
 
-![Model Input and Output](/media/blogAssets/chexpert/chexpert-notes-1-images-ML-pipeline.svg)
+![Model Input and Output](/media/blogAssets/uci-auto-data/pipeline.svg)
 {: style="text-align: center;"}
 
 <hr>
@@ -665,4 +666,6 @@ some insights gained from exploratory data analysis:
 
 - [pickle for model dumps](https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/){: target="_blank"}
     - [python pickle](https://docs.python.org/3.6/library/pickle.html){: target="_blank"}
+
+- [ibm course](https://cognitiveclass.ai/courses/python-for-data-science/){: target="_blank"}
 
