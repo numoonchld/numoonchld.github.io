@@ -5,7 +5,7 @@ artist: Ellie Goulding
 artistLink: https://www.elliegoulding.com/
 track: Lights (Bassnectar Remix)
 trackLink: https://youtu.be/Imixg3jrJS8
-tags: [notes, data science, machine learning, ai, supervised learning, linear regression, k-folds, residual plot, ]
+tags: [notes, data science, machine learning, ai, supervised learning, linear regression, k-folds, residual plot]
 ---
 
 ### Contents
@@ -23,6 +23,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 9. [Model Fitting](#model-fitting)
 10. [Evaluation](#evaluation)
 11. [Model Re-train](#model-re-train)
+12. [Conclusions](#conclusions)
 
 <hr>
 
@@ -638,6 +639,19 @@ some insights gained from exploratory data analysis:
 
 ![dist-plot - k-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size.svg)
 {: style="text-align: center;"}
+
+<hr>
+
+### Conclusions
+
+<br> 
+
+- the trained linear model has the required residual plot behavior, so the linear estimator is good
+
+- the estimator suffers from poor accuracy, however, for out-of-sample data as seen in the above distribution plot
+ 
+- training with more data samples or a more complex model like a neural network might provide better performance 
+
 
 <hr>
 
