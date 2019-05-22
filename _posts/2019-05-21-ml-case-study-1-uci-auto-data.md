@@ -86,7 +86,9 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 
 <br>
 
-train linear regression models with supervised learning methods to predict price of a used car taking in the car's details as input
+- train linear regression models with supervised learning methods to predict price of a used car taking in the car's details as input
+
+- [code repo for this write-up](https://github.com/numoonchld/uci-auto-data){: target="_blank"}
     
 <hr>
 
@@ -653,7 +655,6 @@ some insights gained from exploratory data analysis:
  
 - training with more data samples or a more complex model like a neural network might provide better performance 
 
-
 <hr>
 
 ### References:
@@ -668,4 +669,6 @@ some insights gained from exploratory data analysis:
     - [python pickle](https://docs.python.org/3.6/library/pickle.html){: target="_blank"}
 
 - [ibm course](https://cognitiveclass.ai/courses/python-for-data-science/){: target="_blank"}
+
+
 
