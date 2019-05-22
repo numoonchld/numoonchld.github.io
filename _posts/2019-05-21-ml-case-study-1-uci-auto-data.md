@@ -669,6 +669,3 @@ some insights gained from exploratory data analysis:
     - [python pickle](https://docs.python.org/3.6/library/pickle.html){: target="_blank"}
 
 - [ibm course](https://cognitiveclass.ai/courses/python-for-data-science/){: target="_blank"}
-
-
-
