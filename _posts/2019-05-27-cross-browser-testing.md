@@ -9,7 +9,7 @@ tags: [notes, testing, web-dev, cross-browser, cross-device]
 ---
 
 
-### cross-device testing over wi-fi
+# cross-device testing over wi-fi
 
 - the host machine must serve website at `0.0.0.0`
     - this makes the website available to the devices in the same network outside the machine OS
@@ -47,6 +47,12 @@ tags: [notes, testing, web-dev, cross-browser, cross-device]
             ng serve --host 0.0.0.0 --port 4800
 
 
-### References:
+- different browsers across various devices can be used to test the website as long as they are in the same router network 
+
+<hr>
+
+<br>
+
+# References:
 
 - [jekyll local network](https://zarino.co.uk/post/jekyll-local-network/){: target="_blank"}
