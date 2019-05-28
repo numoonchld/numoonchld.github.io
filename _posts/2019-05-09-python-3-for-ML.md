@@ -6,7 +6,7 @@ artistLink: https://edm.fandom.com/wiki/Myon_%26_Shane_54
 track: Ibiza Sunrize (Dub remix)
 trackLink: https://youtu.be/SWmnZwA_TQA
 tags: [chexpert, notes, machine learning, summer projects]
-updated: 2019-05-18
+updated: 2019-05-29
 ---
 
 
@@ -71,6 +71,11 @@ see `cython` post [here](https://numoonchld.github.io/2019/05/07/cython-notes-0.
 - install `keras` for `tensorflow` frontend
 
         pip3 install keras 
+
+- install 'pydot' and `graphviz` for `keras` model plots
+
+        pip3 install pydot
+        pip3 install graphviz
 
 use a [search engine](https://startpage.com){: target="_blank"} for respective package documentation 
 

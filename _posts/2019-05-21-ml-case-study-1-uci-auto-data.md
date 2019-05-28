@@ -128,7 +128,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 
 <br> 
 
-![Model Input and Output](/media/blogAssets/uci-auto-data/pipeline.svg)
+![Pipeline](/media/blogAssets/uci-auto-data/pipeline.svg)
 {: style="text-align: center;"}
 
 <hr>
@@ -636,12 +636,39 @@ some insights gained from exploratory data analysis:
 
 <br>
 
-##### K-fold Prediction
+##### K-fold Predictions
 
-- Distribution plot of K-folds predictons for out-of-sample test data 
+- Distribution plots of K-folds predictons for out-of-sample test data 
 
-![dist-plot - k-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size.svg)
+![dist-plot - 2-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-2-folds.svg)
 {: style="text-align: center;"}
+
+*fig: 2-fold trained model predictions vs. true values*
+{: style="font-size: 80%; text-align: center;"}
+
+<br>
+
+![dist-plot - 3-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-3-folds.svg)
+{: style="text-align: center;"}
+
+*fig: 3-fold trained model predictions vs. true values*
+{: style="font-size: 80%; text-align: center;"}
+
+<br>
+
+![dist-plot - 4-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-4-folds.svg)
+{: style="text-align: center;"}
+
+*fig: 4-fold trained model predictions vs. true values*
+{: style="font-size: 80%; text-align: center;"}
+
+<br>
+
+![dist-plot - 5-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-5-folds.svg)
+{: style="text-align: center;"}
+
+*fig: 5-fold trained model predictions vs. true values*
+{: style="font-size: 80%; text-align: center;"}
 
 <hr>
 
