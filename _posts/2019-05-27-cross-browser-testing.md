@@ -22,9 +22,11 @@ tags: [notes, testing, web-dev, cross-browser, cross-device]
 
             ng serve --host 0.0.0.0
 
-- this can be accessed by a different device on the same router network through a browser 
+- this can be accessed by a different device on the same router network through a browser by knowing the local IP address of the machine that's serving the website
 
-    
+        http://(local-ip-of-machine):(port)
+
+        # example
         http://192.168.0.5:4000
 
 
