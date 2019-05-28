@@ -24,13 +24,13 @@ tags: [notes, testing, web-dev, cross-browser, cross-device]
 
 - this can be accessed by a different device on the same router network through a browser by knowing the local IP address of the machine that's serving the website
 
-        http://(local-ip-of-machine):(port)
+        http://(local-ip-of-machine):(default-port)
 
         # example
         http://192.168.0.5:4000
 
 
-- `0.0.0.0` still makes the website available on localhost:default-port locally on the machine
+- `0.0.0.0` still makes the website available on `localhost:default-port` locally on the machine
     - jekyll: `0.0.0.0:4000`
     - angular: `0.0.0.0:4200`
 
