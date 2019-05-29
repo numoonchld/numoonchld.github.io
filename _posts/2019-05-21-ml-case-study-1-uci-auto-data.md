@@ -439,6 +439,39 @@ some insights gained from exploratory data analysis:
         ## [1531.96721594] [[ 126.16415762 14.17026447 355.30831826 -495.97047484]]
 
 
+- linear model visualization
+
+<br>
+
+![engine-size:price-linear-estimator](/media/blogAssets/uci-auto-data/03-model-engine-size-price.svg)
+{: style="text-align: center;"}
+
+*fig: engine-size:price linear estimator model*
+{: style="font-size: 80%; text-align: center;"}
+
+
+        plt.figure(0)
+        plt.scatter(x_train[['engine-size']], y_train)
+        plt.xlabel('engine-size')
+        plt.ylabel('price')
+
+        x_bounds = plt.xlim()
+        y_bounds = plt.ylim()
+        print(x_bounds, y_bounds)
+
+        x_vals = np.linspace(x_bounds[0],x_bounds[1],num=50)
+        y_vals = lm_engine_size.intercept_ + lm_engine_size.coef_ * x_vals
+        print(x_vals, y_vals)
+
+        plt.plot(x_vals, y_vals[0], '--')
+
+        plt.title('Engine-Size based Linear Price Estimator')
+
+        plt.savefig('plots/03-model-engine-size.png')
+        plt.close()
+
+
+
 <hr>
 
 ### Evaluation:
