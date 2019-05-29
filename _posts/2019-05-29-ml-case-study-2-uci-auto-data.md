@@ -575,12 +575,21 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 - a Multi-Layered-Perceptron (MLP) is created to accept the normalized predictor variables
     - since the usable number of observations is small (159), a simple three layered MLP is setup and trained
 
-- a `keras` sequential model is initialized with three `Dense` layers and two `Dropout` layers
-    - `Dense` layers are basic building blocks of a neural layer
-    - `Dropout` layers help to avoid over-fitting, these are sandwiched between the `Dense` layers
-    - both `Dense` and `Dropout` are types of core `keras` layers
-    - the input `Dense` layer has 64 nodes each with a sigmoid activation function, the central hidden `Dense` layer has 8 nodes, each with rectified liner unit (ReLU) activation function, and the output `Dense` layer has just one node to output the continuous value of price, so no activation function is supplied
+<br>
 
+![intent-nn-graph](/media/blogAssets/uci-auto-data-nn/model-intent-mlp-e.svg)
+{: style="text-align: center;"}
+
+*fig: intended neural net model*
+{: style="font-size: 80%; text-align: center;"}
+
+
+- a `keras` sequential model is initialized with three `Dense` layers and two `Dropout` layers
+    - both `Dense` and `Dropout` are types of core `keras` layers
+    - `Dense` layers are basic building blocks of a neural layer
+    - the `Dense` layer receiving 9 feature inputs has 32 nodes, each with a sigmoid activation function; the central hidden `Dense` layer has 8 nodes, each with rectified liner unit (ReLU) activation function, and the output `Dense` layer has just one node to output the continuous value of price, so no activation function is supplied
+    - `Dropout` layers help to avoid over-fitting, these are sandwiched between the `Dense` layers
+    
 
 <br>
 
@@ -605,7 +614,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 def build_mlp_model():
 
     model = keras.Sequential([
-        keras.layers.Dense(64, activation = 'sigmoid', kernel_initializer=keras.initializers.glorot_normal(seed=3), input_dim = len(normed_train_data.keys())),
+        keras.layers.Dense(32, activation = 'sigmoid', kernel_initializer=keras.initializers.glorot_normal(seed=3), input_dim = len(normed_train_data.keys())),
         keras.layers.Dropout(rate=0.25, noise_shape=None, seed=7),
         keras.layers.Dense(8, activation = 'relu'),
         keras.layers.Dropout(rate=0.001, noise_shape=None, seed=3),
@@ -623,25 +632,27 @@ model = build_mlp_model()
 model.summary()
 
 # CLI output of model.summary() 
-______________________________________________________________
+_________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-dense_1 (Dense)              (None, 64)                640       
+dense_1 (Dense)              (None, 32)                320       
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 64)                0         
+dropout_1 (Dropout)          (None, 32)                0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 8)                 520       
+dense_2 (Dense)              (None, 8)                 264       
 _________________________________________________________________
 dropout_2 (Dropout)          (None, 8)                 0         
 _________________________________________________________________
 dense_3 (Dense)              (None, 1)                 9         
 =================================================================
+Total params: 593
 Total params: 1,169
 Trainable params: 1,169
 Non-trainable params: 0
 _________________________________________________________________
 ```
 
+<br>
 
 <hr>
 
@@ -847,3 +858,4 @@ plt.show()
 - [keras core layers](https://keras.io/layers/core/){: target="_blank"}
 - [keras optimizers](https://keras.io/optimizers/){: target="_blank"}
 - [graphviz homebrew](http://fpl.cs.depaul.edu/jriely/ds1/lectures/class-01-019.html){: target="_blank"}
+- [neural net visualizer](http://alexlenail.me/NN-SVG/index.html){: target="_blank"}
