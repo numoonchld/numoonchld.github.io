@@ -88,6 +88,8 @@ and (max-width: 450px) {
 
 #dispPic {
   max-height: 50vh;
+  border: 1px solid gold; 
+  border-radius: 50%;
 }
 
 /* vertical aspect-ratio */
@@ -160,12 +162,15 @@ and (max-width: 450px) {
   min-height: 250px;
   max-height: 50vh;
   
+  
   margin: 2vh auto;
   
 }
 
 .project-card:hover {
-  
+  transform: scale(0.98);
+  box-shadow: 0 0 20px gold; 
+  border: 1px gold solid;
 }
 
 
@@ -173,8 +178,9 @@ and (max-width: 450px) {
   width: 80vw;
   height: 70vh;
   overflow: auto;
+  min-width: 80vw;
   box-shadow: inset 0 0 50vh #EAD78B;
-  border: 1px slid #EAD78B;
+  border: 1px solid #EAD78B;
 
   display: block;
 
