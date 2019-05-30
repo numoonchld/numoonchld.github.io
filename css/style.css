@@ -164,6 +164,10 @@ and (max-width: 450px) {
   
 }
 
+.project-card:hover {
+  
+}
+
 
 #project-holder {
   width: 80vw;
