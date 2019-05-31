@@ -83,17 +83,12 @@ and (max-width: 450px) {
   flex: 1.1 1 auto;
 
   max-height: 85vh;
+  max-width: 75%;
 
 }
 
 #dispPic {
   max-height: 50vh;
-  border: 1px solid gold; 
-  border-radius: 50%;
-}
-
-#profDispPic {
-  max-height: 33vh;
   border: 1px solid gold; 
   border-radius: 50%;
 }
@@ -106,6 +101,7 @@ and (max-width: 450px) {
   .aboutInnerTile {
     
     min-height: 100vh;
+    min-width: 95%;
 
     display: flex;
     flex-direction: column;
@@ -119,7 +115,8 @@ and (max-width: 450px) {
   #dispPic {
     max-width: 66vw;
     max-height: 50vh;
-    margin: 25px auto;
+
+    margin-top: -35px;
   }
 
 }
@@ -371,6 +368,12 @@ and (max-width: 759px) {
 
 /* ==========================================================*/
 /* CV page styling */
+
+#profDispPic {
+  max-height: 33vh;
+  border: 1px solid gold; 
+  border-radius: 50%;
+}
 
 #cv-block {
 
