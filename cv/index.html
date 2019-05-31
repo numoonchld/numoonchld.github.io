@@ -29,11 +29,11 @@ title: cv
 
     <div class="d-flex flex-row flex-wrap m-5 justify-content-around">
 
-        <!-- <i class="fab fa-html5 fa-5x m-5"></i>
-
-        <i class="fab fa-css3-alt fa-5x m-5"></i> -->
+ 
 
         <i class="fab fa-python fa-5x m-5"></i>
+
+        <i class="fab fa-js-square fa-5x m-5"></i>
 
         <i class="fab fa-angular fa-5x m-5"></i>
 
@@ -41,7 +41,13 @@ title: cv
 
         <i class="fab fa-npm fa-5x m-5"></i>
 
-        
+        <i class="fab fa-html5 fa-5x m-5"></i>
+
+        <i class="fab fa-css3-alt fa-5x m-5"></i>
+
+        <i class="fab fa-git-square fa-5x m-5"></i>
+
+
 
     </div>
 
@@ -556,13 +562,89 @@ title: cv
     </div>
 
 
-
-
     <br>
     <hr class="w-100 border border-muted">
     <br>
 
     <h3> Professional Experience </h3>
+
+    <div class="accordion mt-3 mb-5" id="work-exp">
+
+
+        <div class="card">
+
+            <div class="card-header" id="iav">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseIAV" aria-expanded="true" aria-controls="collapseIAV">
+                        Automatic Transmission Engineer
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseIAV" class="collapse show" aria-labelledby="iav" data-parent="#work-exp">
+                <div class="card-body">
+
+                    <p>IAV Automotive Engineering Inc.</p>
+                    <p>Northville, Michigan</p>
+                    <p>June 2015 – January 2018</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-header" id="gom">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseNW" aria-expanded="false" aria-controls="collapseNW">
+                        Photogrammetry Applications Engineer
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseNW" class="collapse" aria-labelledby="ninja-writing" data-parent="#work-exp">
+                <div class="card-body ">
+
+                    <p>GOM USA (trilion)</p>
+                    <p>Plymouth Meeting, Pennsylvania;</p>
+                    <p>August 2012 – May 2015</p>
+                    <br>
+                    <p>Co-op (Internship)</p>
+                    <p>March 2011 – September 2011</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-header" id="screen-writing">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSWSB" aria-expanded="false" aria-controls="collapseSWSB">
+                        Tutor and Math Mentor
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseSWSB" class="collapse" aria-labelledby="screen-writing" data-parent="#work-exp">
+                <div class="card-body ">
+
+                    <p>Drexel Learning Centre</p>
+                    <p>Philadelphia, Pennsylvania</p>
+                    <p>July 2009 – March 2011</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
 
     <br>
     <hr class="w-100 border border-muted">
@@ -570,8 +652,61 @@ title: cv
 
     <h3> College </h3>
 
+    <div class="accordion mt-3 mb-5" id="college">
+
+
+        <div class="card">
+
+            <div class="card-header" id="ms">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseMS" aria-expanded="true" aria-controls="collapseMS">
+                        Master of Science - Mechanical Engineering
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseMS" class="collapse show" aria-labelledby="ms" data-parent="#college">
+                <div class="card-body"> 
+                    
+                    <a href="https://idea.library.drexel.edu/islandora/object/idea:4125" target="_blank"> 
+                        <img class="img-fluid cert" src="certificates/png/diploma - graduate.png" alt="ms">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-header" id="bs">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseBS" aria-expanded="false" aria-controls="collapseBS">
+                        Bachelor of Science - Mechanical Engineering
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseBS" class="collapse" aria-labelledby="bs" data-parent="#college">
+                <div class="card-body ">
+
+                    <img class="img-fluid cert" src="certificates/png/diploma - undergraduate.png" alt="bs">
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <br>
+    <hr class="w-100 border border-muted">
     <br>
 
-    
+    {% include copyright.html%}
 
 </div>
