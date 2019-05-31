@@ -372,7 +372,7 @@ and (max-width: 759px) {
 #profDispPic {
   max-height: 33vh;
   border: 1px solid gold; 
-  border-radius: 50%;
+  border-radius: 1pt;
 }
 
 #cv-block {
