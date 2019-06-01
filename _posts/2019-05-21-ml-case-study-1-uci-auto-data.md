@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ml case studies 1 - uci auto data
+title: ml case studies 1 - uci auto data (linear regression)
 artist: Ellie Goulding
 artistLink: https://www.elliegoulding.com/
 track: Lights (Bassnectar Remix)
@@ -213,30 +213,26 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 
     - engine-size:price - strong positive correlation
 
-    ![engine-size](/media/blogAssets/uci-auto-data/01-a-reg-plot-engine-size.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-a-reg-plot-engine-size.svg">
 
     - horsepower:price - strong positive correlation
     
-    ![horsepower](/media/blogAssets/uci-auto-data/01-a-reg-plot-hp.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-a-reg-plot-hp.svg">
 
     - highway-mpg:price - strong negative correlation
 
-    ![highway-mpg](/media/blogAssets/uci-auto-data/01-a-reg-plot-hw-mpg.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-a-reg-plot-hw-mpg.svg">
     
     above regression line only shows the trend/correlation of the predictor-target variable and not the actual relationship (avoid mis-interpreting the regression line going below price=0 for best results)
 
     - symboling:price - weak negative correlation
     
-    ![symboling](/media/blogAssets/uci-auto-data/01-a-reg-plot-symboling.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-a-reg-plot-symboling.svg">
 
     - normalized-losses:price - weak positive correlation
     
-    ![normalized-losses](/media/blogAssets/uci-auto-data/01-a-reg-plot-nl.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-a-reg-plot-nl.svg">
+
 
 ##### categorical variables:
 
@@ -244,23 +240,19 @@ tags: [notes, data science, machine learning, ai, supervised learning, linear re
 
     - body-style:price
 
-    ![body-style](/media/blogAssets/uci-auto-data/01-b-box-plot-body.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-b-box-plot-body.svg">
 
     - aspiration:price
 
-    ![aspiration](/media/blogAssets/uci-auto-data/01-b-box-plot-aspiration.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-b-box-plot-aspiration.svg">
 
     - fuel-system:price
 
-    ![fuel-system](/media/blogAssets/uci-auto-data/01-b-box-plot-fuel-system.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-b-box-plot-fuel-system.svg">
 
     - drive-wheels:price
 
-    ![drive-wheels](/media/blogAssets/uci-auto-data/01-b-box-plot-drive-wheels.svg)
-    {: style="text-align: center;"}
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/01-b-box-plot-drive-wheels.svg">
 
 ##### insights:
 
@@ -438,13 +430,12 @@ some insights gained from exploratory data analysis:
         print(lm_car_specs.intercept_, lm_car_specs.coef_)
         ## [1531.96721594] [[ 126.16415762 14.17026447 355.30831826 -495.97047484]]
 
+<br>
+
 
 - linear model visualization
 
-<br>
-
-![engine-size:price-linear-estimator](/media/blogAssets/uci-auto-data/03-model-engine-size-price.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/03-model-engine-size-price.svg">
 
 *fig: engine-size:price linear estimator model*
 {: style="font-size: 80%; text-align: center;"}
@@ -509,33 +500,30 @@ some insights gained from exploratory data analysis:
 
 - engine-size:price
     
-![engine-size](/media/blogAssets/uci-auto-data/04-a-resid-plot-engine-size.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-engine-size.svg">
 
 - horsepower:price
 
-![horsepower](/media/blogAssets/uci-auto-data/04-a-resid-plot-horsepower.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-horsepower.svg">
 
 - highway-mpg:price
 
-![highway-mpg](/media/blogAssets/uci-auto-data/04-a-resid-plot-highway-mpg.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-highway-mpg.svg">
 
 - normalized-losses:price
 
-![normalized-losses](/media/blogAssets/uci-auto-data/04-a-resid-plot-norm-loss.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-norm-loss.svg">
+
 
 - build-dim:price
 
-![build-dim](/media/blogAssets/uci-auto-data/04-a-resid-plot-body.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-body.svg">
+
 
 - car-specs:price
 
-![car-specs](/media/blogAssets/uci-auto-data/04-a-resid-plot-car-specs.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-a-resid-plot-car-specs.svg">
+
 
 <br>
 
@@ -561,14 +549,14 @@ some insights gained from exploratory data analysis:
 
 - below are distribution plots of true vs. predicted values of in-sample engine-size:price pairs 
         
-    ![engine-size](/media/blogAssets/uci-auto-data/04-b-dist-plot-engine-size.svg)
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-b-dist-plot-engine-size.svg">
     {: style="text-align: center;"}
 
 
 - below are distribution plots of true vs. predicated values of out-of-sample engine-size:price pairs 
 
         
-    ![engine-size](/media/blogAssets/uci-auto-data/04-c-dist-plot-engine-size.svg)
+    <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/04-c-dist-plot-engine-size.svg">
     {: style="text-align: center;"}
 
 
@@ -612,6 +600,13 @@ some insights gained from exploratory data analysis:
 - K-folds cross-validation can be used to train the best simple linear model with 
 
 ### Model Re-train:
+
+##### K-fold Schematic
+
+<br>
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/grid_search_cross_validation.svg">
+{: style="text-align: center;"}
 
 ##### K-fold Cross-Validation
 
@@ -663,42 +658,35 @@ some insights gained from exploratory data analysis:
             np.mean(cross_val_score(lm_engine_size, x_train[['engine-size']], y_train, cv=5))
             # 0.6749308645401664
 
-
-![k-fold](/media/blogAssets/uci-auto-data/grid_search_cross_validation.svg)
-{: style="text-align: center;"}
-
 <br>
+
 
 ##### K-fold Predictions
 
 - Distribution plots of K-folds predictons for out-of-sample test data 
 
-![dist-plot - 2-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-2-folds.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-2-folds.svg">
 
 *fig: 2-fold trained model predictions vs. true values*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![dist-plot - 3-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-3-folds.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-3-folds.svg">
 
 *fig: 3-fold trained model predictions vs. true values*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![dist-plot - 4-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-4-folds.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-4-folds.svg">
 
 *fig: 4-fold trained model predictions vs. true values*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![dist-plot - 5-folds](/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-5-folds.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data/05-a-dist-plot-engine-size-5-folds.svg">
 
 *fig: 5-fold trained model predictions vs. true values*
 {: style="font-size: 80%; text-align: center;"}

@@ -159,64 +159,56 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 <br>
 
-![engine-size](/media/blogAssets/uci-auto-data-nn/ea-engine-size.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-engine-size.svg">
 
 *fig: engine-size vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![horsepower](/media/blogAssets/uci-auto-data-nn/ea-horsepower.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-horsepower.svg">
 
 *fig: horsepower vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![city-mpg](/media/blogAssets/uci-auto-data-nn/ea-city-mpg.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-city-mpg.svg">
 
 *fig: city-mpg vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![highway-mpg](/media/blogAssets/uci-auto-data-nn/ea-highway-mpg.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-highway-mpg.svg">
 
 *fig: highway-mpg vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![wheel-base](/media/blogAssets/uci-auto-data-nn/ea-wheel-base.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-wheel-base.svg">
 
 *fig: wheel-base vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![length](/media/blogAssets/uci-auto-data-nn/ea-length.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-length.svg">
 
 *fig: length vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![width](/media/blogAssets/uci-auto-data-nn/ea-width.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-width.svg">
 
 *fig: width vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![height](/media/blogAssets/uci-auto-data-nn/ea-height.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-height.svg">
 
 *fig: height vs. price*
 {: style="font-size: 80%; text-align: center;"}
@@ -224,40 +216,35 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 <br>
 
-![curb-weight](/media/blogAssets/uci-auto-data-nn/ea-curb-weight.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-curb-weight.svg">
 
 *fig: curb-weight vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![peak-rpm](/media/blogAssets/uci-auto-data-nn/ea-peak-rpm.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-peak-rpm.svg">
 
 *fig: peak-rpm vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![bore](/media/blogAssets/uci-auto-data-nn/ea-bore.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-bore.svg">
 
 *fig: bore vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![stroke](/media/blogAssets/uci-auto-data-nn/ea-stroke.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-stroke.svg">
 
 *fig: stroke vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![compression-ratio](/media/blogAssets/uci-auto-data-nn/ea-compression-ratio.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-compression-ratio.svg">
 
 *fig: compression-ratio vs. price*
 {: style="font-size: 80%; text-align: center;"}
@@ -270,8 +257,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 <br>
 
-![norm-loss](/media/blogAssets/uci-auto-data-nn/ea-norm-loss.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-norm-loss.svg">
 
 *fig: norm-loss vs. price*
 {: style="font-size: 80%; text-align: center;"}
@@ -285,88 +271,77 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 <br>
 
-![body-style](/media/blogAssets/uci-auto-data-nn/ea-body-style-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-body-style-CAT.svg">
 
 *fig: body-style vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![drive-wheels](/media/blogAssets/uci-auto-data-nn/ea-drive-wheels-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-drive-wheels-CAT.svg">
 
 *fig: drive-wheels vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![aspiration](/media/blogAssets/uci-auto-data-nn/ea-aspiration-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-aspiration-CAT.svg">
 
 *fig: aspiration vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![fuel-system](/media/blogAssets/uci-auto-data-nn/ea-fuel-system-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-fuel-system-CAT.svg">
 
 *fig: fuel-system vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![make](/media/blogAssets/uci-auto-data-nn/ea-make-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-make-CAT.svg">
 
 *fig: make vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![fuel-type](/media/blogAssets/uci-auto-data-nn/ea-fuel-type-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-fuel-type-CAT.svg">
 
 *fig: fuel-type vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![num-of-doors](/media/blogAssets/uci-auto-data-nn/ea-num-of-doors-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-num-of-doors-CAT.svg">
 
 *fig: number of doors vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![num-of-cylinders](/media/blogAssets/uci-auto-data-nn/ea-num-of-cylinders-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-num-of-cylinders-CAT.svg">
 
 *fig: number of cylinders vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![symboling](/media/blogAssets/uci-auto-data-nn/ea-symboling-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-symboling-CAT.svg">
 
 *fig: symboling vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![engine-location](/media/blogAssets/uci-auto-data-nn/ea-engine-location-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-engine-location-CAT.svg">
 
 *fig: engine-location vs. price*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![engine-type](/media/blogAssets/uci-auto-data-nn/ea-engine-type-CAT.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/ea-engine-type-CAT.svg">
 
 *fig: engine-type vs. price*
 {: style="font-size: 80%; text-align: center;"}
@@ -577,8 +552,7 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 <br>
 
-![intent-nn-graph](/media/blogAssets/uci-auto-data-nn/model-intent-mlp-e.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/model-intent-mlp-e.svg">
 
 *fig: intended neural net model*
 {: style="font-size: 80%; text-align: center;"}
@@ -748,16 +722,14 @@ plt.savefig('nn-plots/mse-epoch-history.png')
  
 <br>
 
-![mae-vs-epoch](/media/blogAssets/uci-auto-data-nn/metrics-mae-history.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/metrics-mae-history.svg">
 
 *fig: mean-absolute-error vs. epoch*
 {: style="font-size: 80%; text-align: center;"}
 
 <br>
 
-![mse-vs-epoch](/media/blogAssets/uci-auto-data-nn/metrics-mse-history.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/metrics-mse-history.svg">
 
 *fig: mean-absolute-error vs. epoch*
 {: style="font-size: 80%; text-align: center;"}
@@ -800,16 +772,14 @@ Testing set Mean-Abs-Error (MAE): 2156.20 USD
 
 - the error scatter plot below shows a linear trend,
 
-![scatter-test-error](/media/blogAssets/uci-auto-data-nn/metrics-scatter-test-true-vs-predicted.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/metrics-scatter-test-true-vs-predicted.svg">
 
 *fig: scatter plot of error for test dataset*
 {: style="font-size: 80%; text-align: center;"}
 
 - an error histogram with 25 unit bins shows an almost normal distribution
 
-![histogram-test-set-error](/media/blogAssets/uci-auto-data-nn/metrics-hist-test-vs-predicted-error.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-nn/metrics-hist-test-vs-predicted-error.svg">
 
 *fig: histogram of errors for test dataset*
 {: style="font-size: 80%; text-align: center;"}
