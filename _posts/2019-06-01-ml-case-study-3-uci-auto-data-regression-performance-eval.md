@@ -1,10 +1,10 @@
 ---
 layout: post
 title: ml case studies 3 - uci auto data regression performance evaluation
-artist: Myon and Shane 54
-artistLink: https://www.discogs.com/artist/1239503-Myon-Shane-54
-track: The Beach
-trackLink: https://youtu.be/mPUsAABgqyk
+artist: Boom Jinx & Sound Prank feat. Katrine Stenbekk
+artistLink: https://www.discogs.com/artist/368508-Boom-Jinx
+track: We Know (Vintage & Morelli Remix)
+trackLink: https://youtu.be/TkAD8QzEhrU
 tags: [notes, data science, machine learning, ai, supervised learning, neural network, mlp, cython, regression]
 ---
 
