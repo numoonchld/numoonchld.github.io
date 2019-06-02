@@ -6,6 +6,7 @@ artistLink: https://www.discogs.com/artist/1990315-Miroslav-Vrlik
 track: Beautiful Moments
 trackLink: https://youtu.be/PLFVTQZZGy8
 tags: [cython, notes, python]
+updated: 2019-06-02
 ---
 
 repository of my complied code to go with notes:
@@ -85,6 +86,10 @@ repository of my complied code to go with notes:
     - `C` arrays (in lieu of `numpy` array) can be used through `cython` by using
 
             from cython.view cimport array as cvarray
+
+## python 3 compiler directive
+
+- add `# cython: language_level=3` as the first line of the `.pyx` file to ensure complier knows `python3` code is being complied
 
 ## learnings
 
