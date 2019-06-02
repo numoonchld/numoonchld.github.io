@@ -6,7 +6,7 @@ artistLink: https://megadeth.com/
 track: Paranoid
 trackLink: https://youtu.be/5MTcEcNYL50
 tags: [notes, data science, machine learning, ai, deep learning]
-updated: 2019-06-01
+updated: 2019-06-02
 ---
 
 - UC Irvine Machine Learning Repository
@@ -29,6 +29,9 @@ updated: 2019-06-01
         - non-linear classifiers
         - SVMs
         - convolutional neural nets
+
+<hr>
+<br>
 
 - CIFAR: labeled subsets of the 80 million tiny images dataset
     - [Dataset Homepage](https://www.cs.toronto.edu/~kriz/cifar.html){: target="_blank"} - images of animals, planes and ground vehicles
