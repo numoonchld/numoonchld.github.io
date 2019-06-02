@@ -22,6 +22,8 @@ tags: [notes, data science, machine learning, ai, supervised learning, neural ne
 
 - the performance of *multi-linear regression* and *neural network regression* will be compared to predict used car price based on a few features
 
+- [code repo for comparative study](https://github.com/numoonchld/uci-auto-data/tree/master/lin-nn-reg-compare){: target="_blank"}
+
 <br>
 <hr>
 
