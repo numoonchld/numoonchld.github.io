@@ -6,6 +6,7 @@ artistLink: https://www.discogs.com/artist/368508-Boom-Jinx
 track: We Know (Vintage & Morelli Remix)
 trackLink: https://youtu.be/TkAD8QzEhrU
 tags: [notes, data science, machine learning, ai, supervised learning, neural network, mlp, cython, regression]
+updated: 2019-06-03
 ---
 
 ### Pre-requisite Reading
@@ -192,6 +193,8 @@ print(example_result)
 
 ##### linear model residual
 
+- residual scatter plot
+
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-lin-nn-compare/resid-lin.svg">
 
 <!-- ![resid-plot-lin-reg](/media/blogAssets/uci-auto-data-lin-nn-compare/resid-lin.svg)
@@ -200,23 +203,38 @@ print(example_result)
 *fig: residual plot for linear regression model*
 {: style="font-size: 80%; text-align: center;"}
 
+- Multi-variate Linear Regression Accuracy Metrics
+
+    - in-sample R^2: 0.7674983359675379
+    - in-sample MSE: 7650295.906955752
+
+
 <br>
 
 ##### neural net residual
+
+- residual scatter plot
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-lin-nn-compare/resid-nn.svg">
 
 *fig: residual plot for neural net model*
 {: style="font-size: 80%; text-align: center;"}
 
+- Neural Net Regression Accuracy Metrics
+
+    - in-sample R^2: 0.6504853621362341
+    - in-sample MSE: 11500521.57517874
+
+
 <br>
 
 
 ##### insights
 
-- both models have an uneven amount of scatter around x-axis
-- however, there is no obvious curve to the scatter points 
+- both models have an uneven amount of scatter around x-axis, but no obvious curve in the scatter plot 
 - both models are not great according to the residual scatter plot as an even distribution of points would indicate a good trained model
+- the neural net MSE is much higher than the linear model
+- R<sup>2</sup> is much higher for the linear model, indicating the linear model's tighter fit to the training data
 
 <br>
 
@@ -270,9 +288,13 @@ plt.savefig('plots/a-resid-plot-nn.png')
 
 ##### insights
 
-- the out-of-sample R<sup>2</sup> is higher for the linear regression model, so the neural network is slightly better fit for the test data 
+- the out-of-sample R<sup>2</sup> is higher for the linear regression model, making it a better fit for the test data as well
+    - the linear model was a better fit compared to neural net in the training data also
 
-- the MSE, however is worse for the neural net, so it isn't as accurate as the linear model 
+- neural net R<sup>2</sup> for test data in higher than training data, so it generalizes better than the linear model 
+    - since linear model R<sup>2</sup> is lower for training data, indicating lower generalization 
+
+- the MSE, however is worse for the neural net, in both training and test data, so it isn't as accurate as the linear model for both cases 
 
 - as seen in the residual plot, neither model is very good and the MSE values are pretty high as well
     - this can be attributed to the data size of just 159 observations, the dataset to perform this training is small to obtain high accuracies
