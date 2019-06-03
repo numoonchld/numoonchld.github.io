@@ -120,7 +120,7 @@ normed_test_data = (test_data - train_stats['mean']) / train_stats['std']
 
 <br>
 
-##### linear regression model
+#### linear regression model
 
 - this multi-variate linear regression model has 5 dependent variables (9 after one-hot), visualization is complex and beyond the scope of this post
 
@@ -136,7 +136,7 @@ lm.fit(normed_train_data, train_target)
 
 <br>
 
-##### neural net regression model
+#### neural net regression model
 
 - the same 3 layered model with 2 sandwiched dropout layers used in the previous study is used here 
 
@@ -191,7 +191,7 @@ print(example_result)
 
 <br>
 
-##### linear model residual
+#### linear model residual
 
 - residual scatter plot
 
@@ -211,7 +211,7 @@ print(example_result)
 
 <br>
 
-##### neural net residual
+#### neural net residual
 
 - residual scatter plot
 
@@ -229,7 +229,7 @@ print(example_result)
 <br>
 
 
-##### insights
+#### insights
 
 - both models have an uneven amount of scatter around x-axis, but no obvious curve in the scatter plot 
 - both models are not great according to the residual scatter plot as an even distribution of points would indicate a good trained model
@@ -285,7 +285,7 @@ print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 
 <br>
 
-##### linear model
+#### linear model
 
 - Multi-variate Linear Regression Accuracy Metrics
 
@@ -294,7 +294,7 @@ print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 
 <br>
 
-##### neural net
+#### neural net
 
 - Neural Net Regression Accuracy Metrics
 
@@ -303,7 +303,7 @@ print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 
 <br>
 
-##### comparison
+#### comparison
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/uci-auto-data-lin-nn-compare/dist-lin-nn.svg">
 
@@ -312,26 +312,23 @@ print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 
 <br>
 
-##### insights
+#### insights
 
-###### R<sup>2</sup>:
+- R<sup>2</sup>:
+    - the out-of-sample R<sup>2</sup> is higher for the linear regression model, making it a better fit for the test data as well
+        - the linear model was a better fit compared to neural net in the training data also
+        
+    - neural net R<sup>2</sup> for test data in higher than training data, so it generalizes better than the linear model 
+        - since linear model R<sup>2</sup> is lower for training data, indicating lower generalization 
 
-- the out-of-sample R<sup>2</sup> is higher for the linear regression model, making it a better fit for the test data as well
-    - the linear model was a better fit compared to neural net in the training data also
+- MSE:
+    - the MSE, however is worse for the neural net, in both training and test data, so it isn't as accurate as the linear model for both cases 
 
-- neural net R<sup>2</sup> for test data in higher than training data, so it generalizes better than the linear model 
-    - since linear model R<sup>2</sup> is lower for training data, indicating lower generalization 
-
-###### MSE:
-
-- the MSE, however is worse for the neural net, in both training and test data, so it isn't as accurate as the linear model for both cases 
-
-###### conclusion
-
-- as seen in the residual plot, neither model is very good and the MSE values are pretty high as well
-    - this can be attributed to the data size of just 159 observations, the dataset to perform this training is small to obtain high accuracies
-
-- to add to the uncertainty, different runs of training yield slightly different accuracy scores, so the MSE and R<sup>2</sup> values hover around the shown values by a noticeable amount
+- conclusion
+    - as seen in the residual plot, neither model is very good and the MSE values are pretty high as well
+        - this can be attributed to the data size of just 159 observations, the dataset to perform this training is small to obtain high accuracies
+        
+    - to add to the uncertainty, different runs of training yield slightly different accuracy scores, so the MSE and R<sup>2</sup> values hover around the shown values by a noticeable amount
 
 <br>
 ```
