@@ -250,6 +250,32 @@ plt.savefig('plots/a-resid-plot-multi-lin.png')
 plt.figure(1, figsize=(12, 10))
 sns.residplot(nn.predict(normed_train_data).flatten(), train_target)
 plt.savefig('plots/a-resid-plot-nn.png')
+
+### ACCURACY (in-sample test): 
+
+## MULTI-LINEAR REGRESSION: 
+
+print('\nMulti-variate Linear Regression Accuracy Metrics')
+
+# R^2 score:
+print('in-sample R^2')
+print(r2_score(train_target, lm.predict(normed_train_data)))
+
+# MSE score:
+print('in-sample MSE')
+print(mean_squared_error(train_target, lm.predict(normed_train_data)))
+
+## NEURAL NET REGRESSION: 
+
+print('\nNeural Net Regression Accuracy Metrics')
+
+# R^2 score:
+print('in-sample R^2')
+print(r2_score(train_target, nn.predict(normed_train_data).flatten()))
+
+# MSE score:
+print('in-sample MSE')
+print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 ```
 
 <br>
@@ -288,13 +314,19 @@ plt.savefig('plots/a-resid-plot-nn.png')
 
 ##### insights
 
+###### R<sup>2</sup>:
+
 - the out-of-sample R<sup>2</sup> is higher for the linear regression model, making it a better fit for the test data as well
     - the linear model was a better fit compared to neural net in the training data also
 
 - neural net R<sup>2</sup> for test data in higher than training data, so it generalizes better than the linear model 
     - since linear model R<sup>2</sup> is lower for training data, indicating lower generalization 
 
+###### MSE:
+
 - the MSE, however is worse for the neural net, in both training and test data, so it isn't as accurate as the linear model for both cases 
+
+###### conclusion
 
 - as seen in the residual plot, neither model is very good and the MSE values are pretty high as well
     - this can be attributed to the data size of just 159 observations, the dataset to perform this training is small to obtain high accuracies
