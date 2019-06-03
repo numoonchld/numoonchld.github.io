@@ -331,6 +331,8 @@ print(mean_squared_error(train_target, nn.predict(normed_train_data).flatten()))
 - as seen in the residual plot, neither model is very good and the MSE values are pretty high as well
     - this can be attributed to the data size of just 159 observations, the dataset to perform this training is small to obtain high accuracies
 
+- to add to the uncertainty, different runs of training yield slightly different accuracy scores, so the MSE and R<sup>2</sup> values hover around the shown values by a noticeable amount
+
 <br>
 ```
 ### ACCURACY (out-of-sample test): 
