@@ -28,13 +28,29 @@ The moon's gonna owe it one ..."
     - Linkin Park (A Place For My Head)
 - http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html
 
-- Taking a leaf from the plants' books: photosynthesis for life sustainance
+- Taking a leaf from the plants' books: photosynthesis for life sustenance
 - Solar energy is the future of electricity and electricity is the power to drive this planet
-- Electricity is a God of the future, and sand (silica) converts the old Solar God to new Electricity God
+
+- Powers a new God:
+    - Electricity is a God of the now and the future
+    - Sand (silica) converts the Solar energy to Electricity
+    
 
 #### Sunrises and Sunsets
 
-- Transistions into and in the light, Beauty and Glory: Solar Themes
+- Transitions 
+    - from the dark of the night into the day 
+        - start of a something 
+        - marks the beginning point of a steady (day-to-day) cycle
+    - from the light of the day into the night 
+        - end of something 
+        - marks the end of cycle in a steady cycle
+
+- Beauty and Glory
+    - sunrises and sunsets are glorious 
+    - the break of dawn symbolizes hopes, ambition and drive
+    - sunsets mark the beautiful and contented completion of the hustle and bustle of the day
+
 
 <hr>
 
@@ -67,7 +83,7 @@ Tracklist and Notes:
 
 ###### Khaga
 
-- Khaga: the sun as a bird 
+- The sun as a bird (Khaga)
 - that flies in the sky 
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)

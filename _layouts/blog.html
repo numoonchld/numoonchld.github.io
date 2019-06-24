@@ -4,14 +4,21 @@
 
 {% include blogPageHeader.html %}
 
-<body id="blogBody" class="mx-auto py-5" data-spy="scroll" data-target="#linkbar" data-offset="50">
+
+
+<body id="blogBody" class="mx-auto py-5 container" data-spy="scroll" data-target="#linkbar" data-offset="50">
 
   {% include scrollNavBar.html %}
 
   {{ content }}
 
+  {% include blogFooter.html %}
+  
 </body>
 
-{% include blogFooter.html %}
+
+
+
+
 
 </html>
