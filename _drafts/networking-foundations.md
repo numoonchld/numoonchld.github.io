@@ -8,9 +8,51 @@ trackLink:
 tags: [networking, notes]
 ---
 
+## contents
+- [virtual web-server](#virtual-web-server)
+- [linux web servers](#linux-web-servers)
+- [linux security](#linux-security)
+
+- [references](#references)
+- [reading](#reading)
+
+## virtual web-server
+
+### vagrant and VMBox
+
+- use vagrant along with VMBox to mock a remote web server 
+    - a virtual machine inside your local machine acts the web-server
+    - good for development phase, isolate all development to the web-server
+- install vagrant and VMBox on your local machine 
+
+- create a base working directory for this project
+- open terminal and navigate to this folder
+- [init](https://www.vagrantup.com/intro/getting-started/index.html){: target="_blank"} a vagrant VMBox
+    - `vagrant init ubuntu/trusty64` installs a ubuntu (64-bit) trusty tahr VMBox 
+
+
+##### initializing from a Vagrantfile:
+- create a base working directory for this project
+- make a [Vagrantfile](https://www.vagrantup.com/docs/boxes.html){: target="_blank"} in this directory
+    - configure the Vagrantfile to install *linux* 
+- open terminal and navigate to this folder
+- do `vagrant up` to boot up a *linux* in the terminal CLI
+- do `vagrant ssh` to log-in to this server
+
+##### handy vagrant commands
+
+- `vagrant status` shows VMBox status
+- `vagrant suspend` puts VMBox to sleep/hibernate 
+- `vagrant up` boots VMBox
+- `vagrant ssh` logs into VMBox as the default vagrant user
+- `vagrant halt` shuts down the VMBox
+- `vagrant destroy` resets the VMBox to fresh install (of *linux*, in this case)
+
+<hr>
+
 ## linux web servers
 
-- 80% of public internet servers use some flavor of LINUX
+- 80% of public internet servers use some flavor of *linux*
     - *linux* is free open-source OS
     - free-as-in-beer (costs someone else for the development)
     - free-as-in-speech (conditional usage rights)
@@ -37,35 +79,6 @@ tags: [networking, notes]
     - *ubuntu*:  ease of use on servers, desktops, laptops and mobiles
     - *linux mint*: desktop user with proprietary media support
     - *core OS*: clusterized, containerized deployment of apps
-
-### vagrant - local server with VMBox
-
-- use vagrant along with VMBox to mock a remote web server 
-    - good for development phase
-- install vagrant and VMBox on your local machine 
-
-- create a base working directory for this project
-- open terminal and navigate to this folder
-- [init](https://www.vagrantup.com/intro/getting-started/index.html){: target="_blank"} a vagrant VMBox
-    - `vagrant init ubuntu/trusty64` installs a ubuntu (64-bit) trusty tahr VMBox 
-
-
-##### initializing from a Vagrantfile:
-- create a base working directory for this project
-- make a [Vagrantfile](https://www.vagrantup.com/docs/boxes.html){: target="_blank"} in this directory
-    - configure the Vagrantfile to install *linux* 
-- open terminal and navigate to this folder
-- do `vagrant up` to boot up a *linux* in the terminal CLI
-- do `vagrant ssh` to log-in to this server
-
-##### handy vagrant commands
-
-- `vagrant status` shows VMBox status
-- `vagrant suspend` puts VMBox to sleep/hibernate 
-- `vagrant up` boots VMBox
-- `vagrant ssh` logs into VMBox as the default vagrant user
-- `vagrant halt` shuts down the VMBox
-- `vagrant destroy` resets the VMBox to fresh install (of *linux*, in this case)
 
 ### linux file system
 
@@ -127,9 +140,9 @@ tags: [networking, notes]
 - when the app is serving content to end-users, an upgrade usually breaks existing functionality 
     - the upgrade must first be tested in a non-production environment to ensure app works correctly 
 
-<br>
+
 <hr>
-<br>
+
 
 ## linux security
 
@@ -373,6 +386,11 @@ tags: [networking, notes]
     - `sudo ufw status`
 
 
+<hr>
+
+
+
+
 
 
 
@@ -382,6 +400,7 @@ tags: [networking, notes]
 - [Well Known Ports as defined by IANA](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html){: target="_blank"}
 - [IANA ports spec sheet](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2){: target="_blank"}
 - [uncomplicated fire wall](https://wiki.ubuntu.com/UncomplicatedFirewall){: target="_blank"}
+
 
 ## reading
 
