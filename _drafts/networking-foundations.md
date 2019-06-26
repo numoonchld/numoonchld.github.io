@@ -40,20 +40,32 @@ tags: [networking, notes]
 
 ### vagrant - local server with VMBox
 
-- use vagrant to mock a remote web server 
-    - along with VMBox
+- use vagrant along with VMBox to mock a remote web server 
+    - good for development phase
+- install vagrant and VMBox on your local machine 
 
+- create a base working directory for this project
+- open terminal and navigate to this folder
 - [init](https://www.vagrantup.com/intro/getting-started/index.html){: target="_blank"} a vagrant VMBox
+    - `vagrant init ubuntu/trusty64` installs a ubuntu (64-bit) trusty tahr VMBox 
 
-OR 
 
-- make a [Vagrantfile](https://www.vagrantup.com/docs/boxes.html){: target="_blank"} like here
-- navigate to vagrant config file in terminal 
-
-THEN 
-
+##### initializing from a Vagrantfile:
+- create a base working directory for this project
+- make a [Vagrantfile](https://www.vagrantup.com/docs/boxes.html){: target="_blank"} in this directory
+    - configure the Vagrantfile to install *linux* 
+- open terminal and navigate to this folder
 - do `vagrant up` to boot up a *linux* in the terminal CLI
 - do `vagrant ssh` to log-in to this server
+
+##### handy vagrant commands
+
+- `vagrant status` shows VMBox status
+- `vagrant suspend` puts VMBox to sleep/hibernate 
+- `vagrant up` boots VMBox
+- `vagrant ssh` logs into VMBox as the default vagrant user
+- `vagrant halt` shuts down the VMBox
+- `vagrant destroy` resets the VMBox to fresh install (of *linux*, in this case)
 
 ### linux file system
 
@@ -114,8 +126,6 @@ THEN
 - while setting up a new machine, an upgrade is pretty harmless
 - when the app is serving content to end-users, an upgrade usually breaks existing functionality 
     - the upgrade must first be tested in a non-production environment to ensure app works correctly 
-
-
 
 <br>
 <hr>
@@ -187,11 +197,79 @@ THEN
     - `sudo nano /etc/sudoer.s/student`
         - change `vagrant` to `student`
 
-### linux key based authentication
+### linux file permissions 
+
+- `ls -al` lists all the files in a dir with additional info
+    - the first column has 10 characters
+        - eg: `drwxr-xr-x`, `-rw-r--r--`
+    - the first character: directory `d` or file `-`
+    - the next nine are three separate sections:
+        - the first section: *owner*
+        - the second: *group*
+        - the third: *everyone*
+    - in each section: 
+        - the first is read permission: `r`
+        - the second is write permission: `w`
+        - the third is execute permission: `x`
+        - a `-` means the permission in not granted for that entity
+    - so, above in eg: `drwxr-xr-x` == `d`|`rwx`|`r-x`|`r-x`, 
+        - first char: `d` 
+            - directory
+        - then, first section of three: `rwx` 
+            - *owner* can read, write and execute
+        - both of the next two sections of threes are : `r-x`
+            - *group* and *everyone* can only read and execute, but not write 
+    - in eg: `-rw-r--r--` == `-`|`rw-`|`r--`|`r--`
+        - first char is `-`: indicates it's a file
+        - next is `rw-`: *owner* can read and write, but not execute
+        - followed by `r--`: *group* and *everyone* can only read, nothing else
+
+##### *owner* and *group*
+
+- the third and the fourth columns on the output of `ls -al` indicates who the *owner* and *group* are 
+    - when an owner is created it, (i.e. a new user) it is automatically added to group
+    - use `ls -al` while in the parent dir of the file/dir to see it's *owner* and *group*
+
+- `root` is the *owner* for core linux files
+    - for such files, only the root has `w` (write) permissions
+    - *group* and *everyone* can only read and execute
+        - write functions will not work
+
+##### octal permissions
+
+- permission keys:
+    - `r` == 4
+    - `w` == 2 
+    - `x` == 1
+
+- to compute the octal for each login entity, simply add them up
+    - `rwx` == 4 + 2 + 1 == 7
+    - `r-x` == 4 + 0 + 1 == 5
+    - `r--` == 4 + 0 + 0 == 4
+
+- to set the permissions of the `.ssh` folder, for instance, do: 
+    - `chmod 644 ~/.ssh`
+    - this would set the *owner* to 6: `rw-`
+    - *group* to 4: `r--`
+    - *everyone* to 4: `r--`
+
+##### chmod and chown
+
+- `chmod`: change the *mode* of file/dir (*mode* == permission mode)
+    - `chmod 655 filename.ext`
+
+- `chown`: change *owner* 
+    - `chown root filename.ext`
+
+- `chgrp`: change *group*  
+    - `chgrp vagrant filename.ext`
+
+
+### linux key based login
 
 ##### public key encryption:
 - combination of a private key and a public key
-- the key-pair is generated on the local machine
+- the key-pair is generated on your local machine
     - NOT on the server
     - DO NOT share private key with anyone
     - if key-pair is generated on the server, private key will be compromised 
@@ -221,7 +299,13 @@ THEN
         - `chmod` command with appropriate parameters sets/changes mode of file/folder 
 - logging in from local to server account using the key-pair
     - `ssh student@localhost -p 2222 -i ~/.ssh/linuxCourse`
-        
+- after confirming this works, disable password based logins
+    - open `/etc/ssh/sshd_config` with `nano`
+    - scroll to line `PasswordAuthentication` and change following text to `no`
+    - save and exit nano
+    - restart `ssh`: `sudo service ssh restart`
+        - this disables password login
+        - forces all users to login only with a key-pair       
             
 ##### application to client-server authentication scenario: 
 - server sends random message to client
@@ -230,7 +314,75 @@ THEN
 - server will decrypt message with public key
 - if decrypted message is the same as the initially sent message, then client authentication is successful
 
+### linux firewall
+
+- a web-server while up and running, is talking to other devices on the internet
+    - responding to HTTP requests
+    - responding to database queries
+    - sending and receiving email
+    - handing SSH sessions
+
+- there are several types of servers:
+    - email servers 
+    - web application servers
+    - chat servers
+    - generally, the difference is simply the installed software and the ports opened for those softwares
+
+##### ports
+
+- each web-server interaction type is provided a port on the firewall application
+    - applications associated with interactions are configured to responded at specific ports
+    - example of default port numbers for application request type: 
+        - HTTP - `port 80` 
+        - HTTPS: `port 443`
+        - SSH: `port 22`
+        - FTP: `port 21`
+        - POP3: `port 110`
+        - SMTP: `port 25`
+
+- the rule of least privileges for ports:
+    - a web server can listen to all ports at the same time
+        - doesn't mean it should be 
+    - only ports explicitly needed by the desired application should be listened to 
+        - the rest should be configured to deny connections 
+        - a firewall in the server helps with this
+        - `ufw` is the preinstalled firewall in *ubuntu* 
+
+##### ufw (Uncomplicated Fire Wall)
+
+- `ufw` in ubuntu is turned off by default
+    - `sudo ufw status` : provides status of firewall
+    - good practice to activate firewall after configuring it 
+        - you might actively be administering through an SSH connection to the web-server  
+        - activating firewall might disrupt it if rules are not configured correctly beforehand
+
+- adding rules to firewall (firewall configuration):
+    - to enforce rule of least privilege, start by blocking all incoming connections
+        - `sudo ufw default deny incoming`
+    - allow all outgoing by default
+        - `sudo ufw default allow outgoing`
+    - allow SSH
+        - `sudo ufw allow shh`
+    - allow a port: for eg. allow `vagrant ssh`
+        - `sudo ufw allow 2222/tcp`
+    - allow HTTP
+        - `sudo ufw allow www`
+
+- activate firewall and check status:
+    - `sudo ufw enable`
+    - `sudo ufw status`
+
+
+
+
 
 ## references
 
-- [reading current *chmod* octets for files and folders](https://unix.stackexchange.com/questions/46915/get-the-chmod-numerical-value-for-a-file){: target="_blank"}
+- [reading current mode octets for files and folders](https://unix.stackexchange.com/questions/46915/get-the-chmod-numerical-value-for-a-file){: target="_blank"}
+- [Well Known Ports as defined by IANA](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html){: target="_blank"}
+- [IANA ports spec sheet](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2){: target="_blank"}
+- [uncomplicated fire wall](https://wiki.ubuntu.com/UncomplicatedFirewall){: target="_blank"}
+
+## reading
+
+- 
