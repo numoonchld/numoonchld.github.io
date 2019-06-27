@@ -274,9 +274,9 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
     - `x` == 1 (execute)
 
 - to compute the octal for each entity, simply add them up
-    - `rwx` == 4 + 2 + 1 == 7
-    - `r-x` == 4 + 0 + 1 == 5
-    - `r--` == 4 + 0 + 0 == 4
+    - `rwx` == [4 + 2 + 1] == 7 
+    - `r-x` == [4 + 0 + 1] == 5
+    - `r--` == [4 + 0 + 0] == 4
 
 - to set the permissions of the `.ssh` folder, for instance: 
     - `chmod 644 ~/.ssh`
@@ -297,6 +297,8 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 
 
 ### linux key based login
+
+<br>
 
 ##### public key encryption:
 - combination of a private key and a public key
