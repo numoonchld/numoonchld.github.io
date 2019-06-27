@@ -9,16 +9,19 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 ---
 
 # contents
+
 1. [virtual web-server](#virtual-web-server)
 2. [linux web servers](#linux-web-servers)
 3. [linux security](#linux-security)
-
-4. [references](#references)
-5. [reading](#reading)
+4. [apache](apache-web-server-install)
+5. [references](#references)
+6. [reading](#reading)
 
 <hr>
 
 # virtual web-server
+
+<br> 
 
 ### vagrant and VMBox
 
