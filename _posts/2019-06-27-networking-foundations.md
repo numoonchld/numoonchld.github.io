@@ -233,32 +233,32 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 - `ls -al` lists all the files in a dir with additional info
     - the first column has 10 characters
-        - eg: `drwxr-xr-x`, `-rw-r--r--`
+        - eg: '`drwxr-xr-x`', '`-rw-r--r--`'
     - the first character: directory `d` or file `-`
-    - the next nine are three separate sections:
-        - the first section: *owner*
-        - the second: *group*
-        - the third: *everyone*
+    - the next nine are three separate sections of threes:
+        - first section: *owner*
+        - second: *group*
+        - third: *everyone*
     - in each section: 
-        - the first is read permission: `r`
-        - the second is write permission: `w`
-        - the third is execute permission: `x`
-        - a `-` means the permission in not granted for that entity
-    - so, above in eg: `drwxr-xr-x` == `d`|`rwx`|`r-x`|`r-x`, 
+        - first char is read permission: `r`
+        - second for write: `w`
+        - third is execute: `x`
+        - `-`: that permission in not granted for that section 
+    - so, above in eg: `drwxr-xr-x` == `d` ~ `rwx` ~ `r-x` ~ `r-x`, 
         - first char: `d` 
             - directory
         - then, first section of three: `rwx` 
             - *owner* can read, write and execute
         - both of the next two sections of threes are : `r-x`
             - *group* and *everyone* can only read and execute, but not write 
-    - in eg: `-rw-r--r--` == `-`|`rw-`|`r--`|`r--`
+    - in eg: `-rw-r--r--` == `-` ~ `rw-` ~ `r--` ~ `r--`
         - first char is `-`: indicates it's a file
         - next is `rw-`: *owner* can read and write, but not execute
         - followed by `r--`: *group* and *everyone* can only read, nothing else
 
 ##### *owner* and *group*
 
-- the third and the fourth columns on the output of `ls -al` indicates who the *owner* and *group* are 
+- the third and the fourth columns on the output of `ls -al` indicates *owner* and *group* 
     - when an owner is created it, (i.e. a new user) it is automatically added to group
     - use `ls -al` while in the parent dir of the file/dir to see it's *owner* and *group*
 
@@ -279,9 +279,9 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
     - `r-x` == 4 + 0 + 1 == 5
     - `r--` == 4 + 0 + 0 == 4
 
-- to set the permissions of the `.ssh` folder, for instance, do: 
+- to set the permissions of the `.ssh` folder, for instance: 
     - `chmod 644 ~/.ssh`
-    - this would set the *owner* to 6: `rw-`
+    - sets *owner* permissions to 6: `rw-`
     - *group* to 4: `r--`
     - *everyone* to 4: `r--`
 
