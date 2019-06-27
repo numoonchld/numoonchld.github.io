@@ -244,14 +244,14 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
         - second for write: `w`
         - third is execute: `x`
         - `-`: that permission in not granted for that section 
-    - so, above in eg: `drwxr-xr-x` == `d` ~ `rwx` ~ `r-x` ~ `r-x`, 
+    - so, in above eg: `drwxr-xr-x` == `d` + `rwx` + `r-x` + `r-x`, 
         - first char: `d` 
-            - directory
+            - indicating a directory
         - then, first section of three: `rwx` 
             - *owner* can read, write and execute
         - both of the next two sections of threes are : `r-x`
             - *group* and *everyone* can only read and execute, but not write 
-    - in eg: `-rw-r--r--` == `-` ~ `rw-` ~ `r--` ~ `r--`
+    - in eg: `-rw-r--r--` == `-` + `rw-` + `r--` + `r--`
         - first char is `-`: indicates it's a file
         - next is `rw-`: *owner* can read and write, but not execute
         - followed by `r--`: *group* and *everyone* can only read, nothing else
