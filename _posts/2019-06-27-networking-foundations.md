@@ -428,6 +428,8 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - go to `localhost:8080` on your local machine's browser 
     - verify the apache home page loads
 
+- for Vagrant box web-servers, the network type in Virtual Box settings for the said Vagrant Box might need to be changed to 'Bridged Adapter' 
+
 ##### further apache configurations:
 
 - WSGI: Web Server Gateway Interface
@@ -440,6 +442,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - configure apache to use WSGI mod:
     -  add `WSGIScriptAlias / /var/www/html/myapp.wsgi` to the end of the  `<VirtualHost *:80>...</VirtualHost>` in `/etc/apache2/sites-enabled/000-default.conf`
 
+<hr>
 
 # vscode for vagrant box
 
@@ -450,7 +453,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - VSCode's *Remote Development* plugin allows to edit files in a Vagrant box through SSH 
     - using VSCode enables intellisense and code highlight 
     - which makes the process of reading and working with code more efficient 
-    - install the [*Remote-SSH*](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh){: target="_blank"} plug-in from the VSCode marketplace
+    - install the [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh){: target="_blank"} plug-in from the VSCode marketplace
 
 - create a new user in the Vagrant Box (for VSCode projects)
     - refer to `adduser` command under linux users section above 
