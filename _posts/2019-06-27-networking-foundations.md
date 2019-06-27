@@ -259,7 +259,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 ##### *owner* and *group*
 
 - the third and the fourth columns on the output of `ls -al` indicates *owner* and *group* 
-    - when an owner is created it, (i.e. a new user) it is automatically added to group
+    - when an *owner* is created (i.e. a new user) it is the *group* also by default
     - use `ls -al` while in the parent dir of the file/dir to see it's *owner* and *group*
 
 - `root` is the *owner* for core linux files
