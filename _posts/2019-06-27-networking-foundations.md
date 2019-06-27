@@ -482,7 +482,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
     - now select 'Connect to Host'
         - and select the hostname of the Vagrant box
 
-- if a SSH passphrase was used, enter than next in the dialog box
+- if an SSH passphrase was used, enter than next in the dialog box
     - VSCode GUI will refresh with a terminal for the new-user on the Vagrant Box
     
 - VSCode editor might encounter issues writing files 
