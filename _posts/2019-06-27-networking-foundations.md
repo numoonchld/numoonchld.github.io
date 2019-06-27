@@ -440,7 +440,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
     - `sudo apt-get install libapache2-mod-wsgi`
 
 - configure apache to use WSGI mod:
-    -  add `WSGIScriptAlias / /var/www/html/myapp.wsgi` to the end of the  `<VirtualHost *:80>...</VirtualHost>` in `/etc/apache2/sites-enabled/000-default.conf`
+    -  add `WSGIScriptAlias / /var/www/html/myapp.wsgi` to the end of the  `<VirtualHost *:80>...</VirtualHost>` block in file `/etc/apache2/sites-enabled/000-default.conf`
 
 <hr>
 
