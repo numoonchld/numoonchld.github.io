@@ -46,12 +46,12 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 ##### handy vagrant commands
 
-- `vagrant status` shows VMBox status
-- `vagrant suspend` puts VMBox to sleep/hibernate 
-- `vagrant up` boots VMBox
-- `vagrant ssh` logs into VMBox as the default vagrant user
-- `vagrant halt` shuts down the VMBox
-- `vagrant destroy` resets the VMBox to fresh install (of *linux*, in this case)
+- `vagrant status`: shows VMBox status
+- `vagrant suspend`: puts VMBox to sleep/hibernate 
+- `vagrant up`: boots VMBox
+- `vagrant ssh`: logs into VMBox as the default vagrant user
+- `vagrant halt`: shuts down the VMBox
+- `vagrant destroy`: resets the VMBox to fresh install (of *linux*, in this case)
 
 <hr>
 
@@ -75,7 +75,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
         - server versions, laptop versions, mobile versions 
         - consistently updated 
     - *Debian*: parent of Ubuntu
-        - stable and reliable, 
+        - stable and reliable
         - some machines have been running this for years
         - update cycles are very slow compared to ubuntu and such
 
@@ -103,28 +103,30 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
     - `echo $PATH` outputs `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games`
     - when `ls` and such commands are input at the CLI, 
         - the paths in `$PATH` variable are scanned to find a match and run 
-        - if nothing is found, an error is throw
+        - if nothing is found, an error is thrown
 
 ### linux packages
 
 - typically, apps for windows and macOS are bought online or a physical store
 - linux apps are very rarely available this way
 - apps are installed from package sources in linux
-    - see available sources: `cat /etc/apt/sources.list`
+    - see available sources: 
+        - `cat /etc/apt/sources.list`
     - each source here approves and releases packages in their own way
     - varies across distributions as well
 - keep software up-to-date to reduce security risks
     - most *linux* distributions do not update automatically 
     - the update should be run periodically
-    - however, sometimes an update might break existing functionality of your final app
+- however, sometimes an update might break existing functionality of production app
 
 ##### `apt-get` 
 - is a system utility for package related functionality
-- explore `man apt-get` to learn more
-    - installs new packages 
-        - [explore available packages for ubuntu](packages.ubuntu.com){: target="_blank"}
-    - purges packages
-    - upgrades distribution etc.
+    - explore `man apt-get` to learn more
+
+- installs new packages 
+    - [explore available packages for ubuntu](packages.ubuntu.com){: target="_blank"}
+- purges packages
+- upgrades distribution etc.
 
 - `sudo apt-get autoremove`: remove packages that were automatically installed to satisfy dependencies for other packages and are now
         no longer needed
@@ -139,12 +141,14 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 - only updates the available packages list
 - this doesn't update any software on the machine  
 
-##### to actually update existing packages:
+##### to update all existing packages:
 - `sudo apt-get upgrade`
-- while setting up a new machine, an upgrade is pretty harmless
-- when the app is serving content to end-users, an upgrade usually breaks existing functionality 
-    - the upgrade must first be tested in a non-production environment to ensure app works correctly 
 
+- while setting up a new machine, `upgrade` is relatively harmless
+- when the app is in production, serving content to end-users 
+    - an upgrade usually breaks existing functionality 
+    - package upgrade must first be tested in a non-production environment 
+    - deploy app with upgraded packages after thorough testing
 
 <hr>
 
@@ -160,61 +164,70 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 ##### superuser:
 - every *linux* installation has a *root* user
 - this is not readily accessible, even when logged in as the only admin (non-guest) account
-- the superuser privileges are invoked only for certain commands
+- the superuser privileges are invoked only for certain commands 
+    - with a `sudo` prefix
 - deters attackers by having an isolated user with higher system privileges
-- `sudo` command typically simulates `root` user privileges in a regular admin account
+- `sudo` command typically simulates `root` user privileges
     - necessary to install new packages for additional functionality 
+- admin accounts are `sudo` enabled by default 
+    - new accounts should be verified to have sudo privileges 
+    - check the sudoers list
 
 ##### FIRST THINGS:
+
 - limiting superuser privilege `sudo` to server accounts 
     - has to be one of the very first things when a web server is setup
-    - many web-server service providers do it by default
-    - Vagrant configures the VMBox with this by default
-    - check if it exists first to ensure this layer of security
 
-- `su` command switches the entire context to `root` superuser
+- many web-server service providers do it by default
+    - Vagrant configures the VMBox with this by default
+
+- `su` command cna be used to switch the entire context to `root` superuser
     - no safety net
 
 ### linux users
 
 - user information is stored in `/etc/passwd` 
     - `cat /etc/passwd` displays this info
-    - info fields:
-        - `username:encrypted-passwd:userID:groupID:user-desc:home-dir:default-shell`
-    - for `root` user rules:
-        - userID: `0`
-        - groupID: `0`
-        - home-dir: `/root`
-        - default-shell: `/bin/bash`
+
+- info fields:
+    - `username:encrypted-passwd:userID:groupID:user-desc:home-dir:default-shell`
+
+- for `root` user rules:
+    - userID: `0`
+    - groupID: `0`
+    - home-dir: `/root`
+    - default-shell: `/bin/bash`
 
 - always disable remote login for `root`
-    - common security measure, 
+    - common security measure
     - only allow login as another user that has `sudo` abilities
     - Vagrant does this automatically, but not every service provider does this 
     - always check for this measure
 
-- create a new user: `sudo adduser student`
-    - create password
+- to create a new user 'student': 
+    - `sudo adduser student`
+    - make new password
     - provide additional info asked for 
-    - then login as that user through vagrant (having logged out of other sessions)
+
+- login as 'student' through vagrant
     - `ssh student@127.0.0.1 -p 2222`
-        - `ssh`: command to connect through ssh remotely
+        - `ssh`: command to connect through SSH remotely
         - `student@127.0.0.1`: user@ip-address
             - `127.0.0.1`: localhost
         - `-p 2222`: vagrant's port for incoming connections 
-    - this will be the server user account 
 
 - see list of `sudo` users:
     - `sudo cat /etc/sudoers`
-    - in ubuntu:
+    - additionally, in ubuntu:
         - `sudo ls /etc/sudoers.d`
         - lists all sudo users
 
-- to give `sudo` privileges to the newly created `student` user 
-    - `student` user should be just like `vagrant` user
-    - `sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student`
-    - `sudo nano /etc/sudoers.d/student`
-        - change `vagrant` to `student`
+- to give `sudo` privileges to the newly created 'student' user 
+    - goal: `student` user should be just like `vagrant` user
+    - copy vagrant's sudoer file
+        - `sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student`
+    - edit file: `sudo nano /etc/sudoers.d/student`
+        - change `vagrant` to `student` in file
 
 ### linux file permissions 
 

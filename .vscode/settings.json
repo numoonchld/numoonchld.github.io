@@ -3,6 +3,8 @@
         "Vagrantfile",
         "clusterized",
         "executables",
-        "redhat"
+        "redhat",
+        "sudoer",
+        "sudoers"
     ]
 }
