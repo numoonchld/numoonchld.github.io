@@ -5,7 +5,7 @@ artist: Sander van Doorn
 artistLink: https://www.discogs.com/artist/183267-Sander-van-Doorn
 track: Apple (Marcus Schossow Remix)
 trackLink: https://youtu.be/Ska8KPbjrx4
-tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
+tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 ---
 
 # contents
@@ -235,32 +235,32 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
     - the first column has 10 characters
         - eg: '`drwxr-xr-x`', '`-rw-r--r--`'
     - the first character: directory `d` or file `-`
-    - the next nine are three separate sections of threes:
-        - first section: *owner*
+    - the next nine are three triplets:
+        - first triplet entity: *owner*
         - second: *group*
         - third: *everyone*
-    - in each section: 
+    - in each triplet: 
         - first char is read permission: `r`
         - second for write: `w`
         - third is execute: `x`
-        - `-`: that permission in not granted for that section 
-    - so, in above eg: `drwxr-xr-x` == `d` + `rwx` + `r-x` + `r-x`, 
+        - `-`: that permission in not granted for that triplet entity 
+    - so, in above eg: `drwxr-xr-x` == '`d`' + '`rwx`' + '`r-x`' + '`r-x`', 
         - first char: `d` 
             - indicating a directory
-        - then, first section of three: `rwx` 
+        - then, first triplet of three: `rwx` 
             - *owner* can read, write and execute
-        - both of the next two sections of threes are : `r-x`
+        - both of the next two triplets are : `r-x`
             - *group* and *everyone* can only read and execute, but not write 
-    - in eg: `-rw-r--r--` == `-` + `rw-` + `r--` + `r--`
-        - first char is `-`: indicates it's a file
-        - next is `rw-`: *owner* can read and write, but not execute
+    - in eg: `-rw-r--r--` == '`-`' + '`rw-`' + '`r--`' + '`r--`'
+        - first char is `-`: indicates it's a file (not a dir)
+        - then, `rw-`: *owner* can read and write, but not execute
         - followed by `r--`: *group* and *everyone* can only read, nothing else
 
 ##### *owner* and *group*
 
-- the third and the fourth columns on the output of `ls -al` indicates *owner* and *group* 
-    - when an *owner* is created (i.e. a new user) it is the *group* also by default
-    - use `ls -al` while in parent dir of the file/dir to see it's *owner* and *group*
+- the 3<sup>rd</sup> and 4<sup>th</sup> columns (of `ls -al`) indicate *owner* and *group* respectively
+    - when an *owner* is created (i.e. a new user), it is also the *group* by default
+    - use `ls -al` in parent dir of the file/dir to see it's *owner* and *group*
 
 - `root` is the *owner* for core *linux* files
     - for such files, only the root has `w` (write) permissions
@@ -268,12 +268,12 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 ##### octal permissions
 
-- permission keys:
+- permission octal keys:
     - `r` == 4 (read)
     - `w` == 2 (write)
     - `x` == 1 (execute)
 
-- to compute the octal for each login entity, simply add them up
+- to compute the octal for each entity, simply add them up
     - `rwx` == 4 + 2 + 1 == 7
     - `r-x` == 4 + 0 + 1 == 5
     - `r--` == 4 + 0 + 0 == 4
@@ -426,6 +426,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 - [Well Known Ports as defined by IANA](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html){: target="_blank"}
 - [IANA ports spec sheet](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2){: target="_blank"}
 - [uncomplicated fire wall](https://wiki.ubuntu.com/UncomplicatedFirewall){: target="_blank"}
+- [udacity 299](https://classroom.udacity.com/courses/ud299){: target="_blank"}
 
 
 # reading
