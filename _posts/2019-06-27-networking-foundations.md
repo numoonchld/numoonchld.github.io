@@ -231,7 +231,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 ### linux file permissions 
 
-- `ls -al` lists all the files in a dir with additional info
+- `ls -al`: table of everything in a dir with associated details
     - the first column has 10 characters
         - eg: '`drwxr-xr-x`', '`-rw-r--r--`'
     - the first character: directory `d` or file `-`
