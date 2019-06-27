@@ -1,11 +1,11 @@
 ---
 layout: post
 title: networking foundations - notes 0
-artist: 
-artistLink: 
-track: 
-trackLink: 
-tags: [networking, notes]
+artist: Sander van Doorn 
+artistLink: https://www.discogs.com/artist/183267-Sander-van-Doorn
+track: Apple (Marcus Schossow Remix)
+trackLink: https://youtu.be/Ska8KPbjrx4
+tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 ---
 
 ## contents
@@ -196,7 +196,6 @@ tags: [networking, notes]
             - `127.0.0.1`: localhost
         - `-p 2222`: vagrant's port for incoming connections 
     - this will be the server user account 
-    - the default `vagrant` account will be the local machine
 
 - see list of `sudo` users:
     - `sudo cat /etc/sudoers`
@@ -204,10 +203,10 @@ tags: [networking, notes]
         - `sudo ls /etc/sudoers.d`
         - lists all sudo users
 
-- give `sudo` privileges to the newly created `student` user 
+- to give `sudo` privileges to the newly created `student` user 
     - `student` user should be just like `vagrant` user
     - `sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student`
-    - `sudo nano /etc/sudoer.s/student`
+    - `sudo nano /etc/sudoers.d/student`
         - change `vagrant` to `student`
 
 ### linux file permissions 
@@ -290,7 +289,7 @@ tags: [networking, notes]
 ##### key-pair generation and public key installation:
 - do not generate this in the server's user account 
     - generate on local machine terminal and install public key on server
-- app to use: `$ ssh-keygen`
+- app to use: `$ ssh-keygen` on your local machine (not in the VMBox!)
     - enter dirname to write to 
         - `~/.ssh/linuxCourse`
     - set key-pair passphrase
@@ -388,11 +387,19 @@ tags: [networking, notes]
 
 <hr>
 
+## apache web server install
+
+- 47% of today's web-servers are driven by *apache*
+
+- to install apache in the vagrant configured *ubuntu* machine, run in the terminal:
+    - `sudo apt-get install apache2`
+- the apache web-sever starts automatically after install
+    - to restart: `sudo service apace2 restart`
+
+- go to `localhost:8080` on your local machine's browser and verify that the apache home page loads
 
 
-
-
-
+<hr>
 
 ## references
 
@@ -404,4 +411,4 @@ tags: [networking, notes]
 
 ## reading
 
-- 
+- [firewall - etymology](https://www.merriam-webster.com/words-at-play/word-origins-computer-terms/firewall){: target="_blank"}
