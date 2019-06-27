@@ -260,19 +260,18 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 - the third and the fourth columns on the output of `ls -al` indicates *owner* and *group* 
     - when an *owner* is created (i.e. a new user) it is the *group* also by default
-    - use `ls -al` while in the parent dir of the file/dir to see it's *owner* and *group*
+    - use `ls -al` while in parent dir of the file/dir to see it's *owner* and *group*
 
-- `root` is the *owner* for core linux files
+- `root` is the *owner* for core *linux* files
     - for such files, only the root has `w` (write) permissions
-    - *group* and *everyone* can only read and execute
-        - write functions will not work
+    - *group* and *everyone* can only read and execute, not write
 
 ##### octal permissions
 
 - permission keys:
-    - `r` == 4
-    - `w` == 2 
-    - `x` == 1
+    - `r` == 4 (read)
+    - `w` == 2 (write)
+    - `x` == 1 (execute)
 
 - to compute the octal for each login entity, simply add them up
     - `rwx` == 4 + 2 + 1 == 7
