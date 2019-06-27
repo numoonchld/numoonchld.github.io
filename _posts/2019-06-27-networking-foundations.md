@@ -425,7 +425,8 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - the apache web-sever starts automatically after install
     - to restart: `sudo service apache2 restart`
 
-- go to `localhost:8080` on your local machine's browser and verify that the apache home page loads
+- go to `localhost:8080` on your local machine's browser 
+    - verify the apache home page loads
 
 ##### further apache configurations:
 
