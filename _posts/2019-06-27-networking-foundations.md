@@ -8,15 +8,17 @@ trackLink: https://youtu.be/Ska8KPbjrx4
 tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 ---
 
-## contents
-- [virtual web-server](#virtual-web-server)
-- [linux web servers](#linux-web-servers)
-- [linux security](#linux-security)
+# contents
+1. [virtual web-server](#virtual-web-server)
+2. [linux web servers](#linux-web-servers)
+3. [linux security](#linux-security)
 
-- [references](#references)
-- [reading](#reading)
+4. [references](#references)
+5. [reading](#reading)
 
-## virtual web-server
+<hr>
+
+# virtual web-server
 
 ### vagrant and VMBox
 
@@ -50,7 +52,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 <hr>
 
-## linux web servers
+# linux web servers
 
 - 80% of public internet servers use some flavor of *linux*
     - *linux* is free open-source OS
@@ -144,7 +146,9 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 <hr>
 
 
-## linux security
+# linux security
+
+<br>
 
 ##### rule of least privilege: 
 - an app/user gets only gets enough permissions needed to do it's job 
@@ -387,7 +391,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 <hr>
 
-## apache web server install
+# apache web server install
 
 - 47% of today's web-servers are driven by *apache*
 
@@ -401,7 +405,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 
 <hr>
 
-## references
+# references
 
 - [reading current mode octets for files and folders](https://unix.stackexchange.com/questions/46915/get-the-chmod-numerical-value-for-a-file){: target="_blank"}
 - [Well Known Ports as defined by IANA](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html){: target="_blank"}
@@ -409,6 +413,6 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security ]
 - [uncomplicated fire wall](https://wiki.ubuntu.com/UncomplicatedFirewall){: target="_blank"}
 
 
-## reading
+# reading
 
 - [firewall - etymology](https://www.merriam-webster.com/words-at-play/word-origins-computer-terms/firewall){: target="_blank"}
