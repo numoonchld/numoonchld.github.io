@@ -499,7 +499,8 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - [Well Known Ports as defined by IANA](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html){: target="_blank"}
 - [IANA ports spec sheet](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2){: target="_blank"}
 - [uncomplicated fire wall](https://wiki.ubuntu.com/UncomplicatedFirewall){: target="_blank"}
-- [udacity 299](https://classroom.udacity.com/courses/ud299){: target="_blank"}
+- [Udacity 299](https://classroom.udacity.com/courses/ud299){: target="_blank"}
+- [VSCode with SSH key](https://code.visualstudio.com/docs/remote/troubleshooting#_improving-your-security-with-a-dedicated-key){: target="_blank"}
 
 
 # reading
