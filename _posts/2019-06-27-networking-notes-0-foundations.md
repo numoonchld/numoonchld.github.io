@@ -1,11 +1,11 @@
 ---
 layout: post
-title: networking foundations - notes 0
+title: networking - notes 0 - foundations 
 artist: Sander van Doorn 
 artistLink: https://www.discogs.com/artist/183267-Sander-van-Doorn
 track: Apple (Marcus Schossow Remix)
 trackLink: https://youtu.be/Ska8KPbjrx4
-tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
+tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, firewall, ports ]
 ---
 
 # contents
@@ -376,7 +376,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal ]
 - each web-server interaction type is provided a port on the firewall application
     - applications associated with interactions are configured to responded at specific ports
     - example of default port numbers for application request type: 
-        - HTTP - `port 80` 
+        - HTTP: `port 80` 
         - HTTPS: `port 443`
         - SSH: `port 22`
         - FTP: `port 21`
