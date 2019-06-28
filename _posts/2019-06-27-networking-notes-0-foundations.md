@@ -300,7 +300,6 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 
 ### linux key based login
 
-<br>
 
 ##### application to client-server authentication scenario: 
 - server sends random message to client

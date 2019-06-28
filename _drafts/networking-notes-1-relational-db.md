@@ -8,7 +8,7 @@ trackLink: https://youtu.be/Ska8KPbjrx4
 tags: [networking, database, relational database, SQL, python DB-API ]
 ---
 
-### data storage 
+# data storage 
 
 - types of application data storage
     - in memory:
@@ -41,8 +41,47 @@ tags: [networking, database, relational database, SQL, python DB-API ]
             - these are rules to ensure changes to DB is consistent
             - to help protect the integrity of the DB
 
-### relational databases
+# relational databases
 
+- all data is stored as tables in DBs
 
+- at the heart of relational databases is how different pieces of data relate to each other 
 
+- data types and meaning consistency are very relevant in DBs
+    - though data might have the same type, it might not have the same meaning
+    - for instance: '`Georgia`' has string datatype, but can mean:
+        - a country 
+        - a state 
+        - a font name
+        - a person's name
+    - these meanings have to be considered when writing to code for DBs
+    - do not store full names in some cells and surnames in others in the same column for exmaple
+        - the meaning, and hence the integrity of the data suffers so
     
+### anatomy of a table:
+
+- table name
+    - column headers 
+        - columns name
+        - column type
+    - body
+        - rows
+            - columns
+
+     
+### aggregation: 
+
+- summarizes multiple rows into a single row
+- anytime a single value is computed from a set of values
+
+- common SQL aggregation functions:
+
+        count   # how many rows
+        avg     # average of numbers
+        max     # largest of numbers
+        min     # smallest of numbers
+        sum     # summation of numbers
+
+### queries:
+
+- 
