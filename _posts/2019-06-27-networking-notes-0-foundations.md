@@ -24,7 +24,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 
 <br> 
 
-### vagrant and VMBox
+## vagrant and VMBox
 
 - use vagrant along with VMBox to mock a remote web server 
     - a virtual machine inside your local machine acts the web-server
@@ -37,7 +37,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - `vagrant init ubuntu/trusty64` installs a ubuntu (64-bit) trusty tahr VMBox 
 
 
-##### initializing from a Vagrantfile:
+#### initializing from a Vagrantfile:
 - create a base working directory for this project
 - make a [Vagrantfile](https://www.vagrantup.com/docs/boxes.html){: target="_blank"} in this directory
     - configure the Vagrantfile to install *linux* 
@@ -45,7 +45,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 - do `vagrant up` to boot up a *linux* in the terminal CLI
 - do `vagrant ssh` to log-in to this server
 
-##### handy vagrant commands
+#### handy vagrant commands
 
 - `vagrant status`: shows VMBox status
 - `vagrant suspend`: puts VMBox to sleep/hibernate 
@@ -86,7 +86,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - *linux mint*: desktop user with proprietary media support
     - *core OS*: clusterized, containerized deployment of apps
 
-### linux file system
+## linux file system
 
 - root directories
     - *home*: user home dir
@@ -106,7 +106,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
         - the paths in `$PATH` variable are scanned to find a match and run 
         - if nothing is found, an error is thrown
 
-### linux packages
+## linux packages
 
 - typically, apps for windows and macOS are bought online or a physical store
 - linux apps are very rarely available this way
@@ -120,7 +120,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - the update should be run periodically
 - however, sometimes an update might break existing functionality of production app
 
-##### `apt-get` 
+#### `apt-get` 
 - is a system utility for package related functionality
     - explore `man apt-get` to learn more
 
@@ -136,13 +136,13 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 
 - `python3 --version`: view version of currently installed *python3* 
 
-##### to update source list:
+#### to update source list:
 - `sudo apt-get update`
 - this goes though the repositories list in `sources.list` file in `/etc`
 - only updates the available packages list
 - this doesn't update any software on the machine  
 
-##### to update all existing packages:
+#### to update all existing packages:
 - `sudo apt-get upgrade`
 
 - while setting up a new machine, `upgrade` is relatively harmless
@@ -158,11 +158,11 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 
 <br>
 
-##### rule-of-least-privilege: 
+#### rule-of-least-privilege: 
 - an app/user gets only gets enough permissions needed to do it's job 
 - nothing extra, cap other permissions
 
-##### superuser:
+#### superuser:
 - every *linux* installation has a *root* user
 - this is not readily accessible, even when logged in as the only admin (non-guest) account
 - the superuser privileges are invoked only for certain commands 
@@ -174,7 +174,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - new accounts should be verified to have sudo privileges 
     - check the sudoers list
 
-##### FIRST THINGS:
+#### first things:
 
 - limiting superuser privilege `sudo` to server accounts 
     - has to be one of the very first things when a web server is setup
@@ -185,7 +185,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 - `su` command cna be used to switch the entire context to `root` superuser
     - no safety net
 
-### linux users
+## linux users
 
 - user information is stored in `/etc/passwd` 
     - `cat /etc/passwd` displays this info
@@ -230,7 +230,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - edit file: `sudo nano /etc/sudoers.d/student`
         - change `vagrant` to `student` in file
 
-### linux file permissions 
+## linux file permissions 
 
 - `ls -al`: table of everything in a dir with associated details
     - the first column has 10 characters
@@ -257,7 +257,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
         - then, `rw-`: *owner* can read and write, but not execute
         - followed by `r--`: *group* and *everyone* can only read, nothing else
 
-##### *owner* and *group*
+#### *owner* and *group*
 
 - the 3<sup>rd</sup> and 4<sup>th</sup> columns (of `ls -al`) indicate *owner* and *group* respectively
     - when an *owner* is created (i.e. a new user), it is also the *group* by default
@@ -267,7 +267,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - for such files, only the root has `w` (write) permissions
     - *group* and *everyone* can only read and execute, not write
 
-##### octal permissions
+#### octal permissions
 
 - to set the permissions of the `.ssh` folder, for instance: 
     - `chmod 644 ~/.ssh`
@@ -286,7 +286,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - `r--` == [4 + 0 + 0] == 4
 
 
-##### chmod and chown
+#### chmod and chown
 
 - `chmod`: change the *mode* of file/dir (*mode* == permission mode)
     - `chmod 655 filename.ext`
@@ -298,17 +298,17 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - `chgrp vagrant filename.ext`
 
 
-### linux key based login
+## linux key based login
 
 
-##### application to client-server authentication scenario: 
+#### application to client-server authentication scenario: 
 - server sends random message to client
 - client encrypts message with private key
 - encrypted message is sent back to server
 - server will decrypt message with public key
 - if decrypted message is the same as the initially sent message, then client authentication is successful
 
-##### public key encryption:
+#### public key encryption:
 
 - combination of a private key and a public key
 - the key-pair is generated on your local machine 
@@ -318,7 +318,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - if key-pair is generated on the server, private key is said to be compromised 
 - only the public key is installed on the target host web server
 
-##### key-pair generation and public key installation:
+#### key-pair generation and public key installation:
 
 - app to use: `$ ssh-keygen` on your local machine 
     - enter name of set, this is usually saved in 
@@ -343,7 +343,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
         - `chmod` command with appropriate parameters sets/changes mode of file/folder 
 
 
-##### force only key-based authentication:
+#### force only key-based authentication:
 
 - log in from local to server account using the key-pair
     - `ssh student@localhost -p 2222 -i ~/.ssh/linuxCourse`
@@ -356,7 +356,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
         - this disables password login
         - forces all users to login only with a key-pair       
         
-### linux firewall
+## linux firewall
 
 - a web-server while up and running, is talking to other devices on the internet
     - responding to HTTP requests
@@ -370,7 +370,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
     - chat servers
     - generally, the difference is simply the installed software and the ports opened for those softwares
 
-##### ports
+#### ports
 
 - each web-server interaction type is provided a port on the firewall application
     - applications associated with interactions are configured to responded at specific ports
@@ -429,7 +429,7 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 
 - for Vagrant box web-servers, the network type in Virtual Box settings for the said Vagrant Box might need to be changed to 'Bridged Adapter' 
 
-##### further apache configurations:
+#### further apache configurations:
 
 - WSGI: Web Server Gateway Interface
     - specification for web-server:web-application communication
