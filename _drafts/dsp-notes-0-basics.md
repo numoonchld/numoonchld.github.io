@@ -12,15 +12,18 @@ tags: [dsp, notes, signal ]
     - "\[...\] space and time are mere thought entities and creatures of the imagination \[...\] They precede the existence of objects of the senses \[...\]"
 
 - number sets:
-    - N: natural numbers ( \\( 1 to \infty \\) )
-        - whole numbers ( \\( 0 to \infty \\) ) 
-    - Z: integers 
-    - Q: rational numbers (non-recurring decimals)
-    - P: irrational numbers (non-repeating and non-recurring mantissa)
-        - π value
-        - sqrt(2)
-    - R: real numbers (everything on the number line)
+    - \\( \N \\): natural numbers \\( [1,\infty) \\)
+        - whole numbers \\( [0,\infty) \\) 
+    - \\( \Z \\): integers 
+    - \\( \Q \\): rational numbers 
+        - recurring mantissa
+    - \\( \P \\): irrational numbers 
+        - non-repeating and non-recurring mantissa
+        - \\( \pi \\) value
+        - \\( \sqrt{2} \\)
+    - \\( \R \\): real numbers (everything on the number line)
         - includes rational and irrational numbers
+    - \\( \C \\)" complex numbers
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numsets.png" alt="number-sets">
 
@@ -43,7 +46,7 @@ tags: [dsp, notes, signal ]
     - time discretization: time component 'n'
     - amplitude discretization: amplitude component 'x'
 
-- a sample is denoted by `x[n]`
+- a sample is denoted by \\( x[n] \\)
 
 #### discrete-time
 
@@ -90,10 +93,10 @@ tags: [dsp, notes, signal ]
 
 - a sequence of complex numbers
 - one dimensional
-- notation: <span> $x[n]$ </span>
-    - `[n]`: integer
-- two-sided sequences: \\( *x:* **Z ➞ C** \\)
-    - n goes from -∞ to +∞
+- notation: \\( x[n] \\)
+    - \\( [n] \\): integer
+- two-sided sequences: \\( x: \Z \rightarrow \C \\) 
+    - \\( n  \\) 
 - n is *adimensional* "time"
     - no physical units, just sets a numerical id to the sample 
 - analysis eg.: periodic temperature 
