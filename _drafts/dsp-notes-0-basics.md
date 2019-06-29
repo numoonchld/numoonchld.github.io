@@ -95,7 +95,7 @@ tags: [dsp, notes, signal ]
 - one dimensional
 - notation: \\( x[n] \\)
     - \\( [n] \\): integer
-- two-sided sequences: \\( x: \Z \rightarrow \C \\) 
+- two-sided sequences: \\( x: \mathbb{Z} \rightarrow \mathbb{C} \\) 
     - \\( n \in (-\infty,+\infty)   \\) 
 - n is *adimensional* "time"
     - no physical units, just sets a numerical id to the sample 
@@ -104,8 +104,8 @@ tags: [dsp, notes, signal ]
 
 #### fundamental discrete signals
 
-- delta signal: <span> $ x[n] = 𝛿[n] $ </span>
-    - when n == 0, x == 1; else x == 0
+- delta signal: \\( x[n] = 𝛿[n] \\)  
+    - when \\(n = 0 , x = 1 \\); else \\(x == 0\\)
     - signifies a physical phenomenon that lasts a very short duration of time
     - eg. a clapper for syncing video and audio for a movie recording 
         - when audio and video recording happens separately
@@ -116,7 +116,7 @@ tags: [dsp, notes, signal ]
 {: style="font-size: 80%; text-align: center;"}
 
 - unit step: \\( x[n] = u[n] \\)
-    - when \( n < 0, x == 0; else x == 1 \)
+    - when \\( n < 0, x = 0 \\); else \\(x = 1 \\)
     - synonymous to flipping a switch
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/unitstep.png" alt="unit step">
@@ -124,9 +124,9 @@ tags: [dsp, notes, signal ]
 *fig: discrete unit step*
 {: style="font-size: 80%; text-align: center;"}
 
-- exponential decay: $x[n] = |a|<sup>n</sup> *u*[n], |a| < 1$
-    - when n < 0, x == 0; else x decays exponentially, starting from 1 @ n == 0
-    - x reaches 0 @ ∞
+- exponential decay: \\( x[n] = |a|_n u[n], |a| < 1 \\)
+    - when \\( n < 0, x == 0 \\); else x decays exponentially, starting from 1 @ \\( n = 0 \\)
+    - \\( x \rightarrow 0 as n \rightarrow \infty \\)
     - newton's law of cooling
         - cooling of a coffee cup
     - rate of capacitor discharge
@@ -136,9 +136,9 @@ tags: [dsp, notes, signal ]
 *fig: discrete exponential decay*
 {: style="font-size: 80%; text-align: center;"}
     
-- sinosoid: $x[n] = sin(ω<sub>0</sub>*n* + 𝜃)$
-    - ω<sub>0</sub>: angular frequency (rad)
-    - 𝜃: initial phase (rad)
+- sinosoid: \\( x[n] = sin(\omega_0n + \theta) \\)
+    - \\(\omega_0\\): angular frequency (rad)
+    - \\(\theta\\): initial phase (rad)
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/sinusoid.png" alt="sinusoid">
 
@@ -152,18 +152,18 @@ tags: [dsp, notes, signal ]
 - periodic 
 - finite-support
 
-#### finite length signals
+#### finite-length signals
 
-- can only have N samples 
-    - N: range of signal
-    - N is limited
+- can only have \\(N\\) samples 
+    - \\(N\\): range of signal
+    - \\(N\\) is limited in finite-length signals
 - notations: 
-    - sequence: $x[n], n = 0,1,...,N-1$
-    - vector: $x = [x_0, x_1,..., x_{N-1} ]^T$
+    - sequence: \\(x[n], n = 0,1,\ldots,N-1\\)
+    - vector: \\(x = [x_0, x_1,\ldots, x_{N-1} ]^T \\)
 - practical entities
     - good for numerical packages 
 
-#### infinite length signals
+#### infinite-length signals
 
 - can have infinite number of samples
 - it is an abstraction
@@ -171,30 +171,34 @@ tags: [dsp, notes, signal ]
 
 #### periodic signals
 
-- data repeats every N samples
-- N-periodic signals: <tilde>x</tilde>[n] = <tilde>x</tilde>[n + kN], n, k, N ∈ Z
-    - same information as finite-length of length *N*
+- repetitive samples with a constant frequency 
+
+- notation: \\(\tilde{x}\\)
+- \\(N\\)-periodic signals: \\( x[n] = \tilde{x}[n + kN]; n, k, N \in \mathbb{Z} \\)
+    - data repeats every \\(N\\) samples
+    - same information as finite-length of length \\(N\\)
     - natural bridge between finite and infinite lengths
 
 #### finite-support signals
 
 - infinite length sequence
     - but only a finite number of non-zero sample
-- notation: <bar>x</bar>
-- <bar>x</bar> = x[n] if 0 ≤ n ≤ N, else 0 ; n ∈ Z
+
+- notation: \\(\bar{x}\\)
+- \\( \bar{x}  = x[n] if 0 \leq n \leq N, else 0 ; n \in \mathbb{Z} \\)
 - same information as finite-length 
 - another bridge between finite and infinite length lengths
 
 ## elementary signal operations
 
 - scaling:
-    - y[n] = α.x[n]
+    - \\( y[n] = \alpha\dotx[n] \\)
 - sum:
-    - y[n] = x[n] + z[n]
+    - \\( y[n] = x[n] + z[n] \\)
 - product:
-    - y[n] = x[n].z[n]
+    - \\( y[n] = x[n]\dotz[n] \\)
 - delay:
-    - y[n] = x[n-k], x ∈ Z 
+    - \\( y[n] = x[n-k], x \in \mathbb{Z} \\)
     - output of operation is shifted by k samples
     - care must be taken to append and prepend zeros to accommodate the shift 
     - usually done by turning finite signal into a finite-support signal, then applying the shift
@@ -202,7 +206,7 @@ tags: [dsp, notes, signal ]
         - the samples then circle around in the given range of time 
 
 - energy:
-    - E<sub>x</sub> = 
+    - 
 
 # references
 
