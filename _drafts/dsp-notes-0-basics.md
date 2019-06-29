@@ -12,10 +12,10 @@ tags: [dsp, notes, signal ]
     - "\[...\] space and time are mere thought entities and creatures of the imagination \[...\] They precede the existence of objects of the senses \[...\]"
 
 - number sets:
-    - \\( \N \\): natural numbers \\( [1,\infty) \\)
+    - \\( \mathbb{N} \\): natural numbers \\( [1,\infty) \\)
         - whole numbers \\( [0,\infty) \\) 
-    - \\( \Z \\): integers 
-    - \\( \Q \\): rational numbers 
+    - \\( \mathbb{Z} \\): integers 
+    - \\( \mathbb{Q} \\): rational numbers 
         - recurring mantissa
     - \\( \P \\): irrational numbers 
         - non-repeating and non-recurring mantissa
@@ -23,7 +23,7 @@ tags: [dsp, notes, signal ]
         - \\( \sqrt{2} \\)
     - \\( \R \\): real numbers (everything on the number line)
         - includes rational and irrational numbers
-    - \\( \C \\)" complex numbers
+    - \\( \C \\): complex numbers
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numsets.png" alt="number-sets">
 
