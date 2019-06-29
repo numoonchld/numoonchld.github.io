@@ -107,7 +107,7 @@ tags: [dsp, notes, signal ]
     - eg. a clapper for syncing video and audio for a movie recording 
         - when audio and video recording happens separately
 
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/delta.png" alt="delta.png">
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/delta.png" alt="delta">
 
 *fig: discrete delta*
 {: style="font-size: 80%; text-align: center;"}
@@ -116,9 +116,9 @@ tags: [dsp, notes, signal ]
     - when n < 0, x == 0; else x == 1
     - synonymous to flipping a switch
 
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/unitstep.png" alt="delta.png">
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/unitstep.png" alt="unit step">
 
-*fig: discrete delta*
+*fig: discrete unit step*
 {: style="font-size: 80%; text-align: center;"}
 
 - exponential decay: x[n] = |a|<sup>n</sup> *u*[n], |a| < 1
@@ -128,18 +128,18 @@ tags: [dsp, notes, signal ]
         - cooling of a coffee cup
     - rate of capacitor discharge
 
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/expdecay.png" alt="delta.png">
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/expdecay.png" alt="exponential decay">
 
-*fig: discrete delta*
+*fig: discrete exponential decay*
 {: style="font-size: 80%; text-align: center;"}
     
 - sinosoid: x[n] = sin(ω<sub>0</sub>*n* + 𝜃)
     - ω<sub>0</sub>: angular frequency (rad)
     - 𝜃: initial phase (rad)
 
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/sinusoid.png" alt="delta.png">
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/sinusoid.png" alt="sinusoid">
 
-*fig: discrete delta*
+*fig: discrete sinusoid*
 {: style="font-size: 80%; text-align: center;"}
 
 ## signal classes
