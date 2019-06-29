@@ -124,7 +124,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete unit step*
 {: style="font-size: 80%; text-align: center;"}
 
-- exponential decay: \\( x[n] = \lverta\rvert_n u[n], \lverta\rvert < 1 \\)
+- exponential decay: \\( x[n] = \lvert a\rvert^n u[n], \lvert a\rvert < 1 \\)
     - when \\( n < 0, x = 0 \\); else \\(x\\) decays exponentially, starting from 1 @ \\( n = 0 \\)
     - \\( x \rightarrow 0 as n \rightarrow \infty \\)
     - newton's law of cooling
