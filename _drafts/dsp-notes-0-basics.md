@@ -12,8 +12,8 @@ tags: [dsp, notes, signal ]
     - "\[...\] space and time are mere thought entities and creatures of the imagination \[...\] They precede the existence of objects of the senses \[...\]"
 
 - number sets:
-    - N: natural numbers ( \\( 1 to \infty \)) )
-        - whole numbers ( \\( 0 to \infty \)) ) 
+    - N: natural numbers ( \\( 1 to \infty \\)) )
+        - whole numbers ( \\( 0 to \infty \\)) ) 
     - Z: integers 
     - Q: rational numbers (non-recurring decimals)
     - P: irrational numbers (non-repeating and non-recurring mantissa)
