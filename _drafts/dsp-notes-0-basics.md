@@ -192,11 +192,11 @@ tags: [dsp, notes, signal ]
 ## elementary signal operations
 
 - scaling:
-    - \\( y[n] = \alpha\dotx[n] \\)
+    - \\( y[n] = \alpha\cdot x[n] \\)
 - sum:
     - \\( y[n] = x[n] + z[n] \\)
 - product:
-    - \\( y[n] = x[n]\dotz[n] \\)
+    - \\( y[n] = x[n]\cdot z[n] \\)
 - delay:
     - \\( y[n] = x[n-k], x \in \mathbb{Z} \\)
     - output of operation is shifted by k samples
