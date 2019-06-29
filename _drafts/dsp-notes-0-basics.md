@@ -90,9 +90,9 @@ tags: [dsp, notes, signal ]
 
 - a sequence of complex numbers
 - one dimensional
-- notation: \( x[n] \) 
+- notation: <span> $x[n]$ </span>
     - `[n]`: integer
-- two-sided sequences: \( *x:* **Z ➞ C** \)
+- two-sided sequences: \\( *x:* **Z ➞ C** \\)
     - n goes from -∞ to +∞
 - n is *adimensional* "time"
     - no physical units, just sets a numerical id to the sample 
@@ -101,7 +101,7 @@ tags: [dsp, notes, signal ]
 
 #### fundamental discrete signals
 
-- delta signal: \( x[n] = 𝛿[n] \)
+- delta signal: <span> $ x[n] = 𝛿[n] $ </span>
     - when n == 0, x == 1; else x == 0
     - signifies a physical phenomenon that lasts a very short duration of time
     - eg. a clapper for syncing video and audio for a movie recording 
@@ -112,7 +112,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete delta*
 {: style="font-size: 80%; text-align: center;"}
 
-- unit step: \( x[n] = *u*[n] \)
+- unit step: \\( x[n] = u[n] \\)
     - when \( n < 0, x == 0; else x == 1 \)
     - synonymous to flipping a switch
 
