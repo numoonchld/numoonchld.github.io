@@ -105,7 +105,7 @@ tags: [dsp, notes, signal ]
 #### fundamental discrete signals
 
 - delta signal: \\( x[n] = 𝛿[n] \\)  
-    - when \\(n = 0 , x = 1 \\); else \\(x == 0\\)
+    - when \\(n = 0 , x = 1 \\); else \\(x = 0\\)
     - signifies a physical phenomenon that lasts a very short duration of time
     - eg. a clapper for syncing video and audio for a movie recording 
         - when audio and video recording happens separately
@@ -124,8 +124,8 @@ tags: [dsp, notes, signal ]
 *fig: discrete unit step*
 {: style="font-size: 80%; text-align: center;"}
 
-- exponential decay: \\( x[n] = |a|_n u[n], |a| < 1 \\)
-    - when \\( n < 0, x == 0 \\); else x decays exponentially, starting from 1 @ \\( n = 0 \\)
+- exponential decay: \\( x[n] = \lverta\rvert_n u[n], |a| < 1 \\)
+    - when \\( n < 0, x = 0 \\); else x decays exponentially, starting from 1 @ \\( n = 0 \\)
     - \\( x \rightarrow 0 as n \rightarrow \infty \\)
     - newton's law of cooling
         - cooling of a coffee cup
