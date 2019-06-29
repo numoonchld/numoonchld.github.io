@@ -17,13 +17,13 @@ tags: [dsp, notes, signal ]
     - \\( \mathbb{Z} \\): integers 
     - \\( \mathbb{Q} \\): rational numbers 
         - recurring mantissa
-    - \\( \P \\): irrational numbers 
+    - \\( \mathbb{P} \\): irrational numbers 
         - non-repeating and non-recurring mantissa
         - \\( \pi \\) value
         - \\( \sqrt{2} \\)
-    - \\( \R \\): real numbers (everything on the number line)
+    - \\( \mathbb{R} \\): real numbers (everything on the number line)
         - includes rational and irrational numbers
-    - \\( \C \\): complex numbers
+    - \\( \mathbb{C} \\): complex numbers
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numsets.png" alt="number-sets">
 
@@ -96,7 +96,7 @@ tags: [dsp, notes, signal ]
 - notation: \\( x[n] \\)
     - \\( [n] \\): integer
 - two-sided sequences: \\( x: \Z \rightarrow \C \\) 
-    - \\( n  \\) 
+    - \\( n \in (-\infty,+\infty)   \\) 
 - n is *adimensional* "time"
     - no physical units, just sets a numerical id to the sample 
 - analysis eg.: periodic temperature 
