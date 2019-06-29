@@ -185,7 +185,7 @@ tags: [dsp, notes, signal ]
     - but only a finite number of non-zero sample
 
 - notation: \\(\bar{x}\\)
-- \\( \bar{x}  = x[n] \\) if \\(0 \leq n \leq N \\) else \\( 0 ; n \in \mathbb{Z} \\)
+- \\( \bar{x}  = x[n] \\) if \\(0 \leq n \leq N \\) else \\( x = 0 ; n \in \mathbb{Z} \\)
 - same information as finite-length 
 - another bridge between finite and infinite length lengths
 
