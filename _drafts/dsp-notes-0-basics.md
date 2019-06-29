@@ -126,7 +126,7 @@ tags: [dsp, notes, signal ]
 
 - exponential decay: \\( x[n] = \lvert a\rvert^n u[n], \lvert a\rvert < 1 \\)
     - when \\( n < 0, x = 0 \\); else \\(x\\) decays exponentially, starting from 1 @ \\( n = 0 \\)
-    - \\( x \rightarrow 0 as n \rightarrow \infty \\)
+    - \\( x \rightarrow 0  as  n \rightarrow \infty \\)
     - newton's law of cooling
         - cooling of a coffee cup
     - rate of capacitor discharge
@@ -137,8 +137,8 @@ tags: [dsp, notes, signal ]
 {: style="font-size: 80%; text-align: center;"}
     
 - sinosoid: \\( x[n] = sin(\omega_0n + \theta) \\)
-    - \\(\omega_0\\): angular frequency (rad)
-    - \\(\theta\\): initial phase (rad)
+    - \\( \omega_0 \\): angular frequency (rad)
+    - \\( \theta \\): initial phase (rad)
 
 <img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/sinusoid.png" alt="sinusoid">
 
