@@ -22,7 +22,7 @@ tags: [dsp, notes, signal ]
     - R: real numbers (everything on the number line)
         - includes rational and irrational numbers
 
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numbersets.svg" alt="number-sets">
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numsets.png" alt="number-sets">
 
 *fig: number sets*
 {: style="font-size: 80%; text-align: center;"}
