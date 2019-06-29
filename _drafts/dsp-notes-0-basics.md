@@ -11,6 +11,24 @@ tags: [dsp, notes, signal ]
 - obligatory dead person quote:
     - "[...] space and time are mere thought entities and creatures of the imagination [...] They precede the existence of objects of the senses [...]"
 
+- number sets:
+    - N: natural numbers (1 to ♾)
+        - whole numbers (0 to ♾ )
+    - Z: integers 
+    - Q: rational numbers (non-recurring decimals)
+    - P: irrational numbers (non-repeating and non-recurring mantissa)
+        - π value
+        - sqrt(2)
+    - R: real numbers (everything on the number line)
+        - includes rational and irrational numbers
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/numbersets.svg" alt="number-sets">
+
+*fig: number sets*
+{: style="font-size: 80%; text-align: center;"}
+
+# digital signal processing 
+
 - signal: description of a physical phenomenon's evolution over time
 
 - signal processing:
@@ -18,12 +36,14 @@ tags: [dsp, notes, signal ]
     - synthesis: creating a signal to contain the given information 
 
 - digital paradigm for signal processing:
-    - discrete time
-    - discrete amplitude
+    - discrete digitized time
+    - discrete digitized amplitude
 
 - each 'sample' is subjected to both:
-    - time discretization
-    - amplitude discretization
+    - time discretization: time component 'n'
+    - amplitude discretization: amplitude component 'x'
+
+- a sample is denoted by *x[n]*
 
 #### discrete-time
 
@@ -39,6 +59,7 @@ tags: [dsp, notes, signal ]
 
 - samples replace idealized models
 - simple math replaces calculus
+
 
 #### discrete-amplitude
 
@@ -69,7 +90,8 @@ tags: [dsp, notes, signal ]
 
 - a sequence of complex numbers
 - one dimensional
-- notation: `x[n]` [n]: integer
+- notation: `x[n]` 
+    - [n]: integer
 - two-sided sequences: *x:* **Z ➞ C**
     - n goes from -∞ to +∞
 - n is *adimensional* "time"
@@ -85,9 +107,19 @@ tags: [dsp, notes, signal ]
     - eg. a clapper for syncing video and audio for a movie recording 
         - when audio and video recording happens separately
 
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/delta.png" alt="delta.png">
+
+*fig: discrete delta*
+{: style="font-size: 80%; text-align: center;"}
+
 - unit step: x[n] = **u*[n]
     - when n < 0, x == 0; else x == 1
     - synonymous to flipping a switch
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/unitstep.png" alt="delta.png">
+
+*fig: discrete delta*
+{: style="font-size: 80%; text-align: center;"}
 
 - exponential decay: x[n] = |a|<sup>n</sup> *u*[n], |a| < 1
     - when n < 0, x == 0; else x decays exponentially, starting from 1 @ n == 0
@@ -95,10 +127,20 @@ tags: [dsp, notes, signal ]
     - newton's law of cooling
         - cooling of a coffee cup
     - rate of capacitor discharge
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/expdecay.png" alt="delta.png">
+
+*fig: discrete delta*
+{: style="font-size: 80%; text-align: center;"}
     
 - sinosoid: x[n] = sin(ω<sub>0</sub>*n* + 𝜃)
     - ω<sub>0</sub>: angular frequency (rad)
     - 𝜃: initial phase (rad)
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/dsp/sinusoid.png" alt="delta.png">
+
+*fig: discrete delta*
+{: style="font-size: 80%; text-align: center;"}
 
 ## signal classes
 
@@ -127,8 +169,20 @@ tags: [dsp, notes, signal ]
 #### periodic signals
 
 - data repeats every N samples
-- N-periodic signals: <bar>x</bar>[n]
+- N-periodic signals: <tilde>x</tilde>[n] = <tilde>x</tilde>[n + kN], n, k, N ∈ Z
+    - same information as finite-length of length *N*
+    - natural bridge between finite and infinite lengths
 
+#### finite-support signals
 
+- infinite length sequence
+    - but only a finite number of non-zero sample
+- notation: <bar>x</bar>
+- <bar>x</bar> = x[n] if 0 ≤ n ≤ N, else 0 ; n ∈ Z
+- same information as finite-length 
+- another bridge between finite and infinite length lengths
 
+# references
 
+- [number sets and operation symbols](http://ksacg.faculty.ku.edu/ksacg/145/2016_Fall/Math_symbols%20.pdf){: target="_blank"}
+- 
