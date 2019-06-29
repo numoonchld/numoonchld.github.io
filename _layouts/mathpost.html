@@ -1,0 +1,63 @@
+---
+layout: mathblog
+---
+
+<div class="blogDiv">
+
+  <h3 id="page-title" class="text-center" style="color: #BD5C3D;"> 
+    {{ page.title }} 
+  </h3>
+
+  {% if page.updated %}
+  <h6 class="text-center" style="color: #BD5C3D;"> 
+    last updated: {{ page.updated | date_to_string }} 
+  </h6>
+  {% endif %} 
+    
+  <!-- <a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet"
+      data-size="large"
+      data-text="{{ page.title }}"
+      data-url="{{ page.url }}"
+      data-hashtags="{{ page.tags }}"
+      data-via="{{ site.twitter_username }}"
+      data-related="twitterapi,twitter">
+    Tweet
+  </a> -->
+  
+
+  <!-- Pull in unity page -->
+  {% if page.unity-dir %}
+  {% include page_unity.html %}
+  {% endif %}
+  <!-- refer to: https://bit.ly/2rexRJj -->
+
+  <div id="blogText" class="card"> 
+    {{ content }} 
+
+    <hr>
+
+    <div id="share-bar" class="d-flex justify-content-center align-items-center">
+
+        <a  class="twitter-share-button" 
+            href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" 
+            data-size="large" 
+            rel="nofollow" 
+            target="_blank" 
+            title="Share on Twitter">
+        </a>
+    
+    </div>
+
+  </div>
+
+  <div>
+    <h6 class="text-center red-text"> created: {{ page.date | date_to_string }} </h6>
+    {% if page.artist %}
+    <h6 class="text-center red-text"> today's track: <a href="{{page.trackLink}}" target="_blank"> {{page.track}} </a>
+      by <a href="{{page.artistLink}}" target="_blank"> {{page.artist}} </a> </h6>
+    {% endif %}
+  </div>
+
+
+</div>

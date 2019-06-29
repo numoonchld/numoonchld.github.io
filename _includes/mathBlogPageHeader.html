@@ -1,0 +1,62 @@
+<!-- HEADER: include for <head> element -->
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122380531-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122380531-1');
+  </script>
+
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- For Media Query to function in Mobile Screen (https://bit.ly/2HG1bPF)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> {{ page.title }} </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/css/blog-style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cagliostro" rel="stylesheet">
+
+  <!-- MathJAX CDN-->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+  
+  <!-- MathJAX config file -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { 
+        fonts: ["TeX"], 
+        "font-size": "50%" 
+      },
+      
+    });
+  </script>
+
+
+
+</head>

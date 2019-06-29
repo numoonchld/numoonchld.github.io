@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: mathpost
 title: digital signal processing - notes 0 - basics 
 artist: 
 artistLink:
@@ -9,7 +9,7 @@ tags: [dsp, notes, signal ]
 ---
 
 - obligatory dead person quote:
-    - "[...] space and time are mere thought entities and creatures of the imagination [...] They precede the existence of objects of the senses [...]"
+    - "\[...\] space and time are mere thought entities and creatures of the imagination \[...\] They precede the existence of objects of the senses \[...\]"
 
 - number sets:
     - N: natural numbers (1 to ♾)
@@ -43,7 +43,7 @@ tags: [dsp, notes, signal ]
     - time discretization: time component 'n'
     - amplitude discretization: amplitude component 'x'
 
-- a sample is denoted by *x[n]*
+- a sample is denoted by `x[n]`
 
 #### discrete-time
 
@@ -101,7 +101,7 @@ tags: [dsp, notes, signal ]
 
 #### fundamental discrete signals
 
-- delta signal: x[n] = 𝛿[n]
+- delta signal: $x[n] = 𝛿[n]$
     - when n == 0, x == 1; else x == 0
     - signifies a physical phenomenon that lasts a very short duration of time
     - eg. a clapper for syncing video and audio for a movie recording 
@@ -112,7 +112,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete delta*
 {: style="font-size: 80%; text-align: center;"}
 
-- unit step: x[n] = **u*[n]
+- unit step: $x[n] = *u*[n]$
     - when n < 0, x == 0; else x == 1
     - synonymous to flipping a switch
 
@@ -121,7 +121,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete unit step*
 {: style="font-size: 80%; text-align: center;"}
 
-- exponential decay: x[n] = |a|<sup>n</sup> *u*[n], |a| < 1
+- exponential decay: $x[n] = |a|<sup>n</sup> *u*[n], |a| < 1$
     - when n < 0, x == 0; else x decays exponentially, starting from 1 @ n == 0
     - x reaches 0 @ ∞
     - newton's law of cooling
@@ -133,7 +133,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete exponential decay*
 {: style="font-size: 80%; text-align: center;"}
     
-- sinosoid: x[n] = sin(ω<sub>0</sub>*n* + 𝜃)
+- sinosoid: $x[n] = sin(ω<sub>0</sub>*n* + 𝜃)$
     - ω<sub>0</sub>: angular frequency (rad)
     - 𝜃: initial phase (rad)
 
@@ -155,8 +155,8 @@ tags: [dsp, notes, signal ]
     - N: range of signal
     - N is limited
 - notations: 
-    - sequence: x[n], n = 0,1,...,N-1
-    - vector: x = [x<sub>0</sub>, x<sub>1</sub>,..., x<sub>N-1</sub> ]<sup>T</sup>
+    - sequence: $x[n], n = 0,1,...,N-1$
+    - vector: $x = [x_0, x_1,..., x_{N-1} ]^T$
 - practical entities
     - good for numerical packages 
 
@@ -181,6 +181,25 @@ tags: [dsp, notes, signal ]
 - <bar>x</bar> = x[n] if 0 ≤ n ≤ N, else 0 ; n ∈ Z
 - same information as finite-length 
 - another bridge between finite and infinite length lengths
+
+## elementary signal operations
+
+- scaling:
+    - y[n] = α.x[n]
+- sum:
+    - y[n] = x[n] + z[n]
+- product:
+    - y[n] = x[n].z[n]
+- delay:
+    - y[n] = x[n-k], x ∈ Z 
+    - output of operation is shifted by k samples
+    - care must be taken to append and prepend zeros to accommodate the shift 
+    - usually done by turning finite signal into a finite-support signal, then applying the shift
+    - a shift can also be applied by making the finite signal periodic  
+        - the samples then circle around in the given range of time 
+
+- energy:
+    - E<sub>x</sub> = 
 
 # references
 
