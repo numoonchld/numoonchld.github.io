@@ -126,7 +126,7 @@ tags: [dsp, notes, signal ]
 
 - exponential decay: \\( x[n] = \lvert a\rvert^n u[n], \lvert a\rvert < 1 \\)
     - when \\( n < 0, x = 0 \\); else \\(x\\) decays exponentially, starting from 1 @ \\( n = 0 \\)
-    - \\( x \rightarrow 0  as  n \rightarrow \infty \\)
+    - \\( x \rightarrow 0 \\) as \\( n \rightarrow \infty \\)
     - newton's law of cooling
         - cooling of a coffee cup
     - rate of capacitor discharge
@@ -185,7 +185,7 @@ tags: [dsp, notes, signal ]
     - but only a finite number of non-zero sample
 
 - notation: \\(\bar{x}\\)
-- \\( \bar{x}  = x[n] if 0 \leq n \leq N, else 0 ; n \in \mathbb{Z} \\)
+- \\( \bar{x}  = x[n] \\) if \\(0 \leq n \leq N \\) else \\( 0 ; n \in \mathbb{Z} \\)
 - same information as finite-length 
 - another bridge between finite and infinite length lengths
 
