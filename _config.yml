@@ -4,3 +4,4 @@ plugins:
   - jekyll-sitemap
 site.url: https://numoonchld.github.io
 twitter_username: rasaralaya
+markdown: kramdown
