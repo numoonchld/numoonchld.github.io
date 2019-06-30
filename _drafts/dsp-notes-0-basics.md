@@ -197,13 +197,17 @@ tags: [dsp, notes, signal ]
     - \\( y[n] = x[n] + z[n] \\)
 - product:
     - \\( y[n] = x[n]\cdot z[n] \\)
-- delay:
+- delay (shift):
     - \\( y[n] = x[n-k], x \in \mathbb{Z} \\)
     - output of operation is shifted by k samples
     - care must be taken to append and prepend zeros to accommodate the shift 
-    - usually done by turning finite signal into a finite-support signal, then applying the shift
-    - a shift can also be applied by making the finite signal periodic  
-        - the samples then circle around in the given range of time 
+
+- two types of delay:
+    - finite-length signal is turned into a finite-support signal, 
+        - i.e. add zeros until \\( -\infty \\) and \\( +\infty \\) 
+        - then applying the shift
+    - make the finite-signal periodic:  
+        - the samples then circle around in the given range of \\(N\\)
 
 - energy:
     - 
