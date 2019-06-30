@@ -30,7 +30,9 @@ tags: [dsp, notes, signal ]
 *fig: number sets*
 {: style="font-size: 80%; text-align: center;"}
 
-# digital signal processing 
+<hr> 
+
+## digital signal processing 
 
 - signal: description of a physical phenomenon's evolution over time
 
@@ -83,6 +85,7 @@ tags: [dsp, notes, signal ]
 - general-purpose processing can be applied
 - noise can be controlled during signal transmission
 
+<hr>
 
 ## discrete-time signals
 
@@ -125,7 +128,7 @@ tags: [dsp, notes, signal ]
 {: style="font-size: 80%; text-align: center;"}
 
 - exponential decay: \\( x[n] = \lvert a\rvert^n u[n], \lvert a\rvert < 1 \\)
-    - when \\( n < 0, x = 0 \\); else \\(x\\) decays exponentially, starting from 1 @ \\( n = 0 \\)
+    - when \\( n < 0, x = 0 \\); else \\(x\\) decays exponentially, starting from \\( 1 \\) @ \\( n = 0 \\)
     - \\( x \rightarrow 0 \\) as \\( n \rightarrow \infty \\)
     - newton's law of cooling
         - cooling of a coffee cup
@@ -144,6 +147,8 @@ tags: [dsp, notes, signal ]
 
 *fig: discrete sinusoid*
 {: style="font-size: 80%; text-align: center;"}
+
+<hr>
 
 ## signal classes
 
@@ -189,6 +194,8 @@ tags: [dsp, notes, signal ]
 - same information as finite-length 
 - another bridge between finite and infinite length lengths
 
+<hr>
+
 ## elementary signal operations
 
 - scaling:
@@ -202,17 +209,34 @@ tags: [dsp, notes, signal ]
     - output of operation is shifted by k samples
     - care must be taken to append and prepend zeros to accommodate the shift 
 
-- two types of delay:
-    - finite-length signal is turned into a finite-support signal, 
-        - i.e. add zeros until \\( -\infty \\) and \\( +\infty \\) 
-        - then applying the shift
-    - make the finite-signal periodic:  
-        - the samples then circle around in the given range of \\(N\\)
+    - two types of delay:
+        - finite-length is turned into finite-support 
+            - by adding zeros until \\( -\infty \\) and \\( +\infty \\) 
+            - then shift is applied
+        - make the finite-signal periodic:  
+            - samples circle around in the given range of \\(N\\)
 
 - energy:
-    - 
+    - sum of the squares of all amplitudes of the signal 
+    - consistent with physical energy 
+    - many signals have infinite energy i.e. periodic signals
+    - so not a great way to describe the energetic property of a signal 
+
+
+\\[ E_x = \sum_{n=-\infty}^{\infty} \lvert x[n] \rvert^2 \\]
+
+- power: 
+    - a singal cannot have infinte power even if it's energy is infinite
+    - power is the rate of production of energy for a sequence
+    - it is limit of the ratio of local energy in a window to the size of the window as N goes to infinity
+    - for a periodic signal, the power is the ratio fo energy in one period to the length of the period
+
+\\[ P_x = \lim_{N \rightarrow \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} \lvert x[n] \rvert^2 \\]
+
+
+<hr> 
 
 # references
 
 - [number sets and operation symbols](http://ksacg.faculty.ku.edu/ksacg/145/2016_Fall/Math_symbols%20.pdf){: target="_blank"}
-- 
+- [coursera dsp](https://www.coursera.org/learn/dsp/home/welcome){: target="_blank"}
