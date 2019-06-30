@@ -60,3 +60,7 @@ navigate to app's root directory and review current config settings
 <hr>
 
 ### git remote:
+
+## references 
+
+- [ssh git push](https://stackoverflow.com/questions/8588768/how-do-i-avoid-the-specification-of-the-username-and-password-at-every-git-push){: target="_blank"}
