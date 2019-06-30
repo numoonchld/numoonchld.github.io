@@ -101,8 +101,10 @@ repository of my complied code to go with notes:
 
 - having compared a mean-squared-error function performance in `cython` and `python`, the `cython` function is 5 times faster on an average 
 
-![performance boost](/media/blogAssets/cython/cython-basics.svg)
-{: style="text-align: center;"}
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/cython/cython-basics.png" alt="cython-basics">
+
+*fig: performance boost measurement with timeit*
+{: style="font-size: 80%; text-align: center;"}
 
 - run `runtest.py` in `performance-tests` folder in the work-bench repository to see performance results on your machine
 
