@@ -144,7 +144,7 @@ tags: [dsp, notes, signal ]
 *fig: discrete exponential decay*
 {: style="font-size: 80%; text-align: center;"}
     
-- sinosoid: \\( x[n] = sin(\omega_0n + \theta) \\)
+- sinusoid: \\( x[n] = sin(\omega_0n + \theta) \\)
     - \\( \omega_0 \\): angular frequency (rad)
     - \\( \theta \\): initial phase (rad)
 
