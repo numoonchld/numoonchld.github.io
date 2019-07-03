@@ -272,6 +272,16 @@ and (max-width: 450px) {
 
 }
 
+#blogTOC .pagination {
+  /* background: #BEE3C5; */
+  padding: 1% 2%;
+  border: 1px #BD5C3D solid;
+}
+
+#blogTOC #tag-group {
+  display: none;
+}
+
 @media only screen
 and (max-width: 759px) {
 

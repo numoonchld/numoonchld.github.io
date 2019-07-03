@@ -122,7 +122,7 @@ and (max-width: 450px) {
 }
 
 /* ------------------------------------------------------- */
-/* PROJECS Section Styling*/
+/* PROJECTS Section Styling*/
 
 .projectInnerTile {
   
@@ -267,6 +267,8 @@ and (max-width: 450px) {
   /* margin-left: 0vw; */
 
 }
+
+
 
 #blenderCarousel {
   margin: 0 auto;

@@ -6,3 +6,6 @@ site.url: https://numoonchld.github.io
 twitter_username: rasaralaya
 markdown: kramdown
 mathjax: true
+
+paginate: 10
+paginate_path: "/blog/page:num/"
