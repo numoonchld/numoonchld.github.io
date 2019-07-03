@@ -14,6 +14,10 @@ title: blog entries
 
 			<h2> posts listed chronologically </h2>
 
+			<p class="text-center"><a id="hide-chrono-show-tags" href="#"> posts grouped by tags </a></p>
+
+			<br>
+
 			<ul>
 
 				{% for post in paginator.posts %}
@@ -55,13 +59,17 @@ title: blog entries
 
 			<hr>
 
-			<p class="text-center"><a id="hide-chrono-show-tags" href="#"> posts grouped by tags </a></p>
+			
 
 		</div>
 
 		<div id="tag-group">
 
 			<h2> posts grouped by tags </h2>
+
+			<p class="text-center"><a id="hide-tags-show-chrono" href="#"> posts listed chronologically </a></p>
+
+			<br>
 
 			{% for tag in site.tags %}
 			<h4>
@@ -76,7 +84,7 @@ title: blog entries
 
 			<hr>
 
-			<p class="text-center"><a id="hide-tags-show-chrono" href="#"> posts listed chronologically </a></p>
+			
 
 		</div>
 
