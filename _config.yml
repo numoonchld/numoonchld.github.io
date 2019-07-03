@@ -7,5 +7,5 @@ twitter_username: rasaralaya
 markdown: kramdown
 mathjax: true
 
-paginate: 10
+paginate: 8
 paginate_path: "/blog/page:num/"
