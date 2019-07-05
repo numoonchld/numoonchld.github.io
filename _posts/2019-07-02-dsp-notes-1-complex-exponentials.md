@@ -17,7 +17,7 @@ tags: [dsp, notes, signal, complex exponential, signal generator, rotation, arga
     - rockets
     - human beings (only partially oscillatory)
 
-<video class="mx-auto my-1" controls width="400">
+<video class="mx-auto my-1" controls width="360">
 
     <source src="/media/blogAssets/dsp/cd-osc-stability.mp4" type="video/mp4">
 
@@ -25,7 +25,7 @@ tags: [dsp, notes, signal, complex exponential, signal generator, rotation, arga
 
 </video>
 
-*clip: gyroscopic stability of a disc player in zero-gravity; OFF vs. ON*
+*[clip](https://youtu.be/1RkBwvuF80I){: target="_blank"}: gyroscopic stability of a disc player in zero-gravity - OFF vs. ON*
 {: style="font-size: 80%; text-align: center;"}
 
 - an oscillation is cyclic, it goes around in circles
