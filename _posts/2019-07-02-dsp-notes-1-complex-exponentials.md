@@ -21,7 +21,7 @@ tags: [dsp, notes, signal, complex exponential, signal generator, rotation, arga
 
     <source src="/media/blogAssets/dsp/cd-osc-stability.mp4" type="video/mp4">
 
-    Sorry, your browser doesn't support embedded videos.
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="https://youtu.be/1RkBwvuF80I">YouTube link to the video</a> instead.</p>
 
 </video>
 
