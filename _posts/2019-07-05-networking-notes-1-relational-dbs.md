@@ -161,7 +161,7 @@ tags: [networking, database, relational database, SQL queries ]
         - stream processing relational data stream management systems (RDSMS)
     - was made an ISO standard in 1987
     - developed at IBM, initially called SEQUEL: Structured English Query Language
-<br>
+<hr>
 
 #### data types
 <br>
