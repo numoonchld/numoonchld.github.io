@@ -54,6 +54,10 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 - `vagrant halt`: shuts down the VMBox
 - `vagrant destroy`: resets the VMBox to fresh install (of *linux*, in this case)
 
+#### note
+
+- multiple SSH connection arw allowed into the VMBox simultaneously
+
 <hr>
 
 # linux web servers
