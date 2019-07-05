@@ -1,6 +1,6 @@
 ---
 layout: post
-title: networking - notes 1 - relational databases
+title: networking - notes 1 - relational databases (RDBs)
 artist: Hellberg ft. Cozi Zuehlsdorff
 artistLink: https://www.discogs.com/artist/4510244-SvanteG
 track: The Girl (SvanteG Remix)
@@ -165,6 +165,8 @@ tags: [networking, database, relational database, SQL queries ]
 
 #### SQL query 
 
+- a query always returns a table per the parameters of the query
+
 - `select ... from ... where ...` query:
     - example: `select name, birthdate from animals where species = 'gorilla';`
     - query keyword: `select`
@@ -174,7 +176,7 @@ tags: [networking, database, relational database, SQL queries ]
     - query keyword: `where`
         - `select` only rows `where` column `species`  reads `gorilla`
 
-- SQL boolean operators: `and`, `or` and `not`
+- boolean operators: `and`, `or` and `not`
     - `and` example: 
         - `select name, birthdate from animals where species = 'gorilla' and name = 'Max';`
     - `not` example:
@@ -183,7 +185,7 @@ tags: [networking, database, relational database, SQL queries ]
     - `or` example:
         - `select name from animals where not (species = 'gorilla' or name = 'Max');`
 
-- SQL comparison operators: `=`,`<`,`>`,`<=`, `>=`, `!=`
+- comparison operators: `=`,`<`,`>`,`<=`, `>=`, `!=`
     - `select name from animals where birthdate > '1995-01-01' and birthdate < '1998-12-31' and species == 'llama'`
     - to find *llamas* that were *born between 1995 and 1998*
 
@@ -300,6 +302,14 @@ tags: [networking, database, relational database, SQL queries ]
             - `diet.species = animals.species`: table joining condition
         - `group by food`: aggregate selection `food, count(animals.name)` by food
             - return only the food value with one
+
+- `COUNT`:
+    - `QUERY = "select count(*) from animals;"`
+        - returns the number of animals in the zoo
+    - `QUERY = "select count(*) from animals where species = 'gorilla';"`
+        - returns the number of gorillas
+    - `QUERY = "select species, count(*) from animals group by species;"`
+        - returns each species’ name and the number of animals of that species
     
     
 
@@ -336,7 +346,38 @@ tags: [networking, database, relational database, SQL queries ]
     - matched on the common columns `animals.species` and `diet.species`
     - and filtered by `food = 'fish'`
 
+#### sub-queries
+
+- queries may be embedded in queries to operate on the table resulting from a query
+    - the sub-queries must always be named
+    - even if they are not referred to later
+
+- multiple queries can be embedded in one query statement using the sub-querying mechanism, eg:
+    ```
+    select name, weight
+        from players,
+            (select avg(weight) as av
+                from players) as subqures
+        where weight < av;
+    ```
+
+
+#### sql views
+
+- a view stores the output of a query 
+    - similar to making a function in regular programming
+    ```
+    create view topFive as
+    select species, count(*) as num 
+      from animals
+      group by species
+      order by num desc
+      limit 5;
+    ```
+
 <hr>
+
+
 
 # creating DBs
 
@@ -346,10 +387,50 @@ tags: [networking, database, relational database, SQL queries ]
     - to improve data integrity
 - (informally,) a relational DB relation is often described as "normalized" if it meets third normal form
 
+#### normalized DB design
+
+1. every row has the same number of columns
+    - the extruding data needs to be spread across two rows with repeating ID keys if it's of the same type
+2. there is a unique key, and everything in a row says something about that key
+    - in any row, the key provides the context which the rest of the row describes 
+    - primary key in SQL is used as a unique row identifier
+3. facts that don't relate to the key belong in different tables
+    - this helps reduce redundancy 
+    - and consequently storage space used
+    - while providing separate tables with more specific information 
+4. tables shouldn't imply relationships that don't exist
+
+
+#### normalized DB terminology
+
+- *primary key*: 
+    - unique identifier for each row in a table
+    - `PRIMARY` keyword in an SQL table
+- *foreign key*: 
+    - a column/a set of columns in one table that uniquely identifies rows in another table 
+    - `REFERENCES` keyword in an SQL table pointing to a related table or column
+    - it is common for a table in an RDB to have two or more foreign keys
+    - mastering foreign key relationships is essential to understanding RDBs
+        - it's a key skill
+
+#### important DB code paradigm:
+- the design of DBs and the relationships with are a part of the app's code
+    - the design needs to be coherent with the app's purpose    
+
 <hr>
 
-## references 
+# references 
 
 - [Normalization](https://en.wikipedia.org/wiki/Database_normalization){: target="_blank"}
 - [Guide to Normal Forms in RDB theory](http://www.bkent.net/Doc/simple5.htm){: target="_blank"}
+- postgreSQL:
+    - [docs](https://www.postgresql.org/docs/9.3/index.html){: target="_blank"}
+    - [exercises](https://pgexercises.com/){: target="_blank"}
+
+- sub-queries:
+    - [sub-query docs](https://www.postgresql.org/docs/9.4/functions-subquery.html){: target="_blank"}
+    - [scalar sub-queries](https://www.postgresql.org/docs/9.4/sql-expressions.html#SQL-SYNTAX-SCALAR-SUBQUERIES){: target="blank"}
+    - [from clause](https://www.postgresql.org/docs/9.4/sql-select.html#SQL-FROM){: target="_blank"}
+
+
 - [UD 197](https://classroom.udacity.com/courses/ud197){: target="_blank"}

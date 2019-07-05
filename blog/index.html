@@ -14,9 +14,9 @@ title: blog entries
 
 			<h2> posts listed chronologically </h2>
 
-			<p ><a id="hide-chrono-show-tags" href="#"> view posts grouped by tags </a></p>
+			<p><a id="hide-chrono-show-tags" href="#"> view posts grouped by tags </a></p>
 
-			<br>
+			<hr>
 
 			<ul>
 
@@ -69,7 +69,7 @@ title: blog entries
 
 			<p><a id="hide-tags-show-chrono" href="#"> view posts listed chronologically </a></p>
 
-			<br>
+			<hr>
 
 			{% for tag in site.tags %}
 			<h4>
@@ -80,6 +80,7 @@ title: blog entries
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
+			<br>
 			{% endfor %}
 
 			<hr>
