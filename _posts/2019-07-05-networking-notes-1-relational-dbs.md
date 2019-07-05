@@ -8,6 +8,29 @@ trackLink: https://youtu.be/pskEFtzOkz8
 tags: [networking, database, relational database, SQL queries ]
 ---
 
+# contents
+
+1. [data storage](#data-storage)
+    - [relational databases - anatomy](#relational-databases---anatomy)
+2. [sql](#sql)
+    - [data types](#data-types)
+    - [sql query](#sql-query)
+    - [query modifiers](#query-modifiers)
+    - [why a DB language?](#why-a-db-language)
+    - [sql header problem](#sql-header-problem)
+    - [exploring query examples](#exploring-query-examples)
+    - [inserting rows](#inserting-adding-rows)
+    - [joining tables](#joining-tables) 
+    - [sub-queries](#sub-queries) 
+    - [sql views](#sql-views) 
+3. [creating DBs](#creating-dbs)
+    - [normalized DB design](#normalized-db-design)
+    - [normalized DB terminology](#normalized-db-terminology)
+    - [important DB code paradigm](#important-db-code-paradigm)
+4. [references](#references)
+
+<hr>
+
 # data storage 
 
 - types of application data storage
@@ -41,7 +64,7 @@ tags: [networking, database, relational database, SQL queries ]
             - these are rules to ensure changes to DB is consistent
             - to help protect the integrity of the DB
 
-## relational databases
+## relational databases - anatomy
 
 - all data is stored as tables in DBs
 
@@ -138,8 +161,9 @@ tags: [networking, database, relational database, SQL queries ]
         - stream processing relational data stream management systems (RDSMS)
     - was made an ISO standard in 1987
     - developed at IBM, initially called SEQUEL: Structured English Query Language
-
+<br>
 #### data types
+<br>
 
 - a lot of types are recognized in SQL (refer to docs), generic types are:
     - text: like python `str` type
@@ -162,9 +186,10 @@ tags: [networking, database, relational database, SQL queries ]
         - date: calendar date i.e. - YYYY-MM-DD
         - time: time of day
         - timestamp: date and time together
+<hr>
 
 #### SQL query 
-
+<br>
 - a query always returns a table per the parameters of the query
 
 - `select ... from ... where ...` query:
@@ -194,8 +219,11 @@ tags: [networking, database, relational database, SQL queries ]
     *fig: name of the llama returned*
     {: style="font-size: 80%; text-align: center;"}
 
+<hr>
 
 #### query modifiers 
+<br>
+
 - modifiers along with the select keyword to create select clauses:
 - some commonly used modifiers:
     - `LIMIT count OFFSET skip`
@@ -230,8 +258,11 @@ tags: [networking, database, relational database, SQL queries ]
     - `HAVING`:
         - having filters the processed table
         
+<hr>
 
 #### why a DB language?
+<br>
+
 - `python` synonyms of some sql queries:
     - `count(*)`:`len(rsults)`
     - `limit 100 offset 10`: `results[10:100]`
@@ -240,7 +271,10 @@ tags: [networking, database, relational database, SQL queries ]
         - DBs are designed to be fast and take up much lesser memory than python program
         - DBs allow indexing which increases query results' return speed
 
+<hr>
+
 #### SQL header problem
+<br>
 
 - no standard way to get all headers of all the database
 - varied ways in different distributions 
@@ -260,8 +294,11 @@ tags: [networking, database, relational database, SQL queries ]
     - so the column headers must be known before hand 
     - or a tool specific to the distribution has to be used
 
+<hr>
 
 #### exploring query examples
+<br>
+
 - more query examples:
     - `QUERY = "select max(name) from animals;"`
     - `QUERY = "select * from animals limit 10;"`
@@ -313,8 +350,10 @@ tags: [networking, database, relational database, SQL queries ]
     
     
 
+<hr>
 
 #### inserting (adding) rows
+<br>
 
 - `INSERT into table values (42,'stuff');`
     - if values being added aren't in the same order as the table's headers
@@ -325,8 +364,10 @@ tags: [networking, database, relational database, SQL queries ]
     insert into animals values ('Ribid','opossum','2019-12-12');
     '''
     ```
+<hr>
 
 #### joining tables 
+<br>
 
 - `select T.thing, S.stuff from T join S on T.target = S.match`
     - `T.thing, S.stuff`: rows
@@ -345,8 +386,10 @@ tags: [networking, database, relational database, SQL queries ]
     - from table obtained from joining animals and diet
     - matched on the common columns `animals.species` and `diet.species`
     - and filtered by `food = 'fish'`
+<hr>
 
 #### sub-queries
+<br>
 
 - queries may be embedded in queries to operate on the table resulting from a query
     - the sub-queries must always be named
@@ -361,8 +404,10 @@ tags: [networking, database, relational database, SQL queries ]
         where weight < av;
     ```
 
+<hr>
 
 #### sql views
+<br>
 
 - a view stores the output of a query 
     - similar to making a function in regular programming
@@ -387,7 +432,10 @@ tags: [networking, database, relational database, SQL queries ]
     - to improve data integrity
 - (informally,) a relational DB relation is often described as "normalized" if it meets third normal form
 
+<hr>
+
 #### normalized DB design
+<br>
 
 1. every row has the same number of columns
     - the extruding data needs to be spread across two rows with repeating ID keys if it's of the same type
@@ -400,8 +448,10 @@ tags: [networking, database, relational database, SQL queries ]
     - while providing separate tables with more specific information 
 4. tables shouldn't imply relationships that don't exist
 
+<hr>
 
 #### normalized DB terminology
+<br>
 
 - *primary key*: 
     - unique identifier for each row in a table
@@ -413,7 +463,10 @@ tags: [networking, database, relational database, SQL queries ]
     - mastering foreign key relationships is essential to understanding RDBs
         - it's a key skill
 
+<hr>
+
 #### important DB code paradigm:
+<br>
 - the design of DBs and the relationships with are a part of the app's code
     - the design needs to be coherent with the app's purpose    
 
