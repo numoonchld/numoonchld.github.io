@@ -17,7 +17,7 @@ tags: [dsp, notes, signal, complex exponential, signal generator, rotation, arga
     - rockets
     - human beings (only partially oscillatory)
 
-<video class="mx-auto my-1" controls width="400">
+<video class="mx-auto my-1" controls width="360">
 
     <source src="/media/blogAssets/dsp/cd-osc-stability.mp4" type="video/mp4">
 

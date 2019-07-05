@@ -119,7 +119,7 @@ and (max-width: 450px) {
 }
 
 /* ------------------------------------------------------- */
-/* PROJECS Section Styling*/
+/* PROJECTS Section Styling*/
 
 .projectInnerTile {
   
@@ -316,6 +316,15 @@ and (max-width: 759px) {
   
 
 }
+
+/* Blog Video Styling */
+video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 /* FONT SIZE */
