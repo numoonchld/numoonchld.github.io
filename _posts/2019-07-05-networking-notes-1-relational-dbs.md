@@ -162,6 +162,7 @@ tags: [networking, database, relational database, SQL queries ]
     - was made an ISO standard in 1987
     - developed at IBM, initially called SEQUEL: Structured English Query Language
 <br>
+
 #### data types
 <br>
 
