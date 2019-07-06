@@ -1,10 +1,10 @@
 ---
 layout: post
 title: networking - notes 3 - fullstack web server 
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: wrong city
+artistLink: https://twitter.com/wrongcity_jp
+track: 「Dark Is Out」
+trackLink: https://youtu.be/VwSsS0Pe2ZM
 tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 ---
 
@@ -14,10 +14,10 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - [CRUD](#crud)
     - [SQL and CRUD](#sql-and-crud)
     - [structuring app DB](#structuring-app-db)
-- []()
-- []()
-- []()
-- []()
+- [ORM: sql alchemy](#orm-sql-alchemy)
+    - [db setup](#db-setup)
+    - [db sessions](#db-sessions)
+    - [CRUD in a session](#crud-in-a-session)
 - []()
 - []()
 - []()
@@ -72,7 +72,10 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
         - course category
         - foreign key: restaurant ID
 
-## ORM
+<hr>
+
+## ORM: sql alchemy
+
 - ORM: Object Relational Mapping 
     - translation interface between `python` and SQL 
         - object to query mapping
@@ -84,12 +87,242 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     {: style="font-size: 80%; text-align: center;"}
 
     - [SQL Alchemy](https://docs.sqlalchemy.org/en/13/intro.html){: target="_blank"} is an ORM for `python`
-    
+    - several others exist - use as appropriate
 
+<hr> 
+
+#### db setup
+<br>
+
+- creating DB with sql alchemy has four major components
+    - configuration
+    - class
+    - table
+    - mapper
+
+- all of this goes in the python file geared to setup a DB with SQL alchemy
+
+- *configuration*:
+    - sets up all dependencies for the script
+        - bites code to sql alchemy engine
+    - doesn't change much from project to project
+    - at the beginning of file:
+        - import all needed modules
+        - creates instance of base
+    - at the end of file:
+        - create and/or connect to the DB 
+        - then, add tables and columns data 
+
+- *class*:
+    - represents table of an SQL DB as a `python` class
+    - extends the Base class
+    - table and the mapper code will be nested inside 
+
+- *table*:
+    - `python` objects of specific table in DB
+    - inside each class, create a table representation
+        - `__tablename__ = 'some_table'`
+
+- *mapper*:
+    - maps `python` objects to  columns of a table in DB
+    - `columnName = Column(attr1,attr2,attr2,...)`
+    - eg. attributes:
+        - `String(250)`
+        - `Integer`
+        - `relationship(Class)`
+        - `nullable = False`
+        - `primary_key = True`
+        - `ForeignKey('some_table.id')`
+    - nest these column objects within the same class as the table object
+
+<br>
+
+- sample code for DB setup with SQL Alchemy : 
+    - when following script is run, a new file with name `restaurantmenu.db` is created in dir where this script lives
+
+    ```
+    #### (db_setup.py)
+
+    
+    ```
+
+<hr>
+
+#### db sessions
+<br>
+
+- an SQL Alchemy *engine* is first initialized 
+    - the engine connects to the the DB 
+    - a session runs on the engine 
+    - the engine is an interface between python shell and DB shell
+    - engine writes changes to the DB only when saved explicitly  
+    ```
+    engine = create_engine('sqlite:///restaurantmenu.db')
+    ```
+    - bind the engine to a declarative base to continue working on a previously created DB 
+    ```
+    Base.metadata.bind = engine 
+    ```
+
+- a *session maker* object creates a link between the code execution and SQL Alchemy engine
+    - a session is a staging zone for CRUD operations to be applied to the DB
+    - code in a session does not write to DB until a commit command is called 
+    - initialize a session 
+    ```
+    DBSession = sessionmaker(bind = engine)
+    ```
+    - then connect code to DB through session
+    ```
+    session = DBSession()
+    ```
+<hr>
+
+#### CRUD in a session
+<br>
+
+- Create: 
+    - `newEntry = dbTableClassName(property = 'value',...)`
+    - `session.add(newEntry)`
+    - `session.commit()`
+
+- Read:
+    - `session.query(dbTableClassName).first()`
+        - only the first entry
+     
+    - `session.query(dbTableClassName).all()`
+        - all entries
+
+- Update: four step process
+    1. load entry with a query 
+        - store this in a variable
+    2. update values in the variable
+        - simple `python` assignment operation
+    3. add variable to session
+    4. commit session to DB
+
+- Delete: three step process
+    1. load entry with a query 
+        - store this in a variable
+    2. `session.delete(variableName)`
+    3. commit session to DB
+
+
+
+<br>
+
+- sample code for CRUD with SQL Alchemy: 
+    - following code can be executed in the `python` shell once a DB has been initialized with `db-setup.py` 
+
+    ```
+
+    ## import dependencies
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+    from db_setup import Base, Restaurant, MenuItem
+
+    ## init and bind engine to db
+    engine = create_engine('sqlite:///restaurantmenu.db')
+    Base.metadata.bind = engine 
+
+    ## init session and bind to engine
+    DBSession = sessionmaker(bind = engine)
+    session = DBSession()
+
+    #### CREATE
+
+    ## create new restaurant in Restaurant table
+    firstRestaurant = Restaurant(rest_name = "Pizza Place")
+    ## stage changes, persist to DB
+    session.add(firstRestaurant)
+    session.commit()
+
+    ## verify 'Restaurant' table was updated
+    session.query(Restaurant).all()
+
+    ## add menu item 
+    cheesePizza = MenuItem(item_name= "Cheese Pizza", 
+                            item_desc = "Made with all natural ingredients and fresh mozzarella",
+                            item_course = "Entree",
+                            item_price = "µ8.99",
+                            restaurant = firstRestaurant)
+
+    ## stage changes, persist to DB
+    session.add(cheesePizza)
+    session.commit()
+
+    ## verify 'MenuItem' table was updated
+    session.query(MenuItem).all()
+
+    #### READ
+
+    ## read first item of Restaurant table
+    firstResult = session.query(Restaurant).first()
+    firstResult.item_name
+
+    ## loop over rows of MenuItem table
+    items = session.query(MenuItems).all()
+    for item in items:
+        print(item.name)
+
+    #### UPDATE
+
+    ## read current values for all items
+    veggieBurgers = session.query(MenuItem).filter_by(name = 'Veggie Burger')
+    for burger in veggieBurgers:
+        print(burger.id)
+        print(burger.price)
+        print(burger.restaurant.name) # assume output is 'urbanVeggieBurger'
+        print("\n")
+
+    ## select a specific entry
+    urbanVeggieBurger = session.query(MenuItem).filter_by(id = 8).one()
+    print(urbanVeggieBurger.price)
+    urbanVeggieBurger.price = 'µ22'
+
+    ## stage changes, persist to DB
+    session.add(urbanVeggieBurger)
+    session.commit()
+
+    ## verify 'MenuItem' table was updated
+    veggieBurgers = session.query(MenuItem).filter_by(name = 'Veggie Burger')
+    for burger in veggieBurgers:
+        print(burger.id)
+        print(burger.price)
+        print(burger.restaurant.name)
+        print("\n")
+
+    ## to iteratively update
+    for burger in veggieBurgers:
+        if burger.price != 'µ22':
+            burger.price = 'µ22'
+            session.add(burger)
+            session.commit()
+           
+
+    ## verify 'MenuItem' table was updated
+    veggieBurgers = session.query(MenuItem).filter_by(name = 'Veggie Burger')
+    for burger in veggieBurgers:
+        print(burger.id)
+        print(burger.price)
+        print(burger.restaurant.name)
+        print("\n")
+
+    #### DELETE
+
+    spinach = session.query(MenuItem).filter_by(name='Spinach Ice Cream').one()
+    print(spinach.restaurant.name)
+    session.delete(spinach)
+    session.commit()
+
+
+
+    ```
 
 
 <hr>
 
 ## references
 
-- [google oauth 2.0 playground](https://developers.google.com/oauthplayground/){: target="_blank"}
+- sql alchemy
+    - [declarative base](https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/api.html#sqlalchemy.ext.declarative.declarative_base){: target="_blank"}
+    - [queries](https://docs.sqlalchemy.org/en/13/orm/query.html){: target="_blank"}
