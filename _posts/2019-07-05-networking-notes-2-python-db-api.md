@@ -27,7 +27,7 @@ tags: [networking, database, relational database, SQL, python DB-API ]
 
 #### SQLite
    
-- typical sqlite code block to connect and manipulate date:
+- typical sqlite code block to connect and manipulate data:
     ```
     import sqlite3
 
