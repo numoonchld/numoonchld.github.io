@@ -17,19 +17,12 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 - [ORM: sql alchemy](#orm-sql-alchemy)
     - [db setup](#db-setup)
     - [db sessions](#db-sessions)
-<<<<<<< HEAD
     - [CRUD in ORM session](#crud-in-orm-session)
 - [internet mechanics](#internet-mechanics)
     - [protocols](#protocols)
     - [address concepts](#address-concepts)
     - [communication flow](#communication-flow)
     - [HTTP](#http)
-=======
-    - [CRUD in a session](#crud-in-a-session)
-- []()
-- []()
-- []()
->>>>>>> eca842eee4c590f159ee0bd4e81132248dd84461
 
 <hr>
 
