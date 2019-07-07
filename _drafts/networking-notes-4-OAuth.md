@@ -1,10 +1,10 @@
 ---
 layout: post
 title: networking - notes 4 - OAuth
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Blue Foundation
+artistLink: https://www.discogs.com/artist/5456-Blue-Foundation
+track: Eyes On Fire (Zeds Dead Remix)
+trackLink: https://youtu.be/IUGzY-ihqWc
 tags: [networking, authorization, authentication, SQL, OAuth, HTTP, security ]
 ---
 

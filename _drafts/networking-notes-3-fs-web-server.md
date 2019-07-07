@@ -10,6 +10,11 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 ## contents
 
+- [internet mechanics](#internet-mechanics)
+    - [protocols](#protocols)
+    - [address concepts](#address-concepts)
+    - [communication flow](#communication-flow)
+    - [HTTP](#http)
 - [database operations](#database-operations)
     - [CRUD](#crud)
     - [SQL and CRUD](#sql-and-crud)
@@ -18,26 +23,146 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - [db setup](#db-setup)
     - [db sessions](#db-sessions)
     - [CRUD in ORM session](#crud-in-orm-session)
-- [internet mechanics](#internet-mechanics)
-    - [protocols](#protocols)
-    - [address concepts](#address-concepts)
-    - [communication flow](#communication-flow)
-    - [HTTP](#http)
 - [python web server](#python-web-server)
-    - 
+    - [handling multiple requests](#handling-multiple-requests)
+    - [CRUD operations](#crud-operations)
+
+<hr>
+
+## internet mechanics
+
+- client: computer that wants information
+    - initiates communication
+- server: computer that has information to be shared with clients
+    - constantly listens to client requests and responds with requested data
+- protocols: rules for communication over a network
+    - language that clients and servers 'speak' to each other in
+
+- [MDN - clients, servers, and the web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works){: target = "_blank"}
+
+<hr>
+
+#### protocols
+<br>
+
+- protocols relevant to a web-server:
+    - TCP: Transmission Control Protocol
+    - IP: Internet Protocol
+    - HTTP: Hyper Text Transfer Protocol
+    - UDP: User Datagram Protocol
+
+- TCP: 
+    - allows information to be broken into small packets
+    - these packets are transferred between clients and servers
+    - if a packet is lost on the way, the sender and receiver have a way to pinpoint to the lost packet
+        - it is requested for it be resent
+
+- UDP: 
+    - good for streaming content and video
+
+<hr>
+
+#### address concepts
+<br>
+
+- URL: Universal Resource Locator
+    - this is the string alias for an IP address of a registered web-server
+
+- IP addresses:
+    - address of the a device connected to the internet
+    - assume every device on the internet has an IP address that is statically or dynamically assigned by the IP
+    - the server and client both have IP addresses
+
+- DNS: Domain Name Server
+    - this is like a phone-book that stores all IP addresses of web URLs on the internet
+
+- ports:
+    - many sites can run on the same server, so ports are designated to specific communications on a server
+    - port are appended to the IP address with a colon 
+    - ports range from 0 - 65536
+    - ports 0 - 10000 as reserved by OSs for standard purposes
+        - 80: web-sever port (standard port for web-servers where web site content is served)
+        - 8080: web-communication port
+
+- localhost:
+    - IP address of the local machine: `127.0.0.1`
+    - browser looks within the machine 
+        - not outside to the internet
+    - useful for testing web-servers before deployment
+
+<hr>
+
+
+
+#### communication flow
+<br>
+
+- web communication flow:
+    - user enters url in browser on the client device
+    - the client sends url through the modem to the ISP 
+    - ISP redirects it to the DNS
+    - DNS connects client to server IP based on url 
+        - the IP match for the URL is found on the DNS
+    - requested data is sent back
+        - typically through HTTP/TCP 
+
+<video class="mx-auto my-1" controls width="400">
+    <source src="/media/blogAssets/networking/how_the_internet_works_in_5.mp4" type="video/mp4">
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="https://youtu.be/7_LPdttKXPc">YouTube link to the video</a> instead.</p>
+</video>
+
+*[clip](https://youtu.be/7_LPdttKXPc){: target="_blank"}: server IP addresses, clients, internet foundations*
+{: style="font-size: 80%; text-align: center;"}
+
+<hr>
+
+
+
+
+#### HTTP
+<br>
+
+<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/networking/http.png" alt="comp-exp-0">
+
+*fig: client and server HTTP communication*
+{: style="font-size: 80%; text-align: center;"}
+
+- clients tell servers what they want using HTTP verbs/methods 
+- there currently are 9 verbs in the HTTP spec
+- two most commonly used verbs by clients:
+    - GET: asks for information to be sent to client
+        - one of the safe methods
+        - browser visits to a page are GET verbs
+    - POST: modifies information on the server
+        - ask for data to be added, removed or modified on the server
+- client request are pre-fixed with HTTP verbs 
+- server responds to client requests with:
+    - status codes:
+        - based on what happens on the server side in response to the client request
+            - `200`: 'OK' - no errors
+            - `404`: 'Not found'
+            - several others exist
+    - resources:
+        - in response to client request
+        - such as HTML, CSS and JS files
+        - media files such as images, audio and video
+    
+
+
 
 <hr>
 
 ## database operations
 
 <br>
-*web-server goal* 
-    - display menus of several restaurants 
-
-- the data to be displayed on the resulting web site is stored in a DB
-- the web page's code interacts with the DB for information exchange through CRUD operations
+*goal of this post* 
+- build web-server to display menus of several restaurants 
+    - the restaurant data to be displayed on the resulting web site is to be stored in a DB
+    - the web page's code interacts with the DB for information exchange through CRUD operations
 
 <hr>
+
+
 
 ####  CRUD
 <br>
@@ -53,6 +178,8 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
+
+
 #### SQL and CRUD
 <br>
 
@@ -66,6 +193,8 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - removes a row from a DB table
 
 <hr>
+
+
 
 #### structuring app DB
 <br>
@@ -92,6 +221,8 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
+
+
 ## ORM: sql alchemy
 
 - ORM: Object Relational Mapping 
@@ -108,6 +239,8 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - several others exist - use as appropriate
 
 <hr> 
+
+
 
 #### db setup
 <br>
@@ -238,6 +371,8 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
+
+
 #### db sessions
 <br>
 
@@ -267,7 +402,9 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     ```
 <hr>
 
-#### CRUD in a session
+
+
+#### CRUD in ORM session
 <br>
 
 - Create: 
@@ -408,141 +545,27 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
-## internet mechanics
 
-- client: computer that wants information
-    - initiates communication
-- server: computer that has information to be shared with clients
-    - constantly listens to client requests and responds with requested data
-- protocols: communication rules over a network
-    - language that clients and servers 'speak' to each other in
-
-- [MDN - clients, servers, and the web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works){: target = "_blank"}
-
-<hr>
-
-#### protocols
-<br>
-
-- protocols relevant to a web-server:
-    - TCP: Transmission Control Protocol
-    - IP: internet Protocol
-    - HTTP: Hyper Text Transfer Protocol
-
-- TCP: 
-    - allows information to be broken into small packets
-    - these packets are transferred between clients and servers
-    - if a packet is lost on the way, the sender and receiver have a way to pinpoint to the lost packet
-        - it is requested for it be resent
-
-- UDP: User Datagram Protocol
-    - good for streaming content and video
-
-<hr>
-
-#### address concepts
-<br>
-
-- URL: Universal Resource Locator
-    - this is the string alias for an IP address of a registered web-server
-
-- IP addresses:
-    - address of the a device connected to the internet
-    - assume every device on the internet has an IP address that is statically or dynamically assigned by the IP
-    - the server and client both have IP addresses
-
-- DNS: Domain Name Server
-    - this is like a phone-book that stores all IP addresses of web URLs on the internet
-
-- ports:
-    - many sites can run on the same server, so ports are designated to specific communications on a server
-    - port are appended to the IP address with a colon 
-    - ports range from 0 - 65536
-    - ports 0 - 10000 as reserved by OSs for standard purposes
-        - 80: web-sever port (standard port for web-servers where web site content is served)
-        - 8080: web-communication port
-
-- localhost: 127.0.0.1
-    - IP address of the local machine
-    - browser looks within the machine and not outside to the internet
-    - useful for testing web-servers before deployment
-
-<hr>
-
-#### communication flow
-<br>
-
-- web communication flow:
-    - user enters url in browser on the client device
-    - the client sends url through the modem to the ISP 
-    - ISP redirects it to the DNS
-    - DNS connects client to server IP based on url 
-        - the IP match for the URL is found on the DNS
-
-<video class="mx-auto my-1" controls width="400">
-
-    <source src="/media/blogAssets/networking/how_the_internet_works_in_5.mp4" type="video/mp4">
-
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="https://youtu.be/7_LPdttKXPc">YouTube link to the video</a> instead.</p>
-
-</video>
-
-*[clip](https://youtu.be/7_LPdttKXPc){: target="_blank"}: server IP addresses, clients, internet foundations*
-{: style="font-size: 80%; text-align: center;"}
-
-<hr>
-
-
-
-
-#### HTTP
-<br>
-
-- clients tell servers what they want using HTTP verbs/methods 
-- there are 9 verbs currently in the HTTP spec
-- two most commonly used verbs by clients:
-    - GET: asks for information to be sent to client
-        - one of the safe methods
-    - POST: modifies information on the server
-        - ask for data to be added, removed or modified on the server
-    - client request as pre-fixed with HTTP codes
-- server responds to client requests with:
-    - status codes:
-        - based on what happens on the server side in response to the client request
-        - `200`: 'OK' - no errors
-        - `404`: 'Not found'
-    - resources:
-        - in response to client request
-        - such as HTML, CSS and JS files
-        - media files such as images, audio and video
-
-<img class="plot mx-auto text-center img-fluid" src="/media/blogAssets/networking/http.png" alt="comp-exp-0">
-
-*fig: client and server HTTP communication*
-{: style="font-size: 80%; text-align: center;"}
-
-<hr>
 
 ## python web server
 <br>
 
 - `python` HTTPBaseServer can be used to create a web-server 
     ```
-    ## in python 3:
-    from http.server import BaseHTTPRequestHandler, HTTPServer
+    ## in python 2.7:
+    from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
     ```
 
-- the web-server code has two main sections:
+- a `python` based web-server code has two main sections:
     - a handler class:
         - handles what code to execute based on the HTTP request received at the server port
     - a main method:
         - instantiate server 
         - specify listening port
-    - sample web-server code: `webserver.py`
+    - sample `python2.7` web-server code
+        - responds to a browser at `localhost:8080/hello`
 
     ```
-    from http.server import BaseHTTPRequestHandler, HTTPServer
-
     #### INIT HANDLERS ===========================================
     class webserverHandler(BaseHTTPRequestHandler):
         
@@ -583,8 +606,342 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     if __name__ == '__main__':
         main()
     ```
+<hr>
 
 
+
+#### handling multiple requests
+<br>
+
+- to also respond to a GET request at `localhost:8080/hola`
+    - add following in the `try` block in `webserverHandler`
+
+    ```
+    ## look for url that ends with '/hola'
+            if self.path.endswith("/hola"):
+                self.send_response(200)
+                self.send_header('Content-type', 'text/html')
+                self.end_headers()
+
+                output = ""
+                output += "<html><body> &#161 Hola! <a href='/hello'>(Back to Hello)</a></body><html>"
+                self.wfile.write(output.encode(encoding='utf-8'))
+                print(output)
+                return
+    ```
+
+- responding to a POST request
+    - use the CGI library to parse form data 
+    - following is a code snippet that can be used 
+
+    ```
+    ### POST HANDLERS
+    def do_POST(self):
+
+        try:
+
+            ## use cgi header parser to get the content type from the header  
+            ## save into a variable ctype and the contents into dict
+            ctype, pdict = cgi.parse_header(self.headers.getheader('content-type'))
+            print(ctype,pdict)
+
+            ## if ctype is form data, then parse form data
+            if ctype == 'multipart/form-data':
+
+                ## collect all fields of the field
+                fields = cgi.parse_multipart(self.rfile, pdict)
+
+                ## get the values of fields and store in array
+                messageContent = fields.get('message')
+
+        except:
+            pass
+    ```
+<hr>
+
+
+
+
+#### CRUD operations
+<br>
+
+- here is web-server source code which interfaces with the DB created earlier
+    - it has minimal UI
+    - lists all restaurants in the DB with GET
+    - allows adding new restaurants with POST
+    - editing existing restaurant names with POST
+    - and deleting restaurants with POST
+ 
+    ```
+    #### IMPORTS =================================================
+
+    # import http server
+    from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+    # common-gateway-interface
+    import cgi
+
+    ## import DB dependencies
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+    from db_setup import Base, Restaurant, MenuItem
+
+    #### DB connection setup =====================================
+
+    ## init and bind engine to db
+    engine = create_engine('sqlite:///restaurantmenu.db')
+    Base.metadata.bind = engine 
+
+    ## init session and bind to engine
+    DBSession = sessionmaker(bind = engine)
+    session = DBSession()
+
+    #### INIT HANDLERS ===========================================
+    class webserverHandler(BaseHTTPRequestHandler):
+        
+
+        ### GET HANDLERS
+        def do_GET(self):
+
+            try:
+                
+                ## delete restaurant
+                if self.path.endswith("/delete"):
+
+                    ## get ID from path:
+                    rest_id_to_delete = self.path.split('/')[2]
+                    rest_id_query = session.query(Restaurant).filter_by(rest_id = rest_id_to_delete).one()
+
+                    ## if query returns a value
+                    if rest_id_query != []:
+                        self.send_response(200)
+                        self.send_header('Content-type', 'text/html')
+                        self.end_headers()
+
+                        output = ""
+                        output += "<html><body>"
+
+                        output += "<h1> %s </h1>" % rest_id_query.rest_name  
+                        output += "<hr>"
+                        output += "<br>"
+
+                        output += "<h3> Are you sure you want to delete this restuarant? </h3>" 
+                        output += "<hp> If not, hit the back button on your browser </p>" 
+                        output += "<form method='POST' enctype = 'multipart/form-data' action='/restaurants/%s/delete'> " % rest_id_to_delete
+                        output += "<input value='Yes' type='submit'>"
+                        output += "</form>"
+
+                        output += "</body></html>"
+
+                        self.wfile.write(output.encode(encoding='utf-8'))
+
+                ## look for url that ends with '/edit'
+                ## process restaurant edit request
+                if self.path.endswith("/edit"):
+
+                    ## get ID from path:
+                    rest_id_to_edit = self.path.split('/')[2]
+                    rest_id_query = session.query(Restaurant).filter_by(rest_id = rest_id_to_edit).one()
+
+                    ## if query returns a value
+                    if rest_id_query != []:
+                        self.send_response(200)
+                        self.send_header('Content-type', 'text/html')
+                        self.end_headers()
+
+                        output = ""
+                        output += "<html><body>"
+
+                        output += "<h1> %s </h1>" % rest_id_query.rest_name  
+                        output += "<hr>"
+                        output += "<br>"
+
+                        output += "<h3> Enter new name: </h3>" 
+                        output += "<form method='POST' enctype = 'multipart/form-data' action='/restaurants/%s/edit'> " % rest_id_to_edit
+                        output += "<input name='new-restaurant-name' type='text' placeholder='%s'>" % rest_id_query.rest_name
+                        output += "<input value='Rename' type='submit'>"
+                        output += "</form>"
+
+                        output += "</body></html>"
+
+                        self.wfile.write(output.encode(encoding='utf-8'))
+
+                ## look for url that ends with '/restaurants'
+                if self.path.endswith("/restaurants"):
+                    
+                    ## retrieve list from DB
+                    rest_list = session.query(Restaurant).all()
+
+                    if rest_list != []:
+                        ## send headers
+                        self.send_response(200)
+                        self.send_header('Content-type', 'text/html')
+                        self.end_headers()
+                    
+                    ## send list of restaurants
+                    output = ""
+                    output += "<html><body>"
+
+                    output += "<h1> RESTAURANTS </h1>"
+                    output += "<p> <a href='/restaurants/new'> (Add new) </a> </p>"
+                    output += "<hr>"
+                    
+                    for rest in rest_list: 
+                        print(rest.rest_name) 
+                        output += "<h2> %s </h2>" % rest.rest_name
+                        output += "<p> <a href='/restaurants/%s/edit'> Edit Restaurant </a> </p>" % rest.rest_id
+                        output += "<p> <a href='/restaurants/%s/delete'> Delete Restaurant </a> </p>" % rest.rest_id
+                        output += "<br>"
+
+                    output += "</body></html>"
+
+                    self.wfile.write(output.encode(encoding='utf-8'))
+                    print(output)
+                    return
+
+                ## look for url that ends with '/restaurants/new'
+                if self.path.endswith("/restaurants/new"):
+                    
+                    ## send headers
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/html')
+                    self.end_headers()
+                    
+                    ## send list of restaurants
+                    output = ""
+                    output += "<html><body>"
+
+                    output += "<h1> ADD RESTAURANT </h1>"
+                    output += "<hr>"
+                    output += "<br>"
+                    output += "<h2> Enter new restaurant's name: </h2>"
+                    output += "<form method='POST' enctype = 'multipart/form-data' action='/new-restaurant'> " 
+                    output += "<input name='new-restaurant' type='text'>"
+                    output += "<input value='Submit' type='submit'>"
+                    output += "</form>"
+                    
+                    output += "</body></html>"
+
+                    self.wfile.write(output.encode(encoding='utf-8'))
+                    print(output)
+                    return
+
+            except IOError:
+                self.send_error(404, 'File Not Found %s' %self.path)
+
+        ### POST HANDLERS
+        def do_POST(self):
+
+            try:
+
+                ## restaurant name edits
+                if self.path.endswith("/delete"):
+
+                    ## rest ID to edit
+                    rest_id_to_delete = self.path.split('/')[2]
+                    rest_id_query = session.query(Restaurant).filter_by(rest_id = rest_id_to_delete).one()
+
+                    if rest_id_query != []:
+
+                        session.delete(rest_id_query)
+                        session.commit()
+
+                        self.send_response(301)
+                        self.send_header('Content-type', 'text/html')
+                        self.send_header('Location', '/restaurants')
+                        self.end_headers()            
+
+
+                ## restaurant name edits
+                if self.path.endswith("/edit"):
+
+                    ## use cgi header parser to get the content type from the header  
+                    ## save into a variable ctype and the contents into dict
+                    ctype, pdict = cgi.parse_header(self.headers.getheader('content-type'))
+                    print('CGI parsed header: ',ctype,pdict)
+
+                    ## if ctype is form data, then parse form data
+                    if ctype == 'multipart/form-data':
+
+                        ## collect all fields of the field
+                        fields = cgi.parse_multipart(self.rfile, pdict)
+                        print('CGI - fields: ',fields)
+
+                        ## get the values of fields and store in array
+                        updated_rest_name = fields.get('new-restaurant-name')
+                        print('CGI - new restaurant name: ',updated_rest_name, type(updated_rest_name))
+
+                        ## rest ID to edit
+                        rest_id_to_edit = self.path.split('/')[2]
+                        rest_id_query = session.query(Restaurant).filter_by(rest_id = rest_id_to_edit).one()
+
+                        if rest_id_query != []:
+
+                            rest_id_query.rest_name = updated_rest_name[0]
+                            session.add(rest_id_query)
+                            session.commit()
+
+                            self.send_response(301)
+                            self.send_header('Content-type', 'text/html')
+                            self.send_header('Location', '/restaurants')
+                            self.end_headers()
+
+                ## process new restaurant entry
+                if self.path.endswith("/new-restaurant"):
+
+                    ## use cgi header parser to get the content type from the header  
+                    ## save into a variable ctype and the contents into dict
+                    ctype, pdict = cgi.parse_header(self.headers.getheader('content-type'))
+                    print('CGI parsed header: ',ctype,pdict)
+
+                    ## if ctype is form data, then parse form data
+                    if ctype == 'multipart/form-data':
+
+                        ## collect all fields of the field
+                        fields = cgi.parse_multipart(self.rfile, pdict)
+                        print('CGI - fields: ',fields)
+
+                        ## get the values of fields and store in array
+                        new_rest = fields.get('new-restaurant')
+                        print('CGI - new restaurant: ',new_rest, type(new_rest))
+
+                        new_rest_obj = Restaurant(rest_name = new_rest[0])
+                        session.add(new_rest_obj)
+                        session.commit()
+
+                        self.send_response(301)
+                        self.send_header('Content-type', 'text/html')
+                        self.end_headers()
+
+                        output = ""
+                        output += "<html><body>"
+                        output += "<h2> %s added to DB successfully! </h2>" % new_rest[0]
+                        output += "<p> <a href='/restaurants'> Go to main page </a> </p>"
+                        output += "</body></html>"
+                        self.wfile.write(output.encode(encoding='utf-8'))
+                        print(output)
+
+            except:
+                pass
+
+
+    #### CODE ENTRY PORT =========================================
+    def main():
+        try:
+            port = 8080
+            server = HTTPServer(('',port), webserverHandler)
+            print("Web server running on port %s" % port)
+            server.serve_forever()
+
+        ## allow Ctrl+C interrupt:
+        except KeyboardInterrupt:
+            print(" -- Keyboard Interrupt (^C) entered, stopping web server...")
+            server.server_close()
+
+    #### END OF FILE CONFIG =======================================
+    ## run this as soon as python interpreter executes this script
+    if __name__ == '__main__':
+        main()
+    ```
 
 <hr>
 
