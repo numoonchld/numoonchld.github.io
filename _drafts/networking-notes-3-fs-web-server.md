@@ -17,12 +17,19 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 - [ORM: sql alchemy](#orm-sql-alchemy)
     - [db setup](#db-setup)
     - [db sessions](#db-sessions)
+<<<<<<< HEAD
     - [CRUD in ORM session](#crud-in-orm-session)
 - [internet mechanics](#internet-mechanics)
     - [protocols](#protocols)
     - [address concepts](#address-concepts)
     - [communication flow](#communication-flow)
     - [HTTP](#http)
+=======
+    - [CRUD in a session](#crud-in-a-session)
+- []()
+- []()
+- []()
+>>>>>>> eca842eee4c590f159ee0bd4e81132248dd84461
 
 <hr>
 
@@ -217,6 +224,7 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     ## use SQL Alchemy engine to write file:
     Base.metadata.create_all(engine)
 
+    
     ```
 
 <hr>
@@ -250,7 +258,7 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     ```
 <hr>
 
-#### CRUD in ORM session
+#### CRUD in a session
 <br>
 
 - Create: 
@@ -388,6 +396,7 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     session.commit()
     ```
 
+
 <hr>
 
 ## internet mechanics
@@ -517,6 +526,7 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 - sql alchemy
     - [declarative base](https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/api.html#sqlalchemy.ext.declarative.declarative_base){: target="_blank"}
+<<<<<<< HEAD
     - [queries](https://docs.sqlalchemy.org/en/13/orm/query.html){: target="_blank"}
 
 - HTTP 
@@ -524,3 +534,6 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - [webpage, website, web-server, and search engine](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines){: target="_blank"}
     
 
+=======
+    - [queries](https://docs.sqlalchemy.org/en/13/orm/query.html){: target="_blank"}
+>>>>>>> eca842eee4c590f159ee0bd4e81132248dd84461
