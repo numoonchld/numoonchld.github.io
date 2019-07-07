@@ -23,25 +23,38 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - [address concepts](#address-concepts)
     - [communication flow](#communication-flow)
     - [HTTP](#http)
+- [python web server](#python-web-server)
+    - 
 
 <hr>
 
 ## database operations
 
+<br>
 *web-server goal* 
     - display menus of several restaurants 
 
+- the data to be displayed on the resulting web site is stored in a DB
+- the web page's code interacts with the DB for information exchange through CRUD operations
+
+<hr>
+
 ####  CRUD
+<br>
+
 - C: Create
-    - making a new profile on a blog
+    - eg: making a new profile on a blog
 - R: Read
-    - reading an online newspaper
+    - eg: reading an online newspaper
 - U: Update
-    - changing the number of items in a shopping cart
+    - eg: changing the number of items in a shopping cart
 - D: Delete
-    - removing junk mail
+    - eg: removing junk mail
+
+<hr>
 
 #### SQL and CRUD
+<br>
 
 - `SELECT`: read operation 
     - retrieves matching data in a table from DB
@@ -52,7 +65,10 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 - `DELETE`: delete operation
     - removes a row from a DB table
 
+<hr>
+
 #### structuring app DB
+<br>
 
 - more than one way to structure a DB for app requirements
     - KISS: Keep It Simple, Stupid
@@ -476,6 +492,9 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
+
+
+
 #### HTTP
 <br>
 
@@ -504,9 +523,70 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 <hr>
 
+## python web server
+<br>
+
+- `python` HTTPBaseServer can be used to create a web-server 
+    ```
+    ## in python 3:
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+    ```
+
+- the web-server code has two main sections:
+    - a handler class:
+        - handles what code to execute based on the HTTP request received at the server port
+    - a main method:
+        - instantiate server 
+        - specify listening port
+    - sample web-server code: `webserver.py`
+
+    ```
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    #### INIT HANDLERS ===========================================
+    class webserverHandler(BaseHTTPRequestHandler):
+        
+        def do_GET(self):
+
+            try:
+                ## look for url that ends with '/hello'
+                if self.path.endswith("/hello"):
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/html')
+                    self.end_headers()
+
+                    output = ""
+                    output += "<html><body> Hello! </body><html>"
+                    self.wfile.write(output.encode(encoding='utf-8'))
+                    print(output)
+                    return
+            
+            except IOError:
+                self.send_error(404, "File Not Found %s" % self.path)
+
+
+    #### CODE ENTRY PORT =========================================
+    def main():
+        try:
+            port = 8080
+            server = HTTPServer(('',port), webserverHandler)
+            print("Web server running on port %s" % port)
+            server.serve_forever()
+
+        ## allow Ctrl+C interrupt:
+        except KeyboardInterrupt:
+            print(" -- Keyboard Interrupt (^C) entered, stopping web server...")
+            server.server_close()
+
+    #### END OF FILE CONFIG =======================================
+    ## run this as soon as python interpreter executes this script
+    if __name__ == '__main__':
+        main()
+    ```
 
 
 
+<hr>
 
 ## reading
 
@@ -519,7 +599,6 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
 
 - sql alchemy
     - [declarative base](https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/api.html#sqlalchemy.ext.declarative.declarative_base){: target="_blank"}
-<<<<<<< HEAD
     - [queries](https://docs.sqlalchemy.org/en/13/orm/query.html){: target="_blank"}
 
 - HTTP 
@@ -527,6 +606,3 @@ tags: [networking, flask, python, full-stack, CRUD, API end-points, JSON ]
     - [webpage, website, web-server, and search engine](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines){: target="_blank"}
     
 
-=======
-    - [queries](https://docs.sqlalchemy.org/en/13/orm/query.html){: target="_blank"}
->>>>>>> eca842eee4c590f159ee0bd4e81132248dd84461
