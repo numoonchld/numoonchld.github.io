@@ -23,6 +23,8 @@ tags: [dsp, notes, vectors, vector spaces, linear algebra ]
 - [bases](#bases)
     - [vector families](#vector-families)
     - [change of basis](#change-of-basis)
+- [subspaces]
+    - []
 
 <hr>
 
@@ -400,7 +402,10 @@ tags: [dsp, notes, vectors, vector spaces, linear algebra ]
     - however, they are easy to obtain with an orthonormal basis
         - \\( \alpha_k = \langle \textbf{w}^{(k)},\textbf{x} \rangle\\)
 
+<hr>
+
 #### change of basis
+<br>
 
 - \\( \textbf{x} = \sum_{k=0}^{K-1} \alpha_k\textbf{w}^{(k)} = \sum_{k=0}^{K-1} \beta_k\textbf{v}^{(k)}\\)
     - \\( \textbf{v}^{(k )}\\) is the target basis,  \\(\textbf{w}^{(k )}\\) is the original basis
@@ -417,6 +422,12 @@ tags: [dsp, notes, vectors, vector spaces, linear algebra ]
     - the rotation matrix is obtained by the matrix multiplication of the original and the target bases 
     - the rotation matrix applied to a vector in the original bases yields the coefficients of the same vector in the rotated bases
     - the matrix multiplication of the rotation matrix with its inverse yields the identity matrix
+
+<hr>
+
+## subspaces
+
+- basis vectors can be applied to signal approximation and compression 
 
 
 <hr>
