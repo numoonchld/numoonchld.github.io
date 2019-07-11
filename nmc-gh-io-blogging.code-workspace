@@ -10,7 +10,8 @@
 	"settings": {
 		"files.autoSave": "afterDelay",
 		"cSpell.words": [
-			"argand"
+			"argand",
+			"orthonormalize"
 		]
 	}
 }
