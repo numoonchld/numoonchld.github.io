@@ -29,6 +29,7 @@ tags: [dsp, notes, vectors, vector spaces, linear algebra ]
     - [least square approximations](#least-square-approximations)
     - [approximation with Legendre polynomials](#approximation-with-legendre-polynomials)
     - [haar spaces](#haar-spaces)
+- [references](#references)
 
 <hr>
 
@@ -607,6 +608,6 @@ tags: [dsp, notes, vectors, vector spaces, linear algebra ]
 <br>
 
 - [Legendre Polynomial](http://mathworld.wolfram.com/LegendrePolynomial.html){: target="_blank"}
-- [Ch 2:'From Euclid to Hilbert' \\( \in \\) Foundation of Signal Processing](http://www.fourierandwavelets.org/){: target="_blank"}
+- [Ch 2: 'From Euclid to Hilbert' \\( \in \\) Foundation of Signal Processing](http://www.fourierandwavelets.org/){: target="_blank"}
 - [Flatland](https://en.wikipedia.org/wiki/Flatland){: target="_blank"}
 - [Haar wavelet transformation](https://chengtsolin.wordpress.com/2015/04/15/real-time-2d-discrete-wavelet-transform-using-opengl-compute-shader/){: target="_blank"}
