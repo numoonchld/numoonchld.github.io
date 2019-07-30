@@ -1,10 +1,10 @@
 ---
 layout: post
 title: git essentials
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Boom Jinx & Matt Lange feat. Kerry Leva
+artistLink: https://www.discogs.com/artist/368508-Boom-Jinx
+track: Boron
+trackLink: https://youtu.be/ofCniIpp2WA
 tags: [git, notes]
 ---
 
