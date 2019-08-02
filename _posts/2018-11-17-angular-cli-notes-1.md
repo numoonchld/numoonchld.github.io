@@ -5,7 +5,7 @@ artist: Nora En Pure
 artistLink: https://www.noraenpure.com
 track: Diving with Whales (Club Dub)
 trackLink: https://www.youtube.com/watch?v=dYtfUiLRx-E
-tags: [angular-6, notes]
+tags: [angular, notes]
 ---
 
 ['Ng' is the contraction of A*ng*ular. The framework itself is named after the angular parenthesis of HTML elements. Angular components are used like HTML elements.](https://docs.angularjs.org/misc/faq#why-is-this-project-called-angularjs-why-is-the-namespace-called-ng-){: target="_blank"}   

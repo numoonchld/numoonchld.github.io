@@ -5,7 +5,7 @@ artist:
 artistLink: 
 track: 
 trackLink: 
-tags: [angular-6, notes, github-pages]
+tags: [angular, notes, github-pages]
 ---
 
 ### pre-reqs:

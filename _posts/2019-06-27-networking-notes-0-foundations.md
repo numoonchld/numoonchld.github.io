@@ -27,8 +27,8 @@ tags: [networking, notes, ubuntu, ssh, vagrant, web-server, security, octal, fir
 ## vagrant and VMBox
 
 - use vagrant along with VMBox to mock a remote web server 
-    - a virtual machine inside your local machine acts the web-server
-    - good for development phase, isolate all development to the web-server
+    - a virtual machine inside your local machine acts like the web-server
+    - good for development phase, isolate all development to this local web-server
 - install vagrant and VMBox on your local machine 
 
 - create a base working directory for this project

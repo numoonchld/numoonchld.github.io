@@ -5,7 +5,7 @@ artist: Filterheadz
 artistLink: https://en.wikipedia.org/wiki/Filterheadz
 track: Everything Explained 
 trackLink: https://www.youtube.com/watch?v=wScsg7F5pEM
-tags: [angular-6, notes]
+tags: [angular, notes]
 updated: 2019-02-09
 ---
 

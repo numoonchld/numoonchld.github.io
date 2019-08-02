@@ -1,6 +1,7 @@
 ---
 layout: post
 title: blender notes 1 - static 3D production
+
 artist: 
 artistLink: 
 track: 
