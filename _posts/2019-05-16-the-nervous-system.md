@@ -1,6 +1,6 @@
 ---
 layout: post
-title: neurobiology of everyday life - notes 0
+title: the nervous system
 artist: Jochen Miller
 artistLink: http://www.jochenmiller.com/
 track: Lost Connection

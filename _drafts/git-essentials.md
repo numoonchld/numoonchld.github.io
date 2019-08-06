@@ -64,3 +64,4 @@ navigate to app's root directory and review current config settings
 ## references 
 
 - [ssh git push](https://stackoverflow.com/questions/8588768/how-do-i-avoid-the-specification-of-the-username-and-password-at-every-git-push){: target="_blank"}
+- [git - make current commit the first commit of repo](https://stackoverflow.com/a/13102849){: target="_blank"}
