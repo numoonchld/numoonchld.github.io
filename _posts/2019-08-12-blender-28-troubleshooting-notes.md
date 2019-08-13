@@ -107,3 +107,21 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 - gets focus out to the entire node 
 
 - [SO ref](https://blender.stackexchange.com/questions/23832/how-do-i-exit-a-node-group){: target="_blank"}
+
+<hr>
+
+## layers in compostiing 
+
+#### issue:
+
+- object index doesn't load object only layer while using ID mask node editor
+
+#### solution:
+
+- use cryptomatte object pass
+- then render 
+- load the cryptomatte node and connect the renderlayer output to this node input
+- use the pick output to isolate objects
+- then, the matter output to apply other processing nodes to the selected object
+
+- [SO ref](https://blenderartists.org/t/cryptomatte-is-here-amazing/1132013/2)
