@@ -125,3 +125,19 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 - then, the matter output to apply other processing nodes to the selected object
 
 - [SO ref](https://blenderartists.org/t/cryptomatte-is-here-amazing/1132013/2)
+
+## non-scaled mesh screws with UV mapping
+
+#### issue:
+
+- when UV unwrapping a mesh in edit mode, the mesh gets wrapped in konky ways, even when the mesh geometry is simple rectangular primitives
+- this occurs when scaling has been used in creating the mesh along the way
+    - and the scale was not applied
+
+
+#### solution:
+
+- UV unwrapping works best when the scale in mesh transform reads 1.0 for X, Y and Z
+- in edit mode, select all of the mesh 
+- then do `Ctrl+A` to actually apply the scale
+- this should get the scale to 1.0 in X,Y and Z
