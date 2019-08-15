@@ -9,8 +9,6 @@ tags: [git, notes]
 ---
 
 
-
-
 ## git config
 
 #### _**unique local config for a repo:**_
