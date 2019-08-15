@@ -11,7 +11,7 @@ tags: [git, notes]
 
 
 
-## git config:
+## git config
 
 #### _**unique local config for a repo:**_
 
@@ -44,14 +44,12 @@ git config --local user.name "repo-specific-user-name"
 git config --local user.email "repo-specific-login-email"
 ```
 
-<br>
 #### _**unset a set value - example to remove a local user.email**_
 
 ```sh
 git config --local --unset user.email
 ```
 
-<br>
 #### _**view git config file:**_
 
 navigate to app's root directory and review current config settings 
@@ -60,12 +58,9 @@ navigate to app's root directory and review current config settings
 git config --list
 ```
 
-<br>
-
-
 <hr>
 
-## git remote:
+## rebasing
 
 - make current commit the initial commit 
 - helpful in purging long history of commits which you will never go back to
