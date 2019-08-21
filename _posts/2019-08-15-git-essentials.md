@@ -5,6 +5,7 @@ artist: BRKLYN feat. Mariah McManus
 artistLink: https://www.discogs.com/artist/4500301-Mariah-McManus
 track: Can't Get Enough (Unplugged)
 trackLink: https://youtu.be/o2mQt_h5xRQ
+updated: 2019-08-21
 tags: [git, notes]
 ---
 
@@ -71,6 +72,27 @@ git branch -D master  # Deletes the master branch
 git branch -m master  # Rename the current branch to master
 git push -f origin master  # Force push master branch to github
 git gc --aggressive --prune=all     # remove the old files
+```
+
+<hr>
+
+## change remote origin URL
+
+- in the following is the syntax to change the url of the `remote` named `origin` to `https://github.com/USERNAME/REPOSITORY.git`
+
+```sh
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
+
+<hr>
+
+## setting local repo to use http path to push
+
+- `git push -u origin master` throws an error saying the remote repo doesn't exist 
+- use following to set explicitly set HTTP path to push the local repo
+
+```sh
+git config --global credential.useHttpPath true
 ```
 
 <hr>
