@@ -13,6 +13,8 @@ tags: [learning, meta-skills]
   - so there is something to be said about constant learning 
   - and something to be said about the hyprocryte's oath 
 
+***
+
 ## learning modes 
 
 - in line with how the brain works according to the brain's working 
