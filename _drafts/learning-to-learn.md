@@ -66,7 +66,33 @@ tags: [learning, meta-skills]
 - chess and math are supposedly prized abilities of the brain
   - reading being able to screw fellow humans 
   - and keep tabs on fellow humans 
-- digital computers are alegedly much better at this than humans
+- most of the heavy lifting is done under the hood, in the subsconscious
+  - it is not necessary to know how this works to survive
+- different parts of the brain are active during interaction with the world and when resting
+  - the parts dedicated to interacting with the world turn off when resting and vice-versa
+- brain connections are dynamic, even after it matures
+- new synapses are formed and other disappear
+  - memory is still stable after many years
+- new synapses are formed on a dendrite after a learning and rest cycle
+- synapses are less than a micron in diameter
+  - human hair is 10 microns in diameter
+- so, technically, a brain wakes up with an upgrade when it wakes up
+  - insomnia affects learning and problem solving skills
+- [brain behavior reference](https://www.brainfacts.org)
+
+***
+
+## procrasination 
+
+
+***
+
+## memory
+
+*** 
+
+## sleep
+
 
   
   
