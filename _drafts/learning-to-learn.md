@@ -5,9 +5,13 @@ artist:
 artistLink: 
 track: 
 trackLink: 
-tags: [leanring, meta-skills]
+tags: [learning, meta-skills]
 
 ---
+
+- doctors are told at the beginning of their degree that half the things they learn during their degree will be moot by the time they graduate 
+  - so there is something to be said about constant learning 
+  - and something to be said about the hyprocryte's oath 
 
 ## learning modes 
 
@@ -43,7 +47,29 @@ tags: [leanring, meta-skills]
 
 ***
 
+## using the modes
+
 - brain has amazing ablities, but no instruction manual
+- a lot of crazy dead people (Thomas Edison, Salvodor Dali) used to almost fall asleep and harras themselves into waking up using tricks
+  - to force the diffuse thinking and then gather the new thoughts in their waking state
+  
+- similar to body-building, a little neural work in diffused and focussed thinking has to be done everyday under a regiment to strengthen the two systems
+  - constant effort is the T R I C K
+  
+- learning something difficult takes takes time, and more so for people conditioned with only one type of thinking 
+
+#### learning 
+
+- the brain is allegedly useful to learn new things
+- it supposedly consumes three time more energy per unit weigth compared to the rest of the body
+  - thoughts, hopes and fears are allegedly in the neurons of the brain
+- chess and math are supposedly prized abilities of the brain
+  - reading being able to screw fellow humans 
+  - and keep tabs on fellow humans 
+- digital computers are alegedly much better at this than humans
+
+  
+  
 
 
 
