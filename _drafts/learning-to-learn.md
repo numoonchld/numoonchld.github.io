@@ -11,7 +11,7 @@ tags: [learning, meta-skills]
 
 - doctors are told at the beginning of their degree that half the things they learn during their degree will be moot by the time they graduate 
   - so there is something to be said about constant learning 
-  - and something to be said about the hyprocryte's oath 
+  - and something to be said about the hyprocrite's oath 
 
 ***
 
