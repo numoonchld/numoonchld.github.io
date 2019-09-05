@@ -288,8 +288,15 @@ tags: [learning, meta-skills]
 
 - emotions and neuromodulatory systems are slower than perception and action
   - but hold same importance in learning process
-  
-- 
+
+***
+
+## value of chunk library
+
+- historically, combining chunks in new and 'orignal' ways has given rise to innovation
+- read about machine learning algorithms making discoveries that were hidden in old research literature, but not realized in reality
+- people gradually build the number fo chunks in their brain to increase knowledge and gain 'expertise'
+  - chunks are specifically valuable pieces of information 
 
 
 
