@@ -180,6 +180,119 @@ tags: [learning, meta-skills]
 - top down process: big-picture and context linking 
 - botton up process: chucnk and context linking
 - mastery requires both these linkings to happen correctly
+  - focussed attention
+  - understanding with diffused leanring 
+  - temporally spaced practise 
+ 
+*** 
+
+## illusions of competence 
+
+- typically re-doing the material learned is used to develop further understanding 
+  - however, this is counter productive and inefficient
+  - it is more useful to try to recall what was read the first time
+    - without looking 
+    - this is the recall technique 
+    - to be used instead of re-doing method  
+  - the recall process itself aids deeper learning 
+    - helps forms better chunks for firing neurons
+
+- the only time re-doing helps is when there more time between two iterations 
+  - as this works as a spaced repetition
+  - there needs to be a sleep and wake cycle between each iteration 
+  
+- sometimes taking notes and writing down material can fool the brain into thinking you've learnt the material 
+
+- mnistakes are helpful to find out holes in understanding 
+- mistakes can be corrected bit by bit to improve depth and quality of understanding 
+  - and this is why tests exist
+ 
+ 
+*** 
+
+## ease of learning 
+
+- it is harder to learn when there is no inderest in the topic
+- it is easy to learn when motivated and interested in the topic
+  - this is becasue the neurons in the cortex carry information about what is happening around you
+  - and actions
+- brain also has diffusely projecting systems of neuromodulators that carry information 
+  - these carry information about the value of the experience content 
+  - not the content itself 
+
+#### neuromodulators 
+
+- includes (not limited to) acetylcholine, dopamine, and serotonin
+- these have a profound impact on unconscious mind
+
+
+###### acetylcholine
+
+- these neurons form neuromodulatory connection to the cortex that are particulary important for focused learning when paying lcose attention
+- project widely and activate circuits that control synaptic palsticity leading to new long term memory 
+
+###### dopamine
+
+- dopamine allegedly 'controls' motivation
+  - they are a part of a large reward-learning system
+
+- dopamine is found in small set of neurons in the mid-brain
+  - partcularly in the basal ganglia just above the mid-brain 
+  - below the cortex of the top brain
+  
+- dopamine signals project widely and have a powerful effect on learning 
+  - they are released when we receive and unexpected reward
+  - also affects decision-making and the value of the sensory inputs 
+
+- dopamine is in the business of precdicting future rewards 
+  - not just the immediate rewards
+  - this can motivate you to do something right now that may be not a instataneously rewarding 
+  - but may lead to a better reward in the future 
+  
+- addictive drugs artificially increase dopamine activity and fool brain into thinking that something wornderful has happened 
+  - leads ot craving and dependence which can hijack free will 
+  - and motivate harmful behavior
+  
+- loss of dopamine neurons leads to lack of motivation and 
+  - something called "anhedoina" 
+  - which is a loss of interest in things that once gave you pleasure
+  
+- severe loss of dopamine neurons causes resting tremors, slowness, rigidity, parkinson's disease 
+  - ultimately leads to catatonia, a complete lack of any movement 
+
+- dopamine neurons are part of the unconscious brain
+- when using reward-promise in the pomodoro technique, it is essentially tapping into the dopamine mechanism 
+
+###### serotonin
+
+- diffuse neuromodulatory system that strongly affects social life 
+- in monkey troops, the alpha male has the highest level of serotonin activity
+- lowest ranking male has lowest ranking activity 
+- prozac, which is the medication for clinical depression, 
+  - increases serotonin activity
+- serotonin is also closely related risk-taking behavior
+  - higher risk in lower serotonin monkeys 
+- jailed inmates have the lowest recorded levels of serotonin 
+
+
+#### emotions 
+
+- emotions strongly affect learning 
+- emotions are entwined with perception, and attention span
+- emotions interact with learning and memory 
+
+- the amygdala is a part of the limbic system
+  - along with the hippocampus, is involved in memory and decision-making 
+  - regulating emotional reactions 
+- the amygdala must be happy to be an effective learner
+
+- emotions and neuromodulatory systems are slower than perception and action
+  - but hold same importance in learning process
+  
+- 
+
+
+
 
 
 
