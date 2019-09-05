@@ -145,7 +145,41 @@ tags: [learning, meta-skills]
 
 ## chunking
 
+- a chunk is like creating a zip file of many ideas
+  - like stitching together a word from letters
+  
+- a chunk is a piece of information neurologically speaking 
+  - a symphony of neurons firing together
+  - to think a thought or do an action
+  
+- focussed mode learning helps start forming chunks 
+  - but stress, anger and fear block this 
+  
+#### forming chunks
 
+- grasping small patterns of the big picture 
+- then graudaully knitting them together 
+- when done with proper learning technqiues, leads to the ability of doing it without applying much thought
+
+- chunking for every topic is a bit different
+- however, the underlying mental scheme is the same
+  - get the main idea first 
+  - then break it into as many pieces as possible
+- seeing the problem being solved helps provife the big picture
+
+- just because the problem solving process was observed, expertise isnt implied 
+  - aha != expertise
+- many things are understood only after it is done without looking at the sample provided
+  - like seeing a painting or listening to a song desnt mean you can create it
+
+- there are three elements in the scheme of chunking
+  - big picture
+  - context
+  - chunks
+  
+- top down process: big-picture and context linking 
+- botton up process: chucnk and context linking
+- mastery requires both these linkings to happen correctly
 
 
 
