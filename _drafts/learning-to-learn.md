@@ -297,6 +297,21 @@ tags: [learning, meta-skills]
 - read about machine learning algorithms making discoveries that were hidden in old research literature, but not realized in reality
 - people gradually build the number fo chunks in their brain to increase knowledge and gain 'expertise'
   - chunks are specifically valuable pieces of information 
+  - that can be pieced together in new ways
+  
+- applies to musicians, linguists and scientists 
+  - bigger and better the mental chunk library for the given field
+    - easier it is to solve problems and figure out solutions 
+
+- chunking helps understand new concepts
+  - when one chunk is grasped, it can be linked to related chunks in surprising ways 
+  - not only in that particular field, but different fields
+  
+- 
+
+
+- chunking is only one of the components of developing of creative flexibility in learning 
+
 
 
 
