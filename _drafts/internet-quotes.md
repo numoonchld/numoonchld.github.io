@@ -7,7 +7,7 @@ name: internet quotes
 
 [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data){:target="_blank"} on Common Security Concerns
 
-<hr>
+***
 
 Rants:
 
@@ -21,3 +21,9 @@ Rants:
 
 "If you're an adventurous little rain drop, you probably want to dodge that wiper. Else, if you're in the desert, you simply want to dodge the viper"
 
+
+***
+
+Insta-thots:
+
+- regret is not a choice, allowing the fear of regret to control you is 
