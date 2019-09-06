@@ -1,9 +1,9 @@
 ---
 layout: post
 title: learning to learn - chunkning
-artist: Tool
+artist: 
 artistLink: 
-track: Jambi
+track: 
 trackLink: 
 tags: [learning, meta-skills]
 
