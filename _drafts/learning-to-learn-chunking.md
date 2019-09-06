@@ -286,6 +286,47 @@ tags: [learning, meta-skills]
 
 - chunks are best built understanding the idea with focussed, undivided attention
 
+#### practise
+
 - practise helps deepen patterns and gain the context bigger than chunks
+- don't practise the wrong thing, ensure what you're learning is accurate 
+  - in some areas this might not have too much impact 
+  - but in things like learning a new exercise, learnign the wrong form will damage muscles and bones, working against the benefit of the execise, causing harm instead
+
+#### recall
 
 - simple recall i.e. remembering the content without refering to the learning source after having learnt from it, is the best technique to form chunks
+
+#### transfer 
+
+- an already created and mastered chunk more often than not helps form chunk in other areas, due to shared commonalities 
+
+#### interleaving
+
+- different concepts, approaches and techniques are to be practised in the same session 
+- chunks by themselves dont create flexibility, interleaving chuncks does
+- this flexibility leads to creativity and "originality" 
+
+#### illusions of competence 
+
+- it is important to recoginize when you're fooling yourself into thinking you're learning
+
+- a lot of activities like repeatedly hammering at learning the same content, trying to automate learning, highlighting content, focussing on only the easy stuff only etc are trickery to fool yourself
+- nothing actually gets retained
+- recall, and repetietons of recalls spaced with sleep cycles are what helps learning and retention
+
+- mistakes are what helps clear out illusions of competence
+
+#### einstellung
+
+- this is when an exisitng pattern prevents finding a better solution 
+- prevents flexibility in accepting new ideas
+- use the law of serendipity to counter einstullung
+  - luck favors those who try
+  - try with grasping smaller chunks 
+  - build on acquired chunks to build newer ones
+
+
+
+
+
