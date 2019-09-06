@@ -303,7 +303,7 @@ tags: [learning, meta-skills]
   - bigger and better the mental chunk library for the given field
     - easier it is to solve problems and figure out solutions 
 
-#### transfer
+###### transfer
 
 - chunking helps understand new concepts
   - when one chunk is grasped, it can be linked to related chunks in surprising ways 
@@ -311,6 +311,78 @@ tags: [learning, meta-skills]
   - this is called 'transfer'
   
 - chunking is only one of the components of developing of creative flexibility in learning 
+
+- a chunk is a way of expressing ideas more compactly
+  - when organizing chunks, different types and concepts are identified 
+  - this helps in grasping new things more easiliy 
+  
+#### sequential and intuitive (holistic) 
+
+- chunks are useful for step-by-step organization during learning 
+- and enable global intuitive access while retrieving memorized and understood information 
+
+- most difficult problems and concepts are grasped through intuition 
+- diffuse mode is an almost random way of making connections 
+  - these need to be verified using the focussed mode while solidifying learning
+  - intuitive insights aren't always correct
+  
+#### law of serendipity
+
+- lady luck favors the one who tries
+- the first piece of concept might be hard to grasp
+  - but the secodn chunk goes in easier 
+  - the third easier still
+  
+#### overlearing 
+
+- practising over and over again during the same session
+- a little repetetion is useful and necessary
+- continued learning after mastering the content is called overlearning 
+- it can produce automaticity in contexts of tennis and playing muscial insturments 
+- it can be helpful for people not comfortable with public speaking, or when you choke on tests
+- automaticity is helpful in times of nervousness
+- however overlearning costs a lot in terms of learning time
+
+###### illusion of competence
+
+- overlearning leads ot illusion of competence 
+- it also leads to the thinking that bashing in something will fix things and learning new things is just simply overlearning 
+- these are slow strategies and drain motivation chemicals 
+- hammering away at the same content in a study session doesnt strengthen the material learned 
+  - it is important to include sleep cycles between repetetions 
+- time can be wasted automaticizing the easy stuff and not even going simple mastery over the diffucult things
+- there should be deliberate attempt to tackle difficult topics during learning 
+
+#### einstellung
+
+- means mindset in german
+
+- a pattern already developed in your mind or a neural pattern you've already developed and strengthened may prevent a better idea or solution from being found 
+
+- in the pinball machine paradigm of the brain, the thought patterns in the upper brain dominate, unyielding to the solutions to problems coming from the lower brain
+
+- the crowded bumpers of focussed thinking and previous thought patterns can create a rut preventing looking in different places where the solution might be found
+
+- this is the wrong approach but very easy to do, the initial thinking is misleading 
+  - older patterns might need to unlearned before and while learning new patterns
+  
+#### sinking 
+
+- getting into solving problems without priming the mind with relevant information is called sinking 
+
+- for instance, not reading the text book, attending lectures and viewing online lessons before taking a test or doing work associated
+
+- understanding how to obtian solutions is the part that is missed here
+
+- mastering a new concept involves lerning new chunks AND knowing how to select and apply different chunks 
+
+- the best way to learn this is to jump back and forth between situations that require strategies and techniques from different chunks 
+
+- while laying down the foundations use the focussed method to initiate chunks in a linear, sdequential fashion
+
+- to strengthen and master a subject, use the jumping back and forth strategy along with seperated repetitions 
+
+- 
 
 
 
