@@ -366,7 +366,7 @@ tags: [learning, meta-skills]
 - this is the wrong approach but very easy to do, the initial thinking is misleading 
   - older patterns might need to unlearned before and while learning new patterns
   
-#### sinking 
+#### sinking and interleaving
 
 - getting into solving problems without priming the mind with relevant information is called sinking 
 
@@ -377,13 +377,29 @@ tags: [learning, meta-skills]
 - mastering a new concept involves lerning new chunks AND knowing how to select and apply different chunks 
 
 - the best way to learn this is to jump back and forth between situations that require strategies and techniques from different chunks 
+  - this is called interleaving
 
-- while laying down the foundations use the focussed method to initiate chunks in a linear, sdequential fashion
+- while laying down the foundations use the focussed method to initiate chunks in a linear, sequential fashion
 
-- to strengthen and master a subject, use the jumping back and forth strategy along with seperated repetitions 
+- to strengthen and master a subject, use interleaving along with seperated repetitions 
 
+- when mastering a subject, it is important to let the brain know that forming patterns for only one kind of concept, approach and problem-solving is not enough 
+
+- it assissts in deeper understanding of a subject 
+
+- practise and repetition builds strong neural patterns (chunks), interleaving builds flexibility and creativity 
+
+- when chunks in the same subject are interleaved, it builds creativity in that subject
+
+- when different subjects are interleaved, connections between different subjects are generated enabling more creativity 
+
+- however, the chunks from different fields have to be solid enough for these patterns to be applicalble in real life
+
+- some dead fucker who was apparently a philosopher allegedly said that paradigm shifts in science are brought about either by young people or people trained in other disciplines 
+  - since they are not prone to einstllung to the degree that exisitng domain experts are
+   - experts essentially are people trapped in the einstellung
+  
 - 
-
 
 
 
