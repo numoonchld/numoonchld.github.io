@@ -1,6 +1,6 @@
 ---
 layout: post
-title: learning to learn
+title: learning to learn - learning modes
 artist: Tool
 artistLink: https://www.discogs.com/artist/87016-Tool-2
 track: Jambi
