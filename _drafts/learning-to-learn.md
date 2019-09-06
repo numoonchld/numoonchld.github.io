@@ -1,10 +1,10 @@
 ---
 layout: post
 title: learning to learn
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Tool
+artistLink: https://www.discogs.com/artist/87016-Tool-2
+track: Jambi
+trackLink: https://youtu.be/aUK8KOPNcb0
 tags: [learning, meta-skills]
 
 ---
@@ -303,13 +303,13 @@ tags: [learning, meta-skills]
   - bigger and better the mental chunk library for the given field
     - easier it is to solve problems and figure out solutions 
 
+#### transfer
+
 - chunking helps understand new concepts
   - when one chunk is grasped, it can be linked to related chunks in surprising ways 
   - not only in that particular field, but different fields
+  - this is called 'transfer'
   
-- 
-
-
 - chunking is only one of the components of developing of creative flexibility in learning 
 
 
