@@ -399,6 +399,28 @@ tags: [learning, meta-skills]
   - since they are not prone to einstllung to the degree that exisitng domain experts are
    - experts essentially are people trapped in the einstellung
   
+- learning does not happen only from teachers and books, it also happens when 
+  - you lay a bully to rest, 
+  - you fix a a leaky faucet,
+  - you pack a suitcase for a vacation
+
+## chunking summary - chunking chunking 
+
+- chunks are pieces of information, neuroscientifically speaking, 
+  - bound together through use 
+  - and through shared meaning 
+  
+- can be viewed as a scintillating network of neurons that compactly sysntehsize key ideas or actions 
+
+- they can grow to get bigger 
+- but they are meant to be a single easy access item that you can fit like a ribbon into the slot on your working memory 
+
+- chunks are best built understanding the idea with focussed, undivided attention
+
+- practise helps deepen patterns and gain the context bigger than chunks
+
+- simple recall i.e. remembering the content without refering to the learning source after having learnt from it, is the best technique to form chunks
+
 - 
 
 
