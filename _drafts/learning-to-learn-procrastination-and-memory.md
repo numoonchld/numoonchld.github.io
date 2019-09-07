@@ -144,11 +144,70 @@ tags: [learning, meta-skills]
 - in the pomodoro technique for instance, the 25 min session is the process
 
 ###### product 
-- this is outcome of the process
+- this is outcome of the process time
 
 #### procrastination
 
-- a disproportional amount of focus on the product with too much weight given to achieving a perfect product works in favor of prcrastination
-- if the product in the frist attmept is expected to be perfect, it triggers pain centers in a pronounced way 
-- deterring further focussed action
-- 
+- a disproportionate amount of focus on the final product with 
+  - too much weight assigned to achieving a perfect product 
+  - works in favor of prcrastination
+  
+- if the product in the first attmept is expected to be perfect, 
+  - it triggers pain centers in a pronounced way 
+  - deterring further focussed action
+  - triggering procrastination
+
+- focussing on creating a perfect product when learning
+  - deters formation of healthy chunks
+  - inefficient and incoherent chunks are formed
+  - leading to a useless foundation
+  - further discouraging the learner from the learning process
+  - setting up negative narratives about learning, 
+  - strengthening procrastination patterns
+  
+- focus on the process to get better at learning and creating the product 
+  - this deters procrastination as a by-product
+  - increases speed of learning, by forming healthy and coherent chunks
+  
+- this is illustrated in a situation where a homework is just five questions 
+  - but the answers take hours of focussed work and involved reasoning to obtain
+  - it is easy to begin with saying it's just five questions and getting into it focussing on getting five answers 
+  - however this is product focussed action
+    - and encourages procrastination
+  - even if efforts are put in 
+    - considering there are 'just' five answers to be obtained,
+    - it leads to poor learning and misdirected effort
+    - since focus in answer generation and not healthy and coherent chunk creation
+
+- it would be healthier for the learning system to consider the task as coming up with five processes instead of the five final answers 
+  - the point is to not expect oneself to finish in one session to begin with 
+  - this ensures a massively shitty product 
+  - with a 'thrown together at the last moment' vibes 
+  
+- the goal is to distribute the process over several sessions 
+  - so usefully-challenged chunks are not formed 
+  - calm focus has to be spent in short pieces of time to create potent chunks 
+  
+- the zombie brain (para-symapthetic) likes to march mindlessly along process 
+  - it is beneficial to empower this zombie with coherent and solid chunks 
+  - since the zombie is a time saver 
+
+- so in a pomodoro session, finishing a set percent of the task is not the goal
+  - it is about focussing on the process associated with that time span
+  - process means the habit forming and actions assocaited with the considered time span
+
+- focussing on the process helps reduce the negative vibes of the self-judgement for not being able to produce a perfecrt final product in the first go
+
+- to combat distractions, it is helpful to let it flow and not encouraging it 
+  - also setting up oneself for lesser distraction is great
+  - learning in a coffee shop looks great in a stock picture 
+    - to be used on a corporate website
+  - but does not work so well in forming useful chunks 
+    - handicapped chunks are the result of working amidst distractions
+    
+- poor attempt at humor:
+  - drink alcohol to kill those handicapped chunks in your brain 
+ 
+
+  
+  
