@@ -52,7 +52,7 @@ tags: [learning, meta-skills]
   - the narratives are superficially sound and fool your thinking 
   - but in the long run they are irrational and cause loss of development
   
-- tests choke you because there is no strong neural foundation for the test material 
+- tests choke you when there is no strong neural foundation for the test material 
 
 - the strategies for dealing with inner zombies aren't intuitive 
   - in fact it is more intuitive to give in to inner zombies 
@@ -76,7 +76,7 @@ tags: [learning, meta-skills]
 
 - habits are built in energy savers 
   - it helps automate tasks so newer or more relevant taks can be focussed on
-  - but habits also create zombies 
+  - habits also create zombies 
 
 - it is useful to be aware of the purpose of the habitual zombies created in the brain
   - at any given point in time, there is a superpositon of serveral zombies active with in you
@@ -193,7 +193,7 @@ tags: [learning, meta-skills]
   
 - the zombie brain (para-symapthetic) likes to march mindlessly along process 
   - it is beneficial to empower this zombie with coherent and solid chunks 
-  - since the zombie is a time saver 
+  - since the zombie is a energy saver, the better the zombie gets at mindlessly executing the chuck pattern, the lesser it resists
 
 - so in a pomodoro session, finishing a set percent of the task is not the goal
   - it is about focussing on the process associated with that time span
@@ -222,7 +222,7 @@ tags: [learning, meta-skills]
   - good and bad depends on the outcome of the habit they are associated with 
   
 - a lot of previous habits were formed to serve a purspose in an older context
-- as contexts change, to stay relevant, it is of paramount important to modify habits 
+- as contexts change, to stay relevant, it is of paramount importance to modify habits 
 - a full rehaul of old habits are seldom necessary
   - usually, rewiring parts of exisitng ones 
   - erasing and learning a few new ones to replace them 
