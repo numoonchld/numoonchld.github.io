@@ -85,7 +85,7 @@ tags: [learning, meta-skills]
 
 - habit can be god or bad depending on who is coloring it 
 
-#### anatomy of a habit
+#### anatomy of an inner zombie
 
 1. cue
 2. routine
@@ -94,9 +94,38 @@ tags: [learning, meta-skills]
 
 ###### cue 
 
+- the trigger that launches the zombie mode 
+- can be various event 
+  - subtle to drastic 
+  - ties into body language mechanisms
+
 ###### routine 
+
+- the actual zombie mode 
+- the same zombie in different circumstances 
+  - can be exretmely useful
+  - or extremely harmful
+  - or anything in between
 
 ###### reward 
 
-###### beliefe 
+- the very nature of habits is such that there is a reward associated with it
+- the reward solidifies the habit
+- reward in the physical world can be doing somehting pleasureable
+  - in the brain, it translates to some appropriate chemical being released 
+  - dopamine for instance when an addictive behavior is catered to 
+- the reward system needs to be addressed while forming and solidifying good habits 
+  - procrastination, for instance, has a built in reward mechanism
+  - to combat this, the external reard system has to be addressed
+
+###### beliefs
+
+- this is a more abstract topic and needs more research to be understood better
+- in short, beliefs and habits enforce each other
+- a habit formation can change a previously held belief
+- a changed belief can change a habit 
+- a bad habit that is left untended to can reinforce a self-defeating belief
+- a healthy habit can strengthen positive beliefs 
     
+***
+
