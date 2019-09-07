@@ -259,10 +259,41 @@ tags: [learning, meta-skills]
 
 - all aspects of the routine cannot be coherently changed in one sitting
   - a plan is necessary 
-- developing a new ritual is helpful
+  - developing a new ritual is helpful
   
+- but the new response has to be registered with the zombie at the identified cue
+  - untill this is fully absorbed by the zombie
+  
+- the pomodoro technique can be helpful while changing routine associated with a cue
 
+###### reward
+
+- pride and emotional satisfaction typically work in synergy when there is progress associated with the process
+- it may also include other tangible rewards 
+- this needs to be explored on a case by case basis 
+- usually the path of less pain choosen by the procrastination zombie can be used as rewards 
+- so the procrastination zombie is an indicator of what can be used as a reward 
+- OCD tendencies can be used as a reward in some scenarios 
+- lunch breaks, dinner breaks, snack breaks, coffee, tea breaks all work as rewards to reinforce habits
+
+- the better you become at something, 
+  - the lesser the procrastination zombie fights back, 
+  - since the pain centers dont trigger
+  - the activity becomes much more enjoyable due to flow
   
- 
+###### belief
+
+- it helps to obtain a clear visualization of the present habit and the target habit 
+- once these are figured out, and the parts that need rewiring have been identified
+  - the simple act of trying to change the exisitng pattern reinforces the belief 
+    - the belief of being able to change 
+    - the belief of being able to create a replacement habit 
+- positive social reinforcement is also immensely helps in accelerating new habit formation 
+  - the same is true for dysfunctional and malicious habits formation 
+
+***
+
+
+
  
   
