@@ -1,10 +1,10 @@
 ---
 layout: post
 title: learning to learn - procrastination and memory
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Delerium
+artistLink: https://www.discogs.com/artist/2077-Delerium
+track: Ritual
+trackLink: https://youtu.be/dBaD_6QMim8
 tags: [learning, meta-skills]
 
 ---
@@ -136,14 +136,17 @@ tags: [learning, meta-skills]
   - with the intention of completely acknowledging it in its enitrity to move past it 
 
 - the law of serendipity is one of the available tools to get going in the face of these negative vibes and feelings
+
 - another technique to mix in while learning a new thing is differentiating the process from the product 
   - the process has to developed while using the product as a indicator to asses how to process can be made better, not as the end goal 
   
 ###### process
+
 - process is the flow of time + ( the habits and actions ) in the flow of time
 - in the pomodoro technique for instance, the 25 min session is the process
 
 ###### product 
+
 - this is outcome of the process time
 
 #### procrastination
@@ -213,9 +216,53 @@ tags: [learning, meta-skills]
 ## harnessing inner zombies 
 
 - zombies are inner beings formed by habits 
-- they make an action they get associated with consume less energy 
+  - they make an action they get associated with consume less energy 
+
 - inner zombies just are
   - good and bad depends on the outcome of the habit they are associated with 
+  
+- a lot of previous habits were formed to serve a purspose in an older context
+- as contexts change, to stay relevant, it is of paramount important to modify habits 
+- a full rehaul of old habits are seldom necessary
+  - usually, rewiring parts of exisitng ones 
+  - erasing and learning a few new ones to replace them 
+  - or a combination of this does the job
+  
+#### rewiring a habit 
+
+- since there are four parts to a habit, to modify a habit:
+  - the reaction to the cue has to be consciously modified wih repetition 
+  
+###### cue  
+
+- so it is important to identify the cue before changing the reaction to it
+- cue can be of four broad kinds
+  1. location
+  2. time
+  3. how you feel 
+  4. reactions 
+    - other people's behavior or judgement 
+    - your own reactions to some external or internal event
+    
+- procrastination in itself is an energy saving zombie 
+- distractons are cues to trigger this zombie 
+- by default, the mind procrastinates 
+  - i.e. finds action path of least pain 
+  - it is important to note that this doesnt necessarily mean maximizing pleasure
+  - the zombie of procrastination only works to avoid pain 
+
+###### routine
+
+- to get a new routine wired over the older one, 
+  - instead of getting into a less painful pathway 
+  - whatever the path being taken as an alternative 
+
+- all aspects of the routine cannot be coherently changed in one sitting
+  - a plan is necessary 
+- developing a new ritual is helpful
+  
+
+  
  
  
   
