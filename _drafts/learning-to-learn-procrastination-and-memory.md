@@ -209,5 +209,5 @@ tags: [learning, meta-skills]
   - drink alcohol to kill those handicapped chunks in your brain 
  
 
-  
+ 
   
