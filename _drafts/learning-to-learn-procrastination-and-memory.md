@@ -299,6 +299,9 @@ tags: [learning, meta-skills]
 
 ***
 
+## juggling life and learning 
+
+
 
 
  
