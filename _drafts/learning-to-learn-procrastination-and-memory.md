@@ -288,8 +288,14 @@ tags: [learning, meta-skills]
   - the simple act of trying to change the exisitng pattern reinforces the belief 
     - the belief of being able to change 
     - the belief of being able to create a replacement habit 
+
 - positive social reinforcement is also immensely helps in accelerating new habit formation 
   - the same is true for dysfunctional and malicious habits formation 
+  
+- belief plays an important role in sticking to the plan devices to rewire a habit
+  - when the going gets stressful and challenging 
+
+- reinforcing beliefs can aid the new response to the cue, while negative beliefs can hinder it 
 
 ***
 
