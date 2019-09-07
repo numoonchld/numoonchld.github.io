@@ -208,6 +208,14 @@ tags: [learning, meta-skills]
 - poor attempt at humor:
   - drink alcohol to kill those handicapped chunks in your brain 
  
+*** 
 
+## harnessing inner zombies 
+
+- zombies are inner beings formed by habits 
+- they make an action they get associated with consume less energy 
+- inner zombies just are
+  - good and bad depends on the outcome of the habit they are associated with 
+ 
  
   
