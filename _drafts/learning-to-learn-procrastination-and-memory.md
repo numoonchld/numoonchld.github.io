@@ -70,6 +70,14 @@ tags: [learning, meta-skills]
   - only pain avoidance is focussed on
   - while pain avoidance is fine and dandy and helps reduce hospital bills, it is counter to being able to learn new things 
 
+***
 
+## habits 
+
+- habits are built in energy savers 
+- it helps automate tasks so newer or more relevant taks can be focussed on
+- but habits also create zombies 
+- it is useful to be aware of the purpose of the habitual zombies created in the brain
+- at any given point in time, there is a superpositon of serveral zombies active with in you
 
     
