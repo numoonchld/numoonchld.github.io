@@ -129,3 +129,26 @@ tags: [learning, meta-skills]
     
 ***
 
+## process vs product
+
+- it is expected behavior to start with negative vibes when learning something new 
+  - it helps to addressing these direcctly with a rant session of some sort 
+  - with the intention of completely acknowledging it in its enitrity to move past it 
+
+- the law of serendipity is one of the available tools to get going in the face of these negative vibes and feelings
+- another technique to mix in while learning a new thing is differentiating the process from the product 
+  - the process has to developed while using the product as a indicator to asses how to process can be made better, not as the end goal 
+  
+###### process
+- process is the flow of time + ( the habits and actions ) in the flow of time
+- in the pomodoro technique for instance, the 25 min session is the process
+
+###### product 
+- this is outcome of the process
+
+#### procrastination
+
+- a disproportional amount of focus on the product with too much weight given to achieving a perfect product works in favor of prcrastination
+- if the product in the frist attmept is expected to be perfect, it triggers pain centers in a pronounced way 
+- deterring further focussed action
+- 
