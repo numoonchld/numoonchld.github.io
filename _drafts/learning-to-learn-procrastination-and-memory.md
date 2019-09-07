@@ -75,9 +75,28 @@ tags: [learning, meta-skills]
 ## habits 
 
 - habits are built in energy savers 
-- it helps automate tasks so newer or more relevant taks can be focussed on
-- but habits also create zombies 
-- it is useful to be aware of the purpose of the habitual zombies created in the brain
-- at any given point in time, there is a superpositon of serveral zombies active with in you
+  - it helps automate tasks so newer or more relevant taks can be focussed on
+  - but habits also create zombies 
 
+- it is useful to be aware of the purpose of the habitual zombies created in the brain
+  - at any given point in time, there is a superpositon of serveral zombies active with in you
+  - this is very useful for saving energy
+- however, since this system is a subconsious system, it often gets abused 
+
+- habit can be god or bad depending on who is coloring it 
+
+#### anatomy of a habit
+
+1. cue
+2. routine
+3. reward
+4. belief
+
+###### cue 
+
+###### routine 
+
+###### reward 
+
+###### beliefe 
     
