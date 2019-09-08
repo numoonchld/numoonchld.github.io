@@ -1,10 +1,10 @@
 ---
 layout: post
 title: learning to learn - chunkning
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Yendorami
+artistLink: https://open.spotify.com/album/0wDj5SE7QhZytQif3RvM12
+track: Strong and Strike
+trackLink: https://youtu.be/SQeMRiq_BTE
 tags: [learning, meta-skills]
 
 ---
