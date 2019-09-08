@@ -33,7 +33,7 @@ In Blender 2.8 ('s latest beta), I succeeded in getting Eevee transparency to wo
 - [SO ref](https://blender.stackexchange.com/a/129787){: target="_blank"}
 
 
-<hr>
+*** 
 
 
 ## texture only in dark spots
@@ -73,7 +73,7 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 - [SO ref](https://blender.stackexchange.com/questions/116394/how-to-make-texture-appear-only-in-dark-spots){: target="_blank"}
 
 
-<hr>
+***
 
 ## grid artifact in overlapping layers
 
@@ -90,7 +90,7 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 - one of the mesh has to be manually scaled such that 
     - there is no overlap between the two 
 
-<hr>
+***
 
 ## stuck in node group
 
@@ -108,7 +108,7 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 
 - [SO ref](https://blender.stackexchange.com/questions/23832/how-do-i-exit-a-node-group){: target="_blank"}
 
-<hr>
+***
 
 ## layers in compostiing 
 
@@ -134,10 +134,35 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 - this occurs when scaling has been used in creating the mesh along the way
     - and the scale was not applied
 
-
 #### solution:
 
 - UV unwrapping works best when the scale in mesh transform reads 1.0 for X, Y and Z
 - in edit mode, select all of the mesh 
 - then do `Ctrl+A` to actually apply the scale
 - this should get the scale to 1.0 in X,Y and Z
+
+***
+
+## point density shader
+
+#### issue
+
+- using 'add shader' node to sum the output of multiple 'point density' nodes of different object vertices hangs blender 
+- the render process hangs in initialization
+ - in cycles
+
+#### solution
+
+- use dedicated material for each object that the 'point density' node is being applied to 
+
+<br>
+
+#### issue 
+
+- doesnt render in eevee 
+
+#### solution
+
+- use cycles
+- take computation time and resources hit
+- or quality hit 
