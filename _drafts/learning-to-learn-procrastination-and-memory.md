@@ -302,7 +302,123 @@ tags: [learning, meta-skills]
 ## juggling life and learning 
 
 
+- learning involves a complex balance of many different tasks
 
 
+#### keeping perspective 
+
+- to keep perspective, 
+  - write once a week a brief weekly list of key tasks
+  - the each day on another page, write a list of tasks that can be reasonably worked on or accomplished
+  - do the daily task the evening before
+
+###### recon
+
+- doing the evening before helps subconscious grapple with the tasks list
+- if tasks are not written down, they take up mental real estate and eat up short terrm memory space
+
+
+###### entry kinds 
+
+- some entries are process oriented
+  - long term projects that need to consistently worked on 
+  - writing a book or preparing for a conference
+- others are product oriented 
+  - this is because they are doable only within a limited amount of time 
+
+- mixing other tasks with learning can make the process more fun
+  - but ensure you don't get carried away
+
+
+###### quitting time 
+
+- planning quitting time is as important as planning working time 
+- estimating how much time the task takes makes you better at estimating the time need for the task
+- time after time, those who dedicated a healthy amount of leisure time outperformed those without
+- eat those frogs first thing in the morning
+  - work on the most difficult tasks first 
+  - atleast one pomodoro when you start
+
+###### roadblocks
+
+- planning well is a part of trying 
+- there are occasional road blocks 
+- law of serendipity 
+  - lady luck favors the one who keeps trying 
+- use the pomodoro time blocks to realign with goals
+
+
+#### closing 
  
+
+- it is important to gain trust in the new system
+- work with a plan
+- enjoy leisure times without guilt to reap benifits of the work put in 
   
+
+***
+
+## memory
+
+- visual-spatial systems to form memories
+- one key item in the vision used to form the memory
+
+- spaced repetition is key to improve memory
+  - sporadically over several days
+
+
+- the hippocampus helps learn new facts and events 
+  - and appends it to existing memory 
+  - to enable recall 
+
+#### reconsolidation
+
+- memories take a long time to be consolidated into the cortex  
+  - whenever a memory is processed, it undergoes a process called reconsolidation
+- this makes it possible to implant false memories
+  - with suggestions and vivid imaginations 
+
+- reconsolidation takes memory form the short term memory and stores it in the long term memory
+  - by modifying dendrites of the neurons
+    - so the old memory gets modified 
+    - new and old memories get intertwined with each other 
+  - this is the inactive state
+- memories are physical things 
+
+- because of how consolidation works during sleep and how reconsolidation works over larger periods of time
+  - it is better to learn with spaced repetition instead of cramming in one session
+
+#### glial cells
+
+- in addition to neurons, the brain has other cells called glial cells
+- astrocytes are the moist abundant glial cell in the human brain
+  - they provide nutrients to neurons
+  - aid in repair of brain cells
+
+- astrocytes play an important role in learning
+- einstein's brain had a pronouncedly more number of astrocytes than the average human
+
+
+#### creating meaningful memory groups 
+
+- use mnemonics
+  - they can be useful sometimes 
+  - mostly irritating and annoying once the test is done 
+
+- use visualizations 
+  - can be meaningful 
+  - can be absurdly hilarious 
+  - can be extremely dark
+  - what ever helps you remember the thing you need to remember 
+
+- oddball memorization gimmicks 
+  - they speed up the acquisition of data into the brain
+  - be wary of how they inadverently resurface at inappropriate times 
+
+
+#### closing
+
+- space out memorization sessions 
+- start early and memorize in spaced sessions 
+
+***
