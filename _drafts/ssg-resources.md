@@ -14,3 +14,6 @@ https://idratherbewriting.com/documentation-theme-jekyll/mydoc_yaml_tutorial
 
 - Jekyll CMS implementation
 https://www.netlifycms.org/blog/2019/06/implementing-a-jekyll-cms-in-3-days/
+
+- Data Files in Jekyll
+https://jekyllrb.com/docs/datafiles/
