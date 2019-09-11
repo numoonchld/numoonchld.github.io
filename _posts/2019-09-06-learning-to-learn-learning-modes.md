@@ -129,8 +129,8 @@ tags: [learning, meta-skills]
 
 - the wake state creates neuro toxins in the brain
 - during sleep, neurons shrink and the brain fluid washes the toxins out 
-- sleep helps brain clean up toxins, so it is an essential part of brian maintainence
-- lack of sleep increases toxicity in the brain and prvents it from functioning correctly
+- sleep helps brain clean up toxins, so it is an essential part of brian maintenance
+- lack of sleep increases toxicity in the brain and prevents it from functioning correctly
   - sacrificing sleep is like shooting one self in the foot
 - too little sleep for a long period of time causes headaches, depression, heart diseases, diabetes and causes earlier death
 - during sleep the brain rehearses some of the tougher parts of whatever is being learnt 
@@ -138,7 +138,7 @@ tags: [learning, meta-skills]
   - this helps them put together solutions to new taks begin learned
   - dreaming allegedly consolidates memories into easier to grasp chunks
   
-- execrise also is allegedly supposed to improve learning and memory capabilities
+- exercise also is allegedly supposed to improve learning and memory capabilities
 
 
-*** 
+

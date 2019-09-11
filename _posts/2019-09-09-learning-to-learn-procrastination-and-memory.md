@@ -420,5 +420,3 @@ tags: [learning, meta-skills]
 
 - space out memorization sessions 
 - start early and memorize in spaced sessions 
-
-***
