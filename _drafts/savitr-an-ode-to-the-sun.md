@@ -1,6 +1,6 @@
 ---
 layout: post
-title: savitr - a dedication to the sun
+title: savitr - an ode to the sun
 tags: [sun, solar, album Notes]
 ---
 
