@@ -101,3 +101,4 @@ Tracklist and Notes:
 References:
 
 - [Mitra](http://sacred-texts.com/hin/rigveda/rv03059.htm){: target="_blank"}
+- [Aruna](http://www.apamnapat.com/entities/Aruna.html){: target="_blank"}
