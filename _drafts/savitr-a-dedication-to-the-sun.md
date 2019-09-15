@@ -95,6 +95,7 @@ The moon's gonna owe it one ..."
 - copper-red sun rays of dawn
 - the precursor to the golden hour of the morning
 - light that begins the day, initiating the rest of the manifestations of the sun throughout the day
+- the charioteer of the sun (metaphorically)
 
 <hr>
 
