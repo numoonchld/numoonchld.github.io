@@ -4,7 +4,7 @@ title: savitr - a dedication to the sun
 tags: [sun, solar, album Notes]
 ---
 
-Savitr - An Ode to the Sun
+# Savitr - An Ode to the Sun
 
 "They are old Gods, not slow Gods"
 
