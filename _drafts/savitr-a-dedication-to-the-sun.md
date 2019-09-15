@@ -84,7 +84,7 @@ The moon's gonna owe it one ..."
 ###### खग (Khaga)
 
 - The sun as a bird (Khaga)
-- that flies in the sky 
+- that flies in the sky (who moves in the sky)
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
 
@@ -101,5 +101,7 @@ The moon's gonna owe it one ..."
 
 References:
 
+- [Pushan](https://deity-of-the-week.blogspot.com/2011/11/pusan.html){: target="_blank"}
 - [Mitra](http://sacred-texts.com/hin/rigveda/rv03059.htm){: target="_blank"}
 - [Aruna](http://www.apamnapat.com/entities/Aruna.html){: target="_blank"}
+
