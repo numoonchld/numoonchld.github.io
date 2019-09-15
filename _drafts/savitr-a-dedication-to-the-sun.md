@@ -57,13 +57,13 @@ The moon's gonna owe it one ..."
 ### Tracklist and Notes:
 
 
-###### Pushan 
+###### पूषण् (Pūşhan)
 
 - light that helps through transistions and transistions
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
-###### Mitra-Varuna 
+###### मित्र-वरुण (Mitra - Varuna)
 
 - Dvanda: 
     - Mitra-Varuna are seen as composite of Mitra and Varuna
@@ -81,7 +81,7 @@ The moon's gonna owe it one ..."
 
 - Mitra and Varuna together provide drive and sustainance to the variety of organisms on planet Earth 
 
-###### Khaga
+###### खग (Khaga)
 
 - The sun as a bird (Khaga)
 - that flies in the sky 
@@ -90,7 +90,7 @@ The moon's gonna owe it one ..."
 
 ###### Savitr
 
-###### Aruna 
+###### अरुण (Aruṇa)
 
 - copper-red sun rays of dawn
 - the precursor to the golden hour of the morning
