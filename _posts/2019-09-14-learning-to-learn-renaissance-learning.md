@@ -1,10 +1,10 @@
 ---
 layout: post
 title: learning to learn - renaissance learning
-artist: In Flames
-artistLink: https://www.discogs.com/artist/244819-In-Flames
-track: Wallflower
-trackLink: https://youtu.be/Nh10gL_GP_w
+artist: Wouter Hisschemöller
+artistLink: https://soundcloud.com/hisschemoller
+track: 18200 Euro
+trackLink: https://soundcloud.com/hisschemoller/18200-euro
 tags: [learning, meta-skills]
 
 ---
