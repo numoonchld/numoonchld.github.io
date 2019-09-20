@@ -1,10 +1,10 @@
 ---
 layout: post
-title: savitr - a dedication to the sun
+title: savitr - an ode to the sun
 tags: [sun, solar, album Notes]
 ---
 
-Savitr - An Ode to the Sun
+# Savitr - An Ode to the Sun
 
 "They are old Gods, not slow Gods"
 
@@ -54,16 +54,16 @@ The moon's gonna owe it one ..."
 
 <hr>
 
-Tracklist and Notes:
+### Tracklist and Notes:
 
 
-###### Pushan 
+###### पूषण् (Pūşhan)
 
 - light that helps through transistions and transistions
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
-###### Mitra-Varuna 
+###### मित्र-वरुण (Mitra - Varuna)
 
 - Dvanda: 
     - Mitra-Varuna are seen as composite of Mitra and Varuna
@@ -81,23 +81,27 @@ Tracklist and Notes:
 
 - Mitra and Varuna together provide drive and sustainance to the variety of organisms on planet Earth 
 
-###### Khaga
+###### खग (Khaga)
 
-- The sun as a bird (Khaga)
-- that flies in the sky 
+- The sun as a bird
+- that flies in the sky (who moves in the sky)
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
 
 ###### Savitr
 
-###### Aruna 
+###### अरुण (Aruṇa)
 
 - copper-red sun rays of dawn
 - the precursor to the golden hour of the morning
 - light that begins the day, initiating the rest of the manifestations of the sun throughout the day
+- the charioteer of the sun (metaphorically)
 
 <hr>
 
 References:
 
+- [Pushan](https://deity-of-the-week.blogspot.com/2011/11/pusan.html){: target="_blank"}
 - [Mitra](http://sacred-texts.com/hin/rigveda/rv03059.htm){: target="_blank"}
+- [Aruna](http://www.apamnapat.com/entities/Aruna.html){: target="_blank"}
+

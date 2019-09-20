@@ -97,7 +97,21 @@ git config --global credential.useHttpPath true
 
 <hr>
 
+## force push master to remote origin
+
+- sometimes the master branch on the remote is broken 
+- and `git pull` will over write local changes 
+- the time spent on fixing a merge is pointless and 
+- you're the only one working on the repo
+
+```sh
+git push origin master -f
+```
+
+<hr>
+
 ## references 
 
 - [ssh git push](https://stackoverflow.com/questions/8588768/how-do-i-avoid-the-specification-of-the-username-and-password-at-every-git-push){: target="_blank"}
 - [git - make current commit the first commit of repo](https://stackoverflow.com/a/13102849){: target="_blank"}
+- [force push after rebase or reset](https://stackoverflow.com/a/6204804){: target="_blank"}
