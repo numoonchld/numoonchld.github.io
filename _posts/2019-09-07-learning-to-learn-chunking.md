@@ -1,6 +1,6 @@
 ---
 layout: post
-title: learning to learn - chunkning
+title: learning to learn - chunking
 artist: Yendorami
 artistLink: https://open.spotify.com/album/0wDj5SE7QhZytQif3RvM12
 track: Strong and Strike
