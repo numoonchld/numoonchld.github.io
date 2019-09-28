@@ -63,6 +63,7 @@ The moon's gonna owe it one ..."
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
+
 ###### मित्र-वरुण (Mitra - Varuna)
 
 - Dvanda: 
@@ -83,12 +84,14 @@ The moon's gonna owe it one ..."
 
 ###### खग (Khaga)
 
-- The sun as a bird
-- that flies in the sky (who moves in the sky)
+- The sun as a bird, that flies in the sky (who moves in the sky)
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
+- eats away pathogens (in water)
 
 ###### Savitr
+
+
 
 ###### अरुण (Aruṇa)
 
