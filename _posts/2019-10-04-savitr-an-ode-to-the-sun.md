@@ -6,7 +6,9 @@ tags: [sun, solar, album Notes]
 
 # Savitr - An Ode to the Sun
 
-"They are old Gods, not slow Gods"
+###### "They are old Gods, not slow Gods"
+
+***
 
 ####  Circadian Clock
 
@@ -26,7 +28,7 @@ tags: [sun, solar, album Notes]
 "... sun doesn't give light to the moon assuming
 The moon's gonna owe it one ..." 
     - Linkin Park (A Place For My Head)
-- http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html
+    - http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html
 
 - Taking a leaf from the plants' books: photosynthesis for life sustenance
 - Solar energy is the future of electricity and electricity is the power to drive this planet
@@ -52,9 +54,16 @@ The moon's gonna owe it one ..."
     - sunsets mark the beautiful and contented completion of the hustle and bustle of the day
 
 
-<hr>
+***
 
-### Tracklist and Notes:
+## X सवितृ (Savitṛ) EP
+
+- an EP dedicated to the Sun    
+    - inspiration drawn from above concepts 
+- [bandcamp link](https://numoonchld.bandcamp.com/album/x-savit){: target="_blank"}
+
+
+#### Track-list and Notes:
 
 
 ###### पूषण् (Pūşhan)
@@ -63,13 +72,13 @@ The moon's gonna owe it one ..."
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
-###### मित्र-वरुण (Mitra - Varuna)
+###### मित्र​-​वरुण (Mitra​-​Varuṇa)
 
 - Dvanda: 
     - Mitra-Varuna are seen as composite of Mitra and Varuna
 
 - Mitra: the sun as a friend to all, 
-    - doesn't prioritize providing light and heat to the variety of organims that exist on planet Earth (and beyond?)
+    - doesn't prioritize providing light and heat to the variety of organisms that exist on planet Earth (and beyond?)
     - sustains life by providing the drive for mankind to work (see circadian rhythm)
     
 - Varuna: water and ocean, 
@@ -79,7 +88,7 @@ The moon's gonna owe it one ..."
     - There is life in water due to inherent polarity on water: H+ and OH- ions
     - Life is polar: opposites exist, sometimes in conflict, other times in harmony and everywhere in between 
 
-- Mitra and Varuna together provide drive and sustainance to the variety of organisms on planet Earth 
+- Mitra and Varuna together provide drive and sustenance to the variety of organisms on planet Earth 
 
 ###### खग (Khaga)
 
@@ -88,7 +97,11 @@ The moon's gonna owe it one ..."
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
 
-###### Savitr
+###### सवितृ (Savitṛ)
+
+- a stimulator for life energy on earth 
+- driver of the animation of life
+- plants, circadian rhythms, water cycles, wind cycles
 
 ###### अरुण (Aruṇa)
 
@@ -97,11 +110,12 @@ The moon's gonna owe it one ..."
 - light that begins the day, initiating the rest of the manifestations of the sun throughout the day
 - the charioteer of the sun (metaphorically)
 
-<hr>
+***
 
-References:
+### References:
 
 - [Pushan](https://deity-of-the-week.blogspot.com/2011/11/pusan.html){: target="_blank"}
 - [Mitra](http://sacred-texts.com/hin/rigveda/rv03059.htm){: target="_blank"}
+- [Savitr](http://spokensanskrit.org/index.php?mode=3&script=hk&tran_input=savitr&direct=au&anz=100){: target="_blank"}
 - [Aruna](http://www.apamnapat.com/entities/Aruna.html){: target="_blank"}
 
