@@ -99,6 +99,7 @@ tags: [sun, solar, album Notes]
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
 - eats away pathogens (in water)
+  - SODIS
 
 #### सवितृ (Savitṛ)
 
