@@ -65,9 +65,16 @@ tags: [sun, solar, album Notes]
 - [EP bandcamp link](https://numoonchld.bandcamp.com/album/x-savit){: target="_blank"}
 
 
-## Track-list and Notes
+### Track-list and Notes
 
-<br>
+
+#### खग (Khaga)
+
+- The sun as a bird, that flies in the sky (who moves in the sky)
+- watches all and everything, everything that happens in the day happens in under light of the sun
+- keeper of time as it makes it's journey across the sky (see circadian rhythm)
+- eats away pathogens (in water)
+  - SODIS
 
 #### पूषण् (Pūşhan)
 
@@ -93,13 +100,6 @@ tags: [sun, solar, album Notes]
 
 - Mitra and Varuna together provide drive and sustenance to the variety of organisms on planet Earth 
 
-#### खग (Khaga)
-
-- The sun as a bird, that flies in the sky (who moves in the sky)
-- watches all and everything, everything that happens in the day happens in under light of the sun
-- keeper of time as it makes it's journey across the sky (see circadian rhythm)
-- eats away pathogens (in water)
-  - SODIS
 
 #### सवितृ (Savitṛ)
 
