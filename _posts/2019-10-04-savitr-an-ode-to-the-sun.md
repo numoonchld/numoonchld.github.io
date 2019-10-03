@@ -24,8 +24,7 @@ tags: [sun, solar, album Notes]
     
 ## Selflessness, Photosynthesis and Solar Energy
 
-"... sun doesn't give light to the moon assuming
-The moon's gonna owe it one ..." 
+- "... sun doesn't give light to the moon assuming, The moon's gonna owe it one ..." 
     - Linkin Park [(A Place For My Head)](http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html){: target = "_blank"}
 
 - Taking a leaf from the plants' books: photosynthesis for life sustenance
