@@ -80,7 +80,7 @@ tags: [sun, solar, album Notes]
     - sustains life by providing the drive for mankind to work (see circadian rhythm)
     
 - Varuna: water and ocean, 
-    - we all come from water and go back to water
+    - "we all come from water and go back to water"
     - the source of organisms on this planet
     - the majority of the human body is water
     - There is life in water due to inherent polarity on water: H+ and OH- ions
