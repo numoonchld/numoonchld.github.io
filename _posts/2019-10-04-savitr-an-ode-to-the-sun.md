@@ -14,7 +14,7 @@ tags: [sun, solar, album Notes]
 
 ##  Circadian Clock
 
-"A circadian clock is a biochemical oscillator that cycles with a stable phase and is synchronized with solar time."
+- "A circadian clock is a biochemical oscillator that cycles with a stable phase and is synchronized with solar time."
     - [Circadian Clock - Wiki](https://en.wikipedia.org/wiki/Circadian_clock){: target="_blank"}
 
 - Sleep Cycles, Cortisol and Emotional Stability:
