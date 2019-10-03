@@ -4,10 +4,7 @@ title: savitr - an ode to the sun
 tags: [sun, solar, album Notes]
 ---
 
-# Savitr - An Ode to the Sun
-
 ###### "They are old Gods, not slow Gods"
-
 
 
 ***
@@ -23,13 +20,13 @@ tags: [sun, solar, album Notes]
 
 - Third Chakra and the Sun
     - [Dr. Anodea Judith on Fire Chakra](https://anodeajudith.com/chakra-three/){: target="_blank"}
+    - yellow wavelength: 575 - 585 nm
     
 ## Selflessness, Photosynthesis and Solar Energy
 
 "... sun doesn't give light to the moon assuming
 The moon's gonna owe it one ..." 
-    - Linkin Park (A Place For My Head)
-    - http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html
+    - Linkin Park [(A Place For My Head)](http://www.metrolyrics.com/a-place-for-my-head-lyrics-linkin-park.html){: target = "_blank"}
 
 - Taking a leaf from the plants' books: photosynthesis for life sustenance
 - Solar energy is the future of electricity and electricity is the power to drive this planet
