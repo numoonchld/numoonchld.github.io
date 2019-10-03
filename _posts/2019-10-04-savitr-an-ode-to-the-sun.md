@@ -8,22 +8,23 @@ tags: [sun, solar, album Notes]
 
 ###### "They are old Gods, not slow Gods"
 
+
+
 ***
 
-####  Circadian Clock
+##  Circadian Clock
 
 "A circadian clock is a biochemical oscillator that cycles with a stable phase and is synchronized with solar time."
-- https://en.wikipedia.org/wiki/Circadian_clock
-
+    - [Circadian Clock - Wiki](https://en.wikipedia.org/wiki/Circadian_clock){: target="_blank"}
 
 - Sleep Cycles, Cortisol and Emotional Stability:
-    - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475279/
-    - https://www.medicographia.com/2013/01/anxiety-disorders-and-circadian-rhythms/
+    - [Cortisol in Circadian Rhythm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3475279/){: target="_blank"}
+    - [Anxiety Disorders and Circadian Rhythm](https://www.medicographia.com/2013/01/anxiety-disorders-and-circadian-rhythms/){: target="_blank"}
 
 - Third Chakra and the Sun
-    - https://anodeajudith.com/chakra-three/
+    - [Dr. Anodea Judith on Fire Chakra](https://anodeajudith.com/chakra-three/){: target="_blank"}
     
-#### Selflessness, Photosynthesis and Solar Energy
+## Selflessness, Photosynthesis and Solar Energy
 
 "... sun doesn't give light to the moon assuming
 The moon's gonna owe it one ..." 
@@ -38,7 +39,7 @@ The moon's gonna owe it one ..."
     - Sand (silica) converts the Solar energy to Electricity
     
 
-#### Sunrises and Sunsets
+## Sunrises and Sunsets
 
 - Transitions 
     - from the dark of the night into the day 
@@ -60,19 +61,19 @@ The moon's gonna owe it one ..."
 
 - an EP dedicated to the Sun    
     - inspiration drawn from above concepts 
-- [bandcamp link](https://numoonchld.bandcamp.com/album/x-savit){: target="_blank"}
+- [EP bandcamp link](https://numoonchld.bandcamp.com/album/x-savit){: target="_blank"}
 
 
-#### Track-list and Notes:
+## Track-list and Notes
 
 
-###### पूषण् (Pūşhan)
+#### पूषण् (Pūşhan)
 
 - light that helps through transistions and transistions
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
-###### मित्र​-​वरुण (Mitra​-​Varuṇa)
+#### मित्र​-​वरुण (Mitra​-​Varuṇa)
 
 - Dvanda: 
     - Mitra-Varuna are seen as composite of Mitra and Varuna
@@ -90,14 +91,14 @@ The moon's gonna owe it one ..."
 
 - Mitra and Varuna together provide drive and sustenance to the variety of organisms on planet Earth 
 
-###### खग (Khaga)
+#### खग (Khaga)
 
 - The sun as a bird, that flies in the sky (who moves in the sky)
 - watches all and everything, everything that happens in the day happens in under light of the sun
 - keeper of time as it makes it's journey across the sky (see circadian rhythm)
 - eats away pathogens (in water)
 
-###### सवितृ (Savitṛ)
+#### सवितृ (Savitṛ)
 
 - a stimulator for life energy on earth 
 - driver of the animation of life
@@ -105,12 +106,12 @@ The moon's gonna owe it one ..."
 
 
 
-###### अरुण (Aruṇa)
+#### अरुण (Aruṇa)
 
 - copper-red sun rays of dawn
 - the precursor to the golden hour of the morning
 - light that begins the day, initiating the rest of the manifestations of the sun throughout the day
-- the charioteer of the sun (metaphorically)
+- the "charioteer" of the sun 
 
 ***
 
