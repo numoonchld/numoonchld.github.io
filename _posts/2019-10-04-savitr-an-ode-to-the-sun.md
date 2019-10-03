@@ -21,6 +21,11 @@ tags: [sun, solar, album Notes]
 - Third Chakra and the Sun
     - [Dr. Anodea Judith on Fire Chakra](https://anodeajudith.com/chakra-three/){: target="_blank"}
     - yellow wavelength: 575 - 585 nm
+
+- The Sun and Life Force 
+    - [BP Lama on the Sun](http://www.barbarapijan.com/bpa/Graha/Surya/1Surya_main_page.htm){: target="_blank"}
+
+- Root of a pattern
     
 ## Selflessness, Photosynthesis and Solar Energy
 
@@ -100,8 +105,7 @@ tags: [sun, solar, album Notes]
 - a stimulator for life energy on earth 
 - driver of the animation of life
 - plants, circadian rhythms, water cycles, wind cycles
-
-
+- gravity and light
 
 #### अरुण (Aruṇa)
 
