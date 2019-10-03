@@ -66,7 +66,7 @@ tags: [sun, solar, album Notes]
 
 #### पूषण् (Pūşhan)
 
-- light that helps through transistions and transistions
+- light that helps through transitions
 - guiding hand that helps find value in life 
 - journey guide that protects from evil 
 
