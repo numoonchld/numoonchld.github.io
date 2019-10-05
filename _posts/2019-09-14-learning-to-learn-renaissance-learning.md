@@ -229,4 +229,9 @@ tags: [learning, meta-skills]
     - by boiling down the core ideas into easily digestible chunks
     - and being able to explain it concisely and in an easily understandable way
 
+***
+
+#### references
+
+- [Four Learning Patterns](http://www.letmelearnmalta.org/about/the-four-learning-patterns/){: target="_blank"}
 
