@@ -22,6 +22,9 @@ tags: [sun, solar, album Notes]
     - [Dr. Anodea Judith on Fire Chakra](https://anodeajudith.com/chakra-three/){: target="_blank"}
     - yellow wavelength: 575 - 585 nm
 
+- Electron Charge Density Distributions as Chakra Prototypes
+    - [https://upload.wikimedia.org/wikipedia/commons/6/61/Atomic_orbitals_and_periodic_table_construction.ogv]
+
 - The Sun and Life Force 
     - [BP Lama on the Sun](http://www.barbarapijan.com/bpa/Graha/Surya/1Surya_main_page.htm){: target="_blank"}
 
