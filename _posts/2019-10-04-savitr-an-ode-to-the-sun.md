@@ -60,7 +60,7 @@ tags: [sun, solar, album Notes]
 
 ***
 
-## X सवितृ (Savitṛ) EP
+## सवितृ (Savitṛ) EP
 
 - an EP dedicated to the Sun    
     - inspiration drawn from above concepts 
