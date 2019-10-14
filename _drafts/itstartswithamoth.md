@@ -8,7 +8,7 @@ trackLink: https://youtu.be/RKtd7Lzwtqs
 tags: [notes]
 ---
 
-[itbeginswithamoth](https://i.imgur.com/Q31Tji1.jpg)
+![itbeginswithamoth](https://i.imgur.com/Q31Tji1.jpg)
 
 0. it starts with a moth
 
