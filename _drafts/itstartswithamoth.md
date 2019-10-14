@@ -30,8 +30,10 @@ there is no entitlement to sanity
 
 8/ Thing: Discrete packets in synapse
 
-- does not compute 
-- packets and granite
-- does not compute {}•
+\# does not compute 
+
+\# packets and granite
+
+\# does not compute {}•
 
 9/
