@@ -30,7 +30,7 @@ there is no entitlement to sanity
 
 the edge of the knife is an ocean
 
-## 7/ things will fall in place if trust the <u>heart of card</u>
+## 7/ things will fall in place if () trust the <u>heart of card</u>
 
 ## 8/ Thing: Discrete packets in synapse
 
