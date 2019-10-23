@@ -26,6 +26,8 @@ there is no entitlement to sanity
 
 ## 6/ who the f*** (pop) wrote this game
 
+![wtfwtg](https://i.imgur.com/OYIhCau.jpg)
+
 the edge of the knife is an ocean
 
 ## 7/ things will fall in place if trust the <u>heart of card</u>
