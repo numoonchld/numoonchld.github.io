@@ -84,4 +84,5 @@ ELSE, IN PROPAGANDA AND ELEVENTH-HOUR PREPARATION WE TRUST
 
 ## No good work goes unpunished
 
+## At least it was fool-proof
 
