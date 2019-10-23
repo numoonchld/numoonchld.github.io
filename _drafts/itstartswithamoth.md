@@ -18,7 +18,9 @@ tags: [notes]
 
 ## 3/ you will teach yourself to not kill yourself with your own sword
 
-there is no entitlement to sanity
+the edge of the knife is an ocean
+
+
 
 ## 4/ if you can't say the write thing, it is hard to do the write thing
 
@@ -28,7 +30,7 @@ there is no entitlement to sanity
 
 ![wtfwtg](https://i.imgur.com/OYIhCau.jpg)
 
-the edge of the knife is an ocean
+there is no entitlement to sanity
 
 ## 7/ things will fall in place if () trust the <u>heart of card</u>
 
@@ -41,8 +43,6 @@ the edge of the knife is an ocean
 ## \# does not compute {}•
 
 ## 9/ Give and you shall receive *muffled angry nigger noises*
-
-
 
 ## 10/ Things are exactly what they appear to be (most of the time)
 
