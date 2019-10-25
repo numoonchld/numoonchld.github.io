@@ -86,3 +86,10 @@ ELSE, IN PROPAGANDA AND ELEVENTH-HOUR PREPARATION WE TRUST
 
 ## At least it was fool-proof
 
+***
+
+The Nile
+
+- it is possbile to have one's head so high up one's arse that the pyriamids the visible
+  - the Nile enabled life in Egpyt
+  - Denial had some people imprisoned 
