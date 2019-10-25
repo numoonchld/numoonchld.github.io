@@ -88,8 +88,10 @@ ELSE, IN PROPAGANDA AND ELEVENTH-HOUR PREPARATION WE TRUST
 
 ***
 
-The Nile
+### The Nile
 
-- it is possbile to have one's head so high up one's arse that the pyriamids the visible
+- it is possbile to have one's head so high up one's arse that the pyramids the visible
   - the Nile enabled life in Egpyt
-  - Denial had some people imprisoned 
+  - on the other hand, denial had some people imprisoned 
+  - on a similar note [John Dahlback - Pyramid (Dirty South Remix)](https://youtu.be/ZKqvmusVJIY){: target="_blank"}
+  
