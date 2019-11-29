@@ -95,3 +95,22 @@ ELSE, IN PROPAGANDA AND ELEVENTH-HOUR PREPARATION WE TRUST
   - on the other hand, denial had some people imprisoned 
   - on a similar note [John Dahlback - Pyramid (Dirty South Remix)](https://youtu.be/ZKqvmusVJIY){: target="_blank"}
   
+***
+
+Jaluka (leech) ≠ sea snail
+
+- common point
+- common ground 
+- common sense
+- common sentiments
+
+- experience ≠ excellence
+
+- legal cannibis
+  - hemp
+  - bhangi
+  - ganja
+  - marijuana
+  - cannibis 
+  - no trace
+  - no lace
