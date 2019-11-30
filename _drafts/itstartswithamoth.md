@@ -12,11 +12,13 @@ tags: [notes]
 
 ## 0/ it starts with a moth
 
+don't kill yourself with your own sword
+
 ## 1/ sleep, food and water are important for your health 
 
 ## 2/ honesty is the best policy<sup>*</sup>
 
-## 3/ you will teach yourself to not kill yourself with your own sword
+## 3/ don't kill yourself with your own sword
 
 the edge of the knife is an ocean
 
