@@ -6,7 +6,6 @@
 
 - over a period of time
 - from monster to edible thing
--
 
 ---
 
