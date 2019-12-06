@@ -57,8 +57,8 @@ tags: [notes, moral stories]
 #### moral of the story
 
 - if the fakir had eaten the watemelon the first day, he would have been demonized 
-- the villagers might have stoned him for eating something has horrific as the watermelon
-  - as the villagers saw the watermelon as a demon
+- the villagers might have stoned him for eating something as horrific as the watermelon
+  - because the villagers saw the watermelon as a demon
 
 ---
 
