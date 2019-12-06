@@ -14,12 +14,12 @@ tags: [notes, moral stories]
 
 - a wild watermelon patch had cropped up outside the village
   - the villagers, who had never seen a watermelon before, happened across the watermelon patch 
-  - they grew fearful of the waterlmelons and threw stones at it, thinking it was the demon
+  - they grew fearful of the watermelons and threw stones at it, thinking it was the demon
   
 ![Imgur](https://i.imgur.com/QCaczUE.jpg)
 
 - the fakir, who knew what a watermelon was, decided to resolve their confusion
-  - while the villagers were throwing stones at the watermelon patch, the fakir approched them and stopped them 
+  - while the villagers were throwing stones at the watermelon patch, the fakir approached them and stopped them 
 
 - he advised the villagers to stop throwing stones and observe the patch for a week instead 
   - the villagers noticed that the watermelons had done nothing in the week 
@@ -27,7 +27,7 @@ tags: [notes, moral stories]
 - the fakir then told them to observe the watermelons from a closer distance for the next week 
   - the villagers again saw that the watermelons did nothing
   
-- this continued untill the villagers were right next to the watermelons in the patch 
+- this continued until the villagers were right next to the watermelons in the patch 
   - that day, the fakir brought a pocket knife along with him
   - he touched the watermelon and demonstrated to the villagers that the watermelon was harmless
 
@@ -50,13 +50,13 @@ tags: [notes, moral stories]
   - the villagers were delighted by the juicy fruit
   
 - in the coming days, more villagers tried out the watermelons
-  - and watermlons were accepted as an edible fruit in the village
+  - and watermelons were accepted as an edible fruit in the village
   
 ---
 
 #### moral of the story
 
-- if the fakir had eaten the watemelon the first day, he would have been demonized 
+- if the fakir had eaten the watermelon the first day, he would have been demonized 
 - the villagers might have stoned him for eating something as horrific as the watermelon
   - because the villagers saw the watermelon as a demon
 
