@@ -35,20 +35,22 @@ tags: [notes, moral stories]
   - gave it the [ripeness test](https://www.thespruceeats.com/picking-ripe-watermelon-2356044){: target="_blank"} with his fingers 
   - and cut open the watermelon with his pocket knife
   
-- he then ate a piece of watermelon, this horrified the villagers
-- but the fakir seemed to enjoy eating it 
+- he then ate a piece of watermelon
+  - this horrified the villagers
+  - but the fakir enjoyed eating it 
   - so this put the villagers at ease somewhat
-- the fakir offered the villagers a piece to eat
-  - but they were not convinced yet about eating it yet
   
-- the next day, the fakir went to the patch again and open yet another watermelon
+- the fakir offered the villagers a piece to eat
+  - but they were not convinced about eating it yet
+  
+- the next day, the fakir went to the patch again
   - the villagers showed up to see the fakir enjoying another watermelon
   - and some of them asked the fakir to share the watermelon
-  - and the fakir was happy to oblige
+  - the fakir was happy to oblige
   - the villagers were delighted by the juicy fruit
   
 - in the coming days, more villagers tried out the watermelons
-  - and watermlons were accepted as an edible fruit among the villagers
+  - and watermlons were accepted as an edible fruit in the village
   
 ---
 
