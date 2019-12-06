@@ -1,4 +1,14 @@
-## the watermelon
+---
+layout: post
+title: watermelon
+artist: 
+artistLink: 
+track: 
+trackLink: 
+tags: [notes, moral stories]
+---
+
+
 
 - a long time ago, but not too long ago, but quite long ago, there lived a fakir outside a village
 
