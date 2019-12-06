@@ -16,7 +16,7 @@ tags: [notes, moral stories]
   - the villagers, who had never seen a watermelon before, happened across the watermelon patch 
   - they grew fearful of the watermelons and threw stones at it, thinking it was the demon
   
-![Imgur](https://i.imgur.com/QCaczUE.jpg)
+<img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/QCaczUE.jpg" alt="watermelon">
 
 - the fakir, who knew what a watermelon was, decided to resolve their confusion
   - while the villagers were throwing stones at the watermelon patch, the fakir approached them and stopped them 
