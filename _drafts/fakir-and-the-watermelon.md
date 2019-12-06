@@ -51,4 +51,6 @@
 
 #### reflections
 
-
+- in today's day an age, even if a fakir puts in the work to bring a watermelon into a village
+  - with patience and effort
+  - it might actually still backfire and the fakir might be demonized for being materialistic
