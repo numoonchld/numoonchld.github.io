@@ -4,7 +4,7 @@
 
 - a wild watermelon patch had cropped up outside the village
   - the villagers, who had never seen a watermelon before, happened across the watermelon patch 
-  - they grew fearful of the waterlmelons and threw stones at it
+  - they grew fearful of the waterlmelons and threw stones at it, thinking it was the demon
 
 - the fakir, who knew what a watermelon was, decided to resolve their confusion
   - while the villagers were throwing stones at the watermelon patch, the fakir approched them and stopped them 
@@ -32,9 +32,23 @@
   
 - the next day, the fakir went to the patch again and open yet another watermelon
   - the villagers showed up to see the fakir enjoying another watermelon
-  - and some of them asked the fakir to share the watermelong 
+  - and some of them asked the fakir to share the watermelon
   - and the fakir was happy to oblige
+  - the villagers were delighted by the juicy fruit
   
-- in the coming days more villagers 
+- in the coming days, more villagers tried out the watermelons
+  - and watermlons were accepted as an edible fruit among the villagers
+  
+---
+
+#### moral of the story
+
+- if the fakir had eaten the watemelon the first day, he would have been demonized 
+- the villagers might have stoned him for eating something has horrific as the watermelon
+  - as the villagers saw the watermelon as a demon
+
+---
+
+#### reflections
 
 
