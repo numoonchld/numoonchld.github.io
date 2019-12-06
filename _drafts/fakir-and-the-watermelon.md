@@ -21,7 +21,7 @@ tags: [notes, moral stories]
 - the fakir, who knew what a watermelon was, decided to resolve their confusion
   - while the villagers were throwing stones at the watermelon patch, the fakir approched them and stopped them 
 
-- he advised the villagers to stop throwing stones and observe the patch instead for a week 
+- he advised the villagers to stop throwing stones and observe the patch for a week instead 
   - the villagers noticed that watermelons had done nothing in the week 
   
 - the fakir then told them to observe the watermelons from a closer distance for the next week 
