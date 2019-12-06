@@ -22,18 +22,17 @@ tags: [notes, moral stories]
   - while the villagers were throwing stones at the watermelon patch, the fakir approched them and stopped them 
 
 - he advised the villagers to stop throwing stones and observe the patch for a week instead 
-  - the villagers noticed that watermelons had done nothing in the week 
+  - the villagers noticed that the watermelons had done nothing in the week 
   
 - the fakir then told them to observe the watermelons from a closer distance for the next week 
   - the villagers again saw that the watermelons did nothing
   
 - this continued untill the villagers were right next to the watermelons in the patch 
-- that day, the fakir brought a pocket knife along with him
-  
-- he touched the watermelon and demonstrated to the villagers that the watermelon was harmless
+  - that day, the fakir brought a pocket knife along with him
+  - he touched the watermelon and demonstrated to the villagers that the watermelon was harmless
 
 - he pulled a watermelon out from the patch
-  - gave it the ripeness test with his fingers 
+  - gave it the [ripeness test](https://www.thespruceeats.com/picking-ripe-watermelon-2356044){: target="_blank"} with his fingers 
   - and cut open the watermelon with his pocket knife
   
 - he then ate a piece of watermelon, this horrified the villagers
