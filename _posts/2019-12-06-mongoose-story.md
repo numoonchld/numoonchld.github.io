@@ -1,10 +1,10 @@
 ---
 layout: post
 title: the pet mongoose 
-artist: 
-artistLink: 
-track: 
-trackLink: 
+artist: Gareth Emery
+artistLink: https://www.discogs.com/artist/193952-Gareth-Emery
+track: Formentera What (Gareth Emery Remix)
+trackLink: https://youtu.be/-ALdTMnuUpE
 tags: [notes, moral stories]
 ---
 
@@ -15,3 +15,10 @@ tags: [notes, moral stories]
   - from a river nearby
   - she left the mongoose with the baby
 
+- when she returned, she saw the mongoose covered with blood 
+  - she assumed that the mongoose had eaten her baby
+  - and she killed it
+  
+- then she rushed in and found the baby to be fine 
+  - and found a dead snake next to her baby 
+  - she was filled with regret for having killed a great companion 
