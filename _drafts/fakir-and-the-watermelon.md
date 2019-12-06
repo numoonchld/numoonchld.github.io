@@ -30,6 +30,11 @@
 - the fakir offered the villagers a piece to eat
   - but they were not convinced yet about eating it yet
   
-- the next day, the fakir 
+- the next day, the fakir went to the patch again and open yet another watermelon
+  - the villagers showed up to see the fakir enjoying another watermelon
+  - and some of them asked the fakir to share the watermelong 
+  - and the fakir was happy to oblige
+  
+- in the coming days more villagers 
 
 
