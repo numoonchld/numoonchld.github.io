@@ -30,7 +30,7 @@ the edge of the knife is an ocean
 
 ## 6/ who the f*** (pop) wrote this game
 
-![wtfwtg](https://i.imgur.com/OYIhCau.jpg)
+![wtfwtg](https://i.imgur.com/vcuLzih.jpg)
 
 there is no entitlement to sanity
 
