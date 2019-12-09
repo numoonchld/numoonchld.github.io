@@ -176,4 +176,4 @@ or, in other circumstances, you could constrain the Empty to point its X at the 
 
 not able to apply mist pass in crypttomatte in blender 2.8
 
-[2.8 example](https://www.youtube.com/watch?v=nAvogn4regQ){: targett="_blank"}
+[2.8 example](https://youtu.be/bnSLAPJuA_w){: targett="_blank"}
