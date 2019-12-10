@@ -4,6 +4,9 @@ title: savitr - an ode to the sun
 tags: [sun, solar, album Notes]
 ---
 
+
+![Imgur](https://i.imgur.com/6Oxzotg.png)
+
 ###### "They are old Gods, not slow Gods"
 
 
@@ -65,6 +68,7 @@ tags: [sun, solar, album Notes]
 - an EP dedicated to the Sun    
     - inspiration drawn from above concepts 
 - [EP bandcamp link](https://numoonchld.bandcamp.com/album/x-savit){: target="_blank"}
+- EP Album art made with Blender 2.79
 
 
 ### Track-list and Notes
