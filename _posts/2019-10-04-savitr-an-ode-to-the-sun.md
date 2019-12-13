@@ -5,7 +5,8 @@ tags: [sun, solar, album Notes]
 ---
 
 
-![Imgur](https://i.imgur.com/6Oxzotg.png)
+<img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/6Oxzotg.png" alt="watermelon">
+
 
 ###### "They are old Gods, not slow Gods"
 
