@@ -310,7 +310,7 @@ tags: [notes, yoga health]
 
 ## 5/ aanandamaya kosha
 
-- the basis subtle building blocks of everything 
+- the basic subtle building blocks of everything 
 - the bliss layer of existence
 
 #### translation and interpretation
