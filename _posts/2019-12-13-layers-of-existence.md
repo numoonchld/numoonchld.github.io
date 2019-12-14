@@ -14,7 +14,7 @@ tags: [notes, yoga health]
 
 ---
 
-<img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/p5vBmE5.jpg" alt="watermelon">
+<img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/p5vBmE5.jpg" alt="pancha-kosha">
 
 - five layered (pancha-kosha) human existence 
     1. annamaya kosha (matter layer)
@@ -346,6 +346,8 @@ tags: [notes, yoga health]
 
 - by 'tapas', a human transforms by gradually being relieved from the bondages and constrictions of each kosha 
     - 'tapas' literally means meditating on one particular thing for focus 
+
+<img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/BxQGcD0.jpg" alt="pancha-kosha-viveka">
 
 ---
 
