@@ -350,7 +350,11 @@ tags: [notes, yoga health]
 <img class="plot mx-auto text-center img-fluid" src="https://i.imgur.com/BxQGcD0.jpg" alt="pancha-kosha-viveka">
 
 ---
+## references
 
+- [Integrated Approach of Yoga Theraphy](https://archive.org/details/integratedapproachofyogatherapy){: target="_blank"}
+
+---
 ## further reading
 
 - [kirlian photography](https://en.wikipedia.org/wiki/Kirlian_photography){: target="_blank"}
