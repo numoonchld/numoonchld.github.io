@@ -359,4 +359,4 @@ tags: [notes, yoga health]
 
 - [kirlian photography](https://en.wikipedia.org/wiki/Kirlian_photography){: target="_blank"}
 - [wheels of life](https://www.goodreads.com/book/show/907668.Wheels_of_Life){: target="_blank"}
-- [weberr's law](https://www.britannica.com/science/Webers-law){: target="_blank"}
+- [weber's law](https://www.britannica.com/science/Webers-law){: target="_blank"}
