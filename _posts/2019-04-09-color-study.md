@@ -100,7 +100,21 @@ i.e.<br>
 
 ### Notes
 
-- 
+- Primary Hues:
+  - Red
+  - Yellow
+  - Blue
+  
+- Secondary:
+  - Primary + Another Primary
+
+- Tertirary:
+  - Secondary + Another Secondary 
+  - Neutral Tones along Complementary color spectrum
+  
+- Complementary Colors:
+  - Primary complementary: Mix of other two primaries
+  - opposite on the color wheel, on the next outer layer
 
 *** 
 
@@ -120,6 +134,7 @@ i.e.<br>
   - Complementary > Neutral > Complementay 
   - Eg: Red - Red Green - Brown - Green Red - Green 
   
+- Intensiy is also called Vibrance sometimes
   
 *** 
 
