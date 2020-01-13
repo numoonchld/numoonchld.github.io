@@ -104,8 +104,14 @@ i.e.<br>
 
 *** 
 
-### 
+### Color Value 
 
+- Chroma + White = Tint
+- Chrome + Black = Shade
+
+- Monochrome scale (Color Value Range)
+  - White > Tint > Color > Shade > Black 
+  
 ***
 
 ### Color Intensity
@@ -114,6 +120,18 @@ i.e.<br>
   - Complementary > Neutral > Complementay 
   - Eg: Red - Red Green - Brown - Green Red - Green 
   
+  
+*** 
+
+### Color Temperature
+
+- Color Temperatue Range 
+  - Warm > Neutral > Cool
+
+- Warm colors are Red, Yellow, Orange, etc
+- Neutral colors are Brown, Slate, etc
+- Cool colors are Green, Blue, Black, White, Grey etc. 
+
 
 
 ---
