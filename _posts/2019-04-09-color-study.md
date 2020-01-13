@@ -76,7 +76,7 @@ i.e.<br>
 ![Quarternary Colors](/media/blogAssets/colorStudy/quarternary.svg)
 {: style="text-align: center;"}
 
-*fig: tertiary colors*
+*fig: quarternary colors*
 {: style="font-size: 80%; text-align: center;"}
 
 Slate + Brown = Plum; <br>
