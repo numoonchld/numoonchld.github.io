@@ -5,6 +5,7 @@ artist: First State ft. Sarah Howells
 artistLink: https://en.wikipedia.org/wiki/First_State_(DJ)
 track: Brave (Myon & Shane 54 Monster Mix)
 trackLink: https://youtu.be/DJvlkQaZ99s
+updated: 2020-01-14
 tags: [color study, notes]
 ---
 
@@ -20,7 +21,7 @@ tags: [color study, notes]
 - Yellow - Hex: #00FFFF
 - Blue - Hex: #0000FF
 
-<hr>
+***
 
 
 ### Additive Colors - 1:
@@ -38,7 +39,7 @@ Mix Red + Yellow to get Orange; Mix Yellow + Blue to get Green; Mix Blue + Red t
 - Green - Hex: #00FF00
 - Violet - Hex: #800080
 
-<hr>
+***
 
 ### Additive Colors - 2:
 
@@ -68,7 +69,7 @@ i.e.<br>
 - Brown - Hex: #C04040
 - Olive Green - Hex: #80C000
 
-<hr>
+***
 
 ### Additive Colors - 3:
 
@@ -95,7 +96,27 @@ i.e.<br>
 - Sage - Hex: #60A020
 
 
------
+***
+
+### Notes
+
+- 
+
+*** 
+
+### 
+
+***
+
+### Color Intensity
+
+- Color Intensity Range
+  - Complementary > Neutral > Complementay 
+  - Eg: Red - Red Green - Brown - Green Red - Green 
+  
+
+
+---
 
 ### References: <br>
 
