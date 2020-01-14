@@ -108,7 +108,7 @@ i.e.<br>
 - Secondary:
   - Primary + Another Primary
 
-- Tertirary:
+- Tertiary:
   - Secondary + Another Secondary 
   - Neutral Tones along Complementary color spectrum
   
