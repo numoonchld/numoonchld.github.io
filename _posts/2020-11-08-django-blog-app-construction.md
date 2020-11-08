@@ -10,7 +10,7 @@ trackLink: https://youtu.be/S-l6a34mwWw
 tags: [notes, django, python, blog-app, blog]
 ---
 
-   # overview
+# overview
 
 - this is a (b)log of constructing a blog-style web application with the `django` web-framework 
   - the programming language is `python`
@@ -44,17 +44,16 @@ tags: [notes, django, python, blog-app, blog]
     - pillow installed
   - some understandng of django 
   
+# process
 
-   # process
-
- ### install django
+### install django
 
 ```zsh
 pip3 install django
 python3 -m django --version
 ```
 
- ### create new project 
+### create new project 
 
 ```zsh
 django-admin startproject django_blog_app
@@ -75,7 +74,7 @@ django_blog_app #project root dir
 - each file has its own function
   - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs for more 
 
- ### run dev-server
+### run dev-server
 
 ```zsh
 python3 manage.py runserver 6500
@@ -89,23 +88,30 @@ python3 manage.py runserver 6500
 
 - to stop, do `Ctrl+C` in terminal 
 
- ### init apps
+### init apps
 
- ### setup ORM 
+### setup ORM 
  
- ### blog home page 
+### blog home page 
  
- ### user registration page 
+### user registration page 
  
- ### login and logout system 
+### login and logout system 
  
- ### user profile 
+### user profile 
  
- ### image storage system
+### image storage system
+
+### post create, update and delete
+ 
+### pagination and filtering
+ 
+### password reset email 
+ 
+ 
 
 
-
-   # further reading
+# further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
 
