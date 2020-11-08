@@ -10,7 +10,7 @@ trackLink: https://youtu.be/S-l6a34mwWw
 tags: [notes, django, python, blog-app, blog]
 ---
 
-# overview
+   # overview
 
 - this is a (b)log of constructing a blog-style web application with the `django` web-framework 
   - the programming language is `python`
@@ -41,18 +41,19 @@ tags: [notes, django, python, blog-app, blog]
     - understanding object oriented programming well helps 
   - python3 installed on your machine (preferably macOS or Ubuntu)
     - pip3 installed 
+  - some understandng of django 
   
 
-# process
+   # process
 
-#### step #1: install django
+ ### install django
 
 ```zsh
 pip3 install django
 python3 -m django --version
 ```
 
-#### step #2: create project root dir
+ ### create new project 
 
 ```zsh
 django-admin startproject django_blog_app
@@ -71,23 +72,29 @@ django_blog_app #project root dir
 ```
 
 - each file has its own function
-  - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs 
+  - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs for more 
 
-#### step #3: ensure running dev-server
+ ### run dev-server
 
 ```zsh
 python3 manage.py runserver 6500
 # default port is 8000
 ```
 
-- access django server @ `127.0.0.1:6500` on your browser
+- access django dev-server @ `127.0.0.1:6500` on your browser
   - alternatively @ `localhost:6500`
 
 <img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
 
 - to stop, do `Ctrl+C` in terminal 
 
-# / further reading
+ ### add application
+
+ ### 
+
+
+
+   # / further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
 
