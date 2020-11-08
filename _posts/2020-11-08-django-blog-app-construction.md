@@ -19,7 +19,7 @@ tags: [notes, django, python, blog-app, blog]
 
 ### step #2: create project root dir
 
-### step #3:
+### step #3: ensure running dev-server
 
 <img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
 
