@@ -3,9 +3,9 @@ layout: post
 title: django blog app construction
 date: 2020-11-08
 updated: 2020-11-08
-artist: Shingo Nakamura
-artistLink: http://www.silk-music.com/shingonakamura/
-track: Thousands Of Sounds
-trackLink: https://www.youtube.com/watch?v=V4T79GrebBg
+artist: The Chainsmokers ft. Halsey
+artistLink: https://www.thechainsmokers.com/
+track: Closer (T-Mass Remix)
+trackLink: https://youtu.be/S-l6a34mwWw
 tags: [notes, django, python, blog-app, blog]
 ---
