@@ -10,13 +10,13 @@ trackLink: https://youtu.be/S-l6a34mwWw
 tags: [notes, django, python, blog-app, blog]
 ---
 
-# 0/ overview
+# overview
 
 - this is a (b)log of constructing a blog-style web application with the `django` web-framework 
   - the programming language is `python`
   
 - `django` is a popular framework 
-  - with lots of functionality of the box 
+  - with lots of functionality out-of-the-box 
   - makes it enjoyable to work on web-applications
   
 - app goal: 
@@ -43,23 +43,23 @@ tags: [notes, django, python, blog-app, blog]
     - pip3 installed 
   
 
-# 1/ process
+# process
 
-### step #1: install django
+#### step #1: install django
 
 ```zsh
 pip3 install django
 python3 -m django --version
 ```
 
-### step #2: create project root dir
+#### step #2: create project root dir
 
 ```zsh
 django-admin startproject django_blog_app
 cd django_blog_app
 ```
 
-### step #3: ensure running dev-server
+#### step #3: ensure running dev-server
 
 ```zsh
 python3 manage.py runserver 6500
@@ -73,7 +73,7 @@ python3 manage.py runserver 6500
 
 - to stop, do `Ctrl+C` in terminal 
 
-# 2/ notes
+# / further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
 
