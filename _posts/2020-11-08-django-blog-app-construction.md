@@ -90,7 +90,21 @@ python3 manage.py runserver 6500
 
 ### init apps
 
+- initialize the blog app 
+```zsh
+python3 manage.py startapp blog
+```
+
+- initialize the user app
+```zsh
+python3 manage.py startapp users
+```
+
 ### setup ORM 
+
+##### setup the django database
+
+- initialize the blog model
  
 ### blog home page 
  
