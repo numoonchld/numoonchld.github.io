@@ -90,12 +90,12 @@ python3 manage.py runserver 6500
 
 ### init apps
 
-- initialize the blog app 
+##### initialize the blog app 
 ```zsh
 python3 manage.py startapp blog
 ```
 
-- initialize the user app
+##### initialize the user app
 ```zsh
 python3 manage.py startapp users
 ```
