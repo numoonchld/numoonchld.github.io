@@ -29,7 +29,7 @@ tags: [notes, django, python, blog-app, blog]
     - home page: view all blog posts 
     - blog update/delete: if blog written by logged-in user
 
-- blog process aims to walk through 
+- construction process aims to walk through 
   - working with databses
   - authentication systems 
   - password reset email
