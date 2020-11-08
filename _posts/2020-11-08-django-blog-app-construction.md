@@ -21,13 +21,13 @@ tags: [notes, django, python, blog-app, blog]
   
 - app goal: 
   - build a blog where different users can write different posts
-  - app requirements:
-    - *register*: new users can create an account 
-    - *login*: if account already exists, can login and update proile picture
-    - *password reset*: allows forgotten password reset
-    - *user profile*: display image, other details
-    - *home page*: view all blog posts 
-    - *blog update/delete*: if blog written by logged-in user
+- app requirements:
+  - *register*: new users can create an account 
+  - *login*: if account already exists, can login and update proile picture
+  - *password reset*: allows forgotten password reset
+  - *user profile*: display image, other details
+  - *home page*: view all blog posts 
+  - *blog update/delete*: if blog written by logged-in user
 
 - construction process aims to walk through 
   - working with databses
