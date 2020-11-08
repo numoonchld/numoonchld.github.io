@@ -15,9 +15,13 @@ tags: [notes, django, python, blog-app, blog]
 
 # 1/ journal
 
-### step #1:
+### step #1: install django
 
-![Django Development Server Launch Screen](https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif)
+### step #2: create project root dir
+
+### step #3:
+
+<img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
 
 # 2/ notes
 
