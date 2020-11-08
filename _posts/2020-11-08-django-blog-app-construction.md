@@ -41,6 +41,7 @@ tags: [notes, django, python, blog-app, blog]
     - understanding object oriented programming well helps 
   - python3 installed on your machine (preferably macOS or Ubuntu)
     - pip3 installed 
+    - pillow installed
   - some understandng of django 
   
 
@@ -88,13 +89,23 @@ python3 manage.py runserver 6500
 
 - to stop, do `Ctrl+C` in terminal 
 
- ### add application
+ ### init apps
 
- ### 
+ ### setup ORM 
+ 
+ ### blog home page 
+ 
+ ### user registration page 
+ 
+ ### login and logout system 
+ 
+ ### user profile 
+ 
+ ### image storage system
 
 
 
-   # / further reading
+   # further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
 
