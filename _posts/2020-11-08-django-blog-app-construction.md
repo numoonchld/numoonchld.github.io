@@ -17,7 +17,17 @@ tags: [notes, django, python, blog-app, blog]
 
 ### step #1: install django
 
+```python3
+pip3 install django
+python3 -m django --version
+```
+
 ### step #2: create project root dir
+
+```python3
+django-admin startproject django_blog_app
+cd django_blog_app
+```
 
 ### step #3: ensure running dev-server
 
