@@ -59,7 +59,19 @@ django-admin startproject django_blog_app
 cd django_blog_app
 ```
 
-- basic project 
+- file structure of so generated project
+```zsh
+django_blog_app #project root dir
+|- django_blog_app #project's root app 
+|   |-__init__.py
+|   |-settings.py
+|   |-urls.py
+|   |-wsgi.py
+|- manage.py
+```
+
+- each file has its own function
+  - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs 
 
 #### step #3: ensure running dev-server
 
