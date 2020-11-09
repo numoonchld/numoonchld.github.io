@@ -136,7 +136,31 @@ python3 manage.py startapp users
 ##### register both apps 
 
 - the registration is done in the `django_blog_app/settings.py` file
-  - under 
+
+- first check the app's `apps.py` file to get `<app-name>Config` slug
+  - usually these `class`es
+  ```python3
+  class BlogConfig(AppConfig):
+    name = 'blog'
+  ```
+  - and 
+  ```python3
+  class UsersConfig(AppConfig):
+    name = 'users'
+  ```
+
+- registration format:
+  - in a new list item, add the following entry
+    ```python3
+    '<app-name-in-apps.py-class>.apps.<class-name-in-apps.py>Config',
+    ```
+
+- registration location: 
+  - under `INSTALLED_APPS` entry in this file, add the following code:
+    ```python3
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
+    ```
 
 ### setup ORM 
 
