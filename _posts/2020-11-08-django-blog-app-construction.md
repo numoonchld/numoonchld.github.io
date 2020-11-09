@@ -74,6 +74,27 @@ django_blog_app #project root dir
 - each file has its own function
   - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs for more 
 
+
+##### python virtual environment for django app 
+
+- install "virtual env" and "virtual env wrapper"
+```zsh
+pip3 install virtualenv virtualenvwrapper
+``` 
+
+- create and activate virtual env
+```zsh
+python3 -m venv django_blog_app
+source django_blog_app/bin/activate
+```
+
+<figure>
+  <img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
+  <figcaption>
+    Note the parenthesis entity at the left end of the CLI prompt
+  </figcaption>
+</figure>
+
 ### run dev-server
 
 ```zsh
@@ -111,6 +132,11 @@ python3 manage.py startapp users
   <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-birds-eye-view.png?raw=true" alt="Django Blog Structure">
   <figcaption>Bird's Eye View of the Django Blog App</figcaption>
 </figure>
+
+##### register both apps 
+
+- the registration is done in the `django_blog_app/settings.py` file
+  - under 
 
 ### setup ORM 
 
