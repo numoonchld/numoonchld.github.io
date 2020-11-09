@@ -108,20 +108,21 @@ python3 manage.py startapp users
 ```
 
 <figure>
-  <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-birds-eye-view.png?raw=true" alt="Django Blog Structure">
+  <img class="plot mx-auto text-center img-fluid" src="./../media/blogAssets/django-blog-app/django-blog-app-schematics-birds-eye-view.png" alt="Django Blog Structure">
   <figcaption>Bird's Eye View of the Django Blog App</figcaption>
 </figure>
 
 ### setup ORM 
 
 - **database migrations** have to be applied before creating a *superuser*
-- `auth_user` is one such table that needs to be initialized before creating the *superuser* account 
+
 - *superuser* account is needed to access the django admin page that sits @ `localhost:6500/admin`
 
 ##### database migrations
 
 >>> *the very first DB migration creates the DB and adds a few default tables* 
 
+- `auth_user` is one such table that needs to be initialized before creating the *superuser* account 
 
 ```zsh
 python3 manage.py makemigrations
