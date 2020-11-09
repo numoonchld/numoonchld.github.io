@@ -89,9 +89,9 @@ source django_blog_app/bin/activate
 ```
 
 <figure>
-  <img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
+  <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/setting-up-venv.png?raw=true" alt="Django Development Server Launch Screen">
   <figcaption>
-    Note the parenthesis entity at the left end of the CLI prompt
+    Note the parenthesis entity at the left end offsetting the CLI prompt
   </figcaption>
 </figure>
 
@@ -164,15 +164,33 @@ python3 manage.py makemigrations
 ```zsh
 python3 manage.py migrate
 ```
-- 
+- actually applies the changes made in `models.py` to the DB
+- the `auth_user` table is created when above is run the first time
 
+##### create *superuser*
 
+- the first one has to be done via the CLI 
+```zsh
+python3 manage.py superuser
+```
+- to complete the setup, supply 
+  - username
+  - email 
+  - password
+  - confirm password 
 
+##### resetting superuser password from CLI (if password is forgotten)
 
-
-  
-
-##### 
+```zsh
+python3 manage.py shell
+```
+```python3
+from django.contrib.auth.models import User
+User.objects.filter(is_superuser=True)
+usr = User.objects.get(username=<superuser-name-output-above>)
+usr.set_password('<new-password>')
+usr.save()
+```
 
 ##### setup the django database
 
