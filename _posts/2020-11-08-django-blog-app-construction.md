@@ -84,7 +84,14 @@ python3 manage.py runserver 6500
 - access django dev-server @ `127.0.0.1:6500` on your browser
   - alternatively @ `localhost:6500`
 
-<img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
+
+<figure>
+  <img class="plot mx-auto text-center img-fluid" src="https://www.freecodecamp.org/news/content/images/2020/02/DjangoRocket.gif" alt="Django Development Server Launch Screen">
+  <figcaption>
+    Django Development Server Launch Screen @ <code>localhost:6500</code>
+  </figcaption>
+</figure>
+
 
 - to stop, do `Ctrl+C` in terminal 
 
@@ -100,7 +107,40 @@ python3 manage.py startapp blog
 python3 manage.py startapp users
 ```
 
+<figure>
+  <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-birds-eye-view.png?raw=true" alt="Django Blog Structure">
+  <figcaption>Bird's Eye View of the Django Blog App</figcaption>
+</figure>
+
 ### setup ORM 
+
+- **database migrations** have to be applied before creating a *superuser*
+- `auth_user` is one such table that needs to be initialized before creating the *superuser* account 
+- *superuser* account is needed to access the django admin page that sits @ `localhost:6500/admin`
+
+##### database migrations
+
+>>> *the very first DB migration creates the DB and adds a few default tables* 
+
+
+```zsh
+python3 manage.py makemigrations
+```
+- detects changes in models and prepares updates to the DB
+- doesn't update the actual DB, only prepares stages changes 
+
+```zsh
+python3 manage.py migrate
+```
+- 
+
+
+
+
+
+  
+
+##### 
 
 ##### setup the django database
 
