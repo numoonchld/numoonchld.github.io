@@ -294,6 +294,28 @@ usr.save()
     image = model.ImageField(default='default.jpg',upload_to='profile_pics')
   ```
 
+##### register with admin page
+
+- upon registering the models within `admin.py` file
+  - they before available on the admin dashboard for manual CRUD operations
+
+- register the `Post` model in `blog/admin.py` file
+  ```python3
+  from django.contrib import admin
+  from .models import Post
+
+  admin.site.register(Post)
+  ```
+
+
+- register the `Profile` model in `users/admin.py` file
+  ```python3
+  from django.contrib import admin
+  from .models import Profile
+
+  admin.site.register(Profile)
+  ```
+
 ##### updating DB
 
 - prepare and make migrations 
