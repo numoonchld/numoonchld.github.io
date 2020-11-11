@@ -42,9 +42,10 @@ tags: [notes, django, python, blog-app, blog]
   - python3 installed on your machine (preferably macOS or Ubuntu)
     - pip3 installed 
     - pillow installed
-  - some understandng of django 
+      - `pip3 install Pillow`
+  - some understanding of django 
   
-# process
+# process 
 
 ### install django
 
@@ -61,15 +62,15 @@ cd django_blog_app
 ```
 
 - file structure of so generated project
-```zsh
-django_blog_app #project root dir
-|- django_blog_app #project's root app 
-|   |-__init__.py
-|   |-settings.py
-|   |-urls.py
-|   |-wsgi.py
-|- manage.py
-```
+  ```zsh
+  django_blog_app #project root dir
+  |- django_blog_app #project's root app 
+  |   |-__init__.py
+  |   |-settings.py
+  |   |-urls.py
+  |   |-wsgi.py
+  |- manage.py
+  ```
 
 - each file has its own function
   - read [this](https://docs.djangoproject.com/en/2.2/intro/tutorial01/#creating-a-project) page from the docs for more 
@@ -78,15 +79,15 @@ django_blog_app #project root dir
 ##### python virtual environment for django app 
 
 - install "virtual env" and "virtual env wrapper"
-```zsh
-pip3 install virtualenv virtualenvwrapper
-``` 
+  ```zsh
+  pip3 install virtualenv virtualenvwrapper
+  ``` 
 
 - create and activate virtual env
-```zsh
-python3 -m venv django_blog_app
-source django_blog_app/bin/activate
-```
+  ```zsh
+  python3 -m venv django_blog_app
+  source django_blog_app/bin/activate
+  ```
 
 <figure>
   <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/setting-up-venv.png?raw=true" alt="Django Development Server Launch Screen">
@@ -94,6 +95,13 @@ source django_blog_app/bin/activate
     Note the parenthesis entity at the left end offsetting the CLI prompt
   </figcaption>
 </figure>
+
+
+- reinstall django inside the venv:
+  ```python3
+  pip3 install django
+  ```
+
 
 ### run dev-server
 
@@ -116,14 +124,31 @@ python3 manage.py runserver 6500
 
 - to stop, do `Ctrl+C` in terminal 
 
-### init apps
+### initialize apps
+
+
+- new apps can be created in a main django project using the `startapp` command
+- the file system of a newly started app is as follows:
+  ```zsh
+  |- <new-app-name>
+  |   |- __init__.py
+  |   |- admin.py
+  |   |- apps.py
+  |   |- migrations/__init__.py
+  |   |- models.py
+  |   |- tests.py
+  |   |- views.py
+  |- db.sqlite3
+  ```
 
 ##### initialize the blog app 
+
 ```zsh
 python3 manage.py startapp blog
 ```
 
 ##### initialize the user app
+
 ```zsh
 python3 manage.py startapp users
 ```
@@ -132,6 +157,16 @@ python3 manage.py startapp users
   <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-birds-eye-view.png?raw=true" alt="Django Blog Structure">
   <figcaption>Bird's Eye View of the Django Blog App</figcaption>
 </figure>
+
+- the project dir system should look like this now:
+  ```zsh
+  django_blog_app
+    |- django_blog_app
+    |- blog
+    |- users
+    |- manage.py
+    |- db.sqlite3
+  ```
 
 ##### register both apps 
 
@@ -195,13 +230,15 @@ python3 manage.py migrate
 
 - the first one has to be done via the CLI 
 ```zsh
-python3 manage.py superuser
+python3 manage.py createsuperuser
 ```
 - to complete the setup, supply 
   - username
   - email 
   - password
   - confirm password 
+
+- login with credentials @ `localhost:6500/admin/` to verify they work
 
 ##### resetting superuser password from CLI (if password is forgotten)
 
@@ -216,19 +253,70 @@ usr.set_password('<new-password>')
 usr.save()
 ```
 
-##### setup the django database
+##### setup app models
 
-- initialize the blog model
+- when a new app is created using `startapp`,
+  - a `models.py` is automatically created in the app dir
+- before populating this file, think about the structure of the DB 
+  - and what fields are needed 
+- the `User` model is automatically created when the project is created 
+  - can be imported into any file in the project with
+    ```python3
+    from django.contrib.auth.models import User
+    ```
+
+**`Post` model**:
+
+- this is the django ORM model for storing blog posts in the DB 
+- initialize the `Post` model in `blog/models.py`:
+  ```python3
+  from django.db import models
+  from django.utils import timezone
+  from django.contrib.auth.models import User
+
+  class Post(models.Model):
+    title = models.CharField(max_length = 100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default = timezone.now)
+    author = models.ForeignKey(User, on_delete = models.CASCADE)
+  ```
+
+**`Profile` model**:
+- extends the built-in `User` class ORM model 
+  - to accomodate an Profile picture
+- initialize the `Profile` model in `user/models.py`:
+  ```python3
+  from django.db import models
+  from django.contrib.auth.models import User
+
+  class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
+    image = model.ImageField(default='default.jpg',upload_to='profile_pics')
+  ```
+
+##### updating DB
+
+- prepare and make migrations 
+  ```zsh
+  python3 manage.py makemigrations
+  python3 manage.py migrate
+  ```
  
-### blog home page 
- 
+
 ### user registration page 
- 
+
 ### login and logout system 
- 
+
 ### user profile 
  
 ### image storage system
+
+### blog pages 
+
+- we need the following pages to be handled by the blog app
+  - *blog home*: list of all blog posts
+  - *create
+ 
 
 ### post create, update and delete
  
