@@ -197,6 +197,8 @@ python3 manage.py startapp users
     'users.apps.UsersConfig',
     ```
 
+- adding newly created apps to `INSTALLED_APPS` list in `settings.py` models being picked up by django
+
 ### setup ORM 
 
 - **database migrations** have to be applied before creating a *superuser*
@@ -355,8 +357,9 @@ usr.save()
             import users.signals
     ```
 
-### setup templates dir
+### setup static files dir
 
+### setup templates dir
 
 ### user registration page 
 
