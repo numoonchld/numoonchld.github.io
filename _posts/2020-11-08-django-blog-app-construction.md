@@ -357,6 +357,19 @@ usr.save()
 
 ### user registration page 
 
+- a `UserCreationForm` exists with in django to generate the form necessary for new-user-creation
+- in `users/views.py`, add the following logic
+  ```python3
+  from django.shortcuts import render
+  from django.contrib.auth.forms import UserCreationForm
+
+  def register(request):
+    form = UserCreationForm()
+    return render(request, 'users/register.html', {'form':form})
+  ```
+
+- then, create a template file called `register.html` in the 
+
 ### login and logout system 
 
 ### user profile 
@@ -367,10 +380,10 @@ usr.save()
 
 - we need the following pages to be handled by the blog app
   - *blog home*: list of all blog posts
-  - *create
- 
+  - *new post*: create a new post by the logged in user
+  - *update post*: edit a post by logged in user
+  - *delete post*: delete a post by logged in user
 
-### post create, update and delete
  
 ### pagination and filtering
  
@@ -382,6 +395,7 @@ usr.save()
 # further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
+- [django templates folder structure](https://learndjango.com/tutorials/template-structure)
 
 
 
