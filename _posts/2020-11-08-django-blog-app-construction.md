@@ -355,6 +355,9 @@ usr.save()
             import users.signals
     ```
 
+### setup templates dir
+
+
 ### user registration page 
 
 - a `UserCreationForm` exists with in django to generate the form necessary for new-user-creation
