@@ -324,6 +324,36 @@ usr.save()
   python3 manage.py migrate
   ```
  
+##### django signals 
+
+- by default, the extended `Profile` model is not automatically created when a new `User` account is created 
+- to set up automatic `Profile` creation and updation that follows the `User` model, do the following:
+  - create a file called `signals.py` in `users` app dir, i.e. `users/signals.py`
+  - then add the following lines of code in it 
+    ```python3
+    from django.db.models.signals import post_save
+    from django.contrib.auth.models import user
+    from django.dispatch import receiver
+    from .models import Profile
+
+    @receiver(post_save, sender = User)
+    def create_profile(sender, instance, created, **kwargs):
+      if created:
+        Profile.objects.create(user = instance)
+
+    @receiver(post_save, sender = User)
+    def save_profile(sender, instance, **kwargs):
+      instance.profile.save
+    ```
+
+  - then, add the `ready` function to `users/apps.py` under the class `UsersConfig(...)`:
+    ```python3
+    class UsersConfig(AppConfig):
+        name = 'users'
+
+        def ready(self):
+            import users.signals
+    ```
 
 ### user registration page 
 
