@@ -41,11 +41,6 @@ tags: [notes, django, python, blog-app, blog]
     - understanding object oriented programming well helps 
   - python3 installed on your machine (preferably macOS or Ubuntu)
     - pip3 installed 
-    - pillow installed
-      - `pip3 install Pillow`
-    - crispy-forms installed
-      - `pip3 install django-crispy-forms`
-  - some understanding of django 
   
 # process 
 
@@ -56,6 +51,14 @@ pip3 install django
 python3 -m django --version
 ```
 
+- install pillow 
+  ```zsh
+  pip3 install Pillow
+  ```
+- crispy-forms installed
+  ```zsh
+  pip3 install django-crispy-forms
+  ```
 ### create new project 
 
 ```zsh
