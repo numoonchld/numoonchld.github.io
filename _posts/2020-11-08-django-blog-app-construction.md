@@ -55,10 +55,12 @@ python3 -m django --version
   ```zsh
   pip3 install Pillow
   ```
-- crispy-forms installed
+- install crispy-forms 
   ```zsh
   pip3 install django-crispy-forms
   ```
+
+
 ### create new project 
 
 ```zsh
