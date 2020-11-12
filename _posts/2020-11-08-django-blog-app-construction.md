@@ -180,22 +180,20 @@ python3 manage.py startapp users
 
 - first check the app's `apps.py` file to get class-name slug
   - usually the following `class`es
-  
-  ```python3
-  # blog/apps.py
+    ```python3
+    # blog/apps.py
 
-  class BlogConfig(AppConfig):
-    name = 'blog'
-  ```
+    class BlogConfig(AppConfig):
+      name = 'blog'
+    ```
 
   - and 
-  
-  ```python3
-  # users/apps.py
+    ```python3
+    # users/apps.py
 
-  class UsersConfig(AppConfig):
-    name = 'users'
-  ```
+    class UsersConfig(AppConfig):
+      name = 'users'
+    ```
 
 - registration format:
   - in a new list item, add the following entry
@@ -229,6 +227,7 @@ python3 manage.py startapp users
 
 - `auth_user` is one such table that needs to be initialized before creating the *superuser* account 
 
+
 ```zsh
 python3 manage.py makemigrations
 ```
@@ -260,13 +259,16 @@ python3 manage.py createsuperuser
 ```zsh
 python3 manage.py shell
 ```
-```python3
-from django.contrib.auth.models import User
-User.objects.filter(is_superuser=True)
-usr = User.objects.get(username=<superuser-name-output-above>)
-usr.set_password('<new-password>')
-usr.save()
-```
+
+- in the python shells:
+
+  ```python3
+  from django.contrib.auth.models import User
+  User.objects.filter(is_superuser=True)
+  usr = User.objects.get(username=<superuser-name-output-above>)
+  usr.set_password('<new-password>')
+  usr.save()
+  ```
 
 ##### setup app models
 
