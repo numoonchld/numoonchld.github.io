@@ -178,7 +178,7 @@ python3 manage.py startapp users
 
 - the registration is done in the `django_blog_app/settings.py` file
 
-- first check the app's `apps.py` file to get `<app-name>Config` slug
+- first check the app's `apps.py` file to get class-name slug
   - usually these `class`es
   ```python3
   class BlogConfig(AppConfig):
@@ -193,7 +193,7 @@ python3 manage.py startapp users
 - registration format:
   - in a new list item, add the following entry
     ```python3
-    '<app-name-in-apps.py-class>.apps.<class-name-in-apps.py>Config',
+    '<app-name-in-apps.py-class>.apps.<class-name-in-apps.py>',
     ```
 
 - registration location: 
@@ -278,6 +278,8 @@ usr.save()
 - this is the django ORM model for storing blog posts in the DB 
 - initialize the `Post` model in `blog/models.py`:
   ```python3
+  # blog/models.py
+
   from django.db import models
   from django.utils import timezone
   from django.contrib.auth.models import User
@@ -294,6 +296,8 @@ usr.save()
   - to accommodate blogger's Profile picture
 - initialize the `Profile` model in `user/models.py`:
   ```python3
+  # user/models.py
+
   from django.db import models
   from django.contrib.auth.models import User
 
@@ -309,6 +313,8 @@ usr.save()
 
 - register the `Post` model in `blog/admin.py` file
   ```python3
+  # blog/admin.py
+
   from django.contrib import admin
   from .models import Post
 
@@ -318,6 +324,8 @@ usr.save()
 
 - register the `Profile` model in `users/admin.py` file
   ```python3
+  # users/admin.py
+
   from django.contrib import admin
   from .models import Profile
 
@@ -339,8 +347,10 @@ usr.save()
   - create a file called `signals.py` in `users` app dir, i.e. `users/signals.py`
   - then add the following lines of code in it 
     ```python3
+    # users/signals.py
+
     from django.db.models.signals import post_save
-    from django.contrib.auth.models import user
+    from django.contrib.auth.models import User
     from django.dispatch import receiver
     from .models import Profile
 
@@ -356,6 +366,8 @@ usr.save()
 
   - then, add the `ready` function to `users/apps.py` under the class `UsersConfig(...)`:
     ```python3
+    # users/apps.py
+
     class UsersConfig(AppConfig):
         name = 'users'
 
@@ -381,10 +393,49 @@ usr.save()
 - it is a good idea to map out the paths of a web app
   - before getting into programming the `urls.py` file
 
+
+<figure>
+  <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-routes.png?raw=true" alt="App Routes Needed">
+  <figcaption>Routes Needed for this Blog App <br> (suggested order of creation in the right) </figcaption>
+</figure>
+
+
 - django supports template inheritance
   - i.e. one base template can be derived from over and over to make child templates 
 
-- templates are 
+- as django projects grow in size 
+  - it's often more convenient to have all the templates in one place 
+  - rather than hunting for them within multiple apps
+  - with a single line change to our `settings.py` file, we can do this
+
+- update the 'DIRS' config under TEMPLATES as follows
+  ```python3
+  # settings.py
+  ...
+  import os
+  ...
+  TEMPLATES = [
+      {
+          ...
+          'DIRS': [os.path.join(BASE_DIR, 'templates')],
+          ...
+      },
+  ]
+  ```
+  - which specifies that:
+    - in addition to looking for an app-level templates directory,
+    - the Django template loader should also look for a project-level templates directory
+
+- create a `templates` dir in the project root dir
+  ```zsh
+  django_blog_app
+    |- django_blog_app
+    |- blog
+    |- users
+    |- templates
+    |- manage.py
+    |- db.sqlite3
+  ```
 
 ### user registration page 
 
