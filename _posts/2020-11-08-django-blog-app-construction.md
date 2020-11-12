@@ -2,7 +2,7 @@
 layout: post
 title: django blog app construction
 date: 2020-11-08
-updated: 2020-11-08
+updated: 2020-11-12
 artist: The Chainsmokers ft. Halsey
 artistLink: https://www.thechainsmokers.com/
 track: Closer (T-Mass Remix)
@@ -179,14 +179,17 @@ python3 manage.py startapp users
 - the registration is done in the `django_blog_app/settings.py` file
 
 - first check the app's `apps.py` file to get class-name slug
-  - usually these `class`es
+  - usually the following `class`es
+  
   ```python3
   # blog/apps.py
 
   class BlogConfig(AppConfig):
     name = 'blog'
   ```
+
   - and 
+  
   ```python3
   # users/apps.py
 
