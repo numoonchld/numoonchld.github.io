@@ -473,18 +473,18 @@ python3 manage.py shell
   ```
 
 - ensure the `include` imports in the project `urls.py` file
-  - - then add `blog.urls` to the `urlpatterns` list with `include` as follows
-  ```python3
-  # urls.py
+  - then add `blog.urls` to the `urlpatterns` list with `include` as follows
+    ```python3
+    # urls.py
 
-  from django.urls import path, include 
+    from django.urls import path, include 
 
-  urlpatterns = [
-    ...
-    path('',include('blog.urls'))
-  ]
+    urlpatterns = [
+      ...
+      path('',include('blog.urls'))
+    ]
 
-  ```
+    ```
 
 - create a `base.html` in the project-level `templates` folder
 - then go create a folder called `blog` in the same dir
