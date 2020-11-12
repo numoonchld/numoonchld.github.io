@@ -51,15 +51,6 @@ pip3 install django
 python3 -m django --version
 ```
 
-- install pillow 
-  ```zsh
-  pip3 install Pillow
-  ```
-- install crispy-forms 
-  ```zsh
-  pip3 install django-crispy-forms
-  ```
-
 
 ### create new project 
 
@@ -104,15 +95,24 @@ cd django_blog_app
 </figure>
 
 - reinstall pip3 inside the venv:
-  ```python3
+  ```zsh
   pip install --upgrade pip
   ```
 
 - reinstall django inside the venv:
-  ```python3
+  ```zsh
   pip3 install django
   ```
 
+- install pillow 
+  ```zsh
+  pip3 install Pillow
+  ```
+
+- install crispy-forms 
+  ```zsh
+  pip3 install django-crispy-forms
+  ```
 
 ### run dev-server
 
@@ -201,19 +201,18 @@ python3 manage.py startapp users
     ```
 
 - registration format:
-  - in a new list item, add the following entry
-    ```python3
-    '<app-name-in-apps.py-class>.apps.<class-name-in-apps.py>',
-    ```
+  ```python3
+  '<app-name-in-apps.py-class>.apps.<class-name-in-apps.py>',
+  ```
 
 - registration location: 
-  - under `INSTALLED_APPS` entry in this file, add the following code:
+  - under `INSTALLED_APPS` entry in `settings.py` file, add the following lines:
     ```python3
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     ```
 
-- adding newly created apps to `INSTALLED_APPS` list in `settings.py` enables models being picked up by django
+- adding newly created apps to `INSTALLED_APPS` list in `settings.py` enables the apps' models being picked up by django
 
 ### setup ORM 
 
@@ -265,7 +264,7 @@ python3 manage.py createsuperuser
 python3 manage.py shell
 ```
 
-- in the python shells:
+- in the python shell:
 
   ```python3
   from django.contrib.auth.models import User
@@ -275,7 +274,7 @@ python3 manage.py shell
   usr.save()
   ```
 
-##### setup app models
+##### setup models (M of M-V-T)
 
 - when a new app is created using `startapp`,
   - a `models.py` is automatically created in the app dir
@@ -389,7 +388,7 @@ python3 manage.py shell
             import users.signals
     ```
 
-### the model-view-template system
+### the view-template system (V-T of M-V-T)
 
 - templates are HTML files for the final render view 
 
@@ -398,15 +397,8 @@ python3 manage.py shell
 
 - the project globally and each app locally has a `urls.py` file
 
-- after the basic models are setup, 
-  - define the paths in the `urls.py` file
-  - then, define the view handlers for each path 
-  - then create the view handler 
-  - then, create the template 
-
 - it is a good idea to map out the paths of a web app
   - before getting into programming the `urls.py` file
-
 
 <figure>
   <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-blog-app-schematics-routes.png?raw=true" alt="App Routes Needed">
@@ -494,6 +486,20 @@ python3 manage.py shell
 
   ```
 
+- create a `base.html` in the project-level `templates` folder
+- then go create a folder called `blog` in the same dir
+  - in that, make a file called `post_list.html`
+
+- fill the `base.html` file with the Bootstrap 4 Starter Template 
+  - [bootstrap 4 starter template](https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template)
+  - then add a [navbar from bootstrap](https://getbootstrap.com/docs/4.5/components/navbar/) as well
+
+- so basically, 
+  1. create **M**odels first in `models.py`
+  2. create **V**iew handles in `views.py`
+  3. create **T**emplates in `templates/<app-dir>` 
+
+- now go to @ `localhost:6500` in your browser
 
 ### user registration page 
 
