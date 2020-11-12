@@ -181,11 +181,15 @@ python3 manage.py startapp users
 - first check the app's `apps.py` file to get class-name slug
   - usually these `class`es
   ```python3
+  # blog/apps.py
+
   class BlogConfig(AppConfig):
     name = 'blog'
   ```
   - and 
   ```python3
+  # users/apps.py
+
   class UsersConfig(AppConfig):
     name = 'users'
   ```
