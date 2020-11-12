@@ -501,6 +501,12 @@ python3 manage.py shell
 
 - now go to @ `localhost:6500` in your browser
 
+<figure>
+  <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/django-app-bootstrap-base-template.png?raw=true" alt="Bootstrap Base Template">
+  <figcaption>Bootstrap Base Template</figcaption>
+</figure>
+
+
 ### user registration page 
 
 - a `UserCreationForm` exists with in django to generate the form necessary for new-user-creation
