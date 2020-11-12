@@ -43,6 +43,8 @@ tags: [notes, django, python, blog-app, blog]
     - pip3 installed 
     - pillow installed
       - `pip3 install Pillow`
+    - crispy-forms installed
+      - `pip3 install django-crispy-forms`
   - some understanding of django 
   
 # process 
@@ -92,10 +94,14 @@ cd django_blog_app
 <figure>
   <img class="plot mx-auto text-center img-fluid" src="https://github.com/numoonchld/numoonchld.github.io/blob/master/media/blogAssets/django-blog-app/setting-up-venv.png?raw=true" alt="Django Development Server Launch Screen">
   <figcaption>
-    Note the parenthesis entity at the left end offsetting the CLI prompt
+    Note the parenthesis entity at the left-end offsetting the CLI prompt
   </figcaption>
 </figure>
 
+- reinstall pip3 inside the venv:
+  ```python3
+  pip install --upgrade pip
+  ```
 
 - reinstall django inside the venv:
   ```python3
@@ -197,7 +203,7 @@ python3 manage.py startapp users
     'users.apps.UsersConfig',
     ```
 
-- adding newly created apps to `INSTALLED_APPS` list in `settings.py` models being picked up by django
+- adding newly created apps to `INSTALLED_APPS` list in `settings.py` enables models being picked up by django
 
 ### setup ORM 
 
@@ -220,7 +226,7 @@ python3 manage.py startapp users
 python3 manage.py makemigrations
 ```
 - detects changes in models and prepares updates to the DB
-- doesn't update the actual DB, only prepares stages changes 
+- doesn't update the actual DB, only stages changes 
 
 ```zsh
 python3 manage.py migrate
@@ -285,7 +291,7 @@ usr.save()
 
 **`Profile` model**:
 - extends the built-in `User` class ORM model 
-  - to accomodate an Profile picture
+  - to accommodate blogger's Profile picture
 - initialize the `Profile` model in `user/models.py`:
   ```python3
   from django.db import models
@@ -293,13 +299,13 @@ usr.save()
 
   class Profile(models.Model):
     user = models.OneToOneField(User, on_delete = models.CASCADE)
-    image = model.ImageField(default='default.jpg',upload_to='profile_pics')
+    image = models.ImageField(default='default.jpg',upload_to='profile_pics')
   ```
 
 ##### register with admin page
 
 - upon registering the models within `admin.py` file
-  - they before available on the admin dashboard for manual CRUD operations
+  - they become available on the admin dashboard for manual CRUD operations
 
 - register the `Post` model in `blog/admin.py` file
   ```python3
@@ -357,9 +363,28 @@ usr.save()
             import users.signals
     ```
 
-### setup static files dir
+### the model-view-template system
 
-### setup templates dir
+- templates are HTML files for the final render view 
+
+- each route gets its own template 
+  - routes are assigned templates and template content handlers in the `urls.py` file
+
+- the project globally and each app locally has a `urls.py` file
+
+- after the basic models are setup, 
+  - define the paths in the `urls.py` file
+  - then, define the view handlers for each path 
+  - then create the view handler 
+  - then, create the template 
+
+- it is a good idea to map out the paths of a web app
+  - before getting into programming the `urls.py` file
+
+- django supports template inheritance
+  - i.e. one base template can be derived from over and over to make child templates 
+
+- templates are 
 
 ### user registration page 
 
