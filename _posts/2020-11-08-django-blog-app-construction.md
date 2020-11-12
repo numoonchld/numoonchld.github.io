@@ -441,6 +441,50 @@ usr.save()
     |- db.sqlite3
   ```
 
+##### blog home page
+
+- each path defined in the `urls.py` needs a view handler
+- so first, we will look at how to do this for the home page 
+
+- start with view handler file - `views.py`: add the following lines 
+  ```python3
+  # blog/views.py
+
+  #import built in class based view
+  from django.views.generic import ListView 
+
+  # import the model Post from models.py
+  from .models import Post
+
+  # Create your views here.
+  class PostListView(ListView):
+      model = Post
+  ```
+- create an app level `urls.py` and add the following code 
+  ```python3
+  # blog/urls.py
+  from .views import PostListView
+
+  urlpatterns = [
+      path('',PostListView.as_view(), name="blog-home")
+  ]
+  ```
+
+- ensure the `include` imports in the project `urls.py` file
+  - - then add `blog.urls` to the `urlpatterns` list with `include` as follows
+  ```python3
+  # urls.py
+
+  from django.urls import path, include 
+
+  urlpatterns = [
+    ...
+    path('',include('blog.urls'))
+  ]
+
+  ```
+
+
 ### user registration page 
 
 - a `UserCreationForm` exists with in django to generate the form necessary for new-user-creation
