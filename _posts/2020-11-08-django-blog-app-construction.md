@@ -4,7 +4,7 @@ title: django blog app construction
 date: 2020-11-08
 updated: 2020-11-12
 artist: Kalandra
-artistLink: https://open.spotify.com/track/6nYgqC6bPkallvLf3oNEvn?si=_nBSp0EOR8Od4WKEd-1TpQ
+artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
 trackLink: https://youtu.be/KmdYc-V86yI
 tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial]
