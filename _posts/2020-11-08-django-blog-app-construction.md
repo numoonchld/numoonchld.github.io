@@ -512,10 +512,10 @@ python3 manage.py shell
 
 ### set up crispy-forms
 
-- plugin to apply bootstrap styling to forms automatically
+- crispy-forms is a plugin to apply bootstrap styling to forms automatically
 
-- third party django app 
-- makes working with forms easier
+- third party django app that makes working with forms easier
+
 - allows adding simple tags in template files 
   - to add bootstrap styling
   - use other CSS frameworks also
@@ -530,6 +530,7 @@ python3 manage.py shell
   ]
   ...
   ```
+  
 - set the CSS framework to use 
   - in `settings.py` at the very end of file, add following
     ```
