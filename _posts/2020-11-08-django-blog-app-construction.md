@@ -3,11 +3,11 @@ layout: post
 title: django blog app construction
 date: 2020-11-08
 updated: 2020-11-12
-artist: The Chainsmokers ft. Halsey
-artistLink: https://www.thechainsmokers.com/
-track: Closer (T-Mass Remix)
-trackLink: https://youtu.be/S-l6a34mwWw
-tags: [notes, django, python, blog-app, blog]
+artist: Kalandra
+artistLink: www.kalandra.no
+track: Virkelighetens Etterklang
+trackLink: https://youtu.be/KmdYc-V86yI
+tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial]
 ---
 
 # overview
@@ -509,9 +509,15 @@ python3 manage.py shell
 
 ### user registration page 
 
-- a `UserCreationForm` exists with in django to generate the form necessary for new-user-creation
-- in `users/views.py`, add the following logic
+- a `UserCreationForm` form-object exists with in django to generate the form necessary for new-user-creation
+- the way to use it is to 
+  - import it as a class from `django.contrib.auth.forms` 
+  - then pass it as a context into an appropriate template
+
+- add the following logic in the given path
   ```python3
+  # users/views.py
+
   from django.shortcuts import render
   from django.contrib.auth.forms import UserCreationForm
 
@@ -520,7 +526,30 @@ python3 manage.py shell
     return render(request, 'users/register.html', {'form':form})
   ```
 
-- then, create a template file called `register.html` in the 
+- create  `templates/users` dir to hold the user registration template
+  - then, create a template file called `register.html` 
+
+- then ensure the project's `urls.py` has the following lines:
+  ```python3
+  from django.contrib import admin
+  from django.urls import path, include
+  from users import views as user_views
+
+  urlpatterns = [
+      path('admin/', admin.site.urls),
+      path('', include('blog.urls')),
+      path('register/', user_views.register, name='register')
+  ]
+  ```
+
+- load @`localhost:6500/register` in browser 
+- then add the following code into `templates/users/register.html`
+  ```HTML
+
+
+
+  ```
+
 
 ### login and logout system 
 
