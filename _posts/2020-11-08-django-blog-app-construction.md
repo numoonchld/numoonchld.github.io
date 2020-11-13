@@ -443,6 +443,10 @@ python3 manage.py shell
     |- db.sqlite3
   ```
 
+- styling classes for forms can be set in `forms.py`
+  - but `forms.py` is not for applying styles, but to handle the forms backend 
+- so do all styling in templates
+
 ##### blog home page
 
 - each path defined in the `urls.py` needs a view handler
@@ -506,6 +510,31 @@ python3 manage.py shell
   <figcaption>Bootstrap Base Template</figcaption>
 </figure>
 
+### set up crispy-forms
+
+- plugin to apply bootstrap styling to forms automatically
+
+- third party django app 
+- makes working with forms easier
+- allows adding simple tags in template files 
+  - to add bootstrap styling
+  - use other CSS frameworks also
+
+- add following code in `settings.py`
+  ```python3
+  ...
+  INSTALLED_APPS = [
+    ...
+    'crispy_forms',
+    ...
+  ]
+  ...
+  ```
+- set the CSS framework to use 
+  - in `settings.py` at the very end of file, add following
+    ```
+    CRISPY_TEMPLATE_PACK = 'bootstrap4'
+    ```
 
 ### user registration page 
 
