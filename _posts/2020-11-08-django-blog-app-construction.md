@@ -1,6 +1,6 @@
 ---
 layout: post
-title: django blog app construction
+title: django blog app construction (w-i-p)
 date: 2020-11-08
 updated: 2020-11-12
 artist: Kalandra
@@ -538,37 +538,73 @@ python3 manage.py shell
 
 ### user registration page 
 
+
+
+
+
 - a `UserCreationForm` form-object exists with in django to generate the form necessary for new-user-creation
 - the way to use it is to 
   - import it as a class from `django.contrib.auth.forms` 
   - then pass it as a context into an appropriate template
 
-- add the following logic in the given path
+
+- start by building the `forms.py` file with the `UserCreationForm` 
+  - extend it with the email field 
+    ```python3
+
+    # users/forms.py
+    
+    from django import forms
+    from django.contrib.auth.models import User
+    from django.contrib.auth.forms import UserCreationForm
+
+    class UserRegisterForm(UserCreationForm):
+        email = forms.EmailField()
+
+        class Meta:
+            model = User
+            fields = [
+                'username',
+                'email',
+                'password1',
+                'password2',
+            ]
+    ```
+
+- then add the following logic in the given path
   ```python3
   # users/views.py
 
-  from django.shortcuts import render
-  from django.contrib.auth.forms import UserCreationForm
+  from django.shortcuts import render, redirect
+  from django.contrib import messages
+  from .forms import UserRegisterForm
 
+  # Create your views here.
   def register(request):
-    form = UserCreationForm()
-    return render(request, 'users/register.html', {'form':form})
+      if request.method == 'POST':
+          form = UserRegisterForm(request.POST)
+          if form.is_valid():
+              form.save()
+              return redirect('blog-home')
+      else:
+          form = UserRegisterForm()
+          return render(request, 'users/register.html', {'form':form})
   ```
 
-- create  `templates/users` dir to hold the user registration template
-  - then, create a template file called `register.html` 
+  - create  `templates/users` dir to hold the user registration template
+    - then, create a template file called `register.html` 
 
-- then ensure the project's `urls.py` has the following lines:
-  ```python3
-  from django.contrib import admin
-  from django.urls import path, include
-  from users import views as user_views
+  - then ensure the project's `urls.py` has the following lines:
+    ```python3
+    from django.contrib import admin
+    from django.urls import path, include
+    from users import views as user_views
 
-  urlpatterns = [
-      path('admin/', admin.site.urls),
-      path('', include('blog.urls')),
-      path('register/', user_views.register, name='register')
-  ]
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('blog.urls')),
+        path('register/', user_views.register, name='register')
+    ]
   ```
 
 - load @`localhost:6500/register` in browser 
