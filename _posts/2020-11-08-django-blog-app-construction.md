@@ -609,7 +609,7 @@ python3 manage.py shell
 
 - load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`
-  ```
+  ```jinja
   {% extends "base.html" %}
   {% load crispy_forms_tags %}
 
@@ -648,6 +648,8 @@ python3 manage.py shell
 
 
 ### setting up flash messages
+
+
 
 ### login and logout system 
 
