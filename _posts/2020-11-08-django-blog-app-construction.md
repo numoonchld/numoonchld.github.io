@@ -609,7 +609,7 @@ python3 manage.py shell
 
 - load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`
-  ```jinja
+  ```zsh
   {% extends "base.html" %}
   {% load crispy_forms_tags %}
 
