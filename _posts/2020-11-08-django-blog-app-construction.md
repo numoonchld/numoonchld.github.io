@@ -609,6 +609,8 @@ python3 manage.py shell
 
 - load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`
+
+  {% raw %}
   ```HTML
   {% extends "base.html" %}
   {% load crispy_forms_tags %}
@@ -627,9 +629,8 @@ python3 manage.py shell
                   Join Today
               </legend>
               
-              {% raw %}
+              
               {{ form | crispy }}
-              {% endraw %}
               
           </fieldset>
 
@@ -647,6 +648,8 @@ python3 manage.py shell
 
   {% endblock content %}
   ```
+  {% endraw %}
+              
 
 
 ### setting up flash messages
