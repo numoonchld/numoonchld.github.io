@@ -616,6 +616,7 @@ python3 manage.py shell
 
 
 
+
 ### login and logout system 
 
 ### user profile 
