@@ -609,7 +609,7 @@ python3 manage.py shell
 
 - load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`
-  ```zsh
+  ```HTML
   {% extends "base.html" %}
   {% load crispy_forms_tags %}
 
@@ -626,9 +626,11 @@ python3 manage.py shell
               <legend class="border-bottom">
                   Join Today
               </legend>
-
+              
+              {% raw %}
               {{ form | crispy }}
-
+              {% endraw %}
+              
           </fieldset>
 
           <div class="form-group">
