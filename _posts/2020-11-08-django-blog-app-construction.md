@@ -539,9 +539,6 @@ python3 manage.py shell
 ### user registration page 
 
 
-
-
-
 - a `UserCreationForm` form-object exists with in django to generate the form necessary for new-user-creation
 - the way to use it is to 
   - import it as a class from `django.contrib.auth.forms` 
@@ -588,7 +585,7 @@ python3 manage.py shell
               return redirect('blog-home')
       else:
         form = UserRegisterForm()
-        
+
       return render(request, 'users/register.html', {'form':form})
   ```
 
