@@ -988,7 +988,13 @@ python3 manage.py shell
 - in `settings.py`, configure the following
   ```python3
 
+  ...
+
+  MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+  MEDIA_URL = '/media/'
   ```
+
+- this is where the images uploaded with `upload_to` parameter in the Profile model will be saved to
 
 ### blog pages 
 
