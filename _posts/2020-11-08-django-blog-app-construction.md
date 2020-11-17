@@ -627,9 +627,10 @@ python3 manage.py shell
   ```
 
 - in `templates/base.html`, add the following logic:
+  {% raw %}
   ```HTML
   </header>
-  <!-- {% raw %} -->
+
   {% if message %}
 
     {% for message in messages %}
@@ -639,10 +640,10 @@ python3 manage.py shell
     {% endfor %}
 
   {% endif %}
-  <!-- {% endraw %} -->
+  
   {% block content %}
   ```
-
+  {% endraw %}
 
 ### login and logout system 
 
