@@ -709,18 +709,18 @@ python3 manage.py shell
 
 - import these views in the project `urls.py` directly 
 
-```python3
-# urls.py
+  ```python3
+  # urls.py
 
-...
-from django.contrib.auth import views as auth_views
-
-urlpatterns = [
   ...
-  path('login/',auth_views.LoginView.as_view(), name='login')
-  path('logout/',auth_views.LogoutView.as_view(), name='logout')
-]
-```
+  from django.contrib.auth import views as auth_views
+
+  urlpatterns = [
+    ...
+    path('login/',auth_views.LoginView.as_view(), name='login')
+    path('logout/',auth_views.LogoutView.as_view(), name='logout')
+  ]
+  ```
 
 - these views are Class-based views 
   - will handle forms and logic
@@ -778,6 +778,82 @@ urlpatterns = [
   {% endblock content %}
   ```
   {% endraw %}
+
+
+##### setup login redirect
+
+- then, in `settings.py`, configure the default value of login redirect url
+
+  ```python3
+  # settings.py
+
+  LOGIN_REDIRECT_URL = 'blog-home'
+
+  ```
+
+##### setup logout flow
+
+- add the following path in the project `urls.py`
+
+  ```python3
+  # urls.py
+
+  ...
+
+
+  urlpatterns = [
+    ...
+    path('logout/',auth_views.LogoutView.as_view(template_name="registration/logout.html"), name='logout'),
+  ]
+  ```
+
+- the `template_name` has to be specified because the default logout redirect page is the admin panel logout 
+  - even if a `logout.html` template exists
+
+- create the `logout.html` file in the `templates/registration` folder with the following code
+
+{% raw %}
+```html
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2 class="mt-5">You've been logged out</h2>
+
+    <div class="form-group">
+
+        <small class="text-muted">
+            Need an account? <a href="{% url 'login' %}"> Sign Up Now </a>
+        </small>
+
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+```
+{% endraw %}
+
+##### registration page redirect
+
+- link the login page in the register page 
+  - to allow access to login form on the register page 
+  - in the `register.html`
+    ```html
+    ...
+      <div class="form-group">
+
+      <small class="text-muted">
+          Need an account? <a href="{% url 'login' %}"> Sign Up Now </a>
+      </small>
+
+      </div>
+    ...
+    ```
 
 ### user profile 
  
