@@ -648,11 +648,12 @@ python3 manage.py shell
   {% endblock content %}
   ```
   {% endraw %}
-  
+
 ### setting up flash messages
 
 - in `users/views.py` setup these two lines of code
   ```python3
+  ...
   if form.is_valid():
     form.save()
 
@@ -661,6 +662,7 @@ python3 manage.py shell
     message.success(request, "Account created for {}".format(username))
                 
     return redirect('blog-home')
+  ...
   ```
 
 - in `templates/base.html`, add the following logic:
