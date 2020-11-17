@@ -833,7 +833,6 @@ python3 manage.py shell
   </div>
 
   {% endblock content %}
-
   ```
 <!-- {% endraw %} -->
 
@@ -863,9 +862,8 @@ python3 manage.py shell
   - it contains the currently logged in user
   - has attribute `is_authenticated` that allows to check if user is logged in 
 
-- use the following code bit to setup this conditional logic in base.html
-
-<!-- {% raw %} -->
+- use the following code bit to setup this conditional logic in `base.html`
+  {% raw %}
   ```html
 
   ...
@@ -887,7 +885,7 @@ python3 manage.py shell
   </ul>
   ...
   ```
-<!-- {% endraw %} -->  ```
+  {% endraw %}  
 
 ### user profile 
  
