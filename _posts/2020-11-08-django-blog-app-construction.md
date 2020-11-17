@@ -811,8 +811,7 @@ python3 manage.py shell
   - even if a `logout.html` template exists
 
 - create the `logout.html` file in the `templates/registration` folder with the following code
-
-<!-- {% raw %} -->
+{% raw %}
   ```html
   {% extends "base.html" %}
 
@@ -834,13 +833,14 @@ python3 manage.py shell
 
   {% endblock content %}
   ```
-<!-- {% endraw %} -->
+{% endraw %}
 
 ##### registration page redirect
 
 - link the login page in the register page 
   - to allow access to login form on the register page 
   - in the `register.html`
+  {% raw %}
     ```html
     ...
       <div class="form-group">
@@ -852,7 +852,7 @@ python3 manage.py shell
       </div>
     ...
     ```
-
+  {% endraw %}
 ##### login/logout status in the navbar 
 
 - if logged in, a logout link should show and vice-versa
