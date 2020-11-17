@@ -587,8 +587,9 @@ python3 manage.py shell
               form.save()
               return redirect('blog-home')
       else:
-          form = UserRegisterForm()
-          return render(request, 'users/register.html', {'form':form})
+        form = UserRegisterForm()
+        
+      return render(request, 'users/register.html', {'form':form})
   ```
 
   - create  `templates/users` dir to hold the user registration template
@@ -664,8 +665,6 @@ python3 manage.py shell
     
 - in `users/views.py` setup these lines of code
   ```python3
-  ...
-  from django.contrib import messages
 
   ...
   if form.is_valid():
@@ -673,7 +672,7 @@ python3 manage.py shell
 
     # to generate message
     username = form.cleaned_data.get('username')
-    message.success(request, "Account created for {}".format(username))
+    messages.success(request, "Account created for {}".format(username))
                 
     return redirect('blog-home')
   ...
