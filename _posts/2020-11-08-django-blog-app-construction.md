@@ -629,7 +629,7 @@ python3 manage.py shell
 - in `templates/base.html`, add the following logic:
   ```HTML
   </header>
-
+  <!-- {% raw %} -->
   {% if message %}
 
     {% for message in messages %}
@@ -639,7 +639,7 @@ python3 manage.py shell
     {% endfor %}
 
   {% endif %}
-
+  <!-- {% endraw %} -->
   {% block content %}
   ```
 
