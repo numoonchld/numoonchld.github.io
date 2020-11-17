@@ -811,32 +811,29 @@ python3 manage.py shell
   - even if a `logout.html` template exists
 
 - create the `logout.html` file in the `templates/registration` folder with the following code
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
 
-{% raw %}
-```html
-{% extends "base.html" %}
+  {% block content %}
 
-{% block content %}
+  <div class="container">
 
-<div class="container">
+      <h2 class="mt-5">You've been logged out</h2>
 
-    <h2 class="mt-5">You've been logged out</h2>
+      <div class="form-group">
 
-    <div class="form-group">
+          <small class="text-muted">
+              Need an account? <a href="{% url 'login' %}"> Sign Up Now </a>
+          </small>
 
-        <small class="text-muted">
-            Need an account? <a href="{% url 'login' %}"> Sign Up Now </a>
-        </small>
+      </div>
 
-    </div>
+  </div>
 
-</div>
-
-{% endblock content %}
-
-
-```
-{% endraw %}
+  {% endblock content %}
+  ```
+  {% endraw %}
 
 ##### registration page redirect
 
@@ -854,6 +851,10 @@ python3 manage.py shell
       </div>
     ...
     ```
+
+##### login/logout status in the navbar 
+
+- in the nav bar login in the 
 
 ### user profile 
  
@@ -879,10 +880,3 @@ python3 manage.py shell
 
 - `$ django-admin` in zsh lists all django sub-commands
 - [django templates folder structure](https://learndjango.com/tutorials/template-structure)
-
-
-
-
-
-
-
