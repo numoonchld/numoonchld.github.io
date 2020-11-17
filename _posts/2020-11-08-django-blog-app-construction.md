@@ -835,7 +835,7 @@ python3 manage.py shell
   ```
 {% endraw %}
 
-##### registration page redirect
+##### registration page link
 
 - link the login page in the register page 
   - to allow access to login form on the register page 
@@ -853,6 +853,7 @@ python3 manage.py shell
     ...
     ```
   {% endraw %}
+
 ##### login/logout status in the navbar 
 
 - if logged in, a logout link should show and vice-versa
@@ -888,8 +889,74 @@ python3 manage.py shell
   {% endraw %}  
 
 ### user profile 
- 
-### image storage system
+
+- certain pages need to be restricted based on login status 
+  - only accessible when user has logged in
+  - if user tries to go to restricted route, then 
+    - redirect to login page
+
+- first define the profile route in the project `usrls.py`
+  ```
+  # urls.py
+
+  ...
+  urlpatterns = [
+    ...
+    path('profile/', user.views.profile, name="profile")
+  ]
+
+  ```
+
+- create view handler for profile page in `users/views.py`
+  ```python3
+  # users/views.py
+
+  ...
+  from django.contrib.auth.decorators import login_required
+
+  ...
+
+  @login_required
+  def profile(request):
+      return render(request, 'users/profile.html')
+  
+  ...
+  ```
+
+- here the user variable doesnt need to be passed in as context
+  - django automatically makes this available globally to represent the logged in user 
+
+- the 
+
+- then create the template file `users/profile.html`
+  {% raw %}
+  ```html
+
+  {% extends "base.html" %}
+
+  {% block content %}
+
+  <div class="container m-5">
+
+      <img src="{{ user.profile.image.url }}" alt="">
+
+      <div class="m-5">
+
+          <h2> {{ user.username}} </h2>
+          <p> {{ user.email }} </p>
+          
+      </div>
+
+
+  </div>
+
+  {% endblock content %}
+
+  ```
+  {% endraw %}
+
+  
+##### image storage system
 
 ### blog pages 
 
