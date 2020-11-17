@@ -610,8 +610,45 @@ python3 manage.py shell
 - load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`
   - [link to the html template file](https://github.com/numoonchld/django_blog_app/blob/master/templates/users/register.html) (due to build issues with GitHub liquid)             
+  {% raw %}
+  ```HTML
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
 
+  {% block content %}
 
+  <div class="container">
+
+      <form method="POST">
+
+          {% csrf_token %}
+
+          <fieldset class="form-group">
+
+              <legend class="border-bottom">
+                  Join Today
+              </legend>
+
+              {{ form | crispy }}
+
+          </fieldset>
+
+          <div class="form-group">
+
+              <button class="btn btn-primary" >
+                  Sign Up
+              </button>
+
+          </div>
+
+      </form>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+  
 ### setting up flash messages
 
 - in `users/views.py` setup these two lines of code
@@ -629,6 +666,7 @@ python3 manage.py shell
 - in `templates/base.html`, add the following logic:
   {% raw %}
   ```HTML
+  ...
   </header>
 
   {% if message %}
@@ -640,8 +678,9 @@ python3 manage.py shell
     {% endfor %}
 
   {% endif %}
-  
+
   {% block content %}
+  ...
   ```
   {% endraw %}
 
