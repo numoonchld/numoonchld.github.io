@@ -608,8 +608,7 @@ python3 manage.py shell
   ```
 
 - load @`localhost:6500/register` in browser 
-- then add the following code into `templates/users/register.html`
-  - [link to the html template file](https://github.com/numoonchld/django_blog_app/blob/master/templates/users/register.html) (due to build issues with GitHub liquid)             
+- then add the following code into `templates/users/register.html`           
   {% raw %}
   ```HTML
   {% extends "base.html" %}
@@ -651,8 +650,23 @@ python3 manage.py shell
 
 ### setting up flash messages
 
-- in `users/views.py` setup these two lines of code
+- there are different types of built-in messages in django 
+  - bootstrap alert types match django's message types 1-1, so use django message tags in bootstrap classes
+  - the corresponding styles are 
+    - message.debug
+    - message.info
+    - message.success
+    - message.warning
+    - message.error
+
+- the message handles in this case has to be done in the form POST data handler 
+  - which is set in the `views.py` file
+    
+- in `users/views.py` setup these lines of code
   ```python3
+  ...
+  from django.contrib import messages
+
   ...
   if form.is_valid():
     form.save()
@@ -664,6 +678,8 @@ python3 manage.py shell
     return redirect('blog-home')
   ...
   ```
+
+- in the base template, a placeholder has to be set for showing flash messages 
 
 - in `templates/base.html`, add the following logic:
   {% raw %}
