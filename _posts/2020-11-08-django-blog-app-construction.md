@@ -906,7 +906,6 @@ python3 manage.py shell
     ...
     path('profile/', user.views.profile, name="profile")
   ]
-
   ```
 
 - create view handler for profile page in `users/views.py`
@@ -921,7 +920,6 @@ python3 manage.py shell
   @login_required
   def profile(request):
       return render(request, 'users/profile.html')
-  
   ...
   ```
 
@@ -931,7 +929,6 @@ python3 manage.py shell
 - then create the template file `users/profile.html`
   {% raw %}
   ```html
-
   {% extends "base.html" %}
 
   {% block content %}
@@ -947,20 +944,18 @@ python3 manage.py shell
           
       </div>
 
-
   </div>
 
   {% endblock content %}
-
   ```
   {% endraw %}
 
 - then tell django the login url in the `settings.py`
   ```python3
   # settings.py
+  ...
 
   LOGIN_URL = 'login'
-
   ```
   - this is needed because the `@login_required` decorator looks for the login page in a dir named `/accounts/login.html` bu default
     - this settings overrides that behaviour
@@ -979,7 +974,6 @@ python3 manage.py shell
     </li>
   {% else %}
   ...
-
   ```
   {% endraw %}
 
@@ -987,7 +981,7 @@ python3 manage.py shell
 
 - in `settings.py`, configure the following
   ```python3
-
+  # settings.py
   ...
 
   MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -995,6 +989,21 @@ python3 manage.py shell
   ```
 
 - this is where the images uploaded with `upload_to` parameter in the Profile model will be saved to
+- add media route to project `urls.py`
+  ```python3
+  # urls.py
+
+  ...
+  from django.conf import settings
+  from django.conf.urls.static import static
+
+  urlpatterns = [
+    ...
+  ]
+
+  if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+  ```
 
 ### blog pages 
 
