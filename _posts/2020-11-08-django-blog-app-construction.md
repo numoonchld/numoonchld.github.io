@@ -812,7 +812,7 @@ python3 manage.py shell
 
 - create the `logout.html` file in the `templates/registration` folder with the following code
 
-  {% raw %}
+<!-- {% raw %} -->
   ```html
   {% extends "base.html" %}
 
@@ -833,9 +833,9 @@ python3 manage.py shell
   </div>
 
   {% endblock content %}
-  
+
   ```
-  {% endraw %}
+<!-- {% endraw %} -->
 
 ##### registration page redirect
 
@@ -856,7 +856,38 @@ python3 manage.py shell
 
 ##### login/logout status in the navbar 
 
-- in the nav bar login in the 
+- if logged in, a logout link should show and vice-versa
+- set up a conditional check in the base template nav bar section
+
+- django provides a `user` global variable
+  - it contains the currently logged in user
+  - has attribute `is_authenticated` that allows to check if user is logged in 
+
+- use the following code bit to setup this conditional logic in base.html
+
+<!-- {% raw %} -->
+  ```html
+
+  ...
+  <ul class="navbar-nav mr-auto">
+
+  {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
+  {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login' %}">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'register' %}">Register</a>
+    </li>
+  {% endif %}
+
+  </ul>
+  ...
+  ```
+<!-- {% endraw %} -->  ```
 
 ### user profile 
  
