@@ -895,7 +895,9 @@ python3 manage.py shell
   - if user tries to go to restricted route, then 
     - redirect to login page
 
-- first define the profile route in the project `usrls.py`
+- user profile page is one such page which needs to be restricted based on user logged-in status 
+
+- first define the profile route in the project `urls.py`
   ```
   # urls.py
 
@@ -926,8 +928,6 @@ python3 manage.py shell
 - here the user variable doesnt need to be passed in as context
   - django automatically makes this available globally to represent the logged in user 
 
-- the 
-
 - then create the template file `users/profile.html`
   {% raw %}
   ```html
@@ -955,8 +955,40 @@ python3 manage.py shell
   ```
   {% endraw %}
 
-  
+- then tell django the login url in the `settings.py`
+  ```python3
+  # settings.py
+
+  LOGIN_URL = 'login'
+
+  ```
+  - this is needed because the `@login_required` decorator looks for the login page in a dir named `/accounts/login.html` bu default
+    - this settings overrides that behaviour
+
+- then add the profile link to the nav-bar
+  - in the `base.html`, add the following logic
+  {% raw %}
+  ```html
+  ...
+  {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
+  {% else %}
+  ...
+
+  ```
+  {% endraw %}
+
 ##### image storage system
+
+- in `settings.py`, configure the following
+  ```python3
+
+  ```
 
 ### blog pages 
 
