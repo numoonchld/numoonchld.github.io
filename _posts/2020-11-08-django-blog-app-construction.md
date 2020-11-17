@@ -811,6 +811,7 @@ python3 manage.py shell
   - even if a `logout.html` template exists
 
 - create the `logout.html` file in the `templates/registration` folder with the following code
+
   {% raw %}
   ```html
   {% extends "base.html" %}
