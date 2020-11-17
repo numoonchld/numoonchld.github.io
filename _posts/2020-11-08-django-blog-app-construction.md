@@ -833,6 +833,7 @@ python3 manage.py shell
   </div>
 
   {% endblock content %}
+  
   ```
   {% endraw %}
 
