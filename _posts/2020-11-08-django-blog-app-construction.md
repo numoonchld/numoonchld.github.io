@@ -614,7 +614,34 @@ python3 manage.py shell
 
 ### setting up flash messages
 
+- in `users/views.py` setup these two lines of code
+  ```python3
+  if form.is_valid():
+    form.save()
 
+    # to generate message
+    username = form.cleaned_data.get('username')
+    message.success(request, "Account created for {}".format(username))
+                
+    return redirect('blog-home')
+  ```
+
+- in `templates/base.html`, add the following logic:
+  ```HTML
+  </header>
+
+  {% if message %}
+
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+      </div>
+    {% endfor %}
+
+  {% endif %}
+
+  {% block content %}
+  ```
 
 
 ### login and logout system 
