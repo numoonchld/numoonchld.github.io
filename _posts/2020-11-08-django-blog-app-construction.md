@@ -447,7 +447,7 @@ python3 manage.py shell
   - but `forms.py` is not for applying styles, but to handle the forms backend 
 - so do all styling in templates
 
-##### blog home page
+##### blog home page setup
 
 - each path defined in the `urls.py` needs a view handler
 - so first, we will look at how to do this for the home page 
@@ -510,7 +510,7 @@ python3 manage.py shell
   <figcaption>Bootstrap Base Template</figcaption>
 </figure>
 
-### set up crispy-forms
+##### set up crispy-forms
 
 - crispy-forms is a plugin to apply bootstrap styling to forms automatically
 
@@ -536,7 +536,7 @@ python3 manage.py shell
     CRISPY_TEMPLATE_PACK = 'bootstrap4'
     ```
 
-### user registration page 
+### user registration page setup
 
 
 - a `UserCreationForm` form-object exists with in django to generate the form necessary for new-user-creation
@@ -603,9 +603,8 @@ python3 manage.py shell
         path('', include('blog.urls')),
         path('register/', user_views.register, name='register')
     ]
-  ```
+    ```
 
-- load @`localhost:6500/register` in browser 
 - then add the following code into `templates/users/register.html`           
   {% raw %}
   ```HTML
@@ -646,7 +645,9 @@ python3 manage.py shell
   ```
   {% endraw %}
 
-### setting up flash messages
+- load @`localhost:6500/register` in browser 
+
+##### setting up flash messages
 
 - there are different types of built-in messages in django 
   - bootstrap alert types match django's message types 1-1, so use django message tags in bootstrap classes
@@ -657,23 +658,23 @@ python3 manage.py shell
     - message.warning
     - message.error
 
-- the message handles in this case has to be done in the form POST data handler 
+- the message handlers in this case has to be done in the form POST data handler 
   - which is set in the `views.py` file
     
-- in `users/views.py` setup these lines of code
-  ```python3
+  - in `users/views.py` setup these lines of code
+    ```python3
 
-  ...
-  if form.is_valid():
-    form.save()
+    ...
+    if form.is_valid():
+      form.save()
 
-    # to generate message
-    username = form.cleaned_data.get('username')
-    messages.success(request, "Account created for {}".format(username))
-                
-    return redirect('blog-home')
-  ...
-  ```
+      # to generate message
+      username = form.cleaned_data.get('username')
+      messages.success(request, "Account created for {}".format(username))
+                  
+      return redirect('blog-home')
+    ...
+    ```
 
 - in the base template, a placeholder has to be set for showing flash messages 
 
@@ -699,6 +700,84 @@ python3 manage.py shell
   {% endraw %}
 
 ### login and logout system 
+
+- we need to create a login page 
+  - for users to login
+  - so they can create, edit and delete blog posts
+- django has built-in functionality to achieve login and logout 
+  - django provides some views for logins and logouts
+
+- import these views in the project `urls.py` directly 
+
+```python3
+# urls.py
+
+...
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+  ...
+  path('login/',auth_views.LoginView.as_view(), name='login')
+  path('logout/',auth_views.LogoutView.as_view(), name='logout')
+]
+```
+
+- these views are Class-based views 
+  - will handle forms and logic
+  - however, will not handle templates 
+  - but look for template files in a folder called `registration` 
+
+
+- so  we'll create the registration templates 
+  - create a folder named `registration` in templates 
+  - then create a file called `login.html`
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
+
+  {% block content %}
+
+  <div class="container">
+
+      <form method="POST">
+
+          {% csrf_token %}
+
+          <fieldset class="form-group">
+
+              <legend class="border-bottom">
+                  Log In 
+              </legend>
+
+              {{ form | crispy }}
+
+          </fieldset>
+
+          <div class="form-group">
+
+              <button class="btn btn-primary" >
+                  Login
+              </button>
+
+          </div>
+
+      </form>
+
+      <div class="form-group">
+
+          <small class="text-muted">
+              Need an account? <a href="{% url 'register' %}"> Sign Up Now </a>
+          </small>
+
+      </div>
+
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
 
 ### user profile 
  
