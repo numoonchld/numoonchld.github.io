@@ -1043,26 +1043,26 @@ python3 manage.py shell
 - we'll setup a ModelForm to link the user and profile models to the profile UI directly
 
 - add the following logic to the code base 
-```python3
-# users/forms.py
+  ```python3
+  # users/forms.py
 
-...
-from .models import Profile
+  ...
+  from .models import Profile
 
-...
+  ...
 
-class UserUpdateForm(forms.ModelForm):
-    email = forms.EmailField
+  class UserUpdateForm(forms.ModelForm):
+      email = forms.EmailField
 
-    class Meta:
-        model = User
-        fields = ['username', 'email']
-        
-class ProfileUpdateForm(forms.ModelForm):
-    class Meta:
-        model = Profile
-        fields = ['image']
-```
+      class Meta:
+          model = User
+          fields = ['username', 'email']
+          
+  class ProfileUpdateForm(forms.ModelForm):
+      class Meta:
+          model = Profile
+          fields = ['image']
+  ```
 
 - modify the `users/views.py` as follows:
   ```python3
