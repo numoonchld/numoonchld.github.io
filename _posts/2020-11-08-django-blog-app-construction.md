@@ -374,7 +374,7 @@ python3 manage.py shell
 
     @receiver(post_save, sender = User)
     def save_profile(sender, instance, **kwargs):
-      instance.profile.save
+      instance.profile.save()
     ```
 
   - then, add the `ready` function to `users/apps.py` under the class `UsersConfig(...)`:
@@ -1021,14 +1021,15 @@ python3 manage.py shell
   # Create your models here.
   class Profile(models.Model):
       user = models.OneToOneField(User, on_delete = models.CASCADE)
-      image = models.ImageField(default = 'default.jpg', upload_to = 'profile_pics')
+      image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+      
+      def save(self,*args, **kwargs):
+          super().save(*args, **kwargs)
 
-      def save(self, *args, **kwargs):
           img = Image.open(self.image.path)
-
           if img.height > 300 or img.width > 300:
-              output_size = (300, 300)
-              imp.thumbnail(output_size)
+              output_size = (300,300)
+              img.thumbnail(output_size)
               img.save(self.image.path)
   ```
 
@@ -1095,11 +1096,52 @@ class ProfileUpdateForm(forms.ModelForm):
 
   ```
 
-- then, update the profile template as follows
+- then, update the profile template `templates/users/profile.html` as follows
   {% raw %}
   ```html
-  # templates/users/profile.html
 
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
+
+
+  {% block content %}
+
+  <div class="container p-5">
+
+      <img class="img-fluid" src="{{ user.profile.image.url }}" alt="user display image">
+
+      <div class="text-center">
+
+          <h2> {{ user.username}} </h2>
+          <p> {{ user.email }} </p>
+
+      </div>
+
+
+  </div>
+
+  <hr>
+
+  <form class="p-5" method="POST" enctype="multipart/form-data">
+
+      {% csrf_token %}
+
+      <fieldset class="form-group">
+
+          <legend>
+              Profile Info
+          </legend>
+
+          {{ user_form | crispy }}
+          {{ profile_form | crispy }}
+
+      </fieldset>
+      <button class="btn btn-primary w-100" type="submit">
+          Update
+      </button>
+  </form>
+
+  {% endblock content %}
 
 
   ```
