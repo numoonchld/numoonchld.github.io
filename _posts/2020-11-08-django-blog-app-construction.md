@@ -933,11 +933,11 @@ python3 manage.py shell
 
   {% block content %}
 
-  <div class="container m-5">
+  <div class="container p-5">
 
-      <img src="{{ user.profile.image.url }}" alt="">
+      <img class="img-fluid" src="{{ user.profile.image.url }}" alt="user display image">
 
-      <div class="m-5">
+      <div class="text-center">
 
           <h2> {{ user.username}} </h2>
           <p> {{ user.email }} </p>
@@ -979,6 +979,8 @@ python3 manage.py shell
 
 ##### image storage system
 
+- the following strategy is for development time to store images
+
 - in `settings.py`, configure the following
   ```python3
   # settings.py
@@ -1004,6 +1006,105 @@ python3 manage.py shell
   if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
   ```
+
+- then upload an a default image to `/media/default.jpg`
+  - the media folder is to be located in the project root 
+
+- to reduce the file size of the uploaded image and to keep image size consistent, do the following to the profile model
+  ```python3
+  # users/models.py
+
+  from django.db import models
+  from PIL import Image
+  from django.contrib.auth.models import User
+
+  # Create your models here.
+  class Profile(models.Model):
+      user = models.OneToOneField(User, on_delete = models.CASCADE)
+      image = models.ImageField(default = 'default.jpg', upload_to = 'profile_pics')
+
+      def save(self, *args, **kwargs):
+          img = Image.open(self.image.path)
+
+          if img.height > 300 or img.width > 300:
+              output_size = (300, 300)
+              imp.thumbnail(output_size)
+              img.save(self.image.path)
+  ```
+
+
+### user-profile update system
+
+- the profile page so created cannot be updated, it needs to be make update-able
+- the POST-GET-REDIRECT pattern is used to setup the profile update system
+
+
+- we'll setup a ModelForm to link the user and profile models to the profile UI directly
+
+- add the following logic to the code base 
+```python3
+# users/forms.py
+
+...
+from .models import Profile
+
+...
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+        
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['image']
+```
+
+- modify the `users/views.py` as follows:
+  ```python3
+  # users/views.py
+
+  ...
+  from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+
+  ...
+  @login_required
+  def profile(request):
+
+      if request.method == "POST":
+          user_form = UserUpdateForm(request.POST, instance=request.user)
+          profile_form = ProfileUpdateForm(request.POST, request, FILES, instance=request.user.profile)
+          
+          if user_form.is_valid() and profile_form.is_valid():
+              user_form.save()
+              profile_form.save()
+              messages.success(request, 'Account Updated!')
+              return redirect('profile')
+
+      user_form = UserUpdateForm(instance = request.user)
+      profile_form = ProfileUpdateForm(instance = request.user.profile)
+
+      context = {
+          'user_form': user_form,
+          'profile_form': profile_form,
+      }
+      return render(request, 'users/profile.html', context)
+
+  ```
+
+- then, update the profile template as follows
+  {% raw %}
+  ```html
+  # templates/users/profile.html
+
+
+
+  ```
+  {% endraw %}
+
 
 ### blog pages 
 
