@@ -2,7 +2,7 @@
 layout: post
 title: django blog app construction (w-i-p)
 date: 2020-11-08
-updated: 2020-11-12
+updated: 2020-11-19
 artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
@@ -43,6 +43,12 @@ tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial]
     - pip3 installed 
   
 # process 
+
+### process overview
+
+- setup the models first 
+- then, 
+
 
 ### install django
 
@@ -536,7 +542,7 @@ python3 manage.py shell
     CRISPY_TEMPLATE_PACK = 'bootstrap4'
     ```
 
-### user registration page setup
+### registration page setup
 
 
 - a `UserCreationForm` form-object exists with in django to generate the form necessary for new-user-creation
@@ -1042,6 +1048,8 @@ python3 manage.py shell
 
 - we'll setup a ModelForm to link the user and profile models to the profile UI directly
 
+
+**view**
 - add the following logic to the code base 
   ```python3
   # users/forms.py
@@ -1096,10 +1104,10 @@ python3 manage.py shell
 
   ```
 
+**view**
 - then, update the profile template `templates/users/profile.html` as follows
   {% raw %}
   ```html
-
   {% extends "base.html" %}
   {% load crispy_forms_tags %}
 
@@ -1142,21 +1150,77 @@ python3 manage.py shell
   </form>
 
   {% endblock content %}
-
-
   ```
   {% endraw %}
 
 
-### blog pages 
+### blog pages (C-R-U-D)
 
 - we need the following pages to be handled by the blog app
-  - *blog home*: list of all blog posts
-  - *new post*: create a new post by the logged in user
-  - *update post*: edit a post by logged in user
-  - *delete post*: delete a post by logged in user
+  - *blog home*: list of all blog posts (c-R-u-d)
+  - *new post*: create a new post by the logged in user (C-r-u-d)
+  - *update post*: edit a post by logged in user (c-r-U-d)
+  - *delete post*: delete a post by logged in user (c-r-u-D)
 
- 
+
+- we shall use class-based views to handle these C-R-U-D operations
+  - django provides these generic views that do a lot of work in the background
+
+##### create and update blog post 
+
+- define the create view in the blog app
+
+- only registered users get to login
+  - but cannot use decorators for class based views like for functions
+
+- use login mixin class that is built-in to django
+  - inherit view from that mixin class 
+  - import from auth mixins 
+
+
+**view**
+  ```python3
+  # blog/views.py
+
+  ...
+  from django.views.generic import (
+      ListView,
+      CreateView,
+  )
+  from djnago.contrib.auth.mixins import LoginRequiredMixin
+
+  # Create your views here.
+  ...
+
+  class PostCreateView(LoginRequiredMixin, CreateView):
+      model = Post
+      fields = [
+          'title',
+          'content',
+          ]
+
+      def form_valid(self, form):
+          form.instance.author = self.request.user
+          return super().form_valid(form)
+
+  ```
+
+**view**
+- create and update view use the same template file
+  - the path they look for the template file is `templates/blog/post_form.html`
+  - named `post_form` because is a form for the post model
+
+
+##### read blog post
+
+##### list blog posts
+
+##### update blog post
+
+##### delete blog post
+
+
+
 ### pagination and filtering
  
 ### password reset email 
