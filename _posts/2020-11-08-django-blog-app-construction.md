@@ -482,6 +482,7 @@ python3 manage.py shell
   ]
   ```
 
+**routing**
 - ensure the `include` imports in the project `urls.py` file
   - then add `blog.urls` to the `urlpatterns` list with `include` as follows
     ```python3
@@ -550,7 +551,7 @@ python3 manage.py shell
   - import it as a class from `django.contrib.auth.forms` 
   - then pass it as a context into an appropriate template
 
-
+**form-view**
 - start by building the `forms.py` file with the `UserCreationForm` 
   - extend it with the email field 
     ```python3
@@ -573,7 +574,7 @@ python3 manage.py shell
                 'password2',
             ]
     ```
-
+**view**
 - then add the following logic in the given path
   ```python3
   # users/views.py
@@ -598,19 +599,21 @@ python3 manage.py shell
   - create  `templates/users` dir to hold the user registration template
     - then, create a template file called `register.html` 
 
-  - then ensure the project's `urls.py` has the following lines:
-    ```python3
-    from django.contrib import admin
-    from django.urls import path, include
-    from users import views as user_views
+**routing**
+- then ensure the project's `urls.py` has the following lines:
+  ```python3
+  from django.contrib import admin
+  from django.urls import path, include
+  from users import views as user_views
 
-    urlpatterns = [
-        path('admin/', admin.site.urls),
-        path('', include('blog.urls')),
-        path('register/', user_views.register, name='register')
-    ]
+  urlpatterns = [
+      path('admin/', admin.site.urls),
+      path('', include('blog.urls')),
+      path('register/', user_views.register, name='register')
+  ]
     ```
 
+**template**
 - then add the following code into `templates/users/register.html`           
   {% raw %}
   ```HTML
@@ -664,6 +667,7 @@ python3 manage.py shell
     - message.warning
     - message.error
 
+**view**
 - the message handlers in this case has to be done in the form POST data handler 
   - which is set in the `views.py` file
     
@@ -682,6 +686,7 @@ python3 manage.py shell
     ...
     ```
 
+**template**
 - in the base template, a placeholder has to be set for showing flash messages 
 
 - in `templates/base.html`, add the following logic:
@@ -713,6 +718,7 @@ python3 manage.py shell
 - django has built-in functionality to achieve login and logout 
   - django provides some views for logins and logouts
 
+**routing/view**
 - import these views in the project `urls.py` directly 
 
   ```python3
@@ -733,7 +739,7 @@ python3 manage.py shell
   - however, will not handle templates 
   - but look for template files in a folder called `registration` 
 
-
+**template**
 - so  we'll create the registration templates 
   - create a folder named `registration` in templates 
   - then create a file called `login.html`
@@ -799,6 +805,7 @@ python3 manage.py shell
 
 ##### setup logout flow
 
+**routing**
 - add the following path in the project `urls.py`
 
   ```python3
@@ -813,6 +820,7 @@ python3 manage.py shell
   ]
   ```
 
+**template**
 - the `template_name` has to be specified because the default logout redirect page is the admin panel logout 
   - even if a `logout.html` template exists
 
@@ -843,6 +851,7 @@ python3 manage.py shell
 
 ##### registration page link
 
+**template**
 - link the login page in the register page 
   - to allow access to login form on the register page 
   - in the `register.html`
@@ -869,6 +878,7 @@ python3 manage.py shell
   - it contains the currently logged in user
   - has attribute `is_authenticated` that allows to check if user is logged in 
 
+**template**
 - use the following code bit to setup this conditional logic in `base.html`
   {% raw %}
   ```html
@@ -903,6 +913,7 @@ python3 manage.py shell
 
 - user profile page is one such page which needs to be restricted based on user logged-in status 
 
+**routing**
 - first define the profile route in the project `urls.py`
   ```
   # urls.py
@@ -914,6 +925,7 @@ python3 manage.py shell
   ]
   ```
 
+**view**
 - create view handler for profile page in `users/views.py`
   ```python3
   # users/views.py
@@ -932,6 +944,7 @@ python3 manage.py shell
 - here the user variable doesnt need to be passed in as context
   - django automatically makes this available globally to represent the logged in user 
 
+**template**
 - then create the template file `users/profile.html`
   {% raw %}
   ```html
@@ -966,6 +979,7 @@ python3 manage.py shell
   - this is needed because the `@login_required` decorator looks for the login page in a dir named `/accounts/login.html` bu default
     - this settings overrides that behaviour
 
+**template**
 - then add the profile link to the nav-bar
   - in the `base.html`, add the following logic
   {% raw %}
@@ -997,6 +1011,8 @@ python3 manage.py shell
   ```
 
 - this is where the images uploaded with `upload_to` parameter in the Profile model will be saved to
+
+**routing**
 - add media route to project `urls.py`
   ```python3
   # urls.py
@@ -1016,6 +1032,7 @@ python3 manage.py shell
 - then upload an a default image to `/media/default.jpg`
   - the media folder is to be located in the project root 
 
+**model**
 - to reduce the file size of the uploaded image and to keep image size consistent, do the following to the profile model
   ```python3
   # users/models.py
@@ -1049,7 +1066,7 @@ python3 manage.py shell
 - we'll setup a ModelForm to link the user and profile models to the profile UI directly
 
 
-**view**
+**form/view**
 - add the following logic to the code base 
   ```python3
   # users/forms.py
@@ -1072,6 +1089,7 @@ python3 manage.py shell
           fields = ['image']
   ```
 
+**view**
 - modify the `users/views.py` as follows:
   ```python3
   # users/views.py
@@ -1104,7 +1122,7 @@ python3 manage.py shell
 
   ```
 
-**view**
+**template**
 - then, update the profile template `templates/users/profile.html` as follows
   {% raw %}
   ```html
@@ -1205,7 +1223,20 @@ python3 manage.py shell
 
   ```
 
-**view**
+**routing**
+```python3
+# blog/urls.py
+
+...
+from .views import PostListView, PostCreateView
+
+urlpatterns = [
+    ...
+    path('post/new/', PostCreateView.as_view(), name='post_create')
+]
+```
+
+**template**
 - create and update view use the same template file
   - the path they look for the template file is `templates/blog/post_form.html`
   - named `post_form` because is a form for the post model
