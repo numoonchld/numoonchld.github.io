@@ -401,7 +401,7 @@ python3 manage.py shell
 - each route gets its own template 
   - routes are assigned templates and template content handlers in the `urls.py` file
 
-- the project globally and each app locally has a `urls.py` file
+- the routing is handled in the project globally and each app locally in the `urls.py` file 
 
 - it is a good idea to map out the paths of a web app
   - before getting into programming the `urls.py` file
@@ -1285,21 +1285,119 @@ urlpatterns = [
   ```
   {% endraw %}
 
-##### blog post details
+- create as many posts as you like in the path `/post/new` now 
 
-##### list blog posts
+##### blog post details 
+
+
+- we need to set up the blog post detail view 
+  - to view a single blog post's details
+
+**routing**
+
+- setup the routing for the detail view as follows
+
+  ```python3
+  # blog/urls.py
+
+  ...
+  from .views import PostListView, PostCreateView, PostDetailView
+
+  urlpatterns = [
+      ...
+      path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+  ]
+  ```
+
+
+**view**
+
+- import the built-in django detail view class
+  - then extend that class to attach it to the Post model
+
+  ```python3
+  # blog/views.py
+
+  ...
+  from django.views.generic import (
+      ListView,
+      CreateView,
+      DetailView,
+  )
+
+  ...
+  class PostDetailView(DetailView):
+      model = Post
+  ```
+
+**template**
+
+- django makes the model Post's instance as `object` in the template context by default
+  - this `object` variable directly links to the instance of the model class
+
+- the default file name the view expects in the templates folder is `templates/blog/post_detail.html`
+  - so in this file, add the following HTML code
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+
+  {% block content %}
+
+  <article>
+      <img class="img-fluid" src="{{ object.author.profile.img.url }}" alt="author-image">
+      <div>
+          <div>
+              <a href="">
+                  {{ object.author }}
+              </a>
+              <small>
+                  {{ object.date_posted|date: "F d, Y" }}
+              </small>
+          </div>
+          <h2> {{object.title}} </h2>
+          <h2> {{object.content}} </h2>
+      </div>
+  </article>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
+##### blog list view 
+
+
 
 ##### update blog post
 
+**routing**
+
+**view**
+
+**template**
+
 ##### delete blog post
 
+**routing**
 
+**view**
+
+**template**
 
 ### pagination and filtering
+
+**routing**
+
+**view**
+
+**template**
  
 ### password reset email 
  
- 
+**routing**
+
+**view**
+
+**template**
 
 
 # further reading
