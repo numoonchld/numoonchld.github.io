@@ -1240,9 +1240,52 @@ urlpatterns = [
 - create and update view use the same template file
   - the path they look for the template file is `templates/blog/post_form.html`
   - named `post_form` because is a form for the post model
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
 
+  {% block content %}
 
-##### read blog post
+  <div class="container">
+
+      <form method="post">
+          {% csrf_token %}
+
+          <fieldset class="form-group">
+              <legend class=""> 
+                  Blog Post Compose
+              </legend>
+              {{ form | crispy }}
+          </fieldset>
+          <div class=form-group>
+              <button class="btn btn-success" type="submit" >
+                  Post
+              </button>
+          </div>
+
+      </form>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
+- create link to the newly created route in the navbar 
+  - go the nav bar section in the `base.html` file
+  {% raw %}
+  ```html
+  ...
+  {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'post-create' %}"> New Post </a>
+    </li>
+    ...
+  ```
+  {% endraw %}
+
+##### blog post details
 
 ##### list blog posts
 
