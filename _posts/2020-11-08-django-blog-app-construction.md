@@ -2,7 +2,7 @@
 layout: post
 title: django blog app construction (w-i-p)
 date: 2020-11-08
-updated: 2020-11-19
+updated: 2020-11-23
 artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
@@ -46,8 +46,13 @@ tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial]
 
 ### process overview
 
-- setup the models first 
-- then, 
+- setup the *models* first 
+- then, figure out the routes for the app
+- then for each route, setup
+  - the *routing* 
+  - the *view* 
+  - the *template*
+- make config changes in `settings.py`, `admin.py` and `models.py` as needed along the way 
 
 
 ### install django
@@ -1184,6 +1189,86 @@ python3 manage.py shell
 - we shall use class-based views to handle these C-R-U-D operations
   - django provides these generic views that do a lot of work in the background
 
+##### blog post details 
+
+
+- we need to set up the blog post detail view 
+  - to view a single blog post's details
+
+**routing**
+
+- setup the routing for the detail view as follows
+
+  ```python3
+  # blog/urls.py
+
+  ...
+  from .views import PostListView, PostDetailView
+
+  urlpatterns = [
+      ...
+      path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+  ]
+  ```
+
+
+**view**
+
+- import the built-in django detail view class
+  - then extend that class to attach it to the Post model
+
+  ```python3
+  # blog/views.py
+
+  ...
+  from django.views.generic import (
+      ListView,
+      DetailView,
+  )
+
+  ...
+  class PostDetailView(DetailView):
+      model = Post
+  ```
+
+**template**
+
+- django makes the model Post's instance as `object` in the template context by default
+  - this `object` variable directly links to the instance of the model class
+
+- the default file name the view expects in the templates folder is `templates/blog/post_detail.html`
+  - so in this file, add the following HTML code
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+
+  {% block content %}
+
+  <article>
+      <img class="img-fluid" src="{{ object.author.profile.img.url }}" alt="author-image">
+      <div>
+          <div>
+              <a href="">
+                  {{ object.author }}
+              </a>
+              <small>
+                  {{ object.date_posted|date: "F d, Y" }}
+              </small>
+          </div>
+          {% if object.author == user %}
+
+            <a href="{% url 'post-update' object.id %}"> <button class="btn btn-info"> Update Post </button> </a>
+
+          {% endif %}
+          <h2> {{object.title}} </h2>
+          <h2> {{object.content}} </h2>
+      </div>
+  </article>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
 ##### create and update blog post 
 
 - define the create view in the blog app
@@ -1195,6 +1280,8 @@ python3 manage.py shell
   - inherit view from that mixin class 
   - import from auth mixins 
 
+- the create and update view classes both share the same template file 
+  - so setup the create and update parts of the routing, view and template in one shot
 
 **view**
   ```python3
@@ -1203,13 +1290,16 @@ python3 manage.py shell
   ...
   from django.views.generic import (
       ListView,
+      DetailView,
       CreateView,
+      UpdateView,
   )
-  from djnago.contrib.auth.mixins import LoginRequiredMixin
+  from djnago.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
   # Create your views here.
   ...
 
+  # create view
   class PostCreateView(LoginRequiredMixin, CreateView):
       model = Post
       fields = [
@@ -1221,6 +1311,24 @@ python3 manage.py shell
           form.instance.author = self.request.user
           return super().form_valid(form)
 
+  # update view
+  class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+      model = Post
+      fields = [
+          'title',
+          'content',
+      ]
+
+      def form_valid(self, form):
+          form.instance.author = self.request.user
+          return super().form_valid(form)
+
+      def test_func(self):
+          post = self.get_object()
+          if self.request.user == post.author:
+              return True
+          else: return False
+
   ```
 
 **routing**
@@ -1228,11 +1336,12 @@ python3 manage.py shell
 # blog/urls.py
 
 ...
-from .views import PostListView, PostCreateView
+from .views import PostListView, PostCreateView, PostDetailView, PostUpdateView
 
 urlpatterns = [
     ...
-    path('post/new/', PostCreateView.as_view(), name='post_create')
+    path('post/new/', PostCreateView.as_view(), name='post_create'),
+    path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
 ]
 ```
 
@@ -1272,7 +1381,7 @@ urlpatterns = [
   ```
   {% endraw %}
 
-- create link to the newly created route in the navbar 
+- create link to the newly created route in the navbar: 
   - go the nav bar section in the `base.html` file
   {% raw %}
   ```html
@@ -1285,95 +1394,119 @@ urlpatterns = [
   ```
   {% endraw %}
 
-- create as many posts as you like in the path `/post/new` now 
+- create update button in the post detail view
+  - in `templates/blog/post_detail.html`, add the following logic:
 
-##### blog post details 
+  {% raw %}
+  ```html
 
+  ...
+  <div class="my-3">
+      {% if object.author == user %}
+          <a href="{% url 'post-update' object.id %}"> <button class="btn btn-info"> Update Post </button> </a>
+      {% endif %}
+  </div>
+  <h2> {{object.title}} </h2>
+  ...
 
-- we need to set up the blog post detail view 
-  - to view a single blog post's details
+  ```
+  {% endraw %}
 
-**routing**
+**redirection**
 
-- setup the routing for the detail view as follows
+- after post has been created, the user has to be redirected to the post detail view
+
+- this function can be setup in two ways 
+  - set a success re-direct url in the view 
+  - or setup a `get_absolute_url` method in the post model
+
+- setup a `get_absolute_url` method in the post model in `blog/models.py`
 
   ```python3
-  # blog/urls.py
+  # blog/models.py
+
+  ...
+  from django.urls import reverse
+  
+
+  # Create your models here.
+
+  class Post(models.Model):
+      ...
+
+      def get_absolute_url(self):
+          return reverse('post-detail', kwargs={'pk':self.pk})
+  ```
+
+
+
+
+
+- create as many posts as you like in the path `/post/new` now 
+
+
+
+##### blog list view 
+
+- we will next fully set up the view of the list of all blogs on the website 
+
+**routing**
+- should already exist in the `blog/urls.py` file by now
+
+  ```python3
+  # blogs/urls.py
 
   ...
   from .views import PostListView, PostCreateView, PostDetailView
 
   urlpatterns = [
+      path('', PostListView.as_view(), name="blog-home"),
       ...
-      path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
   ]
   ```
 
-
 **view**
 
-- import the built-in django detail view class
-  - then extend that class to attach it to the Post model
-
+- the view should be handled in the `blog/views.py` file as follows
+  
   ```python3
   # blog/views.py
 
   ...
   from django.views.generic import (
-      ListView,
-      CreateView,
-      DetailView,
+    ListView,
+    ...
   )
 
   ...
-  class PostDetailView(DetailView):
-      model = Post
+  class PostListView(ListView):
+    model = Post
+    context_object_name = 'posts'
+    ordering = ["-date_posted"]
+  ...
   ```
 
 **template**
 
-- django makes the model Post's instance as `object` in the template context by default
-  - this `object` variable directly links to the instance of the model class
+{% raw %}
+```html
+{% extends "base.html" %}
 
-- the default file name the view expects in the templates folder is `templates/blog/post_detail.html`
-  - so in this file, add the following HTML code
-  {% raw %}
-  ```html
-  {% extends "base.html" %}
+{% block content %}
 
-  {% block content %}
+    {% for post in posts %}
 
-  <article>
-      <img class="img-fluid" src="{{ object.author.profile.img.url }}" alt="author-image">
-      <div>
-          <div>
-              <a href="">
-                  {{ object.author }}
-              </a>
-              <small>
-                  {{ object.date_posted|date: "F d, Y" }}
-              </small>
-          </div>
-          <h2> {{object.title}} </h2>
-          <h2> {{object.content}} </h2>
-      </div>
-  </article>
+        <a href="{% url 'post-detail' post.id %}"> <h1> {{ post.title }}  </h1> </a>
 
-  {% endblock content %}
-  ```
-  {% endraw %}
+        <p> {{ post.author }} </p>
 
-##### blog list view 
+        <p> {{ post.content }} </p>
 
+    {% endfor %}
 
-
-##### update blog post
-
-**routing**
-
-**view**
-
-**template**
+{% endblock content %}
+```
+{% endraw %}
 
 ##### delete blog post
 
