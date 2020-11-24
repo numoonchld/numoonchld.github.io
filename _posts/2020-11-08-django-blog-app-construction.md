@@ -7,7 +7,7 @@ artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
 trackLink: https://youtu.be/KmdYc-V86yI
-tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial]
+tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial, docker, vscode]
 ---
 
 # overview
@@ -1137,7 +1137,7 @@ python3 manage.py shell
 
   {% block content %}
 
-  <div class="container p-5">
+  <div class="container p-5 d-flex flex-column align-center align-items-center ">
 
       <img class="img-fluid" src="{{ user.profile.image.url }}" alt="user display image">
 
@@ -1236,7 +1236,7 @@ python3 manage.py shell
 - django makes the model Post's instance as `object` in the template context by default
   - this `object` variable directly links to the instance of the model class
 
-- the default file name the view expects in the templates folder is `templates/blog/post_detail.html`
+- the default file name the view expects in the templates folder is `templates/blog/post_detail.html`  which the `.as_view()` part looks for
   - so in this file, add the following HTML code
   {% raw %}
   ```html
@@ -1488,6 +1488,9 @@ urlpatterns = [
 
 **template**
 
+
+- create the file `templates/blog/post_list.html` which the `.as_view()` part looks for the list view
+
 {% raw %}
 ```html
 {% extends "base.html" %}
@@ -1512,9 +1515,88 @@ urlpatterns = [
 
 **routing**
 
+- add the route for the post delete in the `urls.py` file
+
+```python3
+# blog/urls.py
+
+...
+from .views import PostListView, PostCreateView, PostDetailView, PostUpdateView, PostDeleteView
+
+urlpatterns = [
+    ...
+    path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
+]
+
+```
+
 **view**
 
+- set the delete view logic with the DeleteView built in generic view 
+
+```python3
+# blog/views.py
+
+...
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
+...
+
+...
+# delete view 
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Post
+    success_url = '/'
+
+    def test_func(self):
+      post = self.get_object()
+      if self.request.user == post.author:
+          return True
+      else: return False
+```
+
 **template**
+
+- create the file `templates/blog/post_confirm_delete.html` which the `.as_view()` part looks for
+{% raw %}
+```html
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <form method="post">
+        {% csrf_token %}
+
+        <fieldset class="form-group">
+            <legend class=""> 
+                Delete Post
+            </legend>
+           <h2> Are you sure you want to delete the post "{{ object.title }}"? </h2>
+        </fieldset>
+
+        <div class=form-group>
+            <button class="btn btn-danger" type="submit" >
+                Yes, Delete!
+            </button>
+            <a class="btn btn-secondary" href="{% url 'post-detail' object.id %}"> Cancel </a>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock content %}
+
+```
+{% endraw %}
 
 ### pagination and filtering
 
