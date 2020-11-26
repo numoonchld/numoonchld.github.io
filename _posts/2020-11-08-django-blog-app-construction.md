@@ -7,14 +7,19 @@ artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
 trackLink: https://youtu.be/KmdYc-V86yI
-tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial, docker, vscode]
+tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial, heroku, docker, vscode]
 ---
 
 # overview
 
 - this is a (b)log of constructing a blog-style web application with the `django` web-framework 
   - the programming language is `python`
-  
+
+- here is a link for the final app
+  - [https://django-blog-nmc.herokuapp.com/](https://django-blog-nmc.herokuapp.com/)
+  - it is hosted on heroku
+
+
 - `django` is a popular framework 
   - with lots of functionality out-of-the-box 
   - makes it enjoyable to work on web-applications
@@ -843,7 +848,7 @@ python3 manage.py shell
       <div class="form-group">
 
           <small class="text-muted">
-              Need an account? <a href="{% url 'login' %}"> Sign Up Now </a>
+              Want to login? <a href="{% url 'login' %}"> Login </a>
           </small>
 
       </div>
@@ -1244,24 +1249,25 @@ python3 manage.py shell
 
   {% block content %}
 
-  <article>
-      <img class="img-fluid" src="{{ object.author.profile.img.url }}" alt="author-image">
-      <div>
+  <article class="p-3">
+      <img class="img-fluid" src="{{ object.author.profile.image.url }}" alt="author-image">
+      <div >
           <div>
               <a href="">
                   {{ object.author }}
               </a>
               <small>
-                  {{ object.date_posted|date: "F d, Y" }}
+                  {{ object.date_posted | date:"Y, F d" }}
               </small>
           </div>
-          {% if object.author == user %}
-
-            <a href="{% url 'post-update' object.id %}"> <button class="btn btn-info"> Update Post </button> </a>
-
-          {% endif %}
+          <div class="my-3">
+              {% if object.author == user %}
+                  <a href="{% url 'post-update' object.id %}"> <button class="btn btn-info"> Update Post </button> </a>
+                  <a href="{% url 'post-delete' object.id %}"> <button class="btn btn-danger"> Delete Post </button> </a>
+              {% endif %}
+          </div>
           <h2> {{object.title}} </h2>
-          <h2> {{object.content}} </h2>
+          <p> {{object.content}} </p>
       </div>
   </article>
 
@@ -1499,12 +1505,24 @@ urlpatterns = [
 
     {% for post in posts %}
 
-        <a href="{% url 'post-detail' post.id %}"> <h1> {{ post.title }}  </h1> </a>
+    <div class="card m-5">
 
-        <p> {{ post.author }} </p>
+        <div class="card-title m-3">
 
-        <p> {{ post.content }} </p>
+            <a href="{% url 'post-detail' post.id %}" > <h1> {{ post.title }}  </h1> </a>
+            <p> {{ post.author }} </p>
 
+        </div>
+
+        <div class="card-body">
+
+            <p> {{ post.content }} </p>
+
+        </div>
+        
+
+    </div>
+    
     {% endfor %}
 
 {% endblock content %}
@@ -1527,7 +1545,6 @@ urlpatterns = [
     ...
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
 ]
-
 ```
 
 **view**
@@ -1563,42 +1580,62 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 **template**
 
 - create the file `templates/blog/post_confirm_delete.html` which the `.as_view()` part looks for
-{% raw %}
-```html
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
 
-{% extends "base.html" %}
+  {% block content %}
 
-{% block content %}
+  <div class="container">
 
-<div class="container">
+      <form method="post">
+          {% csrf_token %}
 
-    <form method="post">
-        {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class=""> 
+                  Delete Post
+              </legend>
+            <h2> Are you sure you want to delete the post "{{ object.title }}"? </h2>
+          </fieldset>
 
-        <fieldset class="form-group">
-            <legend class=""> 
-                Delete Post
-            </legend>
-           <h2> Are you sure you want to delete the post "{{ object.title }}"? </h2>
-        </fieldset>
+          <div class=form-group>
+              <button class="btn btn-danger" type="submit" >
+                  Yes, Delete!
+              </button>
+              <a class="btn btn-secondary" href="{% url 'post-detail' object.id %}"> Cancel </a>
+          </div>
 
-        <div class=form-group>
-            <button class="btn btn-danger" type="submit" >
-                Yes, Delete!
-            </button>
-            <a class="btn btn-secondary" href="{% url 'post-detail' object.id %}"> Cancel </a>
-        </div>
+      </form>
 
-    </form>
+  </div>
 
-</div>
+  {% endblock content %}
+  ```
+  {% endraw %}
 
-{% endblock content %}
+- add delete button in the post detail view
+  - in the file`templates/blog/post_detail.html` add the following lines:
 
-```
-{% endraw %}
+  {% raw %}
+  ```html
+  ...
+  {% if object.author == user %}
+          <a href="{% url 'post-delete' object.id %}"> <button class="btn btn-danger"> Delete Post </button> </a>
+  {% endif %}
+  ...
+  ```
+  {% endraw %}
 
-### pagination and filtering
+### pagination 
+
+- before we can setup pagination, we need a lot of posts 
+  - se we shall add up to 20 posts in the DB using the UI that we have built already 
+  - use this text generator to create dummy data for testing 
+    - [https://ndaidong.github.io/txtgen/](https://ndaidong.github.io/txtgen/)
+
+
+
+### filtering
 
 **routing**
 
@@ -1614,8 +1651,181 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 **template**
 
+# heroku deployment 
+
+- first install heroku cli for your OS
+- then run the following commands and monitor the output in the CLI
+
+### initial setup 
+
+- create Procfile with following content in app root dir 
+  ```Profile
+  web: gunicorn django_blog_app.wsgi
+  ```
+  - here django_blog_app is the name of the root dir
+
+- then, add the app URL to ALLOWED_HOSTS in `settings.py`
+  ```python3
+  ALLOWED_HOSTS = ['django-blog-nmc.herokuapp.com']
+  ```
+
+- add the STATIC_ROOT parameter in `settings.py` 
+  ```python3
+  STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+  ```
+
+- to launch app on heroku
+
+  ```zsh
+  heroku
+
+  heroku login
+
+  pip3 install gunicorn
+
+  pip3 freeze > requirements.txt
+
+  heroku create django-blog-nmc
+
+  git push heroku master
+
+  heroku open
+  ```
+
+# docker setup
+
+- the first step in creating a docker is installing the docker desktop app 
+  - this the manager for all containers and images 
+
+- secondly the Dockerfile has to be created
+  - this cane be done manually or,
+  - vscode has a docker plugin, 
+    - which has a wizard built-in to create Dockerfiles 
+    - among the other steps involved with dockerizing an app
+
+- install docker desktop and vscode (if you haven't been using it code your app already)
+- install the docker plugin in vscode from the plugin marketplace
+
+### create django dockerfle
+
+
+##### vscode workflow
+
+- bring up the `Shift + Cmd + P` menu by pressing those buttons
+- then search `> Docker Add`
+- then `Docker: Add docker file to workspace`
+- select `Python: Django` as the application platform
+- select `manage.py` as the app's entry point
+- select `8000` for the exposed port (`8000` is the default value)
+- select `No` for including docker compose file
+- **allow** *overwriting* any existing `requirements.txt`
+  - regen the `requirements.txt` file using `pip3 freeze > requirements.txt`
+  - this why it is important to create and source a virtual environment for a django app 
+
+### manual workflow
+
+- add the following lines in a file named `Dockerfile` situated in the project root dir 
+
+  ```Dockerfile
+  # For more information, please refer to https://aka.ms/vscode-docker-python
+  FROM python:3.8-slim-buster
+
+  # Set app-listen port
+  EXPOSE 8000
+
+  # Keeps Python from generating .pyc files in the container
+  ENV PYTHONDONTWRITEBYTECODE=1
+
+  # Turns off buffering for easier container logging
+  ENV PYTHONUNBUFFERED=1
+
+  # Install pip requirements
+  ADD requirements.txt .
+  RUN python -m pip install -r requirements.txt
+
+  WORKDIR /app
+  ADD . /app
+
+  # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
+  RUN useradd appuser && chown -R appuser /app
+  USER appuser
+
+  # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+  CMD ["gunicorn", "--bind", "0.0.0.0:8000", "django_blog_app.wsgi"]
+
+  ```
+
+### image creation from Dockerfile
+
+- CLI method:
+  ```zsh
+  docker build --tag django_blog_app:v0 .
+  ```
+
+- GUI method:
+  - in the vscode file browser, right-click on the Dockerfile and say "Build Image"
+
+### container deployment from image
+
+- CLI method:
+  ```zsh
+  docker run -p 8000:8000 --detach --name dba django_blog_app:v0
+  ```
+  - explanation:
+    - `dba`: name of deployed container
+    - `django_blog_app:v0`: name of deployed container
+
+- GUI method:
+  - open the 
+
+##### access the app
+
+- go to `localhost:8000` to access the deployed container
+
+##### stop the docker container 
+
+- CLI
+  ```zsh
+  docker stop wn 
+  ```
+
+### additional docker commands
+
+- CLI 
+  ```zsh
+  docker ps # lists all running containers 
+  docker exec -it dba /bin/bash # start interactive docker container's internal CLI session
+  ```
 
 # further reading
 
 - `$ django-admin` in zsh lists all django sub-commands
+
 - [django templates folder structure](https://learndjango.com/tutorials/template-structure)
+
+### django-SQL
+
+- django SQL config
+  ```python3
+  # settings.py
+  
+  DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '<db-name-set-in-sql-cli>'
+        'USER': 'root' ,
+        'PASSWORD': '' ,
+        'HOST': 'test-1234',
+        'PORT': '3306'
+    }
+  }
+  ```
+
+- some mysql CLI commands 
+  ```zsh
+  mysql -u root -p # login to sql server as root user
+  brew services start mysql # load brew version of mysql
+  brew services start mysql # stop brew version of mysql
+  lsof -i:3306 # list processes using port 3306
+  ```
+
