@@ -2,7 +2,7 @@
 layout: post
 title: django blog app construction (w-i-p)
 date: 2020-11-08
-updated: 2020-11-23
+updated: 2020-11-26
 artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
@@ -1290,52 +1290,53 @@ python3 manage.py shell
   - so setup the create and update parts of the routing, view and template in one shot
 
 **view**
-  ```python3
-  # blog/views.py
 
-  ...
-  from django.views.generic import (
-      ListView,
-      DetailView,
-      CreateView,
-      UpdateView,
-  )
-  from djnago.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+```python3
+# blog/views.py
 
-  # Create your views here.
-  ...
+...
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+)
+from djnago.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
-  # create view
-  class PostCreateView(LoginRequiredMixin, CreateView):
-      model = Post
-      fields = [
-          'title',
-          'content',
-          ]
+# Create your views here.
+...
 
-      def form_valid(self, form):
-          form.instance.author = self.request.user
-          return super().form_valid(form)
+# create view
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = [
+        'title',
+        'content',
+        ]
 
-  # update view
-  class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-      model = Post
-      fields = [
-          'title',
-          'content',
-      ]
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
-      def form_valid(self, form):
-          form.instance.author = self.request.user
-          return super().form_valid(form)
+# update view
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Post
+    fields = [
+        'title',
+        'content',
+    ]
 
-      def test_func(self):
-          post = self.get_object()
-          if self.request.user == post.author:
-              return True
-          else: return False
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
-  ```
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        else: return False
+
+```
 
 **routing**
 ```python3
@@ -1633,11 +1634,58 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
   - use this text generator to create dummy data for testing 
     - [https://ndaidong.github.io/txtgen/](https://ndaidong.github.io/txtgen/)
 
+- the paginator object is handled automatically when the `paginate_by` attribute is set in ListView's class based view 
+  ```python3
+  # blog/views.py
 
+  ...
+  class PostListView(ListView):
+    model = Post
+    ...
+    paginate_by = 2 # sets the number of blog posts per page
+
+  ```
+- this class based view automatically passes in the pagination info to template automatically 
+
+##### add pagination navigation buttons
+
+- in `templates/blog/post_list.html`, add the following pagination logic 
+  {% raw %}
+  ```html
+  {% if is_paginated %}
+
+    <div class="container align-center d-flex flex-row justify-content-center">
+
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info" href="?page=1">First</a>
+            <a class="btn btn-outline-info" href="?page={{page_obj.previous_page_number}}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+                
+            {% if page_obj.number == num %}
+                <a class="btn btn-info" href="?page={{num}}"> {{num}} </a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a class="btn btn-outline-info" href="?page={{num}}"> {{num}} </a>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a class="btn btn-outline-info" href="?page={{page_obj.next_page_number}}">Next</a>
+            <a class="btn btn-outline-info" href="?page={{page_obj.paginator.num_pages}}">Last</a>
+        {% endif %}
+    
+    </div>
+
+  {% endif %}
+  ```
+  {% endraw %}
 
 ### filtering
 
 **routing**
+
 
 **view**
 
@@ -1650,6 +1698,9 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 **view**
 
 **template**
+
+# making app HTTPS
+
 
 # heroku deployment 
 
@@ -1814,18 +1865,20 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         'ENGINE': 'django.db.backends.mysql',
         'NAME': '<db-name-set-in-sql-cli>'
         'USER': 'root' ,
-        'PASSWORD': '' ,
-        'HOST': 'test-1234',
+        'PASSWORD': 'test-1234' ,
+        'HOST': 'localhost',
         'PORT': '3306'
     }
   }
   ```
 
-- some mysql CLI commands 
+- some mysql CLI sql related commands 
   ```zsh
+  brew install mysql # installs brew mysql
   mysql -u root -p # login to sql server as root user
   brew services start mysql # load brew version of mysql
   brew services start mysql # stop brew version of mysql
   lsof -i:3306 # list processes using port 3306
   ```
 
+- [sql reset root password](https://stackoverflow.com/a/4631232/3161273)
