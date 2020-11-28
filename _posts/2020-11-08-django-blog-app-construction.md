@@ -1684,13 +1684,107 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 ### filtering
 
-**routing**
-
+- the goal of this section is to show pages on our web app that display all posts by a single user 
 
 **view**
 
+- add the following view logic to handle the filtering of posts only by the passed in username 
+  ```python3
+  # blog/views.py
+
+  from django.shortcuts import render, get_object_or_404
+  ...
+    from django.contrib.auth.models import User
+
+  ...
+  # user filter for post list view 
+  class UserPostListView(ListView):
+      model = Post
+      template_name = '/blog/user_posts.html'
+      context_object_name = 'posts' # sets the context variable name inside the template being called
+      paginate_by = 2
+
+      def get_queryset(self): # overrides get
+          user = get_object_or_404(User, username=self.kwargs.get('username'))
+          return Post.objects.filter(author=user).order_by('-date_posted')
+  ...
+  ```
+
+**routing**
+
+```python3
+# blog/urls.py
+
+...
+from .views import PostListView, ..., UserPostListView
+
+urlpatterns = [
+    ...
+    path('user/<str:username>/', UserPostListView.as_view(), name='user-posts'),
+]
+```
+
 **template**
- 
+
+- create a new blog template in `templates/blog/user_posts.html` and add the following logic to it
+{% raw %}
+```html
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <h1> Posts by {{view.kwargs.username}} </h1>
+    <p> ({{page_obj.paginator.count }} posts by this user) </p>
+
+    {% for post in posts %}
+
+        <article class="media content-section">
+            <img class="rounded-circle" src="{{post.author.profile.image.url}}" style="max-width: 90px; margin: 3px">
+            <div class="media-body">
+                
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                    <small class="text-muted">{{ post.date_posted | date:"Y, F d" }}</small>
+                </div>
+
+                <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                
+                <p class="article-content">{{ post.content }}</p>
+
+            </div>
+
+        </article>
+
+    {% endfor %}
+
+    {% if is_paginated %}
+
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info" href="?page=1">First</a>
+            <a class="btn btn-outline-info" href="?page={{page_obj.previous_page_number}}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+                
+            {% if page_obj.number == num %}
+                <a class="btn btn-info" href="?page={{num}}"> {{num}} </a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a class="btn btn-outline-info" href="?page={{num}}"> {{num}} </a>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info" href="?page={{page_obj.next_page_number}}">Next</a>
+            <a class="btn btn-outline-info" href="?page={{page_obj.previous_page_number}}">Last</a>
+        {% endif %}
+
+    {% endif %}
+
+{% endblock content %}
+```
+{% endraw %}
+
 ### password reset email 
  
 **routing**
