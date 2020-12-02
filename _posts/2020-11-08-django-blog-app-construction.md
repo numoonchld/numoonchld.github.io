@@ -1,8 +1,8 @@
 ---
 layout: post
-title: django blog app construction (w-i-p)
+title: django blog app construction
 date: 2020-11-08
-updated: 2020-11-26
+updated: 2020-12-02
 artist: Kalandra
 artistLink: https://www.instagram.com/KalandraMusic/
 track: Virkelighetens Etterklang
@@ -1786,14 +1786,263 @@ urlpatterns = [
 {% endraw %}
 
 ### password reset email 
- 
-**routing**
 
-**view**
+- this system will be implemented in five steps 
+  1. password reset page
+  2. password reset confirm
+  3. password rest done
+  4. smtp config in `settings.py`  
+  5. password reset complete
+
+##### password reset page
+
+**routing/view**
+
+- add following path to project `urls.py`
+
+  ```python3
+  # urls.py
+
+  ...
+
+  urlpatterns = [
+    ...
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name = 'users/password_reset.html'), name = "password_reset"),
+    
+  ]
+  ```
 
 **template**
 
-# making app HTTPS
+- create `templates/users/profile_reset.html` file with following logic in it
+
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
+
+  {% block content %}
+
+  <div class="container my-5">
+
+      <form method="POST">
+
+          {% csrf_token %}
+
+          <fieldset class="form-group">
+
+              <legend class="border-bottom">
+                  Reset Password
+              </legend>
+
+              {{ form | crispy }}
+
+          </fieldset>
+
+          <div class="form-group">
+
+              <button class="btn btn-primary" >
+                  Request Password Reset
+              </button>
+
+          </div>
+
+      </form>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
+
+##### password reset confirm page
+
+
+**routing/view**
+
+- add following path to project `urls.py`
+
+  ```python3
+  # urls.py
+
+  ...
+
+  urlpatterns = [
+    ...
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name = 'users/password_reset_confirm.html'), name = "password_reset_confirm"),
+    
+  ]
+  ```
+
+**template**
+
+- create `templates/users/profile_reset_confirm.html` file with following logic in it
+
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+  {% load crispy_forms_tags %}
+
+  {% block content %}
+
+  <div class="container my-5">
+
+      <form method="POST">
+
+          {% csrf_token %}
+
+          <fieldset class="form-group">
+
+              <legend class="border-bottom">
+                  Reset Password
+              </legend>
+
+              {{ form | crispy }}
+
+          </fieldset>
+
+          <div class="form-group">
+
+              <button class="btn btn-primary" >
+                  Reset Password 
+              </button>
+
+          </div>
+
+      </form>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
+##### password reset done page
+
+
+**routing/view**
+
+- add following path to project `urls.py`
+
+  ```python3
+  # urls.py
+
+  ...
+
+  urlpatterns = [
+    ...
+    path('password-reset/done', auth_views.PasswordResetDoneView.as_view(template_name = 'users/password_reset_done.html'), name = "password_reset_done"),
+    
+  ]
+  ```
+
+**template**
+
+- create `templates/users/profile_reset_done.html` file with following logic in it
+
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+
+  {% block content %}
+
+  <div class="container">
+
+      <div class="alert alert-info">
+          An email has been sent with instructions to reset your password.
+      </div>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
+
+##### smtp config in `settings.py`
+
+- we'll need an smtp server to test our password reset function
+  - ethereal offers an inbox to for development purposes
+  - use gmail in production
+
+**ethereal**
+
+- go to [https://ethereal.email/](https://ethereal.email/) and 
+  - 'Create Account'
+  - then note down the `Username` and `Password`
+  - use the smtp server provided
+- use this in development
+- go to `settings.py` and add the following lines at the end 
+  ```python3
+  # SMTP Configuration
+  EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+  EMAIL_HOST = 'smtp.ethereal.email'
+  EMAIL_PORT = 587
+  EMAIL_USE_TLS = True
+  EMAIL_HOST_USER = '<ethereal-account-username>'
+  EMAIL_HOST_PASSWORD = '<ethereal-account-app-password>'
+  ```
+
+**gmail**
+
+- we'll actually setup a gmail app password and use those settings for our app in production 
+  - generate a [gmail app password](https://support.google.com/accounts/answer/185833?hl=en)
+  - the gmail smtp doesnt work on development servers, works only when deployed
+
+- go to `settings.py` and add the following lines at the end 
+  ```python3
+  # SMTP Configuration
+  EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+  EMAIL_HOST = 'smtp.gmail.com'
+  EMAIL_PORT = 587
+  EMAIL_USE_TLS = True
+  EMAIL_HOST_USER = '<gmail-account-username>'
+  EMAIL_HOST_PASSWORD = '<gmail-account-app-password>'
+  ```
+
+##### password reset complete
+
+**routing/view**
+
+- add following path to project `urls.py`
+
+  ```python3
+  # urls.py
+
+  ...
+
+  urlpatterns = [
+    ...
+    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name = 'users/password_reset_complete.html'), name = "password_reset_complete"),
+    
+  ]
+  ```
+
+**template**
+
+- create `templates/users/profile_reset_complete.html` file with following logic in it
+
+  {% raw %}
+  ```html
+  {% extends "base.html" %}
+
+  {% block content %}
+
+  <div class="container my-5">
+
+      <div class="alert alert-info">
+          Your password has been reset!
+      </div>
+
+      <a href="{% url 'login' %}" class="my-3"> Sign in here </a>
+
+  </div>
+
+  {% endblock content %}
+  ```
+  {% endraw %}
+
 
 
 # heroku deployment 
@@ -1805,7 +2054,7 @@ urlpatterns = [
 
 - create Procfile with following content in app root dir 
   ```Profile
-  web: gunicorn django_blog_app.wsgi
+  web: gu nicorn django_blog_app.wsgi
   ```
   - here django_blog_app is the name of the root dir
 
