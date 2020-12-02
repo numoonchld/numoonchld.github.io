@@ -10,6 +10,14 @@ trackLink: https://youtu.be/KmdYc-V86yI
 tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial, heroku, docker, vscode]
 ---
 
+# table of contents
+
+- [overview](#overview)
+- [construction process](#construction-process)
+- [heroku deployment](#heroku-deployment)
+- [docker setup](#docker-setup)
+- [further reading](#further-reading)
+
 # overview
 
 - this is a (b)log of constructing a blog-style web application with the `django` web-framework 
@@ -47,7 +55,7 @@ tags: [notes, django, python, blog-app, blog, jinja, crispy-forms, tutorial, her
   - python3 installed on your machine (preferably macOS or Ubuntu)
     - pip3 installed 
   
-# process 
+# construction process 
 
 ### process overview
 
