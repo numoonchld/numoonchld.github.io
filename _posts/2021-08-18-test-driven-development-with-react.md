@@ -1,19 +1,17 @@
 ---
 layout: post
 title: test-driven-development-with-react
-date: 2020-11-22
+date: 2021-08-18
 updated: 
 artist: 
 artistLink: 
 track: 
 trackLink: 
-tags: [react, tdd]
+tags: [react, tdd, rtl]
 ---
 
 
-# Test Driven Development With React
-
-> > > 'A way of managing fear during programming' - Kent Beck
+> 'A way of managing fear during programming' - Kent Beck
 
 - Cycles of `Red - Green - Refactor`
   - `Red`: start with failing tests
@@ -33,6 +31,8 @@ tags: [react, tdd]
   - Code only does what is tested
 - **Cleaner Code**
   - Design based on test scenarios
+- **Cheaper**
+  - Find bugs *before* going to production
 
 ## TDD Requirements
 
@@ -43,6 +43,26 @@ tags: [react, tdd]
 _Remember:_
 
 - tests should give us the confidence to ship, not necessarily cover every bit of implementation detail
+
+## Setup 
+
+### React Testing Library (RTL)
+
+- comes bundled in CRA (`npx create-react-app .`)
+- on manual install copy paste the following:
+  - `npm install --save-dev @testing-library/react`
+  - `npm install --save-dev @testing-library/jest-dom`
+  - `npm install --save-dev @testing-library/user-event`
+- in CodeSandbox, add the same dependencies
+  - `@testing-library/react`
+  - `@testing-library/jest-dom`
+  - `@testing-library/user-event`
+
+### Mock Service Worker (MSW)
+
+- great companion for RTL
+- used to mock API calls during React only development
+- `npm install --save-dev msw`
 
 # Reference
 
