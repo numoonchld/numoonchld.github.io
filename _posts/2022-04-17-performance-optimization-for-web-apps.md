@@ -7,7 +7,7 @@ artist:
 artistLink: 
 track: 
 trackLink: 
-tags: [frontend performance, network performance, performance optimization]
+tags: [frontend performance, network performance, performance optimization, crtical render path]
 ---
 
 - several performance pinch points exist in web application systems
@@ -84,6 +84,69 @@ tags: [frontend performance, network performance, performance optimization]
 - however, there is also a max limit for concerrent file transfers in a browser over the network to the server that comes with HTTP 
   - so limit both the frequency and the number of files
 - consolidate stylesheet files 
+
+
+# critical render path (CRP)
+
+>>> The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen
+>>> Optimizing the critical render path improves render performance
+
+- once a script tag is found in the HTML file, the browser...
+  - pauses DOM construction 
+  - waits until the JS file is obtained from the server 
+  - it may be executed before all the CSS is fetched 
+
+- JS files can alter both HTML-DOM and CSS-OM
+  - only after that is complete, the page's render tree is built out by the browser
+
+## strategies to optimize CRP
+
+#### HTML file 
+
+- load CSS files ASAP in the HTML (typically in the `head` element) and load JS files as late as possible (end of `body` element) 
+  - since JS actions need HTML and CSS to already be parsed 
+  - early JS loading blocks other page resources
+  - however, `script` tags for analytics like Google analytics should be placed in the `head` element
+
+#### CSS file 
+
+- only load what's needed 
+  - dont add unnecessary lines of CSS, it increases file size
+
+
+- use above the fold loading if possible
+  - show only what is above the 'fold' - fold is the bottom edge of the broswer window
+  - to see the content hidden behind the fold, the page has to be scrolled down
+  - page loading optimization may be applied by adding delayed loading to the content hidden below the fold 
+
+- use media attributes for links to CSS in HTML files
+
+- less specificity in CSS is better
+
+- more local the CSS, faster the CSS parsing
+  - i.e. inline CSS (fastest) > `style` block CSS in `head` > CSS file outside HTML file (slowest)
+
+#### JS file
+
+- load scripts asynchronously: `<script async>`
+  - this allows the HTML-DOM construction to continue when the script file is being fetched from the server
+  - a different thread fetches the JS file
+  - however, while the JS is being executed, HTML parsing is blocked
+
+  - if core functionality depends on JS, then use `async` in script tag
+
+- to avoid HTML paring pause during JS execution, use `<script defer>` 
+  - this not only loads the JS file asynchronously, but also defers the script's JS execution till after the entire HTML has been parsed
+  - if core functionality does not depend on JS, use this `defer` tag
+
+
+- do not use `async` or `defer` for page's critical script tags!
+
+
+# references
+
+- [Web Performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
+
 
 
 # daily dose of culture 
