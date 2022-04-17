@@ -7,7 +7,7 @@ artist:
 artistLink: 
 track: 
 trackLink: 
-tags: [frontend performance, backend performance, network performance, performance optimization]
+tags: [frontend performance, network performance, performance optimization]
 ---
 
 - several performance pinch points exist in web application systems
@@ -67,9 +67,9 @@ tags: [frontend performance, backend performance, network performance, performan
 - JPG size reduction: use JPEG-optimizer or something similar
 - avoid highly detailed photographs unless a use case presents itself
   - opt for simple SVG illustrations where possible
-- JPG image quality: 30% - 60%
+- JPG image quality: 30% - 60% (image compression)
 - larger the image resolution, larger the image file size, so set image resolution for its intended display!
-  - if the image is sitting in a `div` with CSS for `width` set to `300px`, 
+  - if the image is sitting in a `div` with `width` CSS set to `300px`, 
   - use an image that is actually 300px wide
   - do not use images with witdh `4000px` and place them in `div`s which support only `300px`
 - use `@media` CSS media queries to customize which image file to transmit over the network for that specfic client display
@@ -77,5 +77,16 @@ tags: [frontend performance, backend performance, network performance, performan
 - remove image metadata; metadata adds to the network transfer time, while also being a privacy hazard!
 - uses CDNs like `imigx` or something similiar
 
+## the travelling deliveryman
 
+- reduce the frequency of network requests between the client and the server
+- doesn't mean omitting content, structure the content to be more efficient for network requests instead
+- however, there is also a max limit for concerrent file transfers in a browser over the network to the server that comes with HTTP 
+  - so limit both the frequency and the number of files
+- consolidate stylesheet files 
+
+
+# daily dose of culture 
+
+- [Honey, I Shrunk the Kids](https://en.wikipedia.org/wiki/Honey,_I_Shrunk_the_Kids)
 
