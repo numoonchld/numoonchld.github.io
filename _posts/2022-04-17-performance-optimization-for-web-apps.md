@@ -92,7 +92,7 @@ tags: [frontend performance, network performance, performance optimization, crti
 >>> The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen
 >>> Optimizing the critical render path improves render performance
 
-![CRP-1](https://bs-uploads.toptal.io/blackfish-uploads/uploaded_file/file/59732/image-1573127221095-6bcf41ba78075535d1859e88e68bc2d5.png)
+[CRP-1](https://bs-uploads.toptal.io/blackfish-uploads/uploaded_file/file/59732/image-1573127221095-6bcf41ba78075535d1859e88e68bc2d5.png)
 
 - once a script tag is found in the HTML file, the browser...
   - pauses DOM construction 
@@ -106,7 +106,7 @@ tags: [frontend performance, network performance, performance optimization, crti
 - JS files can alter both HTML-DOM and CSS-OM
   - only after that is complete, the page's **render tree** is built out by the browser
 
-![CRP-2](https://raw.githubusercontent.com/numoonchld/numoonchld.github.io/master/media/blogAssets/CRP.png)
+[CRP-2](https://raw.githubusercontent.com/numoonchld/numoonchld.github.io/master/media/blogAssets/CRP.png)
 
 ### strategies to optimize CRP
 
