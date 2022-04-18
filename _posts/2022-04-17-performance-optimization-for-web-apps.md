@@ -85,21 +85,30 @@ tags: [frontend performance, network performance, performance optimization, crti
   - so limit both the frequency and the number of files
 - consolidate stylesheet files 
 
+# frontend optimizations
 
-# critical render path (CRP)
+## critical render path (CRP)
 
 >>> The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen
 >>> Optimizing the critical render path improves render performance
+
+![CRP-1](https://bs-uploads.toptal.io/blackfish-uploads/uploaded_file/file/59732/image-1573127221095-6bcf41ba78075535d1859e88e68bc2d5.png)
 
 - once a script tag is found in the HTML file, the browser...
   - pauses DOM construction 
   - waits until the JS file is obtained from the server 
   - it may be executed before all the CSS is fetched 
 
-- JS files can alter both HTML-DOM and CSS-OM
-  - only after that is complete, the page's render tree is built out by the browser
+- typically, once **all the synchronous JS files** are loaded and executed,
+  - DOM content gets fully loaded and parsed
+  - then, all other page resources finish loading 
 
-## strategies to optimize CRP
+- JS files can alter both HTML-DOM and CSS-OM
+  - only after that is complete, the page's **render tree** is built out by the browser
+
+![CRP-2](https://raw.githubusercontent.com/numoonchld/numoonchld.github.io/master/media/blogAssets/CRP.png)
+
+### strategies to optimize CRP
 
 #### HTML file 
 
@@ -142,11 +151,18 @@ tags: [frontend performance, network performance, performance optimization, crti
 
 - do not use `async` or `defer` for page's critical script tags!
 
+- minimize DOM manipulations 
+  - so all DOM content fully loads and is parsed ASAP when page loads
+
+
+- avoid long running javascript: 
+
 
 # references
 
 - [Web Performance](https://developer.mozilla.org/en-US/docs/Web/Performance)
-
+- [`async` vs `defer` attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+- [Populating the page: how browsers work](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work)
 
 
 # daily dose of culture 
