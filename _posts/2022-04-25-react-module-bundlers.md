@@ -1,6 +1,6 @@
 ---
 layout: post
-title:react module bunlders
+title: react module bunlders
 date: 2022-04-26
 updated: 
 artist: 
@@ -26,3 +26,8 @@ tags: [react, module bundlers]
 - 'bundles' JS modules and dependencies into static assets 
 
 - webpack setup and configuration is very instense and also prone to change!
+
+## babel
+
+- transpiles ES6 and ES7 etc to ES5 JS to maintain browser compatibility
+
