@@ -24,3 +24,5 @@ tags: [react, module bundlers]
 
 - used in Create React App (APP)
 - 'bundles' JS modules and dependencies into static assets 
+
+- webpack setup and configuration is very instense and also prone to change!
