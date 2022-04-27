@@ -27,9 +27,19 @@ tags: [react, module bundlers]
 
 - webpack setup and configuration is very instense and also prone to change!
 
-## babel
+### loader 
+
+- webpack enables use of loaders to preprocess files which allows bundling static resources (including but not limited to JS) 
+- write your own loaders using Node.js
+
+#### babel
 
 - transpiles ES6 and ES7 etc to ES5 JS to maintain browser compatibility
+
+#### eslint 
+
+- code linter with customizable rules 
+- use airbnb's open source config as a starting point for this config file (`airbnb-base`)
 
 # resources
 
