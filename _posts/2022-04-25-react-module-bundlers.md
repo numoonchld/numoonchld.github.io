@@ -12,7 +12,7 @@ tags: [react, module bundlers]
 
 # Bundlers: 
 
-- bundlers optmize files for delivery over the network
+- bundlers optimize files for delivery over the network
 - examples:
   - parcel: zero configuration
   - webpack: highly configurable
@@ -22,7 +22,7 @@ tags: [react, module bundlers]
 
 ## webpack
 
-- used in Create React App (APP)
+- used in Create React App (CRA)
 - 'bundles' JS modules and dependencies into static assets 
 
 - webpack setup and configuration is very instense and also prone to change!
@@ -40,6 +40,10 @@ tags: [react, module bundlers]
 
 - code linter with customizable rules 
 - use airbnb's open source config as a starting point for this config file (`airbnb-base`)
+
+## parcel
+
+- a web app bundler with minimal configration, as an answer and alternative to configuration heavy webpack
 
 # resources
 
