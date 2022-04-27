@@ -10,7 +10,7 @@ trackLink:
 tags: [react, module bundlers]
 ---
 
-# Bundlers: 
+# bundlers 
 
 - bundlers optimize files for delivery over the network
 - examples:
