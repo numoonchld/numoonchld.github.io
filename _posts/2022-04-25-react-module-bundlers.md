@@ -35,6 +35,7 @@ tags: [react, module bundlers]
 #### babel
 
 - transpiles ES6 and ES7 etc to ES5 JS to maintain browser compatibility
+- `babel-preset-env` && `babel-preset-react`
 
 #### eslint 
 
