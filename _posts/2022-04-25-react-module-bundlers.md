@@ -31,3 +31,6 @@ tags: [react, module bundlers]
 
 - transpiles ES6 and ES7 etc to ES5 JS to maintain browser compatibility
 
+# resources
+
+- [Frontend build config generator](https://createapp.dev/webpack/react--babel--react-hot-loader)
