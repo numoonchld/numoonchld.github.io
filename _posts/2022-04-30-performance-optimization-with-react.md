@@ -7,7 +7,7 @@ artist:
 artistLink: 
 track: 
 trackLink: 
-tags: [frontend performance, react performance]
+tags: [frontend performance, react performance, code splitting]
 ---
 
 - from a JS view point, the heaviest part of the Critical Render Path is 
@@ -34,3 +34,15 @@ tags: [frontend performance, react performance]
 
 - fast time to first meaningful paint
 - fast time for page to be interactive
+
+
+# code splitting (progressive bootstrapping)
+
+- JS benefits from being split into smaller chunks 
+  - doesnt block rendering while loading a single large JS file
+
+- send only a minimal HTML-CSS-JS pack for that particular route
+  - the rest maybe loaded as user action demands (lazy loading)
+
+- use production builds when deploying apps 
+  - comes with Create-React-App (`npm run build`)
