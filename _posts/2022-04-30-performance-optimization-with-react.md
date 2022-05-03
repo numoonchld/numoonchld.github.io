@@ -10,6 +10,12 @@ trackLink:
 tags: [frontend performance, react performance, code splitting]
 ---
 
+- **word of caution**: optimizing code is a never ending process
+  - it can keep going and going
+  - pick your battles wisely
+  - affects maintainability and readability 
+  - consider ROI for code optimization 
+
 ## core react optimization strategies:
 
 - only load what's needed
@@ -68,4 +74,7 @@ tags: [frontend performance, react performance, code splitting]
 - since react 15.4.0: use this query `?react_perf` parameter in the browser address bar
   - then open chrome developer tools and go to performance
 
-- 
+# readings
+
+- [Reduce JavaScript payloads with code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
+- [Reduce JavaScript payloads with tree shaking](https://web.dev/reduce-javascript-payloads-with-tree-shaking/)
