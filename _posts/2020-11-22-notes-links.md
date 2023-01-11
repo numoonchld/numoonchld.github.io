@@ -11,13 +11,6 @@ tags: [notes]
 ---
 
 
-
-## projects:
-
-[grade5point13](https://grade5point13.herokuapp.com)
-
-***
-
 ## links to my notes blogs:
 
 - [Computer Science](https://nmc-ossu-cs.netlify.app/)
