@@ -85,7 +85,7 @@ body {
 
 #dispPic {
   max-height: 50vh;
-  border: 1px solid gold;
+  border: 1px solid white;
   border-radius: 50%;
 }
 
@@ -362,8 +362,9 @@ body {
 
 #profDispPic {
   max-height: 33vh;
-  border: 1px solid gold;
+  border: 1px solid white;
   border-radius: 1pt;
+  display: none;
 }
 
 #cv-block {
