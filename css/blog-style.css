@@ -163,7 +163,7 @@ body {
   height: 70vh;
   overflow: auto;
   box-shadow: inset 0 0 50vh #EAD78B;
-  border: 1px slid #EAD78B;
+  border: 1px solid #EAD78B;
 
   display: block;
 
@@ -221,7 +221,7 @@ body {
 }
 
 #blogText {
-  color: #BD5C3D;
+  color: #6d696a;
   background: #efe1a9;
   padding: 6vh 6vw;
   margin: 5vh auto;
@@ -246,7 +246,7 @@ body {
 
 
 #blogTOC {
-  color: #BD5C3D;
+  color: #6d696a;
   background: #efe1a9;
 
   margin: 5vh auto;
