@@ -15,17 +15,12 @@
 body {
   font-family: 'Cagliostro', sans-serif;
   min-width: 300px;
-  background: #F7F7F7;
+  background-color: #F7F7F7;
   /* background: #fdf6e3; */
 
 }
 
 #mainBody {
-  background: linear-gradient(
-    #EAD78B, 
-    white  
-    #BEE3C5
-  );
   min-width: 300px;
 }
 
