@@ -1,6 +1,6 @@
 ---
 layout: post
-title: react module bunlders
+title: react module bundlers
 date: 2022-04-26
 updated: 
 artist: 
