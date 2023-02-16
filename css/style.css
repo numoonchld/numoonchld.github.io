@@ -364,7 +364,7 @@ body {
   max-height: 33vh;
   border: 1px solid white;
   border-radius: 1pt;
-  display: none;
+  /* display: none; */
 }
 
 #cv-block {
