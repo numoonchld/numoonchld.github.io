@@ -42,7 +42,7 @@ docker ps
 
 - Access the MongoDB shell (mongosh) inside the container:
 ```bash
-docker exec -it my-mongodb mongosh -u admin -p secretpassword`
+docker exec -it my-mongodb mongosh -u admin -p secretpassword
 ```
 
 - Stop the container:
