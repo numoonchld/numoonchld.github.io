@@ -22,7 +22,7 @@ docker run -d \
   -e MONGO_INITDB_ROOT_PASSWORD=secretpassword \
   mongo:latest
 ```
-(Note: If you get a permission error, prepend sudo to the command.) 
+(Note: If you get a permission error, prepend `sudo` to the command.) 
 
 What this command does:
 
@@ -36,16 +36,24 @@ What this command does:
 **Useful Follow-Up Commands**
 
 - Verify it is running:bash
-`docker ps`
+```bash
+docker ps
+```
 
 - Access the MongoDB shell (mongosh) inside the container:bash
-`docker exec -it my-mongodb mongosh -u admin -p secretpassword`
+```bash
+docker exec -it my-mongodb mongosh -u admin -p secretpassword`
+```
 
 - Stop the container:bash
-`docker stop my-mongodb`
+```bash
+ocker stop my-mongodb
+```
 
 - Start it again later: 
-`docker start my-mongodb`
+```bash
+docker start my-mongodb
+```
 
 **Connecting to local NodeJS application**
 
@@ -54,7 +62,9 @@ Because the Docker container maps port 27017 to your Linux host, your Node app c
 
 Here is the exact connection string based on the credentials used in the previous step:
 
-`mongodb://admin:secretpassword@localhost:27017/mydatabase?authSource=admin`
+```text
+mongodb://admin:secretpassword@localhost:27017/mydatabase?authSource=admin
+```
 
 
 Step-by-Step Implementation
