@@ -35,19 +35,19 @@ What this command does:
 
 **Useful Follow-Up Commands**
 
-- Verify it is running:bash
+- Verify it is running:
 ```bash
 docker ps
 ```
 
-- Access the MongoDB shell (mongosh) inside the container:bash
+- Access the MongoDB shell (mongosh) inside the container:
 ```bash
 docker exec -it my-mongodb mongosh -u admin -p secretpassword`
 ```
 
-- Stop the container:bash
+- Stop the container:
 ```bash
-ocker stop my-mongodb
+docker stop my-mongodb
 ```
 
 - Start it again later: 
