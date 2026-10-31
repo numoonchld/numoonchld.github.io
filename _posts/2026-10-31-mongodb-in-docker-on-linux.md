@@ -70,12 +70,14 @@ mongodb://admin:secretpassword@localhost:27017/mydatabase?authSource=admin
 Step-by-Step Implementation
 
 
-1. Install the Driver
+- Install the Driver
 
 In your Node.js project folder, install Mongoose (or the native MongoDB driver):
-`npm install mongoose`
+```bash
+npm install mongoose
+```
 
-2. Add the Connection Code
+- Add the Connection Code
 
 Create or update your server file (e.g., index.js or server.js) with the following clean connection snippet:
 ```javascript
